@@ -40,31 +40,27 @@
     <section class="">
       <form action="">
         <!--Grid row-->
-        <div class="row d-flex justify-content-center">
-          <!--Grid column-->
-          <div class="col-auto">
-            <p class="pt-2">
-              <strong>Sign up for our newsletter</strong>
-            </p>
-          </div>
-          <!--Grid column-->
+        <div class="row d-flex justify-content-center w-100 mx-0 mb-5">
 
           <!--Grid column-->
-          <div class="col-md-5 col-12">
-            <!-- Email input -->
-            <div data-mdb-input-init class="form-outline mb-4">
-              <input type="email" id="form5Example24" class="form-control" />
-              <label class="form-label" for="form5Example24">Email address</label>
-            </div>
+          <div class="col-3 m-0">
+            <span class="pt-2">Sign up for our newsletter</span>
           </div>
-          <!--Grid column-->
+
+          <!-- Email input -->
+          <div data-mdb-input-init class="form-outline col-5 m-0">
+            <input type="email" id="form5Example24" class="form-control text-dark" />
+          </div>
+
+          <div class="col-3 m-0">
+            <button data-mdb-ripple-init type="submit" class="btn btn-outline primary-bg">
+              Subscribe
+            </button>
+          </div>
 
           <!--Grid column-->
           <div class="col-auto">
             <!-- Submit button -->
-            <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4">
-              Subscribe
-            </button>
           </div>
           <!--Grid column-->
         </div>
