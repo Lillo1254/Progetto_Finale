@@ -1,5 +1,5 @@
-<div class="bg-home vh-100">
+<div class="primary-bg vh-100">
 
-<h1 class="h1-home text-center">Benvenuti nel sito</h1>
+    <h1 class="secondary-text display-3 pt-5 text-center">Benvenuti nel sito</h1>
 
 </div>

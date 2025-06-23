@@ -1,38 +1,94 @@
+/* ! COLORS */
+
 :root{
-    --bs-body-bg: rgb(9, 0, 24);
-    --color-Primary: rgb(226, 212, 249);
---color-accent: rgb(188, 154, 0);
+    --primary: rgb(9, 0, 24);
+    --primary-light: #2b2337;
+    --secondary: rgb(226, 212, 249);
+    --accent: rgb(223, 173, 36);
 }
-.color-primary{
-    background-color: var(--color-Primary);
+
+.primary-text{
+    color: var(--primary) !important;
 }
-.color-accent{
-    color: var(--color-accent) !important;
+
+.primary-bg{
+    background-color: var(--primary) !important;
 }
-.bg-color-custom{
-    background-color: var(--bs-body-bg);
+
+.primary-border{
+    border-color: var(--primary) !important;
+}
+
+.primary-light-text{
+    color: var(--primary-light) !important;
+}
+
+.primary-light-bg{
+    background-color: var(--primary-light) !important;
+}
+
+.primary-light-border{
+    border-color: var(--primary-light) !important;
+}
+
+.secondary-text{
+    color: var(--secondary) !important;
+}
+
+.secondary-bg{
+    background-color: var(--secondary) !important;
+}
+
+.secondary-border{
+    border-color: var(--secondary) !important;
+}
+
+.accent-text{
+    color: var(--accent) !important;
+}
+
+.accent-bg{
+    background-color: var(--accent) !important;
+}
+
+.accent-border{
+    border-color: var(--accent) !important;
+}
+
+.white-text{
+    color: #fff !important;
+}
+
+.white-bg{
+    background-color: #fff !important;
+}
+
+.white-border{
+    border-color: #fff !important;
+}
+
+
+/* ! FONTS */
+
+* {
+    color: white !important;
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  color: var(--secondary) !important;
 }
 
 
-.h1-home{
-    padding-top: 5%;
-    color: rgb(226, 212, 249);
-}
-.bg-home{
-    background-color: rgb(9, 0, 24);
-}
-.bg-navbar{
-    background-color: rgba(255, 255, 255, 0.138);
-backdrop-filter: blur(10px);}
+/* ! FOOTER */
 
-.bg-footer{
-    background-color: var(--bs-body-bg);
-    color: var(--color-accent);
+.footer-icon:hover {
+    color: var(--accent) !important;
+}
+
+a:hover {
+    color: var(--accent) !important;
 }
 
