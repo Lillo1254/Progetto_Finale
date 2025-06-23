@@ -5,6 +5,7 @@
     --primary-light: #2b2337;
     --secondary: rgb(226, 212, 249);
     --accent: rgb(223, 173, 36);
+    --danger: #dd586a;
 }
 
 .primary-text{
@@ -65,6 +66,18 @@
 
 .white-border{
     border-color: #fff !important;
+}
+
+.danger-text{
+    color: var(--danger) !important;
+}
+
+.danger-bg{
+    background-color: var(--danger) !important;
+}
+
+.danger-border{
+    border-color: var(--danger) !important;
 }
 
 
@@ -130,5 +143,16 @@ a:hover {
 }
 .navbar-toggler-icon {
    filter: invert(1);
+}
+
+.btn-delete {
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
+    color: var(--primary) !important;
+    background-color: var(--danger);
+}
+
+.btn-delete:hover {
+    background-color: var(--accent) !important;
+
 }
 
