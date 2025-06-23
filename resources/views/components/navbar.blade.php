@@ -29,7 +29,6 @@
                 <li><a class="dropdown-item" href="{{ route('article.create') }}">inserisci articolo</a></li>
               </ul>
             </li>
-             <li><a class="dropdown-item" href="{{ route('article.edit') }}">Modifica articolo</a></li>
               </ul>
             </li>
           </ul>
