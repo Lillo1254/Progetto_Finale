@@ -10,19 +10,16 @@
                             <h2 class="card-title secondary-text fw-light">{{ $article->title }}</h2>
                             <h5 class="card-title secondary-dark-text fw-light">{{ $article->price }}</h5>
                             <p class="card-text mt-2 secondary-text">{{ $article->description }}</p>
-                            <a href="{{route('articles.edit', $article)}}" class="btn-form btn primary-dark-bg mt-1 secondary-text rounded-5">
+                            <a href="{{route('article.edit', $article)}}" class="btn-form btn primary-dark-bg mt-1 secondary-text rounded-5">
                                 <p class="m-auto p-0 px-3">Edit</p>
                             </a>
-                            <a href="{{route('articles.destroy', $article)}}" class="btn primary-dark-bg ms-3 mt-1 secondary-text rounded-5 btn-delete">
+                            <a href="{{route('article.destroy', $article)}}" class="btn primary-dark-bg ms-3 mt-1 secondary-text rounded-5 btn-delete">
                                 <p class="m-auto p-0 px-2">Delete</p>
                             </a>
                         </div>
                     </div>
                 </div>
             @endforeach
-        </div>
-        <div class="row justify-content-center">
-            {{ $articles->links() }}
         </div>
     </div>
 
