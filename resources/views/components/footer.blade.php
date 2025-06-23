@@ -53,7 +53,7 @@
           </div>
 
           <div class="col-3 m-0">
-            <button data-mdb-ripple-init type="submit" class="btn btn-form secondary-bg primary-text px-5">
+            <button data-mdb-ripple-init type="submit" class="btn btn-form px-5">
               Subscribe
             </button>
           </div>
