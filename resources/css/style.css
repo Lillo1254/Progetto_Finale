@@ -85,15 +85,15 @@
 /* ! FOOTER */
 
 .footer-icon {
-    transition: 0.2s ease;
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
 .footer-icon i {
-    transition: 0.2s ease;
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
 .footer-icon:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) translateY(-6%);
 }
 
 .footer-icon:hover i {
@@ -102,7 +102,7 @@
 }
 
 a {
-    transition: 0.2s ease;
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
 a:hover {
@@ -110,7 +110,7 @@ a:hover {
 }
 
 .btn-form {
-    transition: 0.3s ease;
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
 .btn-form:hover {
