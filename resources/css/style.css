@@ -84,11 +84,37 @@
 
 /* ! FOOTER */
 
+.footer-icon {
+    transition: 0.2s ease;
+}
+
+.footer-icon i {
+    transition: 0.2s ease;
+}
+
 .footer-icon:hover {
+    transform: scale(1.2);
+}
+
+.footer-icon:hover i {
     color: var(--accent) !important;
+    /* text-shadow: 0px 0px 5px var(--secondary); */
+}
+
+a {
+    transition: 0.2s ease;
 }
 
 a:hover {
     color: var(--accent) !important;
+}
+
+.btn-form {
+    transition: 0.3s ease;
+}
+
+.btn-form:hover {
+    background-color: var(--accent) !important;
+
 }
 

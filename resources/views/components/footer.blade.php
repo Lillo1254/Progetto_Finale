@@ -5,33 +5,33 @@
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-        ><i class="fs-3 footer-icon bi bi-facebook"></i
+      <a data-mdb-ripple-init class="btn footer-icon btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fs-3 bi bi-facebook"></i
       ></a>
 
       <!-- Twitter -->
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-        ><i class="fs-3 footer-icon bi bi-twitter"></i
+      <a data-mdb-ripple-init class="btn footer-icon btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fs-3 bi bi-twitter"></i
       ></a>
 
       <!-- Google -->
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-        ><i class="fs-3 footer-icon bi bi-google"></i
+      <a data-mdb-ripple-init class="btn footer-icon btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fs-3 bi bi-google"></i
       ></a>
 
       <!-- Instagram -->
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-        ><i class="fs-3 footer-icon bi bi-instagram"></i
+      <a data-mdb-ripple-init class="btn footer-icon btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fs-3 bi bi-instagram"></i
       ></a>
 
       <!-- Linkedin -->
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-        ><i class="fs-3 footer-icon bi bi-linkedin"></i
+      <a data-mdb-ripple-init class="btn footer-icon btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fs-3 bi bi-linkedin"></i
       ></a>
 
       <!-- Github -->
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
-        ><i class="fs-3 footer-icon bi bi-github"></i
+      <a data-mdb-ripple-init class="btn footer-icon btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fs-3 bi bi-github"></i
       ></a>
     </section>
     <!-- Section: Social media -->
@@ -43,26 +43,21 @@
         <div class="row d-flex justify-content-center w-100 mx-0 mb-5">
 
           <!--Grid column-->
-          <div class="col-3 m-0">
-            <span class="pt-2">Sign up for our newsletter</span>
+          <div class="col-3 my-auto">
+            <p class="fw-bold m-0">Sign up for our newsletter</p>
           </div>
 
           <!-- Email input -->
-          <div data-mdb-input-init class="form-outline col-5 m-0">
-            <input type="email" id="form5Example24" class="form-control text-dark" />
+          <div data-mdb-input-init class="form-outline col-6 m-0">
+            <input type="email" id="form5Example24" class="form-control text-dark" placeholder="Type your email here..."/>
           </div>
 
           <div class="col-3 m-0">
-            <button data-mdb-ripple-init type="submit" class="btn btn-outline primary-bg">
+            <button data-mdb-ripple-init type="submit" class="btn btn-form secondary-bg primary-text px-5">
               Subscribe
             </button>
           </div>
 
-          <!--Grid column-->
-          <div class="col-auto">
-            <!-- Submit button -->
-          </div>
-          <!--Grid column-->
         </div>
         <!--Grid row-->
       </form>
