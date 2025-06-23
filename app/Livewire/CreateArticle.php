@@ -30,7 +30,7 @@ class CreateArticle extends Component
         ]);
 
         session()->flash('success', 'Articolo creato con successo.');
-        return redirect()->route('articles.index');
+        return redirect()->route('article.index');
     }
     public function render()
     {

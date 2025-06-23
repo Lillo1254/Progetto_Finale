@@ -128,4 +128,7 @@ a:hover {
     background-color: var(--accent) !important;
 
 }
+.navbar-toggler-icon {
+   filter: invert(1);
+}
 
