@@ -16,19 +16,17 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="{{ route('article.index') }}">Catalogo</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Dropdown
               </a>
               <ul class="dropdown-menu primary-bg">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="{{ route('article.create') }}">inserisci articolo</a></li>
               </ul>
             </li>
           </ul>
@@ -40,8 +38,8 @@
         <div class="mt-4 p-3 rounded primary-bg">
           <h5 class="text-center">Accedi o Registrati</h5>
           <div class="d-flex flex-column">
-            <a href="#" class="btn btn-primary mb-2">Login</a>
-            <a href="#" class="btn btn-secondary">Registrati</a>
+            <a href="{{ route('login') }}" class="btn btn-primary mb-2">Login</a>
+            <a href="{{ route('register') }}" class="btn btn-secondary">Registrati</a>
           </div>
         </div>
       </div>
