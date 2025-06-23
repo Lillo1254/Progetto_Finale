@@ -1,3 +1,5 @@
-<div>
-    {{-- The best athlete wants his opponent at his best. --}}
+<div class="bg-home vh-100">
+
+<h1 class="h1-home text-center">Benvenuti nel sito</h1>
+
 </div>

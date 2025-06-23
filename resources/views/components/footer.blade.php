@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="bg-body-tertiary text-center">
+<footer class="bg-footer text-center">
   <!-- Grid container -->
   <div class="container p-4">
     <!-- Section: Social media -->
@@ -93,37 +93,16 @@
 
           <ul class="list-unstyled mb-0">
             <li>
-              <a class="text-body" href="#!">Link 1</a>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 1</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 2</a>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 2</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 3</a>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 3</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a class="text-body" href="#!">Link 1</a>
-            </li>
-            <li>
-              <a class="text-body" href="#!">Link 2</a>
-            </li>
-            <li>
-              <a class="text-body" href="#!">Link 3</a>
-            </li>
-            <li>
-              <a class="text-body" href="#!">Link 4</a>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 4</a>
             </li>
           </ul>
         </div>
@@ -135,16 +114,16 @@
 
           <ul class="list-unstyled mb-0">
             <li>
-              <a class="text-body" href="#!">Link 1</a>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 1</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 2</a>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 2</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 3</a>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 3</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 4</a>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 4</a>
             </li>
           </ul>
         </div>
@@ -156,16 +135,37 @@
 
           <ul class="list-unstyled mb-0">
             <li>
-              <a class="text-body" href="#!">Link 1</a>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 1</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 2</a>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 2</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 3</a>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 3</a>
             </li>
             <li>
-              <a class="text-body" href="#!">Link 4</a>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 1</a>
+            </li>
+            <li>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 2</a>
+            </li>
+            <li>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 3</a>
+            </li>
+            <li>
+              <a class="color-accent text-body text-decoration-none"  href="#!">Link 4</a>
             </li>
           </ul>
         </div>
@@ -180,7 +180,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2020 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <a class="color-accent text-rese text-decoration-nonet  fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
   </div>
   <!-- Copyright -->
 </footer>

@@ -1,0 +1,38 @@
+:root{
+    --bs-body-bg: rgb(9, 0, 24);
+    --color-Primary: rgb(226, 212, 249);
+--color-accent: rgb(188, 154, 0);
+}
+.color-primary{
+    background-color: var(--color-Primary);
+}
+.color-accent{
+    color: var(--color-accent) !important;
+}
+.bg-color-custom{
+    background-color: var(--bs-body-bg);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+.h1-home{
+    padding-top: 5%;
+    color: rgb(226, 212, 249);
+}
+.bg-home{
+    background-color: rgb(9, 0, 24);
+}
+.bg-navbar{
+    background-color: rgba(255, 255, 255, 0.138);
+backdrop-filter: blur(10px);}
+
+.bg-footer{
+    background-color: var(--bs-body-bg);
+    color: var(--color-accent);
+}
+

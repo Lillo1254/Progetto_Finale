@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-dark bg-navbar fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
