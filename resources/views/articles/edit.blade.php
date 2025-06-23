@@ -39,7 +39,7 @@
                        </div>
                          <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between">
                             <button type="submit" class="btn btn-form mt-4 px-5">Salva modifiche</button>
-                            <a href="{{ route('ads.index') }}" class="btn btn-outline-secondary mt-4">Annulla</a>
+                            <a href="{{ route('article.index') }}" class="btn btn-outline-secondary mt-4">Annulla</a>
                         </div>
                     </form>
                 </div>
