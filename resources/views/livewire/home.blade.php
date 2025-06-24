@@ -42,25 +42,26 @@
                 <div class="col-12 col-md-6 col-lg-6">
 
                     <!-- Ultimi Annunci -->
-                        <h2 class="text-center secondary-text fw-bold">Ultimi Annunci</h2>
-                    </div>
-                        <div class="row pb-5 justify-content-md-evenly  mx-0 mx-sm-auto px-0 w-100 ">
-                            @foreach ($articles as $article)
-                                <div class="col-10 col-md-5 col-lg-5 " data-aos="fade-left" data-aos-delay="200" style="margin-bottom: 2rem">
-                                    <div class="card-categories card mb-5  h-100 ">
-                                        <div class="card-body primary-light-bg d-flex flex-column justify-content-between ">
-                                            <h5 class="card-title ">{{ $article->title }}</h5>
-                                            <p class="card-text "> Prezzo: €{{ number_format($article->price, 2) }}</p>
-                                            <p class="card-text ">{{ Str::limit($article->description, 100) }}</p>
-                                            <a href="{{ route('article.show', $article->id) }}"
-                                                class="btn btn-form card-scale-btn">Vedi Dettagli</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    
+                    <h2 class="text-center secondary-text fw-bold">Ultimi Annunci</h2>
+                </div>
             </div>
+            <div class="row pb-5 justify-content-md-evenly mx-0  px-0 w-100 ">
+                @foreach ($articles as $article)
+                    <div class="col-12 col-8 col-md-5 col-lg-5 " data-aos="fade-left" data-aos-delay="200"
+                        style="margin-bottom: 2rem">
+                        <div class="card-categories card mb-5  h-100 ">
+                            <div class="card-body primary-light-bg d-flex flex-column justify-content-between ">
+                                <h5 class="card-title ">{{ $article->title }}</h5>
+                                <p class="card-text "> Prezzo: €{{ number_format($article->price, 2) }}</p>
+                                <p class="card-text ">{{ Str::limit($article->description, 100) }}</p>
+                                <a href="{{ route('article.show', $article->id) }}"
+                                    class="btn btn-form card-scale-btn">Vedi Dettagli</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
 
 
 
