@@ -55,6 +55,14 @@
             <div class="d-flex gap-3">
               <a href="{{ route('login') }}" class="btn btn-success w-50">Login</a>
               <a href="{{ route('register') }}" class="btn btn-form w-50">Registrati</a>
+              <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="btn btn-form mt-3 w-100 text-start d-flex align-items-center">
+                  <i class="bi bi-box-arrow-right primary-text fs-5 pe-2 m-0"></i>
+                  <span class="primary-text m-0 p-0">Logout</span>
+                </button>
+              </form>
+
             </div>
           </div>
         @endguest
