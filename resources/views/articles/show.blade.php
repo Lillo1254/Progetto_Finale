@@ -1,42 +1,47 @@
 <x-layout>
-    <div class="container-fluid mt-5">
-        <div class="row d-flex align-items-center justify-content-center">
-            <div class="col-12 col-md-6 col-lg-5 d-flex flex-column align-items-center justify-content-center">
-                <h1 class="text-dark">Dettagli articolo: {{ $article->title }}</h1>
-                <h2 class="text-dark">Inserito da:</h2>
-                <h5 class="text-dark">{{ $article->user->name }}</h5>
-                <p class="text-dark">{{ $article->description }}</p>
-                <p class="text-dark fw-bold">💰 Prezzo: € {{ number_format($article->price, 2) }}</p>
-            </div>
-        </div>
-    </div>
+    <div class="primary-bg min-vh-100 py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 primary-light-bg p-5 rounded-4 shadow-lg">
+                    <div class="row d-flex align-items-center">
+                        <!-- Sezione Testo -->
+                        <div class="col-12 col-md-6">
+                            <h1 class="secondary-text fw-bold">{{ $article->title }}</h1>
+                            <h4 class="secondary-text">Inserito da: {{ $article->user->name }}</h4>
+                            <p class="secondary-text mt-3">{{ $article->description }}</p>
+                            <p class="secondary-text fw-bold fs-4">💰 Prezzo: € {{ number_format($article->price, 2) }}</p>
+                        </div>
 
-    {{-- Carosello immagini --}}
-    <div class="container-fluid">
-      <div class="row w-100 justify-content-center align-items-center">
-        <div class="col-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center ">
-          <div id="articleCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://picsum.photos/500/401" class="d-block img-fluid rounded" alt="Immagine articolo">
-            </div>
-            <div class="carousel-item active">
-                <img src="https://picsum.photos/500/402" class="d-block img-fluid rounded" alt="Immagine articolo">
-            </div>
-            <div class="carousel-item active">
-                <img src="https://picsum.photos/500/403" class="d-block img-fluid rounded" alt="Immagine articolo">
+                        <!-- Sezione Carosello senza freccette -->
+                        <div class="col-12 col-md-6">
+                            <div id="articleCarousel" class="carousel slide rounded-4 shadow-sm" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://picsum.photos/500/301" class="d-block w-100 rounded-4" alt="Immagine articolo">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://picsum.photos/500/302" class="d-block w-100 rounded-4" alt="Immagine articolo">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://picsum.photos/500/303" class="d-block w-100 rounded-4" alt="Immagine articolo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sezione Categoria -->
+                    <div class="mt-4">
+                        <h5 class="secondary-text fw-bold">Categoria:</h5>
+                        <p class="secondary-text">{{ $article->category->name ?? 'Nessuna categoria' }}</p>
+                    </div>
+
+                    <!-- Pulsante di ritorno -->
+                    <div class="text-center mt-4">
+                        <a href="{{ route('article.catalogo') }}" class="btn btn-form px-5">Torna agli articoli</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#articleCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Precedente</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#articleCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Successivo</span>
-        </button>
-    </div>
-        </div>
-      </div>
     </div>
 </x-layout>
