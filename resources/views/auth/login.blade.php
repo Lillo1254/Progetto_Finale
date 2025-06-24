@@ -1,6 +1,6 @@
 <x-layout> 
  
-    <div class="primary-bg vh-100">
+    <div class="primary-bg min-vh-100">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12">
