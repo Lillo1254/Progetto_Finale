@@ -238,3 +238,17 @@ a:hover {
     box-shadow: none !important;
     border: none !important;
 }
+
+.card-categories{
+   
+    transition: 200ms ease-in-out;
+}
+
+.card-categories:hover{
+    transform: scale(1.1);
+     box-shadow: 0px 0px 25px 5px var(--secondary);
+}
+
+.card-scale-btn:hover{
+    transform: scale(1.1);
+}
