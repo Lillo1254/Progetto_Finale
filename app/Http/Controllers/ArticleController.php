@@ -72,7 +72,7 @@ class ArticleController extends Controller
 
         $article->delete();
 
-        return redirect()->route('articles.index')->with('success', 'Articolo eliminato con successo.');
+        return redirect()->route('article.catalogo')->with('success', 'Articolo eliminato con successo.');
     }
 
     public function showcategory(Category $category) {
