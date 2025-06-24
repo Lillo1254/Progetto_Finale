@@ -13,33 +13,8 @@ $scrollIntoViewJsSnippet = ($scrollTo !== false)
 <div>
     @if ($paginator->hasPages())
         <nav class="d-flex justify-items-center justify-content-center my-2">
-            <div class="d-flex justify-content-center d-sm-none primary-light-bg">
-                <ul class="pagination">
-                    {{-- Previous Page Link --}}
-                    @if ($paginator->onFirstPage())
-                        <li class="page-item disabled" aria-disabled="true">
-                            <span class="px-4 page-link px-4 page-link-disabled border-0">@lang('pagination.previous')</span>
-                        </li>
-                    @else
-                        <li class="page-item">
-                            <button type="button" dusk="previousPage{{ $paginator->getPageName() == 'page' ? '' : '.' . $paginator->getPageName() }}" class="px-4 page-link border-0" wire:click="previousPage('{{ $paginator->getPageName() }}')" x-on:click="{{ $scrollIntoViewJsSnippet }}" wire:loading.attr="disabled">@lang('pagination.previous')</button>
-                        </li>
-                    @endif
 
-                    {{-- Next Page Link --}}
-                    @if ($paginator->hasMorePages())
-                        <li class="page-item">
-                            <button type="button" dusk="nextPage{{ $paginator->getPageName() == 'page' ? '' : '.' . $paginator->getPageName() }}" class="px-4 page-link border-0" wire:click="nextPage('{{ $paginator->getPageName() }}')" x-on:click="{{ $scrollIntoViewJsSnippet }}" wire:loading.attr="disabled">@lang('pagination.next')</button>
-                        </li>
-                    @else
-                        <li class="page-item disabled" aria-disabled="true">
-                            <span class="px-4 page-link px-4 page-link-disabled border-0" aria-hidden="true">@lang('pagination.next')</span>
-                        </li>
-                    @endif
-                </ul>
-            </div>
-
-            <div class="d-none flex-sm-fill d-sm-flex align-items-sm-center justify-content-center">
+            <div class="d-flex flex-fill align-items-center justify-content-center">
                 <div>
                     <ul class="pagination">
                         {{-- Previous Page Link --}}
