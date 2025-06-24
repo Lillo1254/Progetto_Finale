@@ -1,4 +1,4 @@
-<x-layout> 
+<x-layout>
     <div class="primary-bg vh-100">
         <div class="container">
             <div class="row mb-5">
@@ -31,25 +31,43 @@
                         <div class="mb-3">
                             <label for="title" class="form-label">Titolo</label>
                             <input type="text" class="form-control" id="title" wire:model="title" required>
-                            @error('title') <span class="text-danger">{{ $message }}</span> @enderror
+                            @error('title')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
 
                         <!-- Prezzo -->
                         <div class="mb-3">
                             <label for="price" class="form-label">Prezzo</label>
-                            <input type="number" class="form-control" id="price" wire:model="price" step="0.01" required>
-                            @error('price') <span class="text-danger">{{ $message }}</span> @enderror
+                            <input type="number" class="form-control" id="price" wire:model="price" step="0.01"
+                                required>
+                            @error('price')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
 
                         <!-- Descrizione -->
                         <div class="mb-3">
                             <label for="description" class="form-label">Descrizione</label>
                             <textarea class="form-control text-dark" id="description" wire:model="description" required></textarea>
-                            @error('description') <span class="text-danger">{{ $message }}</span> @enderror
+                            @error('description')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
 
+                        @foreach ($categories  as $category)
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" wire:model="categories"
+                                    id="category-{{ $category->id }}" value="{{ $category->id }}">
+                                <label class="form-check-label" for="category-{{ $category->id }}">
+                                    {{ $category->name }}
+                                </label>
+                            </div>
+                        @endforeach
+
                         <!-- Pulsante di invio -->
-                        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between m-0 my-auto p-0">
+                        <div
+                            class="d-flex flex-column flex-lg-row align-items-center justify-content-between m-0 my-auto p-0">
                             <button type="submit" class="btn btn-form mt-5 px-5">Crea Articolo</button>
                         </div>
                     </form>

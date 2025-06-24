@@ -14,20 +14,19 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
          $categories = [
-            'Auto',
-            'Elettronica',
-            'Casa',
-            'Sport',
-            'Abbigliamento',
-            'Arredamento',
-            'Vintage',
-            'Musica',
-            'Fai da te',
-            'Libri'
-        ];
+            ['name' => 'Auto', 'description' => 'Auto e moto'],
+            ['name' => 'Elettronica','description' => 'Elettronica'],
+            ['name' => 'Casa', 'description' => 'Casa'],
+            ['name' => 'Sport', 'description' => 'Sport'],
+            ['name' =>'Abbigliamento','description' => 'Abbigliamento'],
+            ['name' =>'Arredamento', 'description' => 'Arredamento'],
+           [ 'name' =>'Vintage', 'description' => 'Vintage'],
+           [ 'name' =>'Musica', 'description' => 'Musica'],
+           ['name' => 'Fai da te', 'description' => 'Fai da te'],
+            ['name' =>'Libri', 'description' => 'Libri']        ];
 
         foreach ($categories as $category) {
-            Category::create(['category' => $category]);
+            Category::create(['name' => $category['name'], 'description' => $category['description']]);
         }
     }
 }
