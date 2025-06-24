@@ -3,29 +3,29 @@
 namespace App\Livewire;
 
 use App\Models\Article;
-use Livewire\Component;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Component;
 
 class CreateArticle extends Component
 {
-      public $title;
+    public $title;
     public $price;
     public $description;
-    public $category = [];
+    public $category_id;  // correggi qui
 
     protected $rules = [
         'title' => 'required|string|max:255',
         'price' => 'required|numeric|min:0',
         'description' => 'required|string',
-        'category' => 'required|array|max:1',
+        'category_id' => 'required|exists:categories,id',  // correggi qui
     ];
 
     public function create()
     {
         $validated = $this->validate();
 
-       $article = Article::create([
+        Article::create([
             'title' => $validated['title'],
             'price' => $validated['price'],
             'description' => $validated['description'],
@@ -33,12 +33,12 @@ class CreateArticle extends Component
             'category_id' => $validated['category_id'],
         ]);
 
-
         session()->flash('success', 'Articolo creato con successo.');
-        return redirect()->route('article.index');
+        return redirect()->route('article.catalogo');
     }
+
     public function render()
     {
-        return view('livewire.create-article', ['categories'=> Category::all()]);
+        return view('livewire.create-article', ['categories' => Category::all()]);
     }
 }

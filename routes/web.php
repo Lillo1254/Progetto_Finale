@@ -8,7 +8,7 @@ Route::get('/', [PublicController::class, 'home'])->name('home');
 
 Route::get('/article/create',[ArticleController::class, 'create'])->name('article.create')->middleware('auth');
 
-Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
+Route::get('/article/catalogo', [ArticleController::class, 'index'])->name('article.catalogo');
 
 Route::get('article/{article}', [ArticleController::class, 'show'])->name('article.show');
 

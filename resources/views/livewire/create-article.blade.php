@@ -55,10 +55,11 @@
                             @enderror
                         </div>
 
-                        @foreach ($categories  as $category)
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" wire:model="categories"
-                                    id="category-{{ $category->id }}" value="{{ $category->id }}">
+                        @foreach ($categories as $category)
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category_id"
+                                    id="category-{{ $category->id }}" value="{{ $category->id }}"
+                                    wire:model="category_id">
                                 <label class="form-check-label" for="category-{{ $category->id }}">
                                     {{ $category->name }}
                                 </label>
