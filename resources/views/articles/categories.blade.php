@@ -10,7 +10,7 @@
   </div>
 </div>
  @empty
-     <h4><em>Nessun articolo trovato</em></h4>
+     <h4 ><em>Nessun articolo trovato</em></h4>
  @endforelse 
  
  </x-layout>
