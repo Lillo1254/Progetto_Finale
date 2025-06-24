@@ -4,8 +4,7 @@
   
             
         @else
-            Benvenuto
-            
+            Benvenuto            
         @endif</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon t"></span>
@@ -16,8 +15,7 @@
   
             
         @else
-            Benvenuto
-            
+            Benvenuto            
         @endif</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
@@ -38,7 +36,7 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="{{ route('article.create') }}">inserisci articolo</a></li>
+                <li><a class="dropdown-item" href="{{ route('article.create') }}">Inserisci articolo</a></li>
               </ul>
             </li>
               </ul>
@@ -49,13 +47,25 @@
             <button class="btn btn-success" type="submit">Search</button>
           </form>
         </div>
-        <div class="mt-4 p-3 rounded primary-bg">
-          <h5 class="text-center">Accedi o Registrati</h5>
-          <div class="d-flex flex-column">
-            <a href="{{ route('login') }}" class="btn btn-primary mb-2">Login</a>
-            <a href="{{ route('register') }}" class="btn btn-secondary">Registrati</a>
+
+        <!-- ! Login/Register section -->
+        @guest
+          <div class="mt-4 p-3 rounded primary-bg">
+            <h5 class="text-center pb-1">Accedi o Registrati</h5>
+            <div class="d-flex gap-3">
+              <a href="{{ route('login') }}" class="btn btn-success w-50">Login</a>
+              <a href="{{ route('register') }}" class="btn btn-form w-50">Registrati</a>
+            </div>
           </div>
-        </div>
+        @endguest
+
+        <!-- ! Logout -->
+        @auth          
+          <a href="" class="btn btn-form mt-3 w-100 text-start d-flex align-items-center">
+            <i class="bi bi-box-arrow-right primary-text fs-5 pe-2 m-0"></i>
+            <p class="primary-text m-0 p-0">Logout</p>
+          </a>
+        @endauth
       </div>
   </div>
 </nav>
