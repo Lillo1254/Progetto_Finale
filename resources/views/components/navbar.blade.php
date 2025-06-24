@@ -8,7 +8,7 @@
       @endauth
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+    <button class="navbar-toggler p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon t"></span>
     </button>
 
@@ -24,7 +24,7 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
 
-      <div class="offcanvas-body">
+      <div class="offcanvas-body pt-0">
         <div>
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
@@ -63,7 +63,7 @@
 
         <!-- Sezione Logout -->
         @auth
-          <form method="POST" action="{{ route('logout') }}" class="mt-4 p-3 rounded primary-bg">
+          <form method="POST" action="{{ route('logout') }}" class="mt-4">
             @csrf
             <button type="submit" class="btn btn-form w-100 text-start d-flex align-items-center">
               <i class="bi bi-box-arrow-right primary-text fs-5 pe-2 m-0"></i>

@@ -280,6 +280,10 @@ a:hover {
   transform: translateX(4px);
 }
 
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
 
 .offcanvas-body {
   animation: fadeIn 0.4s ease-out;
