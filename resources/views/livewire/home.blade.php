@@ -1,7 +1,7 @@
 <div class="primary-bg">
 
-    <div class="container-fluid overflow-hidden p-0">
-        <div class="row mx-0 g-0">
+    <div class="container-fluid overflow-hidden p-0 m-0">
+        <div class="row mx-0 g-0 w-100 px-0 mx-0">
 
             <div class="col-12 mx-0 image-home position-relative p-1" data-aos="fade-down">
 
@@ -9,7 +9,7 @@
                     Benvenuti nel sito</h1>
             </div>
 
-            <div class="row justify-content-end">
+            <div class="row justify-content-end w-100 px-0 mx-0">
 
                 <div class="col-lg-8 col-md-8 col-12 primary-bg py-5">
 
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row ">
+            <div class="row  w-100 px-0 mx-0">
                 <div class="col-12 col-md-6 col-lg-6">
 
                     <!-- Banner Promozionale -->
@@ -38,29 +38,28 @@
                 </div>
             </div>
 
-            <div class="row justify-content-end">
+            <div class="row justify-content-end justify-content-sm-center mt-5 w-100 px-0 mx-0">
                 <div class="col-12 col-md-6 col-lg-6">
 
                     <!-- Ultimi Annunci -->
-                    <div class="mt-5">
                         <h2 class="text-center secondary-text fw-bold">Ultimi Annunci</h2>
-                        <div class="row">
+                    </div>
+                        <div class="row pb-5 justify-content-md-evenly  mx-0 mx-sm-auto px-0 w-100 ">
                             @foreach ($articles as $article)
-                                <div class="col-12 col-md-6 col-lg-5" data-aos="fade-left" data-aos-delay="200">
-                                    <div class="card-categories card mb-3 h-100 ">
-                                        <div class="card-body primary-light-bg d-flex flex-column justify-content-between">
+                                <div class="col-10 col-md-5 col-lg-5 " data-aos="fade-left" data-aos-delay="200" style="margin-bottom: 2rem">
+                                    <div class="card-categories card mb-5  h-100 ">
+                                        <div class="card-body primary-light-bg d-flex flex-column justify-content-between ">
                                             <h5 class="card-title ">{{ $article->title }}</h5>
                                             <p class="card-text "> Prezzo: €{{ number_format($article->price, 2) }}</p>
                                             <p class="card-text ">{{ Str::limit($article->description, 100) }}</p>
                                             <a href="{{ route('article.show', $article->id) }}"
-                                                class="btn btn-primary">Vedi Dettagli</a>
+                                                class="btn btn-form card-scale-btn">Vedi Dettagli</a>
                                         </div>
                                     </div>
                                 </div>
                             @endforeach
                         </div>
-                    </div>
-                </div>
+                    
             </div>
 
 
