@@ -15,7 +15,7 @@ class IndexArticle extends Component
     
     public function render()
     {
-        $articles = Article::paginate(6);
+        $articles = Article::orderBy('created_at', 'desc')->paginate(6);
         return view('livewire.index-article', compact('articles'));
     }
 }

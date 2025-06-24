@@ -39,11 +39,8 @@
                        </div>
                          <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between">
                             <button type="submit" class="btn btn-success mt-4 px-4">Salva modifiche</button>
-                            <form id="delete-form-{{ $article->id }}" action="{{ route('article.destroy', $article) }}"
-                                method="POST" style="display: none;">
-                                @csrf
-                                @method('DELETE')
-                            </form>
+
+
                             <a href=""
                                 onclick="event.preventDefault(); document.getElementById('delete-form-{{ $article->id }}').submit();"
                                 class="btn mt-4 rounded-3 btn-delete px-4 primary-text">Cancella articolo</a>
@@ -53,5 +50,9 @@
                 </div>
             </div>
         </div>
-
+                            <form id="delete-form-{{ $article->id }}" action="{{ route('article.destroy', $article) }}"
+                                method="POST" style="display: none;">
+                                @csrf
+                                @method('DELETE')
+                            </form>
 </x-layout>
