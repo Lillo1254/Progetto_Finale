@@ -1,11 +1,39 @@
-<x-layout> 
- 
+<x-layout>
+    <h1 class="text-dark">Dettagli articolo: {{ $article->title }}</h1>
 
- <h1>Dettagli articolo {{ $article->title }}</h1>
- <h2>Inserito da:</h2>
- <h5>{{ $article->user->name }}</h5>
- <p>{{ $article->description }}</p>
- 
- <p>Prezzo: € {{ $article->price }} ;</p> 
- 
- </x-layout>
+    <h2 class="text-dark">Inserito da:</h2>
+    <h5 class="text-dark">{{ $article->user->name }}</h5>
+
+    <p class="text-dark">{{ $article->description }}</p>
+
+    <p class="text-dark">Prezzo: € {{ $article->price }}</p>
+
+    {{-- Carosello immagini --}}
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-6">
+          <div id="articleCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/300/301" class="d-block w-100" alt="Immagine articolo">
+            </div>
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/300/302" class="d-block w-100" alt="Immagine articolo">
+            </div>
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/300/303" class="d-block w-100" alt="Immagine articolo">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#articleCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Precedente</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#articleCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Successivo</span>
+        </button>
+    </div>
+        </div>
+      </div>
+    </div>
+</x-layout>
