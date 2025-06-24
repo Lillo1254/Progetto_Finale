@@ -203,3 +203,38 @@ a:hover {
     background-color: var(--success) !important;
     border: none !important;
 }
+
+
+
+/* ! PAGINATION */
+
+.page-link {
+    background-color: var(--primary-light) !important;
+    color: var(--secondary) !important;
+}
+
+.page-link:hover {
+    color:var(--accent) !important;
+}
+
+.page-link-active {
+    background-color: var(--accent) !important;
+    color:var(--primary) !important;
+}
+
+.page-link-active:hover {
+    color: var(--secondary) !important;
+    border: none !important;
+    box-shadow: none !important;
+
+}
+
+.page-item:hover {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.page-link:focus {
+    box-shadow: none !important;
+    border: none !important;
+}
