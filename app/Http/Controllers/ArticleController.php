@@ -13,8 +13,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
-        return view('articles.catalogo', compact('articles'));
+        $articles = Article::latest()->take(6)->get(); // Prende gli ultimi 6 annunci
+         return view('welcome', compact('articles'));
     }
 
     /**
