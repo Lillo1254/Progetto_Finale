@@ -292,8 +292,5 @@ a:hover {
 form[role="search"] input {
   transition: box-shadow 0.3s ease;
 }
-form[role="search"] input:focus {
-  box-shadow: 0 0 8px rgba(13, 110, 253, 0.4);
-}
-=======
->>>>>>> 3a093b7207de81884ba2a198c5ec3b72c33dea18
+
+
