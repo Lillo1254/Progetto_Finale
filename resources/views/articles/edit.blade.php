@@ -9,7 +9,7 @@
 
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-8">
-                    <form class="primary-light-bg p-5 rounded-4" action="{{route('article.edit', $article)}}" method="POST">
+                    <form class="primary-light-bg p-5 rounded-4" action="{{route('article.update', $article)}}" method="POST">
                          @csrf
                         @method('PUT') 
 

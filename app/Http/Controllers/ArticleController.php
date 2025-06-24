@@ -60,7 +60,7 @@ class ArticleController extends Controller
 
         $article->update($request->validated());
 
-        return redirect()->route('articles.show', $article)->with('success', 'Articolo aggiornato con successo.');
+        return redirect()->route('article.show', $article)->with('success', 'Articolo aggiornato con successo.');
     }
 
     /**
