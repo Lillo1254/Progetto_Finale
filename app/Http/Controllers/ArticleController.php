@@ -73,4 +73,10 @@ class ArticleController extends Controller
 
         return redirect()->route('articles.index')->with('success', 'Articolo eliminato con successo.');
     }
+
+    public function showcategory(Category $category) {
+        
+        $articles = $category->articles;
+        return view('articles.categories', compact('articles')); 
+    }
 }
