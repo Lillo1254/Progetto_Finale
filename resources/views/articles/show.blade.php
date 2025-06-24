@@ -10,18 +10,18 @@
 
     {{-- Carosello immagini --}}
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-6">
+      <div class="row w-100 justify-content-center align-items-center">
+        <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center align-items-center">
           <div id="articleCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://picsum.photos/300/301" class="d-block w-100" alt="Immagine articolo">
+                <img src="https://picsum.photos/300/301" class="d-block img-fluid rounded" alt="Immagine articolo">
             </div>
             <div class="carousel-item active">
-                <img src="https://picsum.photos/300/302" class="d-block w-100" alt="Immagine articolo">
+                <img src="https://picsum.photos/300/302" class="d-block img-fluid rounded" alt="Immagine articolo">
             </div>
             <div class="carousel-item active">
-                <img src="https://picsum.photos/300/303" class="d-block w-100" alt="Immagine articolo">
+                <img src="https://picsum.photos/300/303" class="d-block img-fluid rounded" alt="Immagine articolo">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#articleCarousel" data-bs-slide="prev">
