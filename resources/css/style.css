@@ -6,6 +6,8 @@
     --secondary: rgb(226, 212, 249);
     --accent: rgb(223, 173, 36);
     --danger: #dd586a;
+    --success: hsl(165, 60%, 35%);
+    --success-light: hsl(165, 60%, 42%);
 }
 
 .primary-text{
@@ -80,6 +82,18 @@
     border-color: var(--danger) !important;
 }
 
+.success-text{
+    color: var(--success) !important;
+}
+
+.success-bg{
+    background-color: var(--success) !important;
+}
+
+.success-border{
+    border-color: var(--success) !important;
+}
+
 
 /* ! FONTS */
 
@@ -140,6 +154,9 @@ a:hover {
     color: var(--accent) !important;
 }
 
+
+/* ! BUTTONS */
+
 .btn-form {
     transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
     color: var(--primary) !important;
@@ -148,7 +165,7 @@ a:hover {
 
 .btn-form:hover {
     background-color: var(--accent) !important;
-
+    color: var(--primary) !important;
 }
 .navbar-toggler-icon {
    filter: invert(1);
@@ -162,6 +179,27 @@ a:hover {
 
 .btn-delete:hover {
     background-color: var(--accent) !important;
-
 }
 
+.btn-success {
+    background-color: var(--success) !important;
+    border: none !important;
+}
+
+.btn-success:hover {
+    background-color: var(--success-light) !important;
+    color: #fff !important;
+}
+
+
+/* ! ALERTS */
+
+.alert-danger {
+    background-color: var(--danger) !important;
+    border: none !important;
+}
+
+.alert-success {
+    background-color: var(--success) !important;
+    border: none !important;
+}
