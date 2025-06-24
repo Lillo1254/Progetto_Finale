@@ -9,7 +9,7 @@
                             <h1 class="secondary-text fw-bold">{{ $article->title }}</h1>
                             <h4 class="secondary-text">Inserito da: {{ $article->user->name }}</h4>
                             <p class="secondary-text mt-3">{{ $article->description }}</p>
-                            <p class="secondary-text fw-bold fs-4">💰 Prezzo: € {{ number_format($article->price, 2) }}</p>
+                            <p class="secondary-text fw-bold fs-4">Prezzo: {{ number_format($article->price, 2) }} €</p>
                         </div>
 
                         <!-- Sezione Carosello senza freccette -->
