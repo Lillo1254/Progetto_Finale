@@ -5,7 +5,7 @@
     --primary-light: #2b2337;
     --secondary: rgb(226, 212, 249);
     --accent: rgb(223, 173, 36);
-    --danger: #dd586a;
+    --danger: hsl(352, 62%, 53%);
     --success: hsl(165, 60%, 35%);
     --success-light: hsl(165, 60%, 42%);
 }
@@ -173,17 +173,20 @@ a:hover {
 
 .btn-delete {
     transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
-    color: var(--primary) !important;
+    color: var(--white) !important;
     background-color: var(--danger);
 }
 
 .btn-delete:hover {
-    background-color: var(--accent) !important;
+    background-color: #ff2441 !important;
+    
+    color: var(--white) !important;
 }
 
 .btn-success {
     background-color: var(--success) !important;
     border: none !important;
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
 .btn-success:hover {
@@ -239,6 +242,19 @@ a:hover {
     border: none !important;
 }
 
+.card-categories{
+   
+    transition: 200ms ease-in-out;
+}
+
+.card-categories:hover{
+    transform: scale(1.1);
+     box-shadow: 0px 0px 25px 5px var(--secondary);
+}
+
+.card-scale-btn:hover{
+    transform: scale(1.1);
+}
 @media (max-width: 576px) {
     footer .form-control {
       margin-bottom: 10px;
@@ -252,6 +268,7 @@ a:hover {
       font-size: 0.95rem;
     }
   }
+<<<<<<< HEAD
 
   /* Navbar link */ 
 .navbar-nav .nav-link {
@@ -278,3 +295,5 @@ form[role="search"] input {
 form[role="search"] input:focus {
   box-shadow: 0 0 8px rgba(13, 110, 253, 0.4);
 }
+=======
+>>>>>>> 3a093b7207de81884ba2a198c5ec3b72c33dea18

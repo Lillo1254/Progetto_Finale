@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\PublicController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ArticleController;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
@@ -18,4 +19,6 @@ Route::delete('article/{article}', [ArticleController::class, 'destroy'])->name(
 
 Route::put('article/{article}', [ArticleController::class, 'update'])->name('article.update')->middleware('auth');
 
-Route::get('/categories/{category}',[Articlecontroller::class,'showcategory'])->name('category.articles');
+Route::get('/categories/{category}',[ArticleController::class,'showcategory'])->name('category.articles');
+
+Route::post('/logout', function () {Auth::logout();return redirect()->route('home');})->name('logout')->middleware('auth'); 
