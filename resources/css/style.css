@@ -223,7 +223,7 @@ a:hover {
 }
 
 .page-link-active:hover {
-    color: var(--secondary) !important;
+    color: var(--primary) !important;
     border: none !important;
     box-shadow: none !important;
 

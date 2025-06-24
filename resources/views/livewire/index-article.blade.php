@@ -7,7 +7,7 @@
             </div>
             <div class="row">
                 @foreach ($articles as $article)
-                    <div class="col-12 col-md-6 col-lg-4 col-xxl-3 mb-4">
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
                         <div class="card position-relative p-4 border-0 primary-light-bg rounded-4 h-100">
                             <a href="{{route('article.show', $article)}}" class="position-absolute card-link w-100 h-100 z-2"></a>
                             <div class="card-body p-0 z-1">
@@ -30,7 +30,7 @@
                     </div>
                 @endforeach
             </div>            
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mt-3">
                 {{ $articles->links() }}
             </div>
         </div>
