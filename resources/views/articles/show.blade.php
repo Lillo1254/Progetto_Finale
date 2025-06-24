@@ -1,12 +1,13 @@
 <x-layout>
-    <h1 class="text-dark">Dettagli articolo: {{ $article->title }}</h1>
-
-    <h2 class="text-dark">Inserito da:</h2>
-    <h5 class="text-dark">{{ $article->user->name }}</h5>
-
-    <p class="text-dark">{{ $article->description }}</p>
-
-    <p class="text-dark">Prezzo: € {{ $article->price }}</p>
+    <div class="container mt-5">
+        <div class="row d-flex align-items-center">
+            <div class="col-12 col-md-6">
+                <h1 class="text-dark">Dettagli articolo: {{ $article->title }}</h1>
+                <h2 class="text-dark">Inserito da:</h2>
+                <h5 class="text-dark">{{ $article->user->name }}</h5>
+                <p class="text-dark">{{ $article->description }}</p>
+                <p class="text-dark fw-bold">💰 Prezzo: € {{ number_format($article->price, 2) }}</p>
+            </div>
 
     {{-- Carosello immagini --}}
     <div class="container-fluid">
