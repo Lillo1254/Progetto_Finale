@@ -5,7 +5,7 @@
     --primary-light: #2b2337;
     --secondary: rgb(226, 212, 249);
     --accent: rgb(223, 173, 36);
-    --danger: #dd586a;
+    --danger: hsl(352, 62%, 53%);
     --success: hsl(165, 60%, 35%);
     --success-light: hsl(165, 60%, 42%);
 }
@@ -173,17 +173,20 @@ a:hover {
 
 .btn-delete {
     transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
-    color: var(--primary) !important;
+    color: var(--white) !important;
     background-color: var(--danger);
 }
 
 .btn-delete:hover {
-    background-color: var(--accent) !important;
+    background-color: #ff2441 !important;
+    
+    color: var(--white) !important;
 }
 
 .btn-success {
     background-color: var(--success) !important;
     border: none !important;
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
 .btn-success:hover {
