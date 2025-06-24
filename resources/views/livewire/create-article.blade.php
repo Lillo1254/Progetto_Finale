@@ -1,4 +1,4 @@
-<x-layout>
+
     <div class="primary-bg min-vh-100">
         <div class="container">
             <div class="row mb-5">
@@ -76,4 +76,4 @@
             </div>
         </div>
     </div>
-</x-layout>
+

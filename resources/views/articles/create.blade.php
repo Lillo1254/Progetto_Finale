@@ -1,1 +1,6 @@
-<livewire:create-article />
+<x-layout> 
+ 
+    <livewire:create-article />
+  
+
+ </x-layout>
