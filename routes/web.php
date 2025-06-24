@@ -17,3 +17,5 @@ Route::get('article/{article}/edit', [ArticleController::class, 'edit'])->name('
 Route::delete('article/{article}', [ArticleController::class, 'destroy'])->name('article.destroy')->middleware('auth');
 
 Route::put('article/{article}', [ArticleController::class, 'update'])->name('article.update')->middleware('auth');
+
+Route::get('/categories/{category}',[Articlecontroller::class,'showcategory'])->name('category.articles');

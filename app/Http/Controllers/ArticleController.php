@@ -13,8 +13,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::latest()->take(6)->get(); // Prende gli ultimi 6 annunci
-         return view('welcome', compact('articles'));
+        $articles = Article::orderby('created_at', 'desc')->get();
+        return view('articles.catalogo', compact('articles'));
     }
 
     /**
@@ -72,5 +72,11 @@ class ArticleController extends Controller
         $article->delete();
 
         return redirect()->route('articles.index')->with('success', 'Articolo eliminato con successo.');
+    }
+
+    public function showcategory(Category $category) {
+        
+        $articles = $category->articles;
+        return view('articles.categories', compact('articles')); 
     }
 }
