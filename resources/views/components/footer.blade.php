@@ -3,7 +3,7 @@
   <!-- Grid container -->
   <div class="container p-4">
     <!-- Section: Social media -->
-    <section class="mb-4">
+    <section class="mb-4 d-flex justify-content-center flex-wrap gap-2">
       <!-- Facebook -->
       <a data-mdb-ripple-init class="btn footer-icon btn-outline btn-floating m-1" href="#!" role="button"
         ><i class="fs-3 bi bi-facebook"></i
@@ -40,19 +40,19 @@
     <section class="">
       <form action="">
         <!--Grid row-->
-        <div class="row d-flex justify-content-center w-100 mx-0 mb-5">
+        <div class="row justify-content-center w-100 mx-0 mb-5 text-center text-md-start">
 
           <!--Grid column-->
-          <div class="col-3 my-auto">
+          <div class="col-12 col-md-3 mb-2 mb-md-0 my-auto">
             <p class="fw-bold m-0">Sign up for our newsletter</p>
           </div>
 
           <!-- Email input -->
-          <div data-mdb-input-init class="form-outline col-6 m-0">
+          <div data-mdb-input-init class="col-12 col-md-6 mb-2 mb-md-0">
             <input type="email" id="form5Example24" class="form-control text-dark" placeholder="Type your email here..."/>
           </div>
 
-          <div class="col-3 m-0">
+          <div class="col-12 col-md-3">
             <button data-mdb-ripple-init type="submit" class="btn btn-form px-5">
               Subscribe
             </button>
@@ -79,7 +79,7 @@
       <!--Grid row-->
       <div class="row">
         <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <div class="col-lg-3 col-md-6 mb-4 text-center text-md-start">
           <h5 class="text-uppercase">Links</h5>
 
           <ul class="list-unstyled mb-0">
@@ -100,7 +100,7 @@
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <div class="col-lg-3 col-md-6 mb-4 text-center text-md-start">
           <h5 class="text-uppercase">Links</h5>
 
           <ul class="list-unstyled mb-0">
@@ -121,7 +121,7 @@
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <div class="col-lg-3 col-md-6 mb-4 text-center text-md-start">
           <h5 class="text-uppercase">Links</h5>
 
           <ul class="list-unstyled mb-0">
@@ -142,7 +142,7 @@
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <div class="col-12 col-md-6 col-lg-3 mb-4 text-center text-md-start">
           <h5 class="text-uppercase">Links</h5>
 
           <ul class="list-unstyled mb-0">

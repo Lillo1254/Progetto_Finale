@@ -238,3 +238,17 @@ a:hover {
     box-shadow: none !important;
     border: none !important;
 }
+
+@media (max-width: 576px) {
+    footer .form-control {
+      margin-bottom: 10px;
+    }
+
+    footer button.btn-form {
+      padding: 10px 0;
+    }
+
+    footer p {
+      font-size: 0.95rem;
+    }
+  }
