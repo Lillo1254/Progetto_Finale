@@ -3,37 +3,39 @@
   <!-- Grid container -->
   <div class="container p-4">
     <!-- Section: Social media -->
-    <section class="mb-4 d-flex justify-content-center flex-wrap gap-2">
-      <!-- Facebook -->
-      <a data-mdb-ripple-init class="btn footer-icon btn-outline btn-floating m-1" href="#!" role="button"
-        ><i class="fs-5 fs-md-3 bi bi-facebook"></i
-      ></a>
+   <section class="mb-4 d-flex justify-content-center flex-wrap gap-2">
+  <div class="d-flex flex-wrap flex-md-nowrap justify-content-center gap-1">
+    <!-- Facebook -->
+    <a class="btn footer-icon btn-outline btn-floating m-1 p-2" href="#!" role="button">
+      <i class="fs-4 bi bi-facebook"></i>
+    </a>
 
-      <!-- Twitter -->
-      <a data-mdb-ripple-init class="btn footer-icon btn-outline btn-floating m-1" href="#!" role="button"
-        ><i class="fs-5 fs-md-3 bi bi-twitter"></i
-      ></a>
+    <!-- Twitter -->
+    <a class="btn footer-icon btn-outline btn-floating m-1 p-2" href="#!" role="button">
+      <i class="fs-4 bi bi-twitter"></i>
+    </a>
 
-      <!-- Google -->
-      <a data-mdb-ripple-init class="btn footer-icon btn-outline btn-floating m-1" href="#!" role="button"
-        ><i class="fs-5 fs-md-3 bi bi-google"></i
-      ></a>
+    <!-- Google -->
+    <a class="btn footer-icon btn-outline btn-floating m-1 p-2" href="#!" role="button">
+      <i class="fs-4 bi bi-google"></i>
+    </a>
 
-      <!-- Instagram -->
-      <a data-mdb-ripple-init class="btn footer-icon btn-outline btn-floating m-1" href="#!" role="button"
-        ><i class="fs-5 fs-md-3 bi bi-instagram"></i
-      ></a>
+    <!-- Instagram -->
+    <a class="btn footer-icon btn-outline btn-floating m-1 p-2" href="#!" role="button">
+      <i class="fs-4 bi bi-instagram"></i>
+    </a>
 
-      <!-- Linkedin -->
-      <a data-mdb-ripple-init class="btn footer-icon btn-outline btn-floating m-1" href="#!" role="button"
-        ><i class="fs-5 fs-md-3 bi bi-linkedin"></i
-      ></a>
+    <!-- Linkedin -->
+    <a class="btn footer-icon btn-outline btn-floating m-1 p-2" href="#!" role="button">
+      <i class="fs-4 bi bi-linkedin"></i>
+    </a>
 
-      <!-- Github -->
-      <a data-mdb-ripple-init class="btn footer-icon btn-outline btn-floating m-1" href="#!" role="button"
-        ><i class="fs-5 fs-md-3 bi bi-github"></i
-      ></a>
-    </section>
+    <!-- Github -->
+    <a class="btn footer-icon btn-outline btn-floating m-1 p-2" href="#!" role="button">
+      <i class="fs-4 bi bi-github"></i>
+    </a>
+  </div>
+</section>
     <!-- Section: Social media -->
 
     <!-- Section: Form -->
