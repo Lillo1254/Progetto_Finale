@@ -271,7 +271,7 @@ a:hover {
   }
 
 
-  /* Navbar link */ 
+  /* ! NAVBAR */ 
 .navbar-nav .nav-link {
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -392,4 +392,15 @@ form[role="search"] input {
 @keyframes move-down {
   0% { top: -100%; }
   100% { top: 100%; }
+}
+
+
+/* ! IMAGES */
+
+.article-img {
+    transition: 0.2s ease;
+}
+
+.card:hover .article-img {
+    transform: scale(1.1);
 }

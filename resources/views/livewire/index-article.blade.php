@@ -8,15 +8,19 @@
         <div class="row">
             @foreach ($articles as $article)
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card position-relative p-0 border-0 primary-light-bg rounded-4 h-100">
+                    <div class="card position-relative p-0 border-0 primary-light-bg rounded-4 h-100 overflow-hidden">
                         <a href="{{ route('article.show', $article) }}"
                             class="position-absolute card-link w-100 h-100 z-2"></a>
-                        <img src="https://picsum.photos/id/{{$article->id}}/500/400" width="auto" height="auto" alt="" class="rounded-4 p-0 m-0">
-                        <div class="card-body p-4 z-1 pb-0">
+                        <img src="https://picsum.photos/id/{{$article->id}}/500/400" width="auto" height="auto" alt="" class="article-img rounded-4 z-1 p-0 m-0">
+                        <div class="card-body p-4 z-1 primary-light-bg pb-0">
                             <h2 class="card-title white-text fw-light">{{ $article->title }}</h2>
                             <h5 class="card-title fw-light">{{ $article->price }} €</h5>
                             <p class="card-text mt-2 secondary-text">{{ $article->category->name }}</p>
                             
+                            @guest
+                                <div class="mb-3"></div>
+                            @endguest
+
                         </div>
                         @auth
                         <hr class="secondary-text">
