@@ -8,11 +8,17 @@
             <p class="m-0">Benvenuto, iscriviti per visualizzare il tuo profilo personale</p>
         @endauth
 
+        <div class="buttons">
+            <button href="" class="p-1 btn">
+                <i class="bi bi-bag-dash-fill white-text fs-5"></i>
+            </button>   
+            <button class="navbar-toggler p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <i class="bi bi-person-fill white-text fs-4"></i>
+            </button>
+        </div>
 
-        <button class="navbar-toggler p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-            aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon t"></span>
-        </button>
+
 
         <div class="offcanvas offcanvas-end primary-light-bg" tabindex="-1" id="offcanvasDarkNavbar"
             aria-labelledby="offcanvasDarkNavbarLabel">
