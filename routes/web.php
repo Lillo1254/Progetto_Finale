@@ -33,3 +33,5 @@ Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor
 Route::post('/revisor/request', [RoleProfile::class, 'send'])->name('revisor.request')->middleware('auth');
 
 Route::get('/form-revisor',[PublicController::class,'SendForm'])->name('form.revisor')->middleware('auth');
+
+

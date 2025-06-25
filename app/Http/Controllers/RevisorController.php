@@ -13,5 +13,12 @@ class RevisorController extends Controller
         return view('revisor.index', compact('articles_to_check'));
 
     }
+    public function accept(Article $article)
+    {
+        $article->setAccepted(true);
+        return redirect()
+        ->back()
+        ->with('message', "Hai accettato l'articolo  $article->title");
+    }
 }
     
