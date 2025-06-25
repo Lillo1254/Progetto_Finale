@@ -2,12 +2,11 @@
 
 namespace App\Models;
 
-use App\Models\Article;
 use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    protected $fillable = ['name', 'description'];
+    protected $fillable = ['name', 'description'];  // CORRETTO NOME COLONNA
 
     public function articles()
     {
