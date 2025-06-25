@@ -1,21 +1,32 @@
 <nav class="navbar sticky-top primary-light-bg secondary-text">
-    <div class="container-fluid">
+    <div class="container">
 
-        @auth
-            <p class="m-0">Bentornato utente <a href="{{ route('profile', ['user' => auth()->user()]) }}"
-                    class="text-decoration-none">{{ Auth::user()->name }}</a></p>
-        @else
-            <p class="m-0">Benvenuto, iscriviti per visualizzare il tuo profilo personale</p>
-        @endauth
+        <div class="d-flex justify-content-between  alignt-items-center w-100 py-2">
+            <div class="col-4 m-auto">
+                <form class="d-flex position-relative align-items-center" role="search">
+                    <button class="btn position-absolute px-3" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <input class="form-control ps-5 py-2 primary-bg rounded-5 w-50 white-text" type="search" placeholder="Search" aria-label="Search"/>
+                </form>
+            </div>
+            <div class="col-4 m-auto">
+                <a class="navbar-brand m-auto text-center" href="#">
+                    <h2 class="display-6 my-auto">BRAND LOGO</h2>
+                </a>
+            </div>
+            <div class="col-4 m-auto text-end">
+                <div class="buttons">
+                    <button href="" class="p-1 px-2 btn btn-navbar border-none">
+                        <i class="bi bi-bag-dash-fill white-text fs-5"></i>
+                    </button>   
+                    <button class="navbar-toggler btn btn-navbar p-1 border-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                        <i class="bi bi-person-fill white-text fs-4"></i>
+                    </button>
+                </div>
+            </div>
 
-        <div class="buttons">
-            <button href="" class="p-1 btn">
-                <i class="bi bi-bag-dash-fill white-text fs-5"></i>
-            </button>   
-            <button class="navbar-toggler p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-                aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                <i class="bi bi-person-fill white-text fs-4"></i>
-            </button>
         </div>
 
 
@@ -76,10 +87,6 @@
                         </ul>
                     @endauth
 
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-success" type="submit">Search</button>
-                    </form>
                 </div>
 
                 <!-- Sezione Login/Register -->
