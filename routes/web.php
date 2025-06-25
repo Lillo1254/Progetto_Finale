@@ -29,3 +29,5 @@ Route::post('/logout', function () {Auth::logout();return redirect()->route('hom
 Route::get('/profile/{user}', [ProfileController::class, 'profile'])->name('profile')->middleware('auth');
 
 Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
+
+Route::post('/revisor/request', [RoleProfile::class, 'sendRequest'])->name('revisor.request')->middleware('auth');
