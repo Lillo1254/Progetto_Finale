@@ -18,12 +18,12 @@
             <div class="col-4 m-auto d-flex align-items-center justify-content-end">
                 <a href="{{ route('article.create') }}" class="text-decoration-none px-2">Vendi</a>
                 <div class="buttons">
-                    <button href="" class="p-1 px-2 pb-2 btn btn-navbar border-none">
-                        <i class="bi bi-bag-dash-fill white-text fs-5"></i>
+                    <button href="" class="p-1 px-2 pb-2 btn border-none">
+                        <i class="bi bi-bag-dash-fill btn-navbar white-text fs-5"></i>
                     </button>   
-                    <button class="navbar-toggler pb-2 btn btn-navbar p-1 border-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                    <button class="navbar-toggler pb-2 btn p-1 border-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
                         aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                        <i class="bi bi-person-fill white-text fs-4"></i>
+                        <i class="bi bi-person-fill btn-navbar white-text fs-4"></i>
                     </button>
                 </div>
             </div>
