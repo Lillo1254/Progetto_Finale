@@ -41,18 +41,44 @@
                             <button type="submit" class="btn btn-success mt-4 px-4">Salva modifiche</button>
 
 
-                            <a href=""
-                                onclick="event.preventDefault(); document.getElementById('delete-form-{{ $article->id }}').submit();"
-                                class="btn mt-4 rounded-3 btn-delete px-4 primary-text">Cancella articolo</a>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+  Elimina articolo
+</button>
                             <a href="{{ route('article.catalogo') }}" class="btn btn-form mt-4 px-5">Annulla</a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-                            <form id="delete-form-{{ $article->id }}" action="{{ route('article.destroy', $article) }}"
-                                method="POST" style="display: none;">
-                                @csrf
-                                @method('DELETE')
-                            </form>
+
+
+
+                            {{-- modale --}}
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Conferma eliminazione</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+      </div>
+
+      <div class="modal-body">
+        Sei sicuro di voler eliminare questo articolo? Questa azione non può essere annullata.
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+
+        <form action="{{ route('article.destroy', $article) }}" method="POST">
+          @csrf
+          @method('DELETE')
+          <button type="submit" class="btn btn-danger">Conferma elimina</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+{{-- fine mdoale --}}
 </x-layout>
