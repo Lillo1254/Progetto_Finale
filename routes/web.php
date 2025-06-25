@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RoleProfile;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
@@ -25,3 +26,5 @@ Route::get('/categories/{category}',[ArticleController::class,'showcategory'])->
 Route::post('/logout', function () {Auth::logout();return redirect()->route('home');})->name('logout')->middleware('auth'); 
 
 Route::get('/profile/{user}', [ProfileController::class, 'profile'])->name('profile')->middleware('auth');
+
+Route::post('/revisor/request', [RoleProfile::class, 'send'])->name('role.profile')->middleware('auth');
