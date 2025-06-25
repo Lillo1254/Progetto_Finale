@@ -37,12 +37,15 @@
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Dropdown
               </a>
+              @auth
               <ul class="dropdown-menu primary-bg">
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="{{ route('article.create') }}">Inserisci articolo</a></li>
               </ul>
             </li>
           </ul>
+              
+              @endauth
 
           <form class="d-flex mt-3" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
