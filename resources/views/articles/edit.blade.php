@@ -41,7 +41,7 @@
                             <button type="submit" class="btn btn-success mt-4 px-4">Salva modifiche</button>
 
 
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                            <button type="button" class="btn btn-danger mt-4 px-4 " data-bs-toggle="modal" data-bs-target="#deleteModal">
   Elimina articolo
 </button>
                             <a href="{{ route('article.catalogo') }}" class="btn btn-form mt-4 px-5">Annulla</a>
