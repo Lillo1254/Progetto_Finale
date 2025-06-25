@@ -308,3 +308,88 @@ form[role="search"] input {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+
+.form-glow {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+
+.form-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, transparent, white, transparent);
+  box-shadow: 0px 0px 15px var(--secondary);
+  animation: move-right 1s ease-in 1s infinite;
+  z-index: 1;
+}
+
+.form-glow::after {
+  content: '';
+  position: absolute;
+  bottom: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, white, transparent);
+    box-shadow: 0px 0px 15px var(--secondary);
+
+  animation: move-up 1s ease-in 1s infinite;
+  z-index: 1;
+}
+
+
+.form-glow .left-glow {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, white, transparent);
+    box-shadow: 0px 0px 15px var(--secondary);
+
+  animation: move-down 1s ease-in 1s infinite;
+  z-index: 1;
+}
+
+
+.form-glow .bottom-glow {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to left, transparent, white, transparent);
+    box-shadow: 0px 0px 15px var(--secondary);
+
+  animation: move-left 1s ease-in 1s infinite;
+  z-index: 1;
+}
+
+@keyframes move-right {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes move-left {
+  0% { right: -100%; }
+  100% { right: 100%; }
+}
+
+@keyframes move-up {
+  0% { bottom: -100%; }
+  100% { bottom: 100%; }
+}
+
+@keyframes move-down {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
