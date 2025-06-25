@@ -11,4 +11,9 @@ class PublicController extends Controller
     return view('welcome');
 }
 
+public function profile() {
+    $user = auth()->user();
+    return view('profile.profile', compact('user'));
+    
+}
 }

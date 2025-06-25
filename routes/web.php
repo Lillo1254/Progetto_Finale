@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProfileController;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
@@ -22,3 +23,5 @@ Route::put('article/{article}', [ArticleController::class, 'update'])->name('art
 Route::get('/categories/{category}',[ArticleController::class,'showcategory'])->name('category.articles');
 
 Route::post('/logout', function () {Auth::logout();return redirect()->route('home');})->name('logout')->middleware('auth'); 
+
+Route::get('/profile/{user}', [ProfileController::class, 'profile'])->name('profile')->middleware('auth');

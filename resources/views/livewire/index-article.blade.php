@@ -23,22 +23,47 @@
 
                         </div>
                         @auth
+                           @if ($article->user_id === auth()->id())
                         <hr class="secondary-text">
                         <div class="article-buttons z-3 p-4 pt-0">
                             <a href="{{ route('article.edit', $article) }}" class="btn-form btn mt-1 rounded-3">
                                 <p class="m-auto p-0 px-3 text-dark">Edit</p>
                             </a>
-                            <form id="delete-form-{{ $article->id }}" action="{{ route('article.destroy', $article) }}"
-                                method="POST" style="display: none;">
-                                @csrf
-                                @method('DELETE')
-                            </form>
-                            <a href=""
-                                onclick="event.preventDefault(); document.getElementById('delete-form-{{ $article->id }}').submit();"
-                                class="btn primary-dark-bg ms-3 mt-1 rounded-3 danger-bg btn-delete">
-                                <p class="m-auto p-0 px-2 text-dark">Delete</p>
-                            </a>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+  Elimina articolo
+</button>
                         </div>
+
+{{-- modale --}}
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Conferma eliminazione</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+      </div>
+
+      <div class="modal-body">
+        Sei sicuro di voler eliminare questo articolo? Questa azione non può essere annullata.
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+
+        <form action="{{ route('article.destroy', $article) }}" method="POST">
+          @csrf
+          @method('DELETE')
+          <button type="submit" class="btn btn-danger">Conferma elimina</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+{{-- fine mdoale --}}
+
+                            @endif
                         @endauth
                     </div>
                 </div>
@@ -48,4 +73,10 @@
             {{ $articles->links() }}
         </div>
     </div>
+
+
+
+    
 </div>
+
+
