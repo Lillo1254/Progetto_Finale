@@ -4,7 +4,7 @@
             <div class="row justify-content-center p-3">
                 <div class="col-12 col-lg-10 primary-light-bg p-3 p-md-5 rounded-4 shadow-lg">
                     <div class="row flex-column-reverse flex-md-row">
-                        <!-- Sezione Testo -->
+                        
                         <div class="col-12 col-md-6 overflow-hidden">
                             <h1 class="secondary-text display-5">{{ $article->title }}</h1>
                             <h6 class="white-text px-1">Prezzo: {{ number_format($article->price, 2) }} €</h6>                        
@@ -12,7 +12,7 @@
                             <p class="white-text mt-3 px-1">{{ $article->description }}</p>    
                         </div>
 
-                        <!-- Sezione Carosello senza freccette -->
+                        
                         <div class="col-12 col-md-6 mb-3 mb-md-0">
                             <div id="articleCarousel" class="carousel slide shadow-sm" data-bs-ride="carousel">
                                 <div class="carousel-inner rounded-4">
@@ -30,7 +30,7 @@
                         </div>
                     </div>
 
-                    <!-- Pulsante di ritorno -->
+                   
                     <div class="text-center mt-3 mt-md-5">
                         <a href="{{ route('article.catalogo') }}" class="btn btn-form px-4">Torna al catalogo</a>
                     </div>
