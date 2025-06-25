@@ -38,14 +38,15 @@
             </div>
         </div>
 
-        <div class="row pb-5 justify-content-md-evenly  mx-0 mx-sm-auto px-0 w-100 ">
+        <div class="row py-5 justify-content-md-evenly  mx-0 mx-sm-auto px-0 w-100 ">
             @foreach ($articles as $article)
-                <div class="col-12 col-md-4 col-lg-4 mb-3" data-aos="fade-left" data-aos-delay="200">
+                <div class="col-12 col-md-3 col-lg-2 mb-3" data-aos="fade-left" data-aos-delay="200">
                     <div class="card-categories card h-100 ">
+                        <img src="https://picsum.photos/200" class="img-fluid" alt="">
                         <div class="card-body primary-light-bg d-flex flex-column justify-content-between ">
-                            <h5 class="card-title ">{{ $article->title }}</h5>
-                            <p class="card-text "> Prezzo: €{{ number_format($article->price, 2) }}</p>
-                            <p class="card-text ">{{ Str::limit($article->description, 100) }}</p>
+                            <h5 class="card-title text-center">{{ $article->title }}</h5>
+                            <p class="card-text text-center"> Prezzo: €{{ number_format($article->price, 2) }}</p>
+                            <p class="card-text text-center">{{ Str::limit($article->description, 100) }}</p>
                             <a href="{{ route('article.show', $article->id) }}" class="btn btn-form card-scale-btn">Vedi Dettagli</a>
                         </div>
                     </div>
