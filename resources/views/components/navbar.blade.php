@@ -1,18 +1,61 @@
 <nav class="navbar sticky-top primary-light-bg secondary-text">
-    <div class="container-fluid">
+    <div class="container">
 
-        @auth
-            <p class="m-0">Bentornato utente <a href="{{ route('profile', ['user' => auth()->user()]) }}"
-                    class="text-decoration-none">{{ Auth::user()->name }}</a></p>
-        @else
-            <p class="m-0">Benvenuto, iscriviti per visualizzare il tuo profilo personale</p>
-        @endauth
+        <div class="d-flex justify-content-between  alignt-items-center w-100 py-2">
+            <div class="col-4 m-auto">
+                <form class="d-flex position-relative align-items-center" role="search">
+                    <button class="btn position-absolute px-3" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <input class="form-control ps-5 py-2 primary-bg rounded-5 w-50 white-text" type="search" placeholder="Search" aria-label="Search"/>
+                </form>
+            </div>
+            <div class="col-4 m-auto">
+                <a class="navbar-brand m-auto text-center" href="#">
+                    <h2 class="display-6 my-auto">BRAND LOGO</h2>
+                </a>
+            </div>
+            <div class="col-4 m-auto d-flex align-items-center justify-content-end">
+                <a href="{{ route('article.create') }}" class="text-decoration-none px-2">Vendi</a>
+                <div class="buttons">
+                    <button href="" class="p-1 px-2 pb-2 btn border-none">
+                        <i class="bi bi-bag-dash-fill btn-navbar white-text fs-5"></i>
+                    </button>   
+                    <button class="navbar-toggler pb-2 btn p-1 border-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                        <i class="bi bi-person-fill btn-navbar white-text fs-4"></i>
+                    </button>
+                </div>
+            </div>
 
+        </div>
 
-        <button class="navbar-toggler p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-            aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon t"></span>
-        </button>
+        <div class="d-flex justify-content-between alignt-items-center w-100 py-2">
+            <div class="col-12 m-auto">
+                <ul class="navbar-nav justify-content-end flex-grow-1 d-flex flex-row justify-content-center p-0 gap-4">
+                    <li class="nav-item">
+                        <a class="text-decoration-none  active" aria-current="page" href="{{ route('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-decoration-none " href="{{ route('article.catalogo') }}">Catalogo</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="text-decoration-none dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorie
+                        </a>
+                        <ul class="dropdown-menu position-absolute rounded-0 primary-light-bg">
+                            @forelse ($categories as $category)
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('category.articles', ['category' => $category->id]) }}">{{ $category->name }}</a>
+                                </li>
+                            @empty
+                                <p>non ci sono categorie da visualizzare</p>
+                            @endforelse
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
         <div class="offcanvas offcanvas-end primary-light-bg" tabindex="-1" id="offcanvasDarkNavbar"
             aria-labelledby="offcanvasDarkNavbarLabel">
@@ -29,61 +72,27 @@
                     aria-label="Close"></button>
             </div>
 
-            <div class="offcanvas-body pt-0">
-                <div>
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
+            <div class="offcanvas-body py-0">
+                <ul class="list-unstyled">                   
+                    @auth
+                        <li class="nav-item py-1">
+                            <a class="dropdown-item" href="{{ route('article.create') }}">Inserisci articolo</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('article.catalogo') }}">Catalogo</a>
+                        <li class="nav-item py-1">
+                            <a class="dropdown-item" href="">I tuoi annunci</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Seleziona una categoria
-                            </a>
-                            <ul class="dropdown-menu primary-bg">
-                                @forelse ($categories as $category)
-                                    <li><a class="dropdown-item"
-                                            href="{{ route('category.articles', ['category' => $category->id]) }}">{{ $category->name }}</a>
-                                    </li>
-                                @empty
-                                    <p>non ci sono categorie da visualizzare</p>
-                                @endforelse
-                            </ul>
+                        <li class="nav-item py-1">
+                            <a class="dropdown-item" href="">Ordini</a>
                         </li>
-                        @auth
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu primary-bg">
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="{{ route('article.create') }}">Inserisci articolo</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
                     @endauth
-
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-success" type="submit">Search</button>
-                    </form>
-                </div>
+                </ul>
 
                 <!-- Sezione Login/Register -->
                 @guest
-                    <div class="mt-4 p-3 rounded primary-bg">
-                        <h5 class="text-center pb-1">Accedi o Registrati</h5>
-                        <div class="d-flex gap-3">
-                            <a href="{{ route('login') }}" class="btn btn-success w-50">Login</a>
-                            <a href="{{ route('register') }}" class="btn btn-form w-50">Registrati</a>
-                        </div>
+                    <h5 class="text-start pb-1">Accedi o Registrati</h5>
+                    <div class="d-flex gap-3">
+                        <a href="{{ route('login') }}" class="btn btn-success w-50">Login</a>
+                        <a href="{{ route('register') }}" class="btn btn-form w-50">Registrati</a>
                     </div>
                 @endguest
 

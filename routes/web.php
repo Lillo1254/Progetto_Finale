@@ -6,6 +6,7 @@ use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\RoleProfile;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
@@ -28,3 +29,7 @@ Route::post('/logout', function () {Auth::logout();return redirect()->route('hom
 Route::get('/profile/{user}', [ProfileController::class, 'profile'])->name('profile')->middleware('auth');
 
 Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
+
+Route::post('/revisor/request', [RoleProfile::class, 'send'])->name('revisor.request')->middleware('auth');
+
+Route::get('/form-revisor',[PublicController::class,'SendForm'])->name('form.revisor')->middleware('auth');

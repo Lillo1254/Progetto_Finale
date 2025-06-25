@@ -14,22 +14,8 @@ return new class extends Migration
     {
         Schema::table('articles', function (Blueprint $table) {
             
-            if (!Schema::hasColumn('articles', 'category_id')) {
-                $table->foreignId('category_id')->constrained()->onDelete('cascade');
-            } else {
-                
-                $foreignKeys = DB::select("
-                    SELECT CONSTRAINT_NAME 
-                    FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE 
-                    WHERE TABLE_NAME = 'articles' 
-                    AND COLUMN_NAME = 'category_id' 
-                    AND CONSTRAINT_SCHEMA = DATABASE()
-                ");
-
-                if (empty($foreignKeys)) {
-                    $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-                }
-            }
+            $table->unsignedBigInteger('category_id')->nullable()->after('user_id');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
@@ -39,10 +25,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('articles', function (Blueprint $table) {
-            if (Schema::hasColumn('articles', 'category_id')) {
-                $table->dropForeign(['category_id']);
-                $table->dropColumn('category_id');
-            }
+           $table->dropForeign(['category_id']);
+            $table->dropColumn('category_id');
         });
     }
 };

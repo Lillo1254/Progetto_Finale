@@ -194,6 +194,14 @@ a:hover {
     color: #fff !important;
 }
 
+.btn-navbar {
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
+}
+
+.btn-navbar:hover {
+    color: var(--accent) !important;
+}
+
 
 /* ! ALERTS */
 
@@ -243,8 +251,7 @@ a:hover {
 }
 
 .card-categories{
-   
-    transition: transform 0.3s ease-in-out;
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
 .card-categories:hover{
@@ -257,7 +264,7 @@ a:hover {
     max-width: 100vw; 
     max-height: 100vh; 
     object-fit: contain; 
-    transition: transform 0.3s ease-in-out; 
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
 .card:hover .card-img {
@@ -297,7 +304,7 @@ a:hover {
 
   /* ! NAVBAR */ 
 .navbar-nav .nav-link {
-  transition: color 0.3s ease, transform 0.3s ease;
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 .navbar-nav .nav-link:hover {
   color: #0d6efd;
@@ -319,7 +326,8 @@ a:hover {
 
 
 form[role="search"] input {
-  transition: box-shadow 0.3s ease;
+  
+    transition: box-shadow 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
 
@@ -422,9 +430,13 @@ form[role="search"] input {
 /* ! IMAGES */
 
 .article-img {
-    transition: 0.2s ease;
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
 .card:hover .article-img {
     transform: scale(1.1);
+}
+
+::placeholder {
+    color: var(--secondary) !important;
 }
