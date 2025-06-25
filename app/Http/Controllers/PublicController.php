@@ -16,4 +16,8 @@ public function profile() {
     return view('profile.profile', compact('user'));
     
 }
+
+public function sendForm() {
+    return view('profile.form-mail');
+}
 }

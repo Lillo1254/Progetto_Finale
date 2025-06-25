@@ -30,4 +30,6 @@ Route::get('/profile/{user}', [ProfileController::class, 'profile'])->name('prof
 
 Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
 
-Route::post('/revisor/request', [RoleProfile::class, 'sendRequest'])->name('revisor.request')->middleware('auth');
+Route::post('/revisor/request', [RoleProfile::class, 'send'])->name('revisor.request')->middleware('auth');
+
+Route::get('/form-revisor',[PublicController::class,'SendForm'])->name('form.revisor')->middleware('auth');
