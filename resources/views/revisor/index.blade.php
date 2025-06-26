@@ -8,11 +8,11 @@
             </div>
         </div>
     </div>
-    @if ($article_to_check)
+    @if ($articles_to_check)
 
         <div class="rcontainer-fluid justify-content-center pt-5">
             <div class="row justify-content-center">
-                @forelse($article_to_check->take(4) as $article_to_check)
+                @forelse($articles_to_check->take(4) as $article_to_check)
                     <div
                         class="col-6 col-md-4 mb-4 text-center d-flex flex-column align-items-center justify-content-between">
 
