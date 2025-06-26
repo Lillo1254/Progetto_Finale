@@ -5,7 +5,7 @@
     
                 @if (count($articles) > 0)
                 <h1 class="text-center secondary-text display-3 pt-5">
-                    Sei nella Sezione {{ $articles[0]->category->name }}
+                    Sei nella sezione {{ $articles[0]->category->name }}
                 </h1>
                 @else
                 <h4 class="text-center secondary-text mt-2">
