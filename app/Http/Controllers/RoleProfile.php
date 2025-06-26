@@ -17,6 +17,6 @@ class RoleProfile extends Controller
 
         Mail::to('nostramail@404notfound.com')->send(new MailRevisor($user));
 
-        return redirect()->route('profile', ['user' => $user]);
+        return redirect()->route('revisor.profile', $user)->with('success', 'Richiesta accettata con successo');
     }
 }

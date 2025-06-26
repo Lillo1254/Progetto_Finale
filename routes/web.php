@@ -34,4 +34,9 @@ Route::post('/revisor/request', [RoleProfile::class, 'send'])->name('revisor.req
 
 Route::get('/form-revisor',[PublicController::class,'SendForm'])->name('form.revisor')->middleware('auth');
 
+Route::get('/revisor/profile/{user}', [RevisorController::class, 'revisorProfile'])->name('revisor.profile');
+
+Route::get('/accept/{article}', [RevisorController::class, 'accept'])->name('revisor.accept');
+
+Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('revisor.reject');
 
