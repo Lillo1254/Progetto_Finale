@@ -42,7 +42,8 @@
         <div class="row rounded-0 m-0 p-3 secondary-bg">
             <div class="col-9 my-auto">
                 <h3 class="primary-light-text pt-1 m-0">Scopri le migliori offerte sul catalogo</h3>
-                <p class="primary-light-text py-1 m-0">Non perderti questi sconti esclusivi su una gamma di prodotti selezionati dal nostro team.</p>
+                <p class="primary-light-text py-1 m-0">Non perderti questi sconti esclusivi su una gamma di prodotti
+                    selezionati dal nostro team.</p>
             </div>
             <div class="col-3 m-auto text-end">
                 <a class="btn btn-banner w-md-25 px-4 rounded-5" href="{{ route('article.catalogo') }}">Acquista ora</a>
