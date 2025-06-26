@@ -10,7 +10,7 @@ class Home extends Component
     public $articles; 
 
     public function mount() {
-        $this->articles = Article::latest()->take(6)->get(); 
+        $this->articles = Article::where('is_accepted', true)->latest()->take(6)->get(); 
     }
     
     public function render()

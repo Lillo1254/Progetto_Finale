@@ -14,6 +14,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
+
 return view('articles.catalogo');
     }
 
@@ -38,7 +39,11 @@ return view('articles.catalogo');
      */
     public function show(Article $article)
     {
-        return view('articles.show', compact('article'));
+        
+        if($article->is_accepted == true){
+            return view('articles.show', compact('article'));
+        }
+        return redirect()->route('profile', auth()->user())->with('message', 'Il tuo articolo è in fase di revisione.');
     }
 
     /**
@@ -76,7 +81,8 @@ return view('articles.catalogo');
 
     public function showcategory(Category $category) {
         
-        $articles = $category->articles;
+        $articles = $category->articles->where('is_accepted', true)->all();
         return view('articles.categories', compact('articles')); 
     }
+    
 }

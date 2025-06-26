@@ -36,7 +36,7 @@ Route::get('/form-revisor',[PublicController::class,'SendForm'])->name('form.rev
 
 Route::get('/revisor/profile/{user}', [RevisorController::class, 'revisorProfile'])->name('revisor.profile');
 
-Route::get('/accept/{article}', [RevisorController::class, 'accept'])->name('revisor.accept');
+Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('revisor.accept');
 
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('revisor.reject');
 
