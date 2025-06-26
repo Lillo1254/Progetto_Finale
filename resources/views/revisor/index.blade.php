@@ -16,7 +16,7 @@
                 <div class="row justify-content-center">
                     @foreach ($articles_to_check->take(4) as $article)
                         <div class="col-12 col-md-6 col-lg-4 mb-4">
-                            <div class="card p-3">
+                            <div class="card  primary-light-bg p-3">
                                 <h2>{{ $article->title }}</h2>
                                 <p><strong>Autore:</strong> {{ $article->author }}</p>
                                 <p><strong>Categoria:</strong> {{ $article->category->name }}</p>
@@ -36,12 +36,12 @@
                         </div>
 
                         <!-- Modal Accetta -->
-                        <div class="modal fade" id="acceptModal-{{ $article->id }}" tabindex="-1"
+                        <div class="modal fade " id="acceptModal-{{ $article->id }}" tabindex="-1"
                             aria-labelledby="acceptModalLabel-{{ $article->id }}" aria-hidden="true">
                             <div class="modal-dialog">
-                                <div class="modal-content">
+                                <div class="modal-content primary-light-bg">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="acceptModalLabel-{{ $article->id }}">Accetta
+                                        <h1 class="modal-titlefs-5" id="acceptModalLabel-{{ $article->id }}">Accetta
                                             Articolo</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
