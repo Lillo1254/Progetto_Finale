@@ -82,7 +82,7 @@
                             <a class="dropdown-item" href="{{ route('profile', ['user' => auth()->user()]) }}">Profilo utente</a>
                         </li>
                         <li class="nav-item py-1">
-                            <a class="dropdown-item" href="{{ route('profile', ['user' => auth()->user()]) }}">Dashboard revisore</a>
+                            <a class="dropdown-item" href="{{ route('revisor.profile', ['user' => auth()->user()]) }}">Dashboard revisore</a>
                         </li>
                         <li class="nav-item py-1">
                             <a class="dropdown-item" href="">Ordini</a>
