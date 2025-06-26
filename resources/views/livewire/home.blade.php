@@ -11,7 +11,7 @@
     </div>
 
     <div class="container-fluid container">
-        <div class="row justify-content-center justify-content-md-end w-100">
+        <div class="row justify-content-center justify-content-md-end">
             <div class="col-12 col-md-8 primary-bg py-5">
                 <div class="mt-4 d-flex flex-column align-items-center align-items-md-end" data-aos-duration="2000"
                     data-aos-easing="ease-cubic" data-aos="fade-left">
@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        <div class="row justify-content-center justify-content-md-start w-100 mb-5">
+        <div class="row justify-content-center justify-content-md-start mb-5">
             <div class="col-12 col-md-8 primary-bg py-5">
                 <div class="mt-4 d-flex flex-column align-items-center align-items-md-start" data-aos-duration="2000"
                     data-aos-easing="ease-cubic" data-aos="fade-right">
