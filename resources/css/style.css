@@ -440,3 +440,10 @@ form[role="search"] input {
 ::placeholder {
     color: var(--secondary) !important;
 }
+
+
+/* ! CONTAINER SIZING */
+
+.container {
+    max-width: 1360px !important;
+}
