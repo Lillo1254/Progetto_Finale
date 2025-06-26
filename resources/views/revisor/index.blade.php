@@ -95,9 +95,9 @@
                     <h2><em>Nessun articolo da revisionare</em></h2>
                 </div>
             @endif
-            <div class="text-center">
-                <a href="{{ route('revisor.articledecline') }}" class="btn btn-warning">lista articoli rifiutati</a>
-                <a href="{{ route('home') }}" class="btn btn-success rounded-5 px-3 mt-3">Torna all'homepage</a>
+            <div class="text-center mt-3">
+                <a href="{{ route('revisor.articledecline') }}" class="btn btn-form rounded-5 px-3 mx-3">Lista articoli rifiutati</a>
+                <a href="{{ route('home') }}" class="btn btn-success rounded-5 px-3 mx-3">Torna all'homepage</a>
             </div>
         </div>
     </div>
