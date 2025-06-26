@@ -82,7 +82,11 @@
                             <a class="dropdown-item" href="{{ route('profile', ['user' => auth()->user()]) }}">Profilo utente</a>
                         </li>
                         <li class="nav-item py-1">
-                            <a class="dropdown-item" href="{{ route('revisor.profile', ['user' => auth()->user()]) }}">Dashboard revisore</a>
+                            <a class="dropdown-item" href="{{ route('revisor.profile', ['user' => auth()->user()]) }}">Dashboard revisore 
+                                @if ($counter > 0)
+                                <p class="pt-1"><em>Hai {{ $counter }} articoli da revisionare</em></p>                                   
+                                @endif
+                            </a>               
                         </li>
                         <li class="nav-item py-1">
                             <a class="dropdown-item" href="">Ordini</a>
