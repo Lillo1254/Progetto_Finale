@@ -9,8 +9,8 @@ class RevisorController extends Controller
 {
     public function revisorProfile()
     {
-        $articles_to_check = Article::where('is_accepted', null)->orderby('created_at', 'asc')->get();
-        return view('revisor.index', compact('articles_to_check'));
+        $article_to_check = Article::where('is_accepted', null)->orderby('created_at', 'asc')->get();
+        return view('revisor.index', compact('article_to_check'));
     }
     public function accept(Article $article)
     {
