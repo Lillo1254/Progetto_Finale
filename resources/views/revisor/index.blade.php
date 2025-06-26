@@ -16,18 +16,18 @@
                 <div class="row justify-content-center">
                     @foreach ($articles_to_check->take(4) as $article)
                         <div class="col-12 col-md-6 col-lg-4 mb-4">
-                            <div class="card  primary-light-bg p-3">
-                                <h2>{{ $article->title }}</h2>
+                            <div class="card primary-light-bg p-4 rounded-0">
+                                <h2 class="pb-2">{{ $article->title }}</h2>
                                 <p><strong>Autore:</strong> {{ $article->author }}</p>
                                 <p><strong>Categoria:</strong> {{ $article->category->name }}</p>
                                 <p><strong>Stato:</strong> {{ $article->status }}</p>
 
                                 <div class="d-flex justify-content-between mt-3">
-                                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    <button type="button" class="btn btn-success rounded-5 px-3" data-bs-toggle="modal"
                                         data-bs-target="#acceptModal-{{ $article->id }}">
                                         Accetta articolo
                                     </button>
-                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                    <button type="button" class="btn btn-danger rounded-5 px-3" data-bs-toggle="modal"
                                         data-bs-target="#declineModal-{{ $article->id }}">
                                         Rifiuta articolo
                                     </button>
@@ -51,13 +51,12 @@
                                         <strong>{{ $article->title }}</strong>?
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Annulla</button>
                                         <form action="{{ route('revisor.accept', $article) }}" method="POST">
                                             @csrf
                                             @method('PATCH')
-                                            <button class="btn btn-success">Accetta</button>
+                                            <button class="btn btn-success rounded-5 px-3">Accetta</button>
                                         </form>
+                                        <button type="button" class="btn btn-secondary rounded-5 px-3" data-bs-dismiss="modal">Annulla</button>
                                     </div>
                                 </div>
                             </div>
@@ -79,24 +78,26 @@
                                         <strong>{{ $article->title }}</strong>?
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Annulla</button>
                                         <form action="{{ route('revisor.reject', $article) }}" method="POST">
                                             @csrf
                                             @method('PATCH')
-                                            <button class="btn btn-danger">Rifiuta</button>
+                                            <button class="btn btn-danger rounded-5 px-3">Rifiuta</button>
                                         </form>
+                                        <button type="button" class="btn btn-secondary rounded-5 px-3" data-bs-dismiss="modal">Annulla</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     @endforeach
                 </div>
+            @else
+                <div class="text-center my-5">
+                    <h2><em>Nessun articolo da revisionare</em></h2>
+                </div>
             @endif
-
-            <div class="text-center mt-5">
-                <h2><em>Nessun articolo da revisionare</em></h2>
-                <a href="{{ route('home') }}" class="btn btn-success mt-3">Torna all'homepage</a>
+            <div class="text-center">
+                <a href="{{ route('revisor.articledecline') }}" class="btn btn-warning">lista articoli rifiutati</a>
+                <a href="{{ route('home') }}" class="btn btn-success rounded-5 px-3 mt-3">Torna all'homepage</a>
             </div>
         </div>
     </div>
