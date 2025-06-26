@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('articles', function (Blueprint $table) {
-            $table->boolean('is_accepted')->default(false)->after('user_id');
+            $table->boolean('is_accepted')->nullable()->after('user_id');
            
         });
     }
