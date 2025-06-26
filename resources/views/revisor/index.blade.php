@@ -9,9 +9,9 @@
                 </div>
             </div>
 
-            @if ($article_to_check)
+            @if ($articles_to_check)
                 <div class="row justify-content-center">
-                    @foreach ($article_to_check->take(4) as $article)
+                    @foreach ($articles_to_check->take(4) as $article)
                         <div class="col-12 col-md-6 col-lg-4 mb-4">
                             <div class="card p-3">
                                 <h2>{{ $article->title }}</h2>
