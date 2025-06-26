@@ -2,51 +2,97 @@
     <div class="primary-bg min-vh-100">
         <div class="container">
             <div class="row mb-5">
-                <div class="col-12">
-                    <h1 class="secondary-text display-3 pt-5 text-center">Dashboard Revisori</h1>
+                <div class="col-12 text-center">
+                    <h1 class="secondary-text display-3 pt-5">
+                        Dashboard Revisore - {{ Auth::user()->name }}
+                    </h1>
                 </div>
             </div>
-        </div>
-    </div>
-    @if ($articles_to_check)
 
-        <div class="rcontainer-fluid justify-content-center pt-5">
-            <div class="row justify-content-center">
-                @forelse($articles_to_check->take(4) as $article_to_check)
-                    <div
-                        class="col-6 col-md-4 mb-4 text-center d-flex flex-column align-items-center justify-content-between">
+            @if ($article_to_check)
+                <div class="row justify-content-center">
+                    @foreach ($article_to_check->take(4) as $article)
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="card p-3">
+                                <h2>{{ $article->title }}</h2>
+                                <p><strong>Autore:</strong> {{ $article->author }}</p>
+                                <p><strong>Categoria:</strong> {{ $article->category->name }}</p>
+                                <p><strong>Stato:</strong> {{ $article->status }}</p>
 
-
-                        <img src="https://picsum.photos/300" class="img-fluid rounded-4 mb-3" alt="immagine default">
-                        <h1 text-center>{{ $article_to_check->title}}</h1>
-                        <h4 class="text-muted text-center">{{ $article_to_check->category->name }}</h4>
-                        <p class="h6 text-center">{{ $article_to_check->description }}</p>
-                        <div class="d-flex pb-4 justify-content-around">
-                            <form action="" method="POST">
-                                @csrf
-                                <button class="btn btn-danger py-2 px-5 fw-bold">Rifiuta</button>
-                            </form>
-                            <form action="" method="POST">
-                                @csrf
-                                <button class="btn btn-success py-2 px-5 fw-bold">Accetta</button>
-                            </form>
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#acceptModal-{{ $article->id }}">
+                                        Accetta articolo
+                                    </button>
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                        data-bs-target="#declineModal-{{ $article->id }}">
+                                        Rifiuta articolo
+                                    </button>
+                                </div>
+                            </div>
                         </div>
 
-                    </div>
+                        <!-- Modal Accetta -->
+                        <div class="modal fade" id="acceptModal-{{ $article->id }}" tabindex="-1"
+                            aria-labelledby="acceptModalLabel-{{ $article->id }}" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="acceptModalLabel-{{ $article->id }}">Accetta
+                                            Articolo</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Sei sicuro di voler accettare l'articolo
+                                        <strong>{{ $article->title }}</strong>?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Annulla</button>
+                                        <form action="" method="POST">
+                                            @csrf
+                                            <button class="btn btn-success">Accetta</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal Rifiuta -->
+                        <div class="modal fade" id="declineModal-{{ $article->id }}" tabindex="-1"
+                            aria-labelledby="declineModalLabel-{{ $article->id }}" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="declineModalLabel-{{ $article->id }}">Rifiuta
+                                            Articolo</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Sei sicuro di voler rifiutare l'articolo
+                                        <strong>{{ $article->title }}</strong>?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Annulla</button>
+                                        <form action="" method="POST">
+                                            @csrf
+                                            <button class="btn btn-danger">Rifiuta</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            @endif
+
+            <div class="text-center mt-5">
+                <h2><em>Nessun articolo da revisionare</em></h2>
+                <a href="{{ route('home') }}" class="btn btn-success mt-3">Torna all'homepage</a>
             </div>
         </div>
-
-@empty
-    <div class="row justify-content-center align-items-center height-custom text-center">
-        <div class="col-12">
-            <h1 class="fst-italic display-4">
-                Nessun articolo da revisionare
-            </h1>
-            <a href="{{ route('home') }}" class="mt-5 btn btn-success">Torna all'homepage</a>
-        </div>
     </div>
-    @endforelse
-    @endif
-
-
 </x-layout>
