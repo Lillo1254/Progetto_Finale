@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreArticleRequest;
 use App\Http\Requests\UpdateArticleRequest;
 
@@ -88,7 +89,7 @@ return view('articles.catalogo');
     public function search(Request $request)
     {
         $query = $request->input('query');
-        $articles = Article::search($query)->where('is_accepted', true)->paginate(10);
+        $articles = Article::search($query)->paginate(10); 
         return view('articles.search', compact('articles', 'query'));
     }
     

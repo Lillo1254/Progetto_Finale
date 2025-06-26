@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
-use phpDocumentor\Reflection\Types\Boolean;
 
 class Article extends Model
 {
@@ -28,9 +27,12 @@ class Article extends Model
     public function toSearchableArray()
     {
         return [
+            'id' => $this->id,
             'title' => $this->title,
             'price' => $this->price,
             'description' => $this->description,
+            'user_id' => $this->user_id,
+            'category_id' => $this->category_id
         ];                          
     }
 }

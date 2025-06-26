@@ -5,7 +5,7 @@
 
             <!-- ? SEARCH BAR -->
             <div class="col-4 m-auto">
-                <form class="d-flex position-relative align-items-center" role="search">
+                <form class="d-flex position-relative align-items-center" action="{{ route('article.search') }}" method="GET" role="search">
                     <button class="btn position-absolute px-3" type="submit">
                         <i class="bi bi-search"></i>
                     </button>
