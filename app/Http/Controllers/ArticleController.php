@@ -84,5 +84,12 @@ return view('articles.catalogo');
         $articles = $category->articles->where('is_accepted', true)->all();
         return view('articles.categories', compact('articles')); 
     }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+        $articles = Article::search($query)->where('is_accepted', true)->paginate(10);
+        return view('articles.search', compact('articles', 'query'));
+    }
     
 }

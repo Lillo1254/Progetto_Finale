@@ -44,3 +44,5 @@ Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('r
 Route::get('/revisor/table/decline', [RevisorController::class, 'showDecline'])->name('revisor.articledecline');
 Route::patch('/revisor/article/annulla/{article}', [RevisorController::class, 'annulla'])->name('revisor.annulla');
 
+Route::get('/search/article',[ArticleController::class, 'search'])->name('article.search');
+

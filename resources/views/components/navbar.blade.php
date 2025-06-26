@@ -9,7 +9,7 @@
                     <button class="btn position-absolute px-3" type="submit">
                         <i class="bi bi-search"></i>
                     </button>
-                    <input class="form-control ps-5 py-2 primary-bg rounded-5 w-50 white-text" type="search" placeholder="Search" aria-label="Search"/>
+                    <input class="form-control ps-5 py-2 primary-bg rounded-5 w-50 white-text" name="query" type="search" placeholder="Search" aria-label="Search"/>
                 </form>
             </div>
 
