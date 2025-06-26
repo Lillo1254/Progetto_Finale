@@ -9,6 +9,9 @@
                 </div>
             </div>
 
+@if(session()->has('message'))
+<div>{{ session('message') }}</div>
+@endif
             @if ($articles_to_check)
                 <div class="row justify-content-center">
                     @foreach ($articles_to_check->take(4) as $article)
@@ -50,8 +53,9 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Annulla</button>
-                                        <form action="" method="POST">
+                                        <form action="{{ route('revisor.accept', $article) }}" method="POST">
                                             @csrf
+                                            @method('PATCH')
                                             <button class="btn btn-success">Accetta</button>
                                         </form>
                                     </div>
@@ -77,8 +81,9 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Annulla</button>
-                                        <form action="" method="POST">
+                                        <form action="{{ route('revisor.reject', $article) }}" method="POST">
                                             @csrf
+                                            @method('PATCH')
                                             <button class="btn btn-danger">Rifiuta</button>
                                         </form>
                                     </div>

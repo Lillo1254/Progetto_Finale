@@ -1,5 +1,8 @@
 <x-layout>
     <div class="primary-bg min-vh-100 py-5">
+        @if(session()->has('message'))
+<div>{{ session('message') }}</div>
+@endif
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">

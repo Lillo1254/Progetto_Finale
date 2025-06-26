@@ -2,7 +2,7 @@
     <div class="container-fluid primary-bg">
         <div class="row justify-content-center w-100">
 
-            @if ($articles->count() > 0)
+            @if (count($articles) > 0)
                 <h1 class="text-center secondary-text mt-2">
                     Sei nella Sezione {{ $articles[0]->category->name }}
                 </h1>
