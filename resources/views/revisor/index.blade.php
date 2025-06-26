@@ -67,14 +67,14 @@
                         <div class="modal fade" id="declineModal-{{ $article->id }}" tabindex="-1"
                             aria-labelledby="declineModalLabel-{{ $article->id }}" aria-hidden="true">
                             <div class="modal-dialog">
-                                <div class="modal-content">
+                                <div class="modal-content primary-light-bg">
                                     <div class="modal-header">
                                         <h1 class="modal-title fs-5" id="declineModalLabel-{{ $article->id }}">Rifiuta
                                             Articolo</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
-                                    <div class="modal-body">
+                                    <div class="modal-body primary-light-bg">
                                         Sei sicuro di voler rifiutare l'articolo
                                         <strong>{{ $article->title }}</strong>?
                                     </div>
