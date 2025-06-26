@@ -6,6 +6,7 @@
                     <th>Titolo</th>
                     <th>Descrizione</th>
                     <th>Prezzo</th>
+                    <th>Azione</th>
                 </tr>
             </thead>
             <tbody>
@@ -16,7 +17,7 @@
                         <td class="text-dark">{{ $article->description }}</td>
                         <td class="text-dark">{{ $article->price }} €</td>
                         <td>
-                            <form action="{{ route('revisor.annulla', $article) }}" method="POST">
+                            <form action="{{ route('revisor.annulla', ['article' => $article->id]) }}" method="POST">
                                 @csrf
                                 @method('PATCH')
                                 <button type="submit" class="btn btn-warning">

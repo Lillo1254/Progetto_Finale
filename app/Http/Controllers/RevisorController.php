@@ -38,7 +38,8 @@ class RevisorController extends Controller
     }
     public function annulla(Article $article)
     {
-        if ($article->is_accepted === false) {
+        // dd($article->is_accepted);
+        if ($article->is_accepted == false) {
             $article->setAccepted(null);
             return redirect()->back()->with('message', "Hai annullato il rifiuto dell'articolo \"$article->title\"");
         }

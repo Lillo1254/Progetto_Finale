@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use phpDocumentor\Reflection\Types\Boolean;
 
 class Article extends Model
 {
@@ -15,11 +16,9 @@ class Article extends Model
 {
     return $this->belongsTo(Category::class);
 }
-    public function setAccepted($value)
-    {
-        $this->is_accepted = $value;
-        $this->save();
-        return null;
-    }
-
+   public function setAccepted($value)
+{
+    $this->is_accepted = $value;
+    $this->save();
+}
 }
