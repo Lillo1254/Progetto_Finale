@@ -2,6 +2,8 @@
     <div class="container">
 
         <div class="d-flex justify-content-between  alignt-items-center w-100 py-2">
+
+            <!-- ? SEARCH BAR -->
             <div class="col-4 m-auto">
                 <form class="d-flex position-relative align-items-center" role="search">
                     <button class="btn position-absolute px-3" type="submit">
@@ -10,26 +12,36 @@
                     <input class="form-control ps-5 py-2 primary-bg rounded-5 w-50 white-text" type="search" placeholder="Search" aria-label="Search"/>
                 </form>
             </div>
+
+            <!-- ? LOGO -->
             <div class="col-4 m-auto">
                 <a class="navbar-brand m-auto text-center" href="#">
                     <h2 class="display-6 my-auto">BRAND LOGO</h2>
                 </a>
             </div>
+
+            <!-- ? ICONS -->
             <div class="col-4 m-auto d-flex align-items-center justify-content-end">
+
+                <!-- ? CREATE ARTICLE LINK -->
                 <a href="{{ route('article.create') }}" class="text-decoration-none px-2">Vendi</a>
+
                 <div class="buttons">
+                <!-- ? SHOPPING BAG -->
                     <button href="" class="p-1 px-2 pb-2 btn border-none">
                         <i class="bi bi-bag-dash-fill btn-navbar white-text fs-5"></i>
                     </button>   
+
+                    <!-- ? USER PROFILE -->
                     <button class="navbar-toggler pb-2 btn p-1 border-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
                         aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                         <i class="bi bi-person-fill btn-navbar white-text fs-4"></i>
                     </button>
                 </div>
             </div>
-
         </div>
 
+        <!-- ? MAIN LINKS -->
         <div class="d-flex justify-content-between alignt-items-center w-100 py-2">
             <div class="col-12 m-auto">
                 <ul class="navbar-nav justify-content-end flex-grow-1 d-flex flex-row justify-content-center p-0 gap-4">
@@ -57,6 +69,7 @@
             </div>
         </div>
 
+        <!-- ? OFFCANVAS LINKS -->
         <div class="offcanvas offcanvas-end primary-light-bg" tabindex="-1" id="offcanvasDarkNavbar"
             aria-labelledby="offcanvasDarkNavbarLabel">
             <div class="offcanvas-header">
@@ -75,22 +88,33 @@
             <div class="offcanvas-body py-0">
                 <ul class="list-unstyled">                   
                     @auth
-                        <li class="nav-item py-1">
-                            <a class="dropdown-item" href="{{ route('article.create') }}">Inserisci articolo</a>
-                        </li>
-                        <li class="nav-item py-1">
-                            <a class="dropdown-item" href="{{ route('profile', ['user' => auth()->user()]) }}">Profilo utente</a>
-                        </li>
-                        <li class="nav-item py-1">
-                            <a class="dropdown-item" href="{{ route('revisor.profile', ['user' => auth()->user()]) }}">Dashboard revisore 
-                                @if ($counter > 0)
-                                <p class="pt-1"><em>Hai {{ $counter }} articoli da revisionare</em></p>                                   
-                                @endif
-                            </a>               
-                        </li>
+
+                        <!-- ? ORDERS -->
                         <li class="nav-item py-1">
                             <a class="dropdown-item" href="">Ordini</a>
                         </li>
+
+                        <!-- ? CREATE ARTICLE -->
+                        <li class="nav-item py-1">
+                            <a class="dropdown-item" href="{{ route('article.create') }}">Inserisci articolo</a>
+                        </li>
+
+                        <!-- ? USER PROFILE -->
+                        <li class="nav-item py-1">
+                            <a class="dropdown-item" href="{{ route('profile', ['user' => auth()->user()]) }}">Profilo utente</a>
+                        </li>
+
+                        @if (auth()->user()->is_revisor)
+                            <!-- ? REVISOR DASHBOARD -->
+                            <li class="nav-item py-1">
+                                <a class="dropdown-item" href="{{ route('revisor.profile', ['user' => auth()->user()]) }}">Dashboard revisore 
+                                    @if ($counter > 0)
+                                        <p class="pt-1"><em>Hai {{ $counter }} articoli da revisionare</em></p>                                   
+                                    @endif
+                                </a>               
+                            </li>
+                        @endif
+
                     @endauth
                 </ul>
 

@@ -9,7 +9,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-8 ">
-                    <form class="primary-light-bg p-5 rounded-4 form-glow" action="{{ route('register') }}" method="POST">
+                    <form class="primary-light-bg p-5 rounded-0 form-glow" action="{{ route('register') }}" method="POST">
                         @csrf
                         @if ($errors->any())
                             <div class="alert alert-danger m-0 mb-4">
@@ -22,25 +22,25 @@
                         @endif
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
+                            <input type="text" class="form-control rounded-0 primary-bg white-text" id="name" name="name" required value="{{old('name')}}">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Indirizzo Email</label>
-                            <input type="email" class="form-control" id="email" name="email"
-                                aria-describedby="emailHelp" required>
+                            <input type="email" class="form-control rounded-0 primary-bg white-text" id="email" name="email"
+                                aria-describedby="emailHelp" required value="{{old('email')}}">
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" name="password" required>
+                            <input type="password" class="form-control rounded-0 primary-bg white-text" id="password" name="password" required>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-0">
                             <label for="password_confirmation" class="form-label">Conferma Password</label>
-                            <input type="password" class="form-control" id="password_confirmation"
+                            <input type="password" class="form-control rounded-0 primary-bg white-text" id="password_confirmation"
                                 name="password_confirmation" required>
                         </div>
                         <div
                             class="d-flex flex-column flex-lg-row align-items-center justify-content-between m-0 my-auto p-0">
-                            <button type="submit" class="btn btn-form mt-5 px-5">Register</button>
+                            <button type="submit" class="btn btn-form mt-5 px-5 rounded-5">Register</button>
                             <p class="my-0 mt-5 secondary-text">Already have an account? <a
                                     class="form-link secondary-text text-decoration-none"
                                     href="{{ route('login') }}">Login</a></p>
