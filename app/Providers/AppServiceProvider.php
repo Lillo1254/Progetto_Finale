@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -23,6 +24,10 @@ class AppServiceProvider extends ServiceProvider
     {
         View::composer('*', function ($view) {
             $view->with('categories', Category::all());
+        });
+
+        View::composer('*', function ($counter) {
+            $counter->with('counter', Article::where('is_accepted', null)->count());
         });
     }
 }
