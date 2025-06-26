@@ -167,6 +167,20 @@ a:hover {
     background-color: var(--accent) !important;
     color: var(--primary) !important;
 }
+
+
+.btn-banner {
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
+    color: var(--secondary) !important;
+    background-color: var(--primary-light);
+}
+
+.btn-banner:hover {
+    background-color: var(--accent) !important;
+    color: var(--primary-light) !important;
+}
+
+
 .navbar-toggler-icon {
     filter: invert(1);
 }
@@ -340,9 +354,9 @@ form[role="search"] input {
 
 
 .image-home{
-    height: 25vh;
+    height: 540px;
     width: 100%;
-    background:linear-gradient(rgba(11, 0, 28, 0.5), rgba(11, 0, 28, 0.5)),url(https://picsum.photos/500/300);
+    background:linear-gradient(#00000000, #00000000),url('/public/media/306-1024x768.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
