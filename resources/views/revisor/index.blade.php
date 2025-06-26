@@ -96,6 +96,7 @@
                 </div>
             @endif
             <div class="text-center">
+                <a href="{{ route('revisor.articledecline') }}" class="btn btn-warning">lista articoli rifiutati</a>
                 <a href="{{ route('home') }}" class="btn btn-success rounded-5 px-3 mt-3">Torna all'homepage</a>
             </div>
         </div>
