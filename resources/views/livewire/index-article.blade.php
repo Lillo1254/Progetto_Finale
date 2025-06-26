@@ -1,5 +1,5 @@
 <div class="primary-bg min-vh-100">
-    <div class="container">
+    <div class="container pb-3">
         <div class="row mb-5">
             <div class="col-12">
                 <h1 class="secondary-text display-3 pt-5 text-center">All articles</h1>
