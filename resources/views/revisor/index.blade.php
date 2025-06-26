@@ -93,7 +93,7 @@
                     @endforeach
                 </div>
             @endif
-
+<a href="{{ route('revisor.articledecline') }}" class="btn btn-warning">lista articoli rifiutati</a>
             <div class="text-center mt-5">
                 <h2><em>Nessun articolo da revisionare</em></h2>
                 <a href="{{ route('home') }}" class="btn btn-success mt-3">Torna all'homepage</a>

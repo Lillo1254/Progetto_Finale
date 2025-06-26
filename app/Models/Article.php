@@ -19,7 +19,7 @@ class Article extends Model
     {
         $this->is_accepted = $value;
         $this->save();
-        return true;
+        return null;
     }
 
 }

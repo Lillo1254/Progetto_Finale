@@ -26,9 +26,18 @@ class RevisorController extends Controller
             ->back()
             ->with('message', "Hai rifiutato l'articolo  $article->title");
     }
+
+
+    // EXTRA
+
+    public function showDecline() {
+        $articles = Article::where('is_accepted', false)->get();
+        
+            return view('revisor.articledecline', compact('articles'));
+        
+    }
     public function annulla(Article $article)
     {
-
         if ($article->is_accepted === false) {
             $article->setAccepted(null);
             return redirect()->back()->with('message', "Hai annullato il rifiuto dell'articolo \"$article->title\"");
