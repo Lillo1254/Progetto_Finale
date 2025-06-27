@@ -27,7 +27,7 @@
 }
 
 .primary-light-bg{
-    background-color: var(--primary-light);
+    background-color: var(--primary-light)!important;
 }
 
 .primary-light-border{
