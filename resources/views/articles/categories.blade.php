@@ -11,6 +11,7 @@
                 <h4 class="text-center secondary-text mt-2">
                     <em>Nessun articolo presente per questa categoria</em>
                 </h4>
+                <a href="{{ route('article.catalogo') }}" class="btn btn-form rounded-5 px-3 mx-3">Torna al catalogo</a>
                 @endif
             </div>
     
