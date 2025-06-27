@@ -27,7 +27,7 @@
 }
 
 .primary-light-bg{
-    background-color: var(--primary-light) !important;
+    background-color: var(--primary-light);
 }
 
 .primary-light-border{
@@ -338,13 +338,12 @@ a:hover {
 
 
 .offcanvas-body {
-    animation: fadeIn 0.4s ease-out;
+    animation: fadeIn 2s ease-out;
 }
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
 
 form[role="search"] input {
     
@@ -460,9 +459,48 @@ form[role="search"] input {
 
 .container {
     max-width: 1360px !important;
+
 }
 
 .main-bg {
     background: #090018;
     background: linear-gradient( rgba(9, 0, 24, 1) 0%, rgba(123, 108, 148, 1) 50%, rgba(9, 0, 24, 1) 100%);
 }
+
+
+
+/* effetto navbar  */
+
+
+.navbar-bg-blur {
+  transition: background-color 500ms ease, backdrop-filter 1s ease;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none; 
+}
+
+
+.navbar-bg-blur.scrolled {
+  background-color: rgba(9, 0, 24, 0.3); 
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+body input {
+    box-shadow: inset 0px 0px 15px 2px var(--secondary) ;
+}
+
+.hover-move-down {
+  display: inline-block; 
+  transition: transform 0.3s ease;
+}
+
+.hover-move-down:hover {
+  transform: translateY(30%); 
+}
+
+.bg-ul-category{
+    background-color:var(--primary-light) !important;
+    
+}
+
+/* per cambio delle pagine */

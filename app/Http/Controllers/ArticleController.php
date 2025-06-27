@@ -40,7 +40,8 @@ return view('articles.catalogo');
      */
     public function show(Article $article)
     {
-        
+        $article = Article::findOrFail($article->id);
+
         if($article->is_accepted == true){
             return view('articles.show', compact('article'));
         }
@@ -81,7 +82,8 @@ return view('articles.catalogo');
     }
 
     public function showcategory(Category $category) {
-        
+         
+
         $articles = $category->articles->where('is_accepted', true)->all();
         return view('articles.categories', compact('articles')); 
     }
@@ -89,7 +91,7 @@ return view('articles.catalogo');
     public function search(Request $request)
     {
         $query = $request->input('query');
-        $articles = Article::search($query)->paginate(10); 
+        $articles = Article::search($query)->get(); 
         return view('articles.search', compact('articles', 'query'));
     }
     

@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="primary-bg min-vh-100">
+    <div class="main-bg min-vh-100">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12">
@@ -34,7 +34,7 @@
                             class="d-flex flex-column flex-lg-row align-items-center justify-content-between m-0 my-auto p-0">
                             <button type="submit" class="btn btn-form mt-5 rounded-5 px-5">Submit</button>
                             <p class="my-0 mt-5 secondary-text">Don't have an account? <a
-                                    class="form-link secondary-text text-decoration-none"
+                                    class="form-link secondary-text text-decoration-none accent-text"
                                     href="{{ route('register') }}">Sign up</a></p>
                         </div>
                         <div class="left-glow"></div>

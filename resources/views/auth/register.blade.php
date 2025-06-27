@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="primary-bg min-vh-100">
+    <div class="main-bg min-vh-100">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12">
@@ -9,7 +9,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-8 ">
-                    <form class="primary-light-bg p-5 rounded-0 form-glow" action="{{ route('register') }}" method="POST">
+                    <form class="primary-light-bg p-5 rounded-0 form-glow mb-5" action="{{ route('register') }}" method="POST">
                         @csrf
                         @if ($errors->any())
                             <div class="alert alert-danger m-0 mb-4">

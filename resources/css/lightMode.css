@@ -1,0 +1,185 @@
+/* btn light mode  */
+.switch {
+ --button-width: 2.5em;
+ --button-height: 1em;
+ --toggle-diameter: 0.5em;
+ --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+ --toggle-shadow-offset: 10px;
+ --toggle-wider: 3em;
+ --color-grey: #4a3768;
+ --color-green: #d29eff;
+}
+
+.slider {
+ display: inline-block;
+ width: var(--button-width);
+ height: var(--button-height);
+ background-color: var(--color-grey);
+ border-radius: calc(var(--button-height) / 2);
+ position: relative;
+ transition: 0.3s all ease-in-out;
+}
+
+.slider::after {
+ content: "";
+ display: inline-block;
+ width: var(--toggle-diameter);
+ height: var(--toggle-diameter);
+ background-color: #fff;
+ border-radius: calc(var(--toggle-diameter) / 2);
+ position: absolute;
+ top: var(--button-toggle-offset);
+ transform: translateX(var(--button-toggle-offset));
+ box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+ transition: 0.3s all ease-in-out;
+}
+
+.switch input[type="checkbox"]:checked + .slider {
+ background-color: var(--color-green);
+}
+
+.switch input[type="checkbox"]:checked + .slider::after {
+ transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+ box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+}
+
+.switch input[type="checkbox"] {
+ display: none;
+}
+
+.switch input[type="checkbox"]:active + .slider::after {
+ width: var(--toggle-wider);
+}
+
+.switch input[type="checkbox"]:checked:active + .slider::after {
+ transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
+}
+/* fine btn lgiht mode */
+
+
+
+
+body.light-mode {
+    --primary: rgb(188, 164, 214);
+    --primary-light: rgb(220, 209, 241);
+    --secondary: #1c102e;
+    --accent: rgb(223, 173, 36); /* Mantieni accento per coerenza */
+    --danger: hsl(352, 75%, 60%);
+    --success: hsl(165, 45%, 45%);
+    --success-light: hsl(165, 45%, 52%);
+    
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+body.light-mode * {
+    color: var(--secondary) !important;
+}
+
+body.light-mode .primary-light-text{
+    color: var(--primary-light) !important;
+}
+
+body.light-mode .btn-close-white{
+    color: #1c102e !important;
+}
+
+body.light-mode input,
+body.light-mode textarea {
+    color: #000 !important;
+    background-color: #fff !important;
+}
+
+body.light-mode input::placeholder,
+body.light-mode textarea::placeholder {
+    color: var(--primary-light) !important;
+}
+
+body.light-mode .primary-bg {
+    background-color: var(--primary) !important;
+}
+
+body.light-mode .primary-text {
+    color: var(--primary) !important;
+}
+
+body.light-mode .secondary-bg {
+    background-color: var(--secondary) !important;
+}
+
+body.light-mode .secondary-text {
+    color: var(--secondary) !important;
+}
+
+body.light-mode .white-text {
+    color: #000 !important;
+}
+
+body.light-mode .white-bg {
+    background-color: #fff !important;
+}
+
+body.light-mode .btn-form {
+    background-color: var(--accent) !important;
+    color: var(--secondary) !important;
+}
+
+body.light-mode .btn-form:hover {
+    background-color: var(--secondary) !important;
+    color: var(--primary) !important;
+}
+
+body.light-mode .btn-banner {
+    background-color: var(--primary) !important;
+    color: var(--secondary) !important;
+}
+
+body.light-mode .btn-banner:hover {
+    background-color: var(--accent) !important;
+    color: var(--primary) !important;
+}
+
+body.light-mode .page-link {
+    background-color: var(--primary-light) !important;
+    color: var(--secondary) !important;
+}
+
+body.light-mode .page-link-active {
+    background-color: var(--accent) !important;
+    color: var(--primary) !important;
+}
+
+body.light-mode .image-home{
+    height: 540px;
+    width: 100%;
+    background:linear-gradient(rgba(254, 254, 254, 0.342), rgba(248, 248, 248, 0.54) ),url('/public/media/306-1024x768.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.light-mode input{
+        box-shadow: inset 0px 0px 15px 2px var(--secondary) ;
+
+}
+
+body.light-mode .main-bg {
+    background: linear-gradient( rgb(224, 206, 255) 0%,  rgba(9, 0, 24) 48%,  rgba(9, 0, 24) 53%, rgb(224, 206, 255) 100%);
+}
+
+body.light-mode input.primary-bg{
+    background-color: var(--primary-light) !important;
+}
+
+body.light-mode .accent-text{
+    color: var(--accent) !important;
+}
+
+body.light-mode input::placeholder {
+    color: var(--secondary) !important;
+}
+
+body.light-mode .bg-ul-category{
+    background-color:#e2d4f9ef !important;
+    
+}
