@@ -141,10 +141,12 @@
         @auth
           <form method="POST" action="{{ route('logout') }}" class="mt-4">
             @csrf
-            <button type="submit" class="btn btn-form w-100 text-start d-flex align-items-center">
+            
+            <button type="submit" class="btn btn-form w-50  d-flex align-items-center justify-content-center span-logout">
               <i class="bi bi-box-arrow-right primary-text fs-5 pe-2 m-0"></i>
-              <span class="primary-text m-0 p-0">Logout</span>
+              <span class="primary-text m-0 p-0 ">Logout</span>
             </button>
+            
           </form>
         @endauth
         <label class="switch d-flex align-items-center"> 

@@ -1,9 +1,11 @@
 <x-layout>
+    
     <div class="primary-bg min-vh-100">
         <div class="container primary-bg pb-5 ">
             <div class="row justify-content-center w-100 mb-5">
     
                 @if (count($articles) > 0)
+                
                 <h1 class="text-center secondary-text display-3 pt-5">
                     Sei nella sezione {{ $articles[0]->category->name }}
                 </h1>
