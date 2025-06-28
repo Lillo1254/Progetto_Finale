@@ -71,7 +71,7 @@
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
           @auth
-            Ciao <a href="{{ route('profile', ['user' => auth()->user()]) }}" class="text-decoration-none">{{ Auth::user()->name }}</a>
+            Ciao <a href="{{ route('profile', ['user' => auth()->user()]) }}" class="text-decoration-none ">{{ Auth::user()->name }}</a>
           @else
             Benvenuto
           @endauth
@@ -81,7 +81,7 @@
         </a>
       </div>
 
-      <div class="offcanvas-body py-0">
+      <div class="offcanvas-body py-0 pe-0">
         <ul class="list-unstyled">
           <!-- NAV Links in mobile -->
           <li class="nav-item py-1">
@@ -137,23 +137,26 @@
           @endguest
         </ul>
 
-        <!-- Logout -->
-        @auth
-          <form method="POST" action="{{ route('logout') }}" class="mt-4">
-            @csrf
-            
-            <button type="submit" class="btn btn-form w-50  d-flex align-items-center justify-content-center span-logout">
-              <i class="bi bi-box-arrow-right primary-text fs-5 pe-2 m-0"></i>
-              <span class="primary-text m-0 p-0 ">Logout</span>
-            </button>
-            
-          </form>
-        @endauth
         <label class="switch d-flex align-items-center"> 
             <input type="checkbox">
             <span class="slider"></span>
             <span class="ms-2">Theme Mode</span>
           </label>
+        <!-- Logout -->
+        @auth
+          <form method="POST" action="{{ route('logout') }}" class="mt-4">
+            @csrf
+            <div class="h-100 d-flex align-items-end">
+              <button type="submit" class="btn btn-form w-50   d-flex align-items-center justify-content-center span-logout">
+                <i class="bi bi-box-arrow-right primary-text fs-5 pe-2 m-0"></i>
+                <span class="primary-text m-0 p-0 ">Logout</span>
+              </button>
+
+            </div>
+            
+          </form>
+        @endauth
+        
       </div>
     </div>
   </div>

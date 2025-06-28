@@ -487,6 +487,10 @@ form[role="search"] input {
   -webkit-backdrop-filter: blur(10px);
 }
 
+body {
+    overflow-x: hidden;
+}
+
 body input {
     box-shadow: inset 0px 0px 15px 2px var(--secondary) ;
 }
@@ -505,4 +509,25 @@ body input {
     
 }
 
-/* per cambio delle pagine */
+/* per cambio della scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+ 
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-light);
+  border-radius: 10px;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 10px;
+  border: 1px solid var(--primary-light);
+   box-shadow: 0px 0px 50px 25px var(--secondary) ;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent);
+}
