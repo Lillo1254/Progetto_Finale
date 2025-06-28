@@ -88,6 +88,7 @@ body.light-mode input,
 body.light-mode textarea {
     color: #000 !important;
     background-color: #fff !important;
+    box-shadow: inset 0px 0px 15px 2px var(--secondary) ;
 }
 
 body.light-mode input::placeholder,

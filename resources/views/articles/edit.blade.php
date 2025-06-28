@@ -9,9 +9,10 @@
 
             <div class="row justify-content-center mb-5">
                 <div class="col-12 col-md-10 col-lg-8">
-                    <form class="primary-light-bg p-5 rounded-4" action="{{route('article.update', $article)}}" method="POST">
-                         @csrf
-                        @method('PUT') 
+                    <form class="primary-light-bg p-5 rounded-4" action="{{ route('article.update', $article) }}"
+                        method="POST">
+                        @csrf
+                        @method('PUT')
 
                         @if ($errors->any())
                             <div class="alert alert-danger m-0 mb-4">
@@ -22,28 +23,40 @@
                                 </ul>
                             </div>
                         @endif
-                       <div class="mb-3">
+                        <div class="mb-3">
                             <label for="title" class="form-label">Titolo</label>
                             <input type="text" name="title" id="title" class="form-control"
-                                   value="{{ old('title', $article->title) }}" required>
+                                value="{{ old('title', $article->title) }}" required>
                         </div>
-                       <div class="mb-3">
-                           <label for="price" class="form-label">Prezzo</label>
-                           <input type="number" name="price" id="price" class="form-control"
-                                  value="{{ old('price', $article->price) }}" required>
-                       </div>
-                       <div class="mb-3">
-                           <label for="description" class="form-label">Descrizione</label>
-                           <textarea name="description" id="description" class="form-control"
-                                     required>{{ old('description', $article->description) }}</textarea>
-                       </div>
-                         <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between">
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Prezzo</label>
+                            <input type="number" name="price" id="price" class="form-control"
+                                value="{{ old('price', $article->price) }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Descrizione</label>
+                            <textarea name="description" id="description" class="form-control" required>{{ old('description', $article->description) }}</textarea>
+                        </div>
+
+                        @foreach ($categories as $category)
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="category_id"
+                                    id="category-{{ $category->id }}" value="{{ $category->id }}"
+                                    wire:model="category_id">
+                                <label class="form-check-label" for="category-{{ $category->id }}">
+                                    {{ $category->name }}
+                                </label>
+                            </div>
+                        @endforeach
+
+                        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between">
                             <button type="submit" class="btn btn-success mt-4 px-4">Salva modifiche</button>
 
 
-                            <button type="button" class="btn btn-danger mt-4 px-4 " data-bs-toggle="modal" data-bs-target="#deleteModal">
-  Elimina articolo
-</button>
+                            <button type="button" class="btn btn-danger mt-4 px-4 " data-bs-toggle="modal"
+                                data-bs-target="#deleteModal">
+                                Elimina articolo
+                            </button>
                             <a href="{{ route('article.catalogo') }}" class="btn btn-form mt-4 px-5">Annulla</a>
                         </div>
                     </form>
@@ -53,32 +66,32 @@
 
 
 
-                            {{-- modale --}}
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+        {{-- modale --}}
+        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
 
-      <div class="modal-header">
-        <h5 class="modal-title" id="deleteModalLabel">Conferma eliminazione</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
-      </div>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">Conferma eliminazione</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+                    </div>
 
-      <div class="modal-body">
-        Sei sicuro di voler eliminare questo articolo? Questa azione non può essere annullata.
-      </div>
+                    <div class="modal-body">
+                        Sei sicuro di voler eliminare questo articolo? Questa azione non può essere annullata.
+                    </div>
 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
 
-        <form action="{{ route('article.destroy', $article) }}" method="POST">
-          @csrf
-          @method('DELETE')
-          <button type="submit" class="btn btn-danger">Conferma elimina</button>
-        </form>
-      </div>
+                        <form action="{{ route('article.destroy', $article) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Conferma elimina</button>
+                        </form>
+                    </div>
 
-    </div>
-  </div>
-</div>
-{{-- fine mdoale --}}
+                </div>
+            </div>
+        </div>
+        {{-- fine mdoale --}}
 </x-layout>

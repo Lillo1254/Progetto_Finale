@@ -25,6 +25,7 @@ class UpdateArticleRequest extends FormRequest
             'title' => 'required|string|max:255',
             'price' => 'required|numeric',
             'description' => 'required|string',
+            'category_id' => 'required|exists:categories,id'
         ];
     }
 }

@@ -31,7 +31,7 @@
                         <label for="title" class="form-label">Titolo</label>
                         <input type="text" class="form-control primary-bg white-text rounded-0" id="title" wire:model="title" required>
                         @error('title')
-                            <span class="text-danger">{{ $message }}</span>
+                            <span class="text-danger">{{ $messages }}</span>
                         @enderror
                     </div>
 
@@ -40,7 +40,7 @@
                         <label for="price" class="form-label">Prezzo</label>
                         <input type="number" class="form-control primary-bg white-text rounded-0" id="price" wire:model="price" step="0.01" required>
                         @error('price')
-                            <span class="text-danger">{{ $message }}</span>
+                            <span class="text-danger">{{ $messages }}</span>
                         @enderror
                     </div>
 
@@ -49,7 +49,7 @@
                         <label for="description" class="form-label">Descrizione</label>
                         <textarea class="form-control primary-bg white-text rounded-0 text-dark" id="description" wire:model="description" required></textarea>
                         @error('description')
-                            <span class="text-danger">{{ $message }}</span>
+                            <span class="text-danger">{{ $messages }}</span>
                         @enderror
                     </div>
 

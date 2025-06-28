@@ -337,6 +337,9 @@ a:hover {
 
 
 .offcanvas-body {
+    min-height: 100vh;
+    background-color: var(--primary-light);
+    z-index: 999;
     animation: fadeIn 0.5s ease-out;
 }
 @keyframes fadeIn {
@@ -479,7 +482,7 @@ form[role="search"] input {
 
 
 .navbar-bg-blur.scrolled {
-  background-color: rgba(9, 0, 24, 0.3); 
+  background-color: rgba(9, 0, 24, 0.3) !important; 
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(10px);
 }

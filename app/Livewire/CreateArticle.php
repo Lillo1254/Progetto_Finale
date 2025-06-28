@@ -17,8 +17,15 @@ class CreateArticle extends Component
     protected $rules = [
         'title' => 'required|string|max:255',
         'price' => 'required|numeric|min:0',
-        'description' => 'required|string',
+        'description' => 'required|string|max:500',
         'category_id' => 'required|exists:categories,id',  
+    ];
+
+    protected $messages = [
+        'title.required' => 'Il titolo dell\'articolo è obbligatorio.',
+        'price.required' => 'Il prezzo dell\'articolo è obbligatorio e non deve essere minore di 0.',
+        'description.required' => 'La descrizione dell\'articolo è obbligatoria e deve contere almeno 8 caratteri ed un massimo di 500.',
+        'category_id.required' => 'Seleziona una categoria di appartenenza.',
     ];
 
     public function create()
