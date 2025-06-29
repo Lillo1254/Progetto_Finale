@@ -38,16 +38,21 @@
                             <textarea name="description" id="description" class="form-control" required>{{ old('description', $article->description) }}</textarea>
                         </div>
 
-                        @foreach ($categories as $category)
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="category_id"
-                                    id="category-{{ $category->id }}" value="{{ $category->id }}"
-                                    wire:model="category_id">
-                                <label class="form-check-label" for="category-{{ $category->id }}">
-                                    {{ $category->name }}
-                                </label>
-                            </div>
-                        @endforeach
+
+                        <div class="row justify-content-center ">
+                            @foreach ($categories as $category)
+                                <div class="col-6 col-md-4 col-lg-4 ">
+                                    <div class="form-check ms-5">
+                                        <input class="form-check-input  " type="radio" name="category_id"
+                                            id="category-{{ $category->id }}" value="{{ $category->id }}"
+                                            {{ old('category_id', $article->category_id ?? '') == $category->id ? 'checked' : '' }}>
+                                        <label class="form-check-label  " for="category-{{ $category->id }}">
+                                            {{ $category->name }}
+                                        </label>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
 
                         <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between">
                             <button type="submit" class="btn btn-success mt-4 px-4">Salva modifiche</button>
