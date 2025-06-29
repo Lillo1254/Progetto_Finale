@@ -1,20 +1,19 @@
-<x-layout titlePage="Ricerca per {{ $query }}">
+<x-layout titlePage="Hai cercato : {{ $query }}">
     <div class="container-fluid primary-bg">
     
         <h1 class="text-center secondary-text display-5">risultati per "{{ $query }}"</h1>
         <div class="row justify-content-center">
 @forelse ($articles as $article)
                         <div class="col-12 col-md-6 col-lg-4 mb-4">
-                            <div
-                                class="card position-relative p-0 border-0 primary-light-bg rounded-0 h-100 overflow-hidden">
+                            <div class="card position-relative p-0 border-0 primary-light-bg rounded-0 h-100 overflow-hidden">
     
-                                <!-- ? IMAGE -->
+                                <!--  IMAGE -->
                                 <a href="{{ route('article.show', $article) }}" class="card-link z-1">
                                     <img src="https://picsum.photos/id/{{ $article->id }}/600/500" alt=""
                                         class="article-img rounded-0 z-1 p-0 m-0 w-100">
                                 </a>
     
-                                <!-- ? CARD BODY -->
+                                <!--  CARD BODY -->
                                 <div class="card-body p-4 z-2 primary-light-bg pb-0">
                                     <a href="{{ route('article.show', $article) }}"
                                         class="card-link card-title z-1 text-decoration-none white-text fw-light fs-3">{{ $article->title }}</a>
@@ -23,7 +22,7 @@
                                         class="text-decoration-none card-text secondary-text">{{ $article->category->name }}</a>
                                 </div>
     
-                                <!-- ? CARD BUTTONS -->
+                                <!--  CARD BUTTONS -->
                                 @auth
                                     @if ($article->user_id === auth()->id())
                                         <hr class="secondary-text">
