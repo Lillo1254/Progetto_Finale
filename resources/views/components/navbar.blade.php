@@ -1,55 +1,64 @@
-<nav class="navbar sticky-top primary-light-bg secondary-text navbar-bg-blur">
+<nav class="navbar primary-light-bg secondary-text navbar-bg-blur">
   <div class="container">
     
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center w-100 py-2 gap-2">
+    <div class="d-flex flex-row justify-content-between align-items-center w-100 gap-2">
       <!-- Search -->
-      <div class="w-100 w-md-33">
+      <div class="w-100 d-none d-md-block">
         <form class="d-flex position-relative align-items-center" action="{{ route('article.search') }}" method="GET">
-          <button class="btn position-absolute px-3" type="submit">
+          <button class="btn position-absolute btn-navbar px-3" type="submit">
             <i class="bi bi-search"></i>
           </button>
-          <input class="form-control ps-5 py-2 primary-bg rounded-5 w-100 white-text input-search-custom" name="query" type="search" placeholder="Cerca" aria-label="Search" />
+          <input class="form-control ps-5 py-2 primary-bg rounded-5 white-text  search-bar input-search-custom" name="query" type="search" placeholder="Cerca" aria-label="Search" />
         </form>
       </div>
 
       <!-- Logo -->
-      <div class="w-100 w-md-33 text-center">
-        <a class="navbar-brand text-center" href="#">
-          <img src="{{ asset('media/logodasvg-removebg-preview.png') }}"  height="80px" alt="">
+      <div class="w-100 text-start text-md-center">
+        <a class="navbar-brand m-0" href="#">
+          <img src="{{ asset('media/logodasvg-removebg-preview.png') }}" class="logo" alt="">
         </a>
       </div>
 
       <!-- Icons -->
-      <div class="w-100 w-md-33 d-flex align-items-center justify-content-md-end justify-content-center gap-2">
-        <a href="{{ route('article.create') }}" class="text-decoration-none px-2">Vendi</a>
+      <div class="w-100 w-md-33 d-flex align-items-center justify-content-end gap-2">
+        <a href="{{ route('article.create') }}" class="text-decoration-none p-1 px-2 pb-2 btn-navbar btn border-0">
+          <i class="bi bi-plus-square-fill white-text fs-5"></i>
+        </a>
 
-        <button class="p-1 px-2 pb-2 btn border-none">
-          <i class="bi bi-bag-dash-fill btn-navbar white-text fs-5"></i>
+        <button class="p-1 px-2 pb-2 btn-navbar btn border-0">
+          <i class="bi bi-bag-dash-fill white-text fs-5"></i>
         </button>
 
-        <button class="navbar-toggler pb-2 btn p-1 border-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-          <i class="bi bi-person-fill btn-navbar white-text fs-4"></i>
+        <button class="navbar-toggler btn p-1 pb-2 btn-navbar person-icon-correction border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+          <i class="bi bi-person-fill white-text"></i>
         </button>
-
-        
-          
-     </div>
-
       </div>
+
     </div>
 
+      <!-- Search MOBILE-->
+      <div class="w-100 w-md-33 d-block d-md-none pb-1">
+        <form class="d-flex position-relative align-items-center" action="{{ route('article.search') }}" method="GET">
+          <input class="form-control ps-3 py-2 primary-bg rounded-5 w-100 white-text input-search-custom" name="query" type="search" placeholder="Cerca" aria-label="Search" />
+          <button class="btn position-absolute end-0 px-3" type="submit">
+            <i class="bi bi-search btn-navbar"></i>
+          </button>
+        </form>
+      </div>
+  </div>
+
     <!-- MAIN NAVBAR -->
-    <div class="d-none d-md-flex justify-content-between align-items-center w-100 py-2">
+    <div class="d-none d-md-flex justify-content-between align-items-center w-100 pb-2">
       <div class="col-12 m-auto">
         <ul class="navbar-nav d-flex flex-row justify-content-center p-0 gap-4">
           <li class="nav-item">
-            <a class="text-decoration-none active hover-move-down" href="{{ route('home') }}">Home</a>
+            <a class="text-decoration-none active" href="{{ route('home') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="text-decoration-none hover-move-down" href="{{ route('article.catalogo') }}">Catalogo</a>
+            <a class="text-decoration-none" href="{{ route('article.catalogo') }}">Catalogo</a>
           </li>
           <li class="nav-item dropdown position-relative">
-            <a class="text-decoration-none dropdown-toggle hover-move-down" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="text-decoration-none dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categorie
             </a>
             <ul class="dropdown-menu rounded-0 primary-light-bg position-absolute bg-ul-category">
@@ -77,20 +86,20 @@
           @endauth
         </h5>
         <a type="button" class="bg-transparent ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
-          <i class="bi bi-box-arrow-right"></i>
+          <i class="bi bi-x-lg"></i>
         </a>
       </div>
 
-      <div class="offcanvas-body py-0 pe-0">
+      <div class="offcanvas-body py-0">
         <ul class="list-unstyled">
           <!-- NAV Links in mobile -->
-          <li class="nav-item py-1">
+          <li class="nav-item py-1 d-block d-md-none">
             <a class="dropdown-item" href="{{ route('home') }}">Home</a>
           </li>
-          <li class="nav-item py-1">
+          <li class="nav-item py-1 d-block d-md-none">
             <a class="dropdown-item" href="{{ route('article.catalogo') }}">Catalogo</a>
           </li>
-          <li class="nav-item py-1 dropdown position-relative">
+          <li class="nav-item py-1 dropdown position-relative d-block d-md-none">
             <a class="dropdown-toggle dropdown-item " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categorie
             </a>
@@ -147,7 +156,7 @@
           <form method="POST" action="{{ route('logout') }}" class="mt-4">
             @csrf
             <div class="h-100 d-flex align-items-end">
-              <button type="submit" class="btn btn-form w-50   d-flex align-items-center justify-content-center span-logout">
+              <button type="submit" class="btn btn-form w-100 d-flex align-items-center justify-content-center span-logout">
                 <i class="bi bi-box-arrow-right primary-text fs-5 pe-2 m-0"></i>
                 <span class="primary-text m-0 p-0 ">Logout</span>
               </button>

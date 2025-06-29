@@ -150,13 +150,13 @@ body.light-mode .page-link-active {
     color: var(--primary) !important;
 }
 
-body.light-mode .image-home{
-    height: 540px;
-    width: 100%;
-    background:linear-gradient(rgba(254, 254, 254, 0.342), rgba(248, 248, 248, 0.54) ),url('/public/media/306-1024x768.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
+body.light-mode .header-text {
+    color: var(--primary-light) !important;
+}
+
+body.light-mode .image-home h6 {
+    color: #fff !important;
 }
 
 body.light-mode input{
