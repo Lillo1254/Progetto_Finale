@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout titlePage="Profilo Utente - {{ auth()->user()->name }}">
     <div class="primary-bg min-vh-100 py-3">
         @if (session()->has('message'))
             <div class="text-center text-success fw-bold">{{ session('message') }}</div>

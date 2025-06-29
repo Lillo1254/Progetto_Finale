@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout titlePage="Modifica Articolo">
     <div class="primary-bg min-vh-100">
         <div class="container">
             <div class="row mb-5">

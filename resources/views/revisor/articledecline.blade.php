@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout titlePage="Articoli Rifiutati">
     <div class="primary-bg min-vh-100 py-3">
         <div class="container">
             <div class="row justify-content-center">

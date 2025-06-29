@@ -16,7 +16,7 @@ class ArticleController extends Controller
     public function index()
     {
 
-return view('articles.catalogo');
+        return view('articles.catalogo');
     }
 
     /**
@@ -24,7 +24,7 @@ return view('articles.catalogo');
      */
     public function create()
     {
-        return view ('articles.create');
+        return view('articles.create');
     }
 
     /**
@@ -42,7 +42,7 @@ return view('articles.catalogo');
     {
         $article = Article::findOrFail($article->id);
 
-        if($article->is_accepted == true){
+        if ($article->is_accepted == true) {
             return view('articles.show', compact('article'));
         }
         return redirect()->route('profile', auth()->user())->with('message', 'Il tuo articolo è in fase di revisione.');
@@ -81,18 +81,19 @@ return view('articles.catalogo');
         return redirect()->route('article.catalogo')->with('success', 'Articolo eliminato con successo.');
     }
 
-    public function showcategory(Category $category) {
-         
+    public function showcategory(Category $category)
+    {
 
-        $articles = $category->articles->where('is_accepted', true)->all();
-        return view('articles.categories', compact('articles')); 
+
+        $articles = $category->articles()->where('is_accepted', true)->get();
+        $categoryName = $category->name;
+        return view('articles.categories', compact('articles', 'categoryName'));
     }
 
     public function search(Request $request)
     {
         $query = $request->input('query');
-        $articles = Article::search($query)->get(); 
+        $articles = Article::search($query)->get();
         return view('articles.search', compact('articles', 'query'));
     }
-    
 }

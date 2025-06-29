@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout titlePage="Ricerca per {{ $query }}">
     <div class="container-fluid primary-bg">
     
         <h1 class="text-center secondary-text display-5">risultati per "{{ $query }}"</h1>

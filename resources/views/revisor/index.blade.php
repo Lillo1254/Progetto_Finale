@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout titlePage="Dashboard Revisore">
     <div class="primary-bg min-vh-100">
         <div class="container">
             <div class="row mb-5">

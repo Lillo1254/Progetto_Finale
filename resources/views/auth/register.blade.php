@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout titlePage="Registrazione">
 
     <div class="main-bg min-vh-100">
         <div class="container">

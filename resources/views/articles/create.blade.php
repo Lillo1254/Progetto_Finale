@@ -1,4 +1,4 @@
-<x-layout> 
+<x-layout titlePage="Crea Articolo"> 
  
     <livewire:create-article />
   

@@ -445,10 +445,12 @@ form[role="search"] input {
 /* ! IMAGES */
 
 .article-img {
+    filter: grayscale(70%);
     transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
 .card:hover .article-img {
+    filter: grayscale(0);
     transform: scale(1.1);
 }
 

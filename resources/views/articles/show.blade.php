@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout titlePage="{{ $article->title }}">
     <div class="primary-bg min-vh-100 py-5">
         <div class="container">
             <div class="row justify-content-center p-3">

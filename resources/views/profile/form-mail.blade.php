@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout titlePage="Richiedi di diventare revisore">
     <div class="primary-bg min-vh-100 d-flex flex-column justify-content-start pb-5">
         <div class="container">
             <div class="row justify-content-center">
