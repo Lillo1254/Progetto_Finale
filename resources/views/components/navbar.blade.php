@@ -15,7 +15,7 @@
       <!-- Logo -->
       <div class="w-100 w-md-33 text-center">
         <a class="navbar-brand text-center" href="#">
-          <h2 class="display-6 my-auto">BRAND LOGO</h2>
+          <img src="{{ asset('media/logodasvg-removebg-preview.png') }}"  height="80px" alt="">
         </a>
       </div>
 
