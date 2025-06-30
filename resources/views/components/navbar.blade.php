@@ -37,9 +37,13 @@
                     aria-controls="offcanvasDarkNavbar">
                     <i class="bi bi-person-fill"></i>
 
-                    @if ($counter > 0)
-                        <div class="notifications"></div>
-                    @endif
+                    @auth
+                        @if (auth()->user()->is_revisor)
+                            @if ($counter > 0)
+                                <div class="notifications"></div>
+                            @endif
+                        @endif
+                    @endauth
 
                 </button>
             </div>
@@ -163,8 +167,12 @@
                     @guest
                         <h5 class="text-start pb-1">Accedi o Registrati</h5>
                         <div class="d-flex gap-3">
-                            <a href="{{ route('login') }}" class="btn btn-success w-50 rounded-5">Login</a>
-                            <a href="{{ route('register') }}" class="btn btn-form w-50 rounded-5">Registrati</a>
+                            <a href="{{ route('login') }}" class="btn btn-success w-50 rounded-5">
+                                <p class="m-auto p-0 px-2 dark-text">Login</p>
+                            </a>
+                            <a href="{{ route('register') }}" class="btn btn-form w-50 rounded-5">
+                                <p class="m-auto p-0 px-2 dark-text">Registrati</p>
+                            </a>
                         </div>
                     @endguest
                 </ul>
