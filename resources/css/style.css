@@ -8,6 +8,7 @@
     --danger: hsl(352, 62%, 53%);
     --success: hsl(165, 60%, 35%);
     --success-light: hsl(165, 60%, 42%);
+    --dark: #090018;
 }
 
 .primary-text{
@@ -20,6 +21,18 @@
 
 .primary-border{
     border-color: var(--primary) !important;
+}
+
+.dark-text{
+    color: var(--dark) !important;
+}
+
+.dark-bg{
+    background-color: var(--dark) !important;
+}
+
+.dark-border{
+    border-color: var(--dark) !important;
 }
 
 .primary-light-text{
@@ -143,7 +156,6 @@ textarea:focus {
 
 .footer-icon:hover i {
     color: var(--accent) !important;
-    /* text-shadow: 0px 0px 5px var(--secondary); */
 }
 
 a {
@@ -168,6 +180,17 @@ a:hover {
     color: var(--primary) !important;
 }
 
+.btn-home {
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
+    color: var(--primary) !important;
+    background-color: var(--secondary);
+}
+
+.btn-home:hover {
+    background-color: var(--accent) !important;
+    color: var(--primary) !important;
+}
+
 
 .btn-banner {
     transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
@@ -187,25 +210,26 @@ a:hover {
 
 .btn-delete {
     transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
-    color: var(--white) !important;
+    color: #000 !important;
     background-color: var(--danger);
 }
 
 .btn-delete:hover {
     background-color: #ff2441 !important;
     
-    color: var(--white) !important;
+    color: #000 !important;
 }
 
 .btn-success {
     background-color: var(--success) !important;
     border: none !important;
     transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
+    color: #000 !important;
 }
 
 .btn-success:hover {
     background-color: var(--success-light) !important;
-    color: #fff !important;
+    color: #000 !important;
 }
 
 .btn-navbar i {
@@ -214,6 +238,16 @@ a:hover {
 
 .btn-navbar:hover i {
     color: var(--accent) !important;
+}
+
+.btn-secondary {
+    color: var(--dark) !important;
+    background-color: var(--secondary);
+}
+
+.btn-secondary:hover {
+    color: var(--dark) !important;
+    background-color: var(--accent);
 }
 
 
@@ -307,12 +341,6 @@ a:hover {
 
 
 /* ! NAVBAR */ 
-.navbar-nav .nav-link {
-    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
-}
-.navbar-nav .nav-link:hover {
-    color: #0d6efd;
-}
 
 .navbar-toggler:focus {
     box-shadow: none !important;
@@ -320,6 +348,18 @@ a:hover {
 
 .bi-person-fill {
     font-size: 1.6rem;
+}
+
+.notifications {
+    width:8px;
+    height:8px;
+    background-color: var(--danger);
+    position: absolute;
+    top:0px;
+    right: 2px;
+    border-radius: 8px;
+    border: 2px solid var(--primary-light);
+    box-sizing: content-box;
 }
 
 .person-icon-correction {
@@ -345,14 +385,19 @@ a:hover {
     z-index: 999;
     animation: fadeIn 0.5s ease-out;
 }
+
+.nav-bar {
+    position: sticky;
+    top:0%;
+    z-index: 100;
+    padding-bottom: 8px;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-form[role="search"] input {
-    
-    /* transition: box-shadow 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000); */
 }
 
 
@@ -432,8 +477,14 @@ form[role="search"] input {
     z-index: 1;
 }
 
-.navbarclass{
-    height: calc(var(--navbar-height) + 1rem);
+.form-control {
+    color: var(--white) !important;
+    background-color: var(--primary) !important;
+    /* box-shadow: inset 0px 0px 15px 2px var(--secondary) ; */
+}
+
+.form-control::placeholder {
+    color: var(--secondary) !important;
 }
 
 @keyframes move-right {
@@ -460,13 +511,11 @@ form[role="search"] input {
 /* ! IMAGES */
 
 .article-img {
-    filter: grayscale(70%);
     transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
 .card:hover .article-img {
-    filter: grayscale(0);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 ::placeholder {
@@ -480,13 +529,6 @@ form[role="search"] input {
     max-width: 1360px !important;
 
 }
-
-.main-bg {
-    background: #090018;
-    background: linear-gradient( rgba(9, 0, 24, 1) 0%, rgba(123, 108, 148, 1) 50%, rgba(9, 0, 24, 1) 100%);
-}
-
-
 
 /* effetto navbar  */
 

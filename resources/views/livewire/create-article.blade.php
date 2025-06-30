@@ -29,7 +29,7 @@
                     <!-- Titolo -->
                     <div class="mb-3">
                         <label for="title" class="form-label">Titolo</label>
-                        <input type="text" class="form-control primary-bg white-text rounded-0" id="title"
+                        <input type="text" class="form-control rounded-0" id="title"
                             wire:model="title" required>
                         @error('title')
                             <span class="text-danger">{{ $messages }}</span>
@@ -39,7 +39,7 @@
                     <!-- Prezzo -->
                     <div class="mb-3">
                         <label for="price" class="form-label">Prezzo</label>
-                        <input type="number" class="form-control primary-bg white-text rounded-0" id="price"
+                        <input type="number" class="form-control rounded-0" id="price"
                             wire:model="price" step="0.01" required>
                         @error('price')
                             <span class="text-danger">{{ $messages }}</span>
@@ -49,16 +49,18 @@
                     <!-- Descrizione -->
                     <div class="mb-3">
                         <label for="description" class="form-label">Descrizione</label>
-                        <textarea class="form-control primary-bg white-text rounded-0 text-dark" id="description" wire:model="description"
+                        <textarea class="form-control rounded-0 text-dark" id="description" wire:model="description"
                             required></textarea>
                         @error('description')
                             <span class="text-danger">{{ $messages }}</span>
                         @enderror
                     </div>
-
+                    
+                    <!-- Categoria -->
+                    <label for="category" class="form-label">Categoria</label>
                     <div class="row justify-content-center ">
                         @foreach ($categories as $category)
-                            <div class="col-6 col-md-4 col-lg-4 ">
+                            <div class="col-6">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="category_id"
                                         id="category-{{ $category->id }}" value="{{ $category->id }}"
@@ -74,7 +76,7 @@
                     <!-- Pulsante di invio -->
                     <div
                         class="d-flex flex-column flex-lg-row align-items-center justify-content-between m-0 my-auto p-0">
-                        <button type="submit" class="btn btn-form mt-5 px-4 rounded-5">Crea Articolo</button>
+                        <button type="submit" class="btn btn-form mt-4 px-4 rounded-5">Crea Articolo</button>
                     </div>
                 </form>
             </div>

@@ -36,14 +36,24 @@
                                     <h5 class="card-text fw-light pt-2 fs-6">{{ $article->price }} €</h5>
                                     <a href="{{ route('category.articles', $article->category) }}"
                                         class="text-decoration-none card-text secondary-text">{{ $article->category->name }}</a>
+
+                                
+                                    @guest
+                                        <div class="mb-3"></div>
+                                    @endguest
+                            
+                                    @auth
+                                        @if ($article->user_id != auth()->id())
+                                            <div class="mb-3"></div>
+                                        @endif
+                                    @endauth
                                 </div>
-    
+
                                 <!-- ? CARD BUTTONS -->
                                 @auth
                                     @if ($article->user_id === auth()->id())
                                         <hr class="secondary-text">
-                                        <div
-                                            class="article-buttons z-3 p-4 pt-2 row align-items-center justify-content-between">
+                                        <div class="article-buttons z-3 p-4 pt-2 row align-items-center justify-content-between">
                                             <div class="col-6">
                                                 <a href="{{ route('article.edit', $article) }}"
                                                     class="btn-form btn w-100 rounded-5">

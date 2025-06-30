@@ -9,9 +9,10 @@
                 </div>
             </div>
 
-@if(session()->has('message'))
-<div>{{ session('message') }}</div>
-@endif
+            @if(session()->has('message'))
+            <h5 class="text-center pb-5 display-6 white-text">{{ session('message') }}</h5>
+            @endif
+            
             @if ($articles_to_check)
                 <div class="row justify-content-center">
                     @foreach ($articles_to_check->take(4) as $article)
@@ -27,7 +28,7 @@
                                         data-bs-target="#acceptModal-{{ $article->id }}">
                                         Accetta articolo
                                     </button>
-                                    <button type="button" class="btn btn-danger rounded-5 px-3" data-bs-toggle="modal"
+                                    <button type="button" class="btn btn-delete rounded-5 px-3" data-bs-toggle="modal"
                                         data-bs-target="#declineModal-{{ $article->id }}">
                                         Rifiuta articolo
                                     </button>
@@ -81,7 +82,7 @@
                                         <form action="{{ route('revisor.reject', $article) }}" method="POST">
                                             @csrf
                                             @method('PATCH')
-                                            <button class="btn btn-danger rounded-5 px-3">Rifiuta</button>
+                                            <button class="btn btn-delete rounded-5 px-3">Rifiuta</button>
                                         </form>
                                         <button type="button" class="btn btn-secondary rounded-5 px-3" data-bs-dismiss="modal">Annulla</button>
                                     </div>

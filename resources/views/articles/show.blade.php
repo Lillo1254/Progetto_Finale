@@ -2,7 +2,7 @@
     <div class="primary-bg min-vh-100 py-5">
         <div class="container">
             <div class="row justify-content-center p-3">
-                <div class="col-12 col-lg-10 primary-light-bg p-3 p-md-5 rounded-4 shadow-lg">
+                <div class="col-12 col-lg-10 primary-light-bg p-3 p-md-5 rounded-0">
                     <div class="row flex-column-reverse flex-md-row">
                         
                         <div class="col-12 col-md-6 overflow-hidden">
@@ -32,7 +32,7 @@
 
                    
                     <div class="text-center mt-3 mt-md-5">
-                        <a href="{{ route('article.catalogo') }}" class="btn btn-form px-4">Torna al catalogo</a>
+                        <a href="{{ route('article.catalogo') }}" class="btn btn-form px-4 rounded-5">Torna al catalogo</a>
                     </div>
                 </div>
             </div>

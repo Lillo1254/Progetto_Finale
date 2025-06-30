@@ -1,6 +1,6 @@
 <footer class="primary-light-bg text-center">
     <div class="container p-4">
-        <section class="mb-4 d-flex justify-content-center flex-wrap gap-2">
+        <section class="mb-3 d-flex justify-content-center flex-wrap gap-2">
             <div class="d-flex flex-wrap flex-md-nowrap justify-content-center gap-1">
                 <a class="btn footer-icon btn-outline btn-floating m-1 p-2" href="#!" role="button">
                     <i class="fs-4 bi bi-facebook"></i>
@@ -28,9 +28,11 @@
             </div>
         </section>
 
+        @auth
         <section class="">
-<a href="{{ route('form.revisor') }}" class="btn btn-form mb-3">LAVORA CON NOI</a>
-        </section>
+            <a href="{{ route('form.revisor') }}" class="btn btn-form mb-4 rounded-5 px-4">LAVORA CON NOI</a>
+        </section>           
+        @endauth
 
         <section class="mb-4 ">
             <p>

@@ -76,6 +76,10 @@ body.light-mode * {
     color: var(--secondary) !important;
 }
 
+body.light-mode a:hover {
+    color: var(--accent) !important;
+}
+
 body.light-mode .primary-light-text{
     color: var(--primary-light) !important;
 }
@@ -84,16 +88,14 @@ body.light-mode .btn-close-white{
     color: #1c102e !important;
 }
 
-body.light-mode input,
-body.light-mode textarea {
+body.light-mode .form-control {
     color: #000 !important;
     background-color: #fff !important;
-    box-shadow: inset 0px 0px 15px 2px var(--secondary) ;
+    /* box-shadow: inset 0px 0px 15px 2px var(--secondary) ; */
 }
 
-body.light-mode input::placeholder,
-body.light-mode textarea::placeholder {
-    color: var(--primary-light) !important;
+body.light-mode .form-control::placeholder {
+    color: var(--primary) !important;
 }
 
 body.light-mode .primary-bg {
@@ -121,13 +123,23 @@ body.light-mode .white-bg {
 }
 
 body.light-mode .btn-form {
-    background-color: var(--accent) !important;
+    background-color: var(--primary) !important;
     color: var(--secondary) !important;
 }
 
 body.light-mode .btn-form:hover {
-    background-color: var(--secondary) !important;
-    color: var(--primary) !important;
+    background-color: var(--accent) !important;
+    color: var(--secondary) !important;
+}
+
+body.light-mode .btn-home {
+    background-color: var(--primary-light) !important;
+    color: var(--secondary) !important;
+}
+
+body.light-mode .btn-home:hover {
+    background-color: var(--accent) !important;
+    color: var(--secondary) !important;
 }
 
 body.light-mode .btn-banner {
@@ -137,7 +149,7 @@ body.light-mode .btn-banner {
 
 body.light-mode .btn-banner:hover {
     background-color: var(--accent) !important;
-    color: var(--primary) !important;
+    color: var(--secondary) !important;
 }
 
 body.light-mode .page-link {
@@ -159,25 +171,8 @@ body.light-mode .image-home h6 {
     color: #fff !important;
 }
 
-body.light-mode input{
-        box-shadow: inset 0px 0px 15px 2px var(--secondary) ;
-
-}
-
-body.light-mode .main-bg {
-    background: linear-gradient( rgb(224, 206, 255) 0%,  rgba(9, 0, 24) 48%,  rgba(9, 0, 24) 53%, rgb(224, 206, 255) 100%);
-}
-
-body.light-mode input.primary-bg{
-    background-color: var(--primary-light) !important;
-}
-
 body.light-mode .accent-text{
     color: var(--accent) !important;
-}
-
-body.light-mode input::placeholder {
-    color: var(--secondary) !important;
 }
 
 body.light-mode .bg-ul-category{
