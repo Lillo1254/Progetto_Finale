@@ -40,8 +40,10 @@
                         </div>
                         <div
                             class="d-flex flex-column flex-lg-row align-items-center justify-content-between m-0 my-auto p-0">
-                            <button type="submit" class="btn btn-form mt-5 px-5 rounded-5">Register</button>
-                            <p class="my-0 mt-5 secondary-text">Already have an account? <a
+                            <button type="submit" class="btn btn-form mt-5 px-5 rounded-5">
+                                <p class="m-auto p-0 px-2 dark-text">Registrati</p>
+                            </button>
+                            <p class="my-0 mt-5 secondary-text">Hai già un account? <a
                                     class="form-link secondary-text text-decoration-none"
                                     href="{{ route('login') }}">Login</a></p>
                         </div>

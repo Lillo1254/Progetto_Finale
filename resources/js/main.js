@@ -22,13 +22,16 @@
 // fine switch light mode 
 
 // trasparenza della navbar
-var prevScrollpos = window.pageYOffset;
+let prevScrollpos = window.pageYOffset;
+const navbar = document.querySelector('.nav-bar');
 window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
+  let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    document.querySelector('.nav-bar').style.top = "0";
+    navbar.classList.remove('nav-hover');    
+    navbar.classList.remove('scrolled');
   } else {
-    document.querySelector('.nav-bar').style.top = "-15%";
+    navbar.classList.add('nav-hover');
+    navbar.classList.add('scrolled');
   }
   prevScrollpos = currentScrollPos;
 }

@@ -16,7 +16,7 @@
             @if ($articles_to_check)
                 <div class="row justify-content-center">
                     @foreach ($articles_to_check->take(4) as $article)
-                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="col-12 col-md-6 col-lg-5 mb-4">
                             <div class="card primary-light-bg p-4 rounded-0">
                                 <h2 class="pb-2">{{ $article->title }}</h2>
                                 <p><strong>Autore:</strong> {{ $article->author }}</p>
@@ -26,11 +26,11 @@
                                 <div class="d-flex justify-content-between mt-3">
                                     <button type="button" class="btn btn-success rounded-5 px-3" data-bs-toggle="modal"
                                         data-bs-target="#acceptModal-{{ $article->id }}">
-                                        Accetta articolo
+                                        <p class="m-auto p-0 px-2 dark-text">Accetta articolo</p>
                                     </button>
                                     <button type="button" class="btn btn-delete rounded-5 px-3" data-bs-toggle="modal"
                                         data-bs-target="#declineModal-{{ $article->id }}">
-                                        Rifiuta articolo
+                                        <p class="m-auto p-0 px-2 dark-text">Rifiuta articolo</p>
                                     </button>
                                 </div>
                             </div>
@@ -55,9 +55,13 @@
                                         <form action="{{ route('revisor.accept', $article) }}" method="POST">
                                             @csrf
                                             @method('PATCH')
-                                            <button class="btn btn-success rounded-5 px-3">Accetta</button>
+                                            <button class="btn btn-success rounded-5 px-3">
+                                                <p class="m-auto p-0 px-2 dark-text">Accetta</p>
+                                            </button>
                                         </form>
-                                        <button type="button" class="btn btn-secondary rounded-5 px-3" data-bs-dismiss="modal">Annulla</button>
+                                        <button type="button" class="btn btn-secondary rounded-5 px-3" data-bs-dismiss="modal">
+                                            <p class="m-auto p-0 px-2 dark-text">Annulla</p>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -82,9 +86,13 @@
                                         <form action="{{ route('revisor.reject', $article) }}" method="POST">
                                             @csrf
                                             @method('PATCH')
-                                            <button class="btn btn-delete rounded-5 px-3">Rifiuta</button>
+                                            <button class="btn btn-delete rounded-5 px-3">
+                                                <p class="m-auto p-0 px-2 dark-text">Rifiuta</p>
+                                            </button>
                                         </form>
-                                        <button type="button" class="btn btn-secondary rounded-5 px-3" data-bs-dismiss="modal">Annulla</button>
+                                        <button type="button" class="btn btn-secondary rounded-5 px-3" data-bs-dismiss="modal">
+                                            <p class="m-auto p-0 px-2 dark-text">Annulla</p>
+                                    </button>
                                     </div>
                                 </div>
                             </div>
@@ -97,8 +105,12 @@
                 </div>
             @endif
             <div class="text-center mt-3">
-                <a href="{{ route('revisor.articledecline') }}" class="btn btn-form rounded-5 px-3 mx-3">Lista articoli rifiutati</a>
-                <a href="{{ route('home') }}" class="btn btn-success rounded-5 px-3 mx-3">Torna all'homepage</a>
+                <a href="{{ route('revisor.articledecline') }}" class="btn btn-form rounded-5 px-3 mx-3">
+                    <p class="m-auto p-0 px-1 dark-text">Lista articoli rifiutati</p>
+                </a>
+                <a href="{{ route('home') }}" class="btn btn-success rounded-5 px-3 mx-3">
+                    <p class="m-auto p-0 px-1 dark-text">Torna all'homepage</p>
+                </a>
             </div>
         </div>
     </div>

@@ -39,13 +39,13 @@
                                 <div class="article-buttons z-3 p-4 pt-2 row align-items-center justify-content-between">
                                   <div class="col-6">
                                     <a href="{{ route('article.edit', $article) }}" class="btn-form btn w-100 rounded-5">
-                                        <p class="m-auto p-0 px-3 text-dark">Modifica</p>
+                                        <p class="m-auto p-0 px-3 dark-text">Modifica</p>
                                     </a>
                                   </div>
                                   <div class="col-6">
-                                    <button type="button" class="btn btn-danger rounded-5 w-100 px-4" data-bs-toggle="modal"
+                                    <button type="button" class="btn btn-delete rounded-5 w-100 px-4" data-bs-toggle="modal"
                                         data-bs-target="#deleteModal">
-                                        Elimina
+                                        <p class="m-auto p-0 px-2 dark-text">Elimina</p>
                                     </button>
                                   </div>
                                 </div>
@@ -74,7 +74,7 @@
                                                 <form action="{{ route('article.destroy', $article) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger">Conferma elimina</button>
+                                                    <button type="submit" class="btn btn-delete">Conferma elimina</button>
                                                 </form>
                                             </div>
 

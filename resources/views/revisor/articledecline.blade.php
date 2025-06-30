@@ -5,7 +5,7 @@
                 <div class="col-md-8">
                     
                         <div class="card-body text-center">
-                            <h1 class="secondary-text fw-bold"><i class="fas fa-shopping-cart"></i> Articoli Rifiutati
+                            <h1 class="secondary-text fw-bold">Articoli Rifiutati
                             </h1>
                             <hr class="my-3">
                         </div>
@@ -16,7 +16,7 @@
             <div class="mt-4">
                 
                 <div class="row justify-content-center">
-                    <div class="col-md-8">
+                    <div class="col-md-10 col-lg-8">
                         @if ($articles->isEmpty())
                             <p class="text-danger text-center"><em>Nessun articolo rifiutato</em></p>
                         @else
@@ -27,8 +27,8 @@
                                             <th class="fw-bold p-2 primary-light-bg">Titolo</th>
                                             <th class="fw-bold p-2 primary-light-bg">Prezzo</th>
                                             <th class="fw-bold p-2 primary-light-bg">Categorie</th>
-                                            <th class="fw-bold p-2 primary-light-bg">Descrizione</th>
-                                            <th class="fw-bold p-2 primary-light-bg w-15">Data</th>
+                                            <th class="hide fw-bold p-2 primary-light-bg">Descrizione</th>
+                                            <th class="hide fw-bold p-2 primary-light-bg w-15">Data</th>
                                             <th class="fw-bold p-2 primary-light-bg text-start w-auto">Azioni</th>
                                         </tr>
                                         </tr>
@@ -36,14 +36,14 @@
                                     <tbody>
                                         @foreach ($articles as $article)
                                             <tr>
-                                                <td class="p-2  primary-light-bg">{{ $article->title }}</td>
-                                                <td class="p-2  primary-light-bg">{{ $article->price }}</td>
-                                                <td class="p-2  primary-light-bg">{{ $article->category->name }}</td>
-                                                <td class="p-2  primary-light-bg">{{ Str::limit($article->description, 50) }}</td>
-                                                <td class="p-2  primary-light-bg w-15">{{ $article->created_at->format('d/m/Y') }}</td>
-                                                <td class="p-2  primary-light-bg text-start w-auto">
+                                                <td class="p-2 primary-light-bg">{{ $article->title }}</td>
+                                                <td class="p-2 primary-light-bg">{{ $article->price }}</td>
+                                                <td class="p-2 primary-light-bg">{{ $article->category->name }}</td>
+                                                <td class="p-2 hide primary-light-bg">{{ Str::limit($article->description, 50) }}</td>
+                                                <td class="p-2 hide primary-light-bg w-15">{{ $article->created_at->format('d/m/Y') }}</td>
+                                                <td class="p-2 primary-light-bg text-start w-auto">
                                                     <div class="d-flex align-items-center gap-2">
-                                                         <a href="{{ route('article.show', $article) }}" class="btn btn-form btn-sm">
+                                                         <a href="{{ route('article.show', $article) }}" class="btn rounded-5 btn-form btn-sm">
                                                             <i class="bi bi-eye primary-text"></i>
                                                         </a>
                                                         <form
@@ -51,10 +51,9 @@
                                                             method="POST">
                                                             @csrf
                                                             @method('PATCH')
-                                                            <button type="submit" class="btn btn-form btn-sm">
-                                                                <i
-                                                                    class="bi bi-arrow-counterclockwise text-dark"></i>
-                                                                Ripristina
+                                                            <button type="submit" class="btn rounded-5 btn-form btn-sm">
+                                                                <i class="bi bi-arrow-counterclockwise text-dark d-inline"></i>
+                                                                <p class="d-none d-md-inline m-auto p-0 pb-1 dark-text d-inline">Ripristina</p>
                                                             </button>
                                                         </form>
                                                     </div>
@@ -70,8 +69,7 @@
             </div>
 
             <div class="text-center mt-4">
-                <a href="{{ route('revisor.profile', Auth::user()) }}" class="btn btn-success">
-                    <i class="bi bi-arrow-left"></i> Torna Indietro
+                <a href="{{ route('revisor.profile', Auth::user()) }}" class="btn rounded-5 btn-success"><p class="m-auto p-0 px-2 dark-text">Torna alla dashboard</p>
                 </a>
             </div>
         </div>

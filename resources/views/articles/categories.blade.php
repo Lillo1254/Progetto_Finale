@@ -61,9 +61,9 @@
                                                 </a>
                                             </div>
                                             <div class="col-6">
-                                                <button type="button" class="btn btn-danger rounded-5 w-100 px-4"
+                                                <button type="button" class="btn btn-delete rounded-5 w-100 px-4"
                                                     data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $article->id }}">
-                                                    Elimina
+                                                    <p class="m-auto p-0 px-2 dark-text">Elimina</p>
                                                 </button>
                                             </div>
                                         </div>
@@ -88,8 +88,7 @@
                                                         <form action="{{ route('article.destroy', $article) }}" method="POST">
                                                             @csrf
                                                             @method('DELETE')
-                                                            <button type="submit" class="btn btn-danger">Conferma
-                                                                elimina</button>
+                                                            <button type="submit" class="btn btn-delete"><p class="m-auto p-0 px-2 dark-text">Elimina</p></button>
                                                         </form>
                                                     </div>
                                                 </div>

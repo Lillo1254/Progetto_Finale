@@ -127,28 +127,13 @@ body.light-mode .btn-form {
     color: var(--secondary) !important;
 }
 
-body.light-mode .btn-form:hover {
-    background-color: var(--accent) !important;
-    color: var(--secondary) !important;
-}
-
 body.light-mode .btn-home {
     background-color: var(--primary-light) !important;
     color: var(--secondary) !important;
 }
 
-body.light-mode .btn-home:hover {
-    background-color: var(--accent) !important;
-    color: var(--secondary) !important;
-}
-
 body.light-mode .btn-banner {
     background-color: var(--primary) !important;
-    color: var(--secondary) !important;
-}
-
-body.light-mode .btn-banner:hover {
-    background-color: var(--accent) !important;
     color: var(--secondary) !important;
 }
 
@@ -178,6 +163,18 @@ body.light-mode .accent-text{
 body.light-mode .bg-ul-category{
     background-color:#e2d4f9ef !important;
     
+}
+
+.scrolled {
+    background-color: #dcd1f177 !important; 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.scrolled:hover {
+    background-color: var(--primary-light) !important; 
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none; 
 }
 
 ::-webkit-scrollbar {

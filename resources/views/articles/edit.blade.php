@@ -55,15 +55,17 @@
                             @endforeach
                         </div>
 
-                        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between mt-4">
-                            <button type="submit" class="btn rounded-5 btn-success px-4">Salva modifiche</button>
+                        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between mt-5">
+                            <button type="submit" class="btn rounded-5 btn-success px-4">
+                                <p class="m-auto p-0 dark-text">Salva modifiche</p>
+                            </button>
 
 
                             <button type="button" class="btn rounded-5 btn-delete px-4 " data-bs-toggle="modal"
                                 data-bs-target="#deleteModal">
-                                Elimina articolo
+                                <p class="m-auto p-0 dark-text">Elimina articolo</p>
                             </button>
-                            <a href="{{ route('article.catalogo') }}" class="btn rounded-5 btn-form px-5">Annulla</a>
+                            <a href="{{ route('article.catalogo') }}" class="btn rounded-5 btn-form px-5"><p class="m-auto p-0 dark-text">Annulla</p></a>
                         </div>
                     </form>
                 </div>

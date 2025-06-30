@@ -76,7 +76,7 @@
                     <!-- Pulsante di invio -->
                     <div
                         class="d-flex flex-column flex-lg-row align-items-center justify-content-between m-0 my-auto p-0">
-                        <button type="submit" class="btn btn-form mt-4 px-4 rounded-5">Crea Articolo</button>
+                        <button type="submit" class="btn btn-form mt-4 px-4 rounded-5"><p class="m-auto p-0 px-2 dark-text">Crea articolo</p></button>
                     </div>
                 </form>
             </div>

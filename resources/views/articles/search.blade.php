@@ -1,8 +1,8 @@
 <x-layout titlePage="Hai cercato : {{ $query }}">
     <div class="container-fluid primary-bg">
     
-        <h1 class="text-center secondary-text display-5">risultati per "{{ $query }}"</h1>
-        <div class="row justify-content-center">
+        <h1 class="text-center secondary-text display-5 py-5">Risultati per "{{ $query }}"</h1>
+        <div class="row pb-5">
 @forelse ($articles as $article)
                         <div class="col-12 col-md-6 col-lg-4 mb-4">
                             <div class="card position-relative p-0 border-0 primary-light-bg rounded-0 h-100 overflow-hidden">
@@ -35,9 +35,9 @@
                                                 </a>
                                             </div>
                                             <div class="col-6">
-                                                <button type="button" class="btn btn-danger rounded-5 w-100 px-4"
+                                                <button type="button" class="btn btn-delete rounded-5 w-100 px-4"
                                                     data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $article->id }}">
-                                                    Elimina
+                                                    <p class="m-auto p-0 px-3 dark-text">Elimina</p>
                                                 </button>
                                             </div>
                                         </div>
@@ -58,12 +58,11 @@
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
-                                                            data-bs-dismiss="modal">Annulla</button>
+                                                            data-bs-dismiss="modal"><p class="m-auto p-0 px-2 dark-text">Annulla</p></button>
                                                         <form action="{{ route('article.destroy', $article) }}" method="POST">
                                                             @csrf
                                                             @method('DELETE')
-                                                            <button type="submit" class="btn btn-danger">Conferma
-                                                                elimina</button>
+                                                            <button type="submit" class="btn btn-delete"><p class="m-auto p-0 px-2 dark-text">Elimina</p></button>
                                                         </form>
                                                     </div>
                                                 </div>

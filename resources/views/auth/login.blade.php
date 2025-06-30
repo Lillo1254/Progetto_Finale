@@ -32,10 +32,12 @@
                         </div>
                         <div
                             class="d-flex flex-column flex-lg-row align-items-center justify-content-between m-0 my-auto p-0">
-                            <button type="submit" class="btn btn-form mt-5 rounded-5 px-5">Submit</button>
-                            <p class="my-0 mt-5 secondary-text">Don't have an account? <a
+                            <button type="submit" class="btn btn-form mt-5 rounded-5 px-5">
+                                <p class="m-auto p-0 px-2 dark-text">Login</p>
+                            </button>
+                            <p class="my-0 mt-5 secondary-text">Non hai ancora un account? <a
                                     class="form-link secondary-text text-decoration-none accent-text"
-                                    href="{{ route('register') }}">Sign up</a></p>
+                                    href="{{ route('register') }}">Registrati</a></p>
                         </div>
                         <div class="left-glow"></div>
                         <div class="bottom-glow"></div>

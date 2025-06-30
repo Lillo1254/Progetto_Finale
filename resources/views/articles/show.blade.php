@@ -32,7 +32,7 @@
 
                    
                     <div class="text-center mt-3 mt-md-5">
-                        <a href="{{ route('article.catalogo') }}" class="btn btn-form px-4 rounded-5">Torna al catalogo</a>
+                        <a href="{{ route('article.catalogo') }}" class="btn btn-form px-4 rounded-5"><p class="m-auto p-0 px-2 dark-text">Torna al catalogo</p></a>
                     </div>
                 </div>
             </div>
