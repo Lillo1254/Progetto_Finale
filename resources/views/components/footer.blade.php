@@ -28,9 +28,11 @@
             </div>
         </section>
 
+        @auth
         <section class="">
             <a href="{{ route('form.revisor') }}" class="btn btn-form mb-4 rounded-5 px-4">LAVORA CON NOI</a>
-        </section>
+        </section>           
+        @endauth
 
         <section class="mb-4 ">
             <p>
