@@ -14,7 +14,7 @@
   <body class="primary-bg">
     
     <x-navbar />
-    
+    <div class="navbarclass"></div>
        {{ $slot }}
     
     

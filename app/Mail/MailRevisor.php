@@ -28,7 +28,7 @@ class MailRevisor extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: "{ $this->user->name} ,vorrebbe diventare revisore",
+            subject: $this->user->name . ', vorrebbe diventare revisore'
 
         );
     }

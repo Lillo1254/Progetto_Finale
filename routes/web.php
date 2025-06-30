@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\isAdmin;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\RoleProfile;
@@ -31,6 +32,11 @@ Route::get('/profile/{user}', [ProfileController::class, 'profile'])->name('prof
 Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
 
 Route::post('/revisor/request', [RoleProfile::class, 'send'])->name('revisor.request')->middleware('auth');
+
+// accettazione revisor
+Route::get('/revisor/accept/{user}', [isAdmin::class, 'accept'])->name('revisor.acceptUser');
+Route::get('/revisor/reject/{user}', [isAdmin::class, 'reject'])->name('revisor.rejectUser');
+
 
 Route::get('/form-revisor',[PublicController::class,'SendForm'])->name('form.revisor')->middleware('auth');
 
