@@ -52,6 +52,8 @@ Route::patch('/revisor/article/annulla/{article}', [RevisorController::class, 'a
 
 Route::get('/search/article',[ArticleController::class, 'search'])->name('article.search');
 
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setlocale');
+    
 
 
 
