@@ -24,3 +24,5 @@ public function setLanguage($lang) {
     session(['locale' => $lang]);
     return redirect()->back();
 }
+
+}
