@@ -22,20 +22,16 @@
 // fine switch light mode 
 
 // trasparenza della navbar
-//  document.addEventListener('DOMContentLoaded', function () {
-//     const navbar = document.querySelector('.navbar-bg-blur');
-
-//     window.addEventListener('scroll', () => {
-//         const scrollTop = window.scrollY || document.documentElement.scrollTop;
-//         const scrollPercent = (scrollTop / document.body.scrollHeight) * 100;
-
-//         if (scrollPercent > 3) {
-//             navbar.classList.add('scrolled');
-//         } else {
-//             navbar.classList.remove('scrolled');
-//         }
-//     });
-// });
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector('.nav-bar').style.top = "0";
+  } else {
+    document.querySelector('.nav-bar').style.top = "-15%";
+  }
+  prevScrollpos = currentScrollPos;
+}
 // fine trasparenza navbar
 
 // transition del body

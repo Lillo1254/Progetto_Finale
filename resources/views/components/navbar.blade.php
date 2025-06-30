@@ -1,4 +1,4 @@
-<nav class="navbar primary-light-bg secondary-text navbar-bg-blur">
+<nav class="nav-bar primary-light-bg secondary-text">
   <div class="container">
     
     <div class="d-flex flex-row justify-content-between align-items-center w-100 gap-2">
@@ -8,7 +8,7 @@
           <button class="btn position-absolute btn-navbar px-3" type="submit">
             <i class="bi bi-search"></i>
           </button>
-          <input class="form-control ps-5 py-2 primary-bg rounded-5 white-text  search-bar input-search-custom" name="query" type="search" placeholder="Cerca" aria-label="Search" />
+          <input class=" ps-5 py-2 rounded-5 white-text search-bar input-search-custom form-control" name="query" type="search" placeholder="Cerca" aria-label="Search" />
         </form>
       </div>
 
@@ -22,15 +22,20 @@
       <!-- Icons -->
       <div class="w-100 w-md-33 d-flex align-items-center justify-content-end gap-2">
         <a href="{{ route('article.create') }}" class="text-decoration-none p-1 px-2 pb-2 btn-navbar btn border-0">
-          <i class="bi bi-plus-square-fill white-text fs-5"></i>
+          <i class="bi bi-plus-square-fill fs-5"></i>
         </a>
 
         <button class="p-1 px-2 pb-2 btn-navbar btn border-0">
-          <i class="bi bi-bag-dash-fill white-text fs-5"></i>
+          <i class="bi bi-bag-dash-fill fs-5"></i>
         </button>
 
-        <button class="navbar-toggler btn p-1 pb-2 btn-navbar person-icon-correction border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-          <i class="bi bi-person-fill white-text"></i>
+        <button class="navbar-toggler btn p-1 pb-2 btn-navbar person-icon-correction border-0 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+          <i class="bi bi-person-fill"></i>
+          
+          @if ($counter > 0)
+            <div class="notifications"></div>
+          @endif
+
         </button>
       </div>
 
@@ -140,8 +145,8 @@
           @guest
             <h5 class="text-start pb-1">Accedi o Registrati</h5>
             <div class="d-flex gap-3">
-              <a href="{{ route('login') }}" class="btn btn-success w-50">Login</a>
-              <a href="{{ route('register') }}" class="btn btn-form w-50">Registrati</a>
+              <a href="{{ route('login') }}" class="btn btn-success w-50 rounded-5">Login</a>
+              <a href="{{ route('register') }}" class="btn btn-form w-50 rounded-5">Registrati</a>
             </div>
           @endguest
         </ul>
@@ -156,9 +161,9 @@
           <form method="POST" action="{{ route('logout') }}" class="mt-4">
             @csrf
             <div class="h-100 d-flex align-items-end">
-              <button type="submit" class="btn btn-form w-100 d-flex align-items-center justify-content-center span-logout">
-                <i class="bi bi-box-arrow-right primary-text fs-5 pe-2 m-0"></i>
-                <span class="primary-text m-0 p-0 ">Logout</span>
+              <button type="submit" class="rounded-5 btn btn-form w-100 d-flex align-items-center justify-content-center span-logout">
+                <i class="bi bi-box-arrow-right dark-text fs-5 pe-2 m-0"></i>
+                <span class="m-0 p-0 dark-text">Logout</span>
               </button>
 
             </div>

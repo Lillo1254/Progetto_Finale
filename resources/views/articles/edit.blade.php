@@ -9,7 +9,7 @@
 
             <div class="row justify-content-center mb-5">
                 <div class="col-12 col-md-10 col-lg-8">
-                    <form class="primary-light-bg p-5 rounded-4" action="{{ route('article.update', $article) }}"
+                    <form class="primary-light-bg p-5 rounded-0" action="{{ route('article.update', $article) }}"
                         method="POST">
                         @csrf
                         @method('PUT')
@@ -25,24 +25,25 @@
                         @endif
                         <div class="mb-3">
                             <label for="title" class="form-label">Titolo</label>
-                            <input type="text" name="title" id="title" class="form-control"
+                            <input type="text" name="title" id="title" class="form-control rounded-0"
                                 value="{{ old('title', $article->title) }}" required>
                         </div>
                         <div class="mb-3">
                             <label for="price" class="form-label">Prezzo</label>
-                            <input type="number" name="price" id="price" class="form-control"
+                            <input type="number" name="price" id="price" class="form-control rounded-0"
                                 value="{{ old('price', $article->price) }}" required>
                         </div>
                         <div class="mb-3">
                             <label for="description" class="form-label">Descrizione</label>
-                            <textarea name="description" id="description" class="form-control" required>{{ old('description', $article->description) }}</textarea>
+                            <textarea name="description" id="description" class="form-control rounded-0" required>{{ old('description', $article->description) }}</textarea>
                         </div>
 
-
+                        <!-- Categoria -->
+                        <label for="category" class="form-label">Categoria</label>
                         <div class="row justify-content-center ">
                             @foreach ($categories as $category)
-                                <div class="col-6 col-md-4 col-lg-4 ">
-                                    <div class="form-check ms-5">
+                                <div class="col-6">
+                                    <div class="form-check">
                                         <input class="form-check-input  " type="radio" name="category_id"
                                             id="category-{{ $category->id }}" value="{{ $category->id }}"
                                             {{ old('category_id', $article->category_id ?? '') == $category->id ? 'checked' : '' }}>
@@ -54,15 +55,15 @@
                             @endforeach
                         </div>
 
-                        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between">
-                            <button type="submit" class="btn btn-success mt-4 px-4">Salva modifiche</button>
+                        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between mt-4">
+                            <button type="submit" class="btn rounded-5 btn-success px-4">Salva modifiche</button>
 
 
-                            <button type="button" class="btn btn-danger mt-4 px-4 " data-bs-toggle="modal"
+                            <button type="button" class="btn rounded-5 btn-delete px-4 " data-bs-toggle="modal"
                                 data-bs-target="#deleteModal">
                                 Elimina articolo
                             </button>
-                            <a href="{{ route('article.catalogo') }}" class="btn btn-form mt-4 px-5">Annulla</a>
+                            <a href="{{ route('article.catalogo') }}" class="btn rounded-5 btn-form px-5">Annulla</a>
                         </div>
                     </form>
                 </div>

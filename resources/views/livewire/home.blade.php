@@ -20,7 +20,7 @@
                         Scopri una vasta gamma di prodotti selezionati con cura per offrirti qualità e convenienza.
                         Approfitta delle nostre offerte esclusive e rendi il tuo shopping un'esperienza unica.
                     </p>
-                    <a class="btn btn-form w-md-25 px-4 rounded-5" href="{{ route('article.catalogo') }}">Acquista</a>
+                    <a class="btn btn-home w-md-25 px-4 rounded-5" href="{{ route('article.catalogo') }}">Acquista</a>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
                         Metti in vendita in pochi secondi, vendi in pochi giorni, acquista in un attimo — è tutto più
                         facile.
                     </p>
-                    <a class="btn btn-form w-md-25 px-4 rounded-5" href="{{ route('article.create') }}">Vendi</a>
+                    <a class="btn btn-home w-md-25 px-4 rounded-5" href="{{ route('article.create') }}">Vendi</a>
                 </div>
             </div>
         </div>

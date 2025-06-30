@@ -1,4 +1,4 @@
-<div class="main-bg min-vh-100">
+<div class="primary-bg min-vh-100">
     <div class="container pb-3">
         <div class="row mb-5">
             <div class="col-12">
