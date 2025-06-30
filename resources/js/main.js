@@ -21,14 +21,14 @@
     });
 // fine switch light mode 
 
-// trasparenza della navbar
+// trasparenza della navbar ma sti var?? la trasparenza?? tutto quell'effetto blur fighissimo??
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.querySelector('.nav-bar').style.top = "0";
   } else {
-    document.querySelector('.nav-bar').style.top = "-15%";
+    document.querySelector('.nav-bar').style.top = "-10%";
   }
   prevScrollpos = currentScrollPos;
 }
