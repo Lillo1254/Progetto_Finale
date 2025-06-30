@@ -66,7 +66,7 @@ class ArticleController extends Controller
 
         $article->update($request->validated());
 
-        return redirect()->route('article.show', $article)->with('success', 'Articolo aggiornato con successo.');
+        return redirect()->route('article.show', $article)->with('message', 'Articolo aggiornato con successo.');
     }
 
     /**
@@ -78,7 +78,7 @@ class ArticleController extends Controller
 
         $article->delete();
 
-        return redirect()->route('article.catalogo')->with('success', 'Articolo eliminato con successo.');
+        return redirect()->route('article.catalogo')->with('message', 'Articolo eliminato con successo.');
     }
 
     public function showcategory(Category $category)
