@@ -1,5 +1,5 @@
 <x-layout titlePage="Articoli Rifiutati">
-    <div class="primary-bg min-vh-100 py-3">
+    <main class="primary-bg min-vh-100 py-3">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
@@ -13,14 +13,14 @@
                 </div>
             </div>
 
-            <div class="mt-4">
+            <section class="mt-4">
                 
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-lg-8">
                         @if ($articles->isEmpty())
                             <p class="text-danger text-center"><em>Nessun articolo rifiutato</em></p>
                         @else
-                            <div class="table-responsive">
+                            <article class="table-responsive">
                                 <table class="table table-striped table-sm border-0 primary-light-bg w-100">
                                     <thead class="table-dark">
                                         <tr>

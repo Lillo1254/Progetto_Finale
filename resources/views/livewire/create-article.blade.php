@@ -1,4 +1,4 @@
-<div class="primary-bg min-vh-100 d-flex flex-column justify-content-center pb-5">
+<main class="primary-bg min-vh-100 d-flex flex-column justify-content-center pb-5">
     <div class="container">
         <div class="row mb-5">
             <div class="col-12">
@@ -82,4 +82,4 @@
             </div>
         </div>
     </div>
-</div>
+</main>

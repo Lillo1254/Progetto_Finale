@@ -1,5 +1,5 @@
 <x-layout titlePage="Modifica Articolo">
-    <div class="primary-bg min-vh-100">
+    <main class="primary-bg min-vh-100">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12">
@@ -7,7 +7,7 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center mb-5">
+            <article class="row justify-content-center mb-5">
                 <div class="col-12 col-md-10 col-lg-8">
                     <form class="primary-light-bg p-5 rounded-0" action="{{ route('article.update', $article) }}"
                         method="POST">
@@ -69,7 +69,7 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            </article>
         </div>
 
 

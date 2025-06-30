@@ -1,9 +1,9 @@
 <x-layout titlePage="{{ $article->title }}">
-    <div class="primary-bg min-vh-100 py-5">
+    <main class="primary-bg min-vh-100 py-5">
         <div class="container">
             <div class="row justify-content-center p-3">
                 <div class="col-12 col-lg-10 primary-light-bg p-3 p-md-5 rounded-0">
-                    <div class="row flex-column-reverse flex-md-row">
+                    <article class="row flex-column-reverse flex-md-row">
                         
                         <div class="col-12 col-md-6 overflow-hidden">
                             <h1 class="secondary-text display-5">{{ $article->title }}</h1>
@@ -28,7 +28,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
                    
                     <div class="text-center mt-3 mt-md-5">
@@ -37,5 +37,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 </x-layout>

@@ -165,13 +165,13 @@ body.light-mode .bg-ul-category{
     
 }
 
-.scrolled {
+body.light-mode .scrolled {
     background-color: #dcd1f177 !important; 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
-.scrolled:hover {
+body.light-mode .scrolled:hover {
     background-color: var(--primary-light) !important; 
     backdrop-filter: none;
     -webkit-backdrop-filter: none; 

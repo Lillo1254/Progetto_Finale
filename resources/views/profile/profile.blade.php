@@ -1,14 +1,14 @@
 <x-layout titlePage="Profilo Utente - {{ auth()->user()->name }}">
-    <div class="primary-bg min-vh-100 py-3">
+    <main class="primary-bg min-vh-100 py-3">
         @if (session()->has('message'))
             <div class="text-center text-success fw-bold">{{ session('message') }}</div>
         @endif
-        <div class="container">
+        <article class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <div class="card shadow-lg rounded-0 p-3 primary-light-bg">
+                    <div class="card shadow-lg rounded-0 p-3 mt-3 primary-light-bg">
                         <div class="card-body text-center">
-                            <h1 class="secondary-text fw-bold">Profilo Utente</h1>
+                            <h1 class="secondary-text display-5">Profilo Utente</h1>
                             <hr class="my-3">
                             <h3 class="secondary-text"> Nome: {{ auth()->user()->name }}</h3>
                             <h4 class="secondary-text"> Email: {{ auth()->user()->email }}</h4>
@@ -18,8 +18,8 @@
                 </div>
             </div>
 
-            <div class="mt-4">
-                <h2 class="text-center secondary-text fw-bold py-3"><i class="fas fa-shopping-cart"></i> I tuoi Articoli</h2>
+            <section class="my-4">
+                <h2 class="text-center secondary-text py-3"><i class="fas fa-shopping-cart"></i> I tuoi Articoli</h2>
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         @if ($user->articles->isEmpty())
@@ -71,7 +71,7 @@
                         @endif
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+            </section>
+        </article>
+    </main>
 </x-layout>

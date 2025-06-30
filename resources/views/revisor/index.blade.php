@@ -1,5 +1,5 @@
 <x-layout titlePage="Dashboard Revisore">
-    <div class="primary-bg min-vh-100">
+    <section class="primary-bg min-vh-100">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12 text-center">
@@ -14,9 +14,9 @@
             @endif
             
             @if ($articles_to_check)
-                <div class="row justify-content-center">
+                <main class="row justify-content-center">
                     @foreach ($articles_to_check->take(4) as $article)
-                        <div class="col-12 col-md-6 col-lg-5 mb-4">
+                        <article class="col-12 col-md-6 col-lg-5 mb-4">
                             <div class="card primary-light-bg p-4 rounded-0">
                                 <h2 class="pb-2">{{ $article->title }}</h2>
                                 <p><strong>Autore:</strong> {{ $article->author }}</p>
@@ -34,7 +34,7 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
                         <!-- Modal Accetta -->
                         <div class="modal fade " id="acceptModal-{{ $article->id }}" tabindex="-1"
@@ -98,7 +98,7 @@
                             </div>
                         </div>
                     @endforeach
-                </div>
+                </main>
             @else
                 <div class="text-center my-5">
                     <h2><em>Nessun articolo da revisionare</em></h2>
@@ -113,5 +113,5 @@
                 </a>
             </div>
         </div>
-    </div>
+    </section>
 </x-layout>
