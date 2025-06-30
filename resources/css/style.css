@@ -432,6 +432,10 @@ form[role="search"] input {
     z-index: 1;
 }
 
+.navbarclass{
+    height: calc(var(--navbar-height) + 1rem);
+}
+
 @keyframes move-right {
     0% { left: -100%; }
     100% { left: 100%; }

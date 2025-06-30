@@ -1,4 +1,4 @@
-<nav class="navbar primary-light-bg secondary-text navbar-bg-blur">
+<nav class="navbar primary-light-bg secondary-text navbar-bg-blur sticky-top">
   <div class="container">
     
     <div class="d-flex flex-row justify-content-between align-items-center w-100 gap-2">
