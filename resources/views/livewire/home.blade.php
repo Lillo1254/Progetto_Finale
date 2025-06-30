@@ -4,7 +4,7 @@
         <div class="container-fluid container h-100 d-flex flex-column justify-content-center" data-aos-duration="2000"
             data-aos-easing="ease-cubic" data-aos="fade-right">
             <h1 class="header-text text-shadow display-5">ReBrand</h1>
-            <h6 class="p-1 pb-0 white-text text-shadow">Trasforma gli oggetti che non usi più in quello che desideri davvero,</h6>
+            <h6 class="p-1 pb-0 white-text text-shadow"> {{ __('ui.titolo principale') }},</h6>
             <h6 class="p-1 pt-0 white-text text-shadow">in un'unica piattaforma sicura.</h6>
             <h4 class="p-1 header-text text-shadow">Il tuo mercato, a modo tuo.</h4>
         </div>

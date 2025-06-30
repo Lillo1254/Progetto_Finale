@@ -164,9 +164,7 @@
                         @endif
                     @endauth
 
-                    @foreach(['it', 'en', 'es'] as $lang)
-                        <x-language :lang="$lang" />
-                    @endforeach
+
 
                     @guest
                         <h5 class="text-start pb-1">Accedi o Registrati</h5>
@@ -202,7 +200,16 @@
                     </form>
                 @endauth
 
+                <div class="mt-5">
+                    @foreach (['it', 'en', 'es', 'zh'] as $lang)
+                        <x-_locale :lang="$lang" />
+                    @endforeach
+
+                </div>
             </div>
+
+
+
         </div>
         </div>
 </header>
