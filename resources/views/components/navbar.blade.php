@@ -164,6 +164,10 @@
                         @endif
                     @endauth
 
+                    @foreach(['it', 'en', 'es'] as $lang)
+                        <x-language :lang="$lang" />
+                    @endforeach
+
                     @guest
                         <h5 class="text-start pb-1">Accedi o Registrati</h5>
                         <div class="d-flex gap-3">

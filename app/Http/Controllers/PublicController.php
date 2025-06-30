@@ -20,4 +20,7 @@ public function profile() {
 public function sendForm() {
     return view('profile.form-mail');
 }
+public function setLanguage($lang) {
+    session(['locale' => $lang]);
+    return redirect()->back();
 }

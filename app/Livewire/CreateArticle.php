@@ -40,7 +40,7 @@ class CreateArticle extends Component
             'category_id' => $validated['category_id'],
         ]);
 
-        session()->flash('success', 'Articolo creato con successo.');
+        session()->flash('message', 'Articolo creato con successo.');
         return redirect()->route('article.catalogo');
     }
 

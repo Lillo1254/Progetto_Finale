@@ -11,10 +11,10 @@ class isAdmin extends Controller
        $user->is_revisor = true;
         $user->save();
 
-        return redirect('home')->with('success', "L'utente {$user->name} è ora un revisore.");
+        return redirect('home')->with('message', "L'utente {$user->name} è ora un revisore.");
     }
 
     public function reject(User $user) {
-        return redirect('home')->with('success', "L'utente {$user->name} non puo' essere un revisore.");
+        return redirect('home')->with('message', "L'utente {$user->name} non puo' essere un revisore.");
     }
 }
