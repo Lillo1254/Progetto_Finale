@@ -44,6 +44,6 @@ class RevisorController extends Controller
             return redirect()->back()->with('message', "Hai annullato il rifiuto dell'articolo \"$article->title\"");
         }
 
-        return redirect()->back()->with('error', "L'articolo non è stato rifiutato, quindi non può essere annullato.");
+        return redirect()->back()->with('message', "L'articolo non è stato rifiutato, quindi non può essere annullato.");
     }
 }
