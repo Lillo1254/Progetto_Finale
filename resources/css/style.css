@@ -146,15 +146,16 @@ textarea:focus {
     transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
-.footer-icon i {
+.icon-i {
+    color: var(--secondary) !important;
     transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
 .footer-icon:hover {
-    transform: scale(1.2) translateY(-6%);
+    transform: scale(1.1) translateY(-6%);
 }
 
-.footer-icon:hover i {
+.footer-icon:hover .icon-i {
     color: var(--accent) !important;
 }
 
@@ -166,6 +167,13 @@ a:hover {
     color: var(--accent) !important;
 }
 
+.footer-link {
+    padding-left: 0px;
+}
+
+.footer-link:hover {
+    padding-left: 4px;
+}
 
 /* ! BUTTONS */
 

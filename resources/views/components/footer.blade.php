@@ -4,37 +4,37 @@
             <ul class="list-unstyled d-flex flex-wrap flex-md-nowrap justify-content-center gap-1">
                 <li>
                     <a class="btn footer-icon btn-outline btn-floating m-1 p-2" href="#!" role="button">
-                        <i class="fs-4 bi bi-facebook"></i>
+                        <i class="fs-4 icon-i bi bi-facebook"></i>
                     </a>
                 </li>
 
                 <li>                    
                     <a class="btn footer-icon btn-outline btn-floating m-1 p-2" href="#!" role="button">
-                        <i class="fs-4 bi bi-twitter"></i>
+                        <i class="fs-4 icon-i bi bi-twitter"></i>
                     </a>
                 </li>
 
                 <li>                    
                     <a class="btn footer-icon btn-outline btn-floating m-1 p-2" href="#!" role="button">
-                        <i class="fs-4 bi bi-google"></i>
+                        <i class="fs-4 icon-i bi bi-google"></i>
                     </a>
                 </li>
 
                 <li>                    
                     <a class="btn footer-icon btn-outline btn-floating m-1 p-2" href="#!" role="button">
-                        <i class="fs-4 bi bi-instagram"></i>
+                        <i class="fs-4 icon-i bi bi-instagram"></i>
                     </a>
                 </li>
 
                 <li>
                     <a class="btn footer-icon btn-outline btn-floating m-1 p-2" href="#!" role="button">
-                        <i class="fs-4 bi bi-linkedin"></i>
+                        <i class="fs-4 icon-i bi bi-linkedin"></i>
                     </a>
                 </li>
 
                 <li>
                     <a class="btn footer-icon btn-outline btn-floating m-1 p-2" href="#!" role="button">
-                        <i class="fs-4 bi bi-github"></i>
+                        <i class="fs-4 icon-i bi bi-github"></i>
                     </a>
                 </li>
             </ul>
@@ -94,16 +94,24 @@
                 <h3 class="mb-3 secondary-text fw-light">Link utili</h3>
                 <ul class="list-unstyled">
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text"><a href="" class="text-decoration-none">Assistenza</a></small>
+                        <small class="white-text">
+                            <a href="" class="text-decoration-none footer-link">Assistenza</a>
+                        </small>
                     </li>
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text"><a href="" class="text-decoration-none">Privacy</a></small>
+                        <small class="white-text">
+                            <a href="" class="text-decoration-none footer-link">Privacy</a>
+                        </small>
                     </li>
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text"><a href="" class="text-decoration-none">Condizioni</a></small>
+                        <small class="white-text">
+                            <a href="" class="text-decoration-none footer-link">Condizioni</a>
+                        </small>
                     </li>
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text"><a href="" class="text-decoration-none">FAQ</a></small>
+                        <small class="white-text">
+                            <a href="" class="text-decoration-none footer-link">FAQ</a>
+                        </small>
                     </li>
                 </ul>
             </div>
@@ -113,9 +121,11 @@
       
     </div>
 
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2020 Copyright:
-        <a class="white-text text-rese text-decoration-nonet  fw-bold"
-            href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
+        <small class="m-0 p-0">
+            © 2025 Copyright:
+            <a class="white-text text-rese text-decoration-nonet  fw-bold"
+                href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </small>
     </div>
 </footer>
