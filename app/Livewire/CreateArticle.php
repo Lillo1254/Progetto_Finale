@@ -80,7 +80,7 @@ class CreateArticle extends Component
 
     public function updatedTemporaryImage() {
         if($this->validate([
-            'temporary_image.*' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'temporary_image.*' => 'image|mimes:jpeg,jpg,png|max:2048',
             'temporary_image' => 'max:6',
         ])) {
            foreach ($this->temporary_image as $image) {
