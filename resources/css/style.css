@@ -561,13 +561,14 @@ a:hover {
     top: 0%;
 }
 
-.dropdown-menu {
-    max-width: 60px !important;
-    min-width: 60px !important;
+.lang-menu {
+    max-width: 50px !important;
+    min-width: 50px !important;
+    margin-left: -7px !important;
 }
 
 #curLang {
-    width: 50px;
+    width: 49px;
 }
 
 @keyframes fadeIn {

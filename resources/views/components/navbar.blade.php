@@ -196,7 +196,7 @@
                         <a class="text-decoration-none dropdown-toggle d-flex align-items-center gap-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="curLang">
                             <img src="{{ asset('vendor/blade-flags/language-' . $currentLang . '.svg') }}" width="28" height="28" />
                         </a>
-                        <ul class="dropdown-menu primary-light-bg p-2">
+                        <ul class="dropdown-menu lang-menu primary-light-bg pb-2 px-0 ps-2 border-0">
                             @foreach ($availableLangs as $lang)
                                 @if ($lang !== $currentLang)
                                     <li class="bg-none p-0 m-0">
