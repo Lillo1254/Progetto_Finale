@@ -184,16 +184,7 @@
                     @endguest
                 </ul>
 
-                <div class="row justify-content-end">
-
-                    <!-- mode switch -->
-                    <div class="col-5">
-                        <label class="switch d-flex align-items-center justify-content-end">
-                            <p class="mx-2 my-0 mb-1">{{ __('ui.tema') }}</p>
-                            <input type="checkbox">
-                            <span class="slider"></span>
-                        </label>
-                    </div>
+                <div class="row justify-content-start">
 
                     <!-- lang switch -->
                     @php
@@ -201,11 +192,11 @@
                         $availableLangs = ['it', 'en', 'es', 'zh'];
                     @endphp
         
-                    <div class="dropdown col-2 ms-1 position-relative d-flex align-items-center justify-content-end primary-light-bg">
-                        <a class="text-decoration-none dropdown-toggle d-flex align-items-center gap-2 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="curLang">
+                    <div class="dropdown col-2 position-relative d-flex align-items-center justify-content-start primary-light-bg">
+                        <a class="text-decoration-none dropdown-toggle d-flex align-items-center gap-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="curLang">
                             <img src="{{ asset('vendor/blade-flags/language-' . $currentLang . '.svg') }}" width="28" height="28" />
                         </a>
-                        <ul class="dropdown-menu primary-light-bg p-2">
+                        <ul class="dropdown-menu lang-menu primary-light-bg pb-2 px-0 ps-2 border-0">
                             @foreach ($availableLangs as $lang)
                                 @if ($lang !== $currentLang)
                                     <li class="bg-none p-0 m-0">
@@ -214,6 +205,15 @@
                                 @endif
                             @endforeach
                         </ul>
+                    </div>
+
+                    <!-- mode switch -->
+                    <div class="col-5">
+                        <label class="switch d-flex align-items-center justify-content-start pt-1">
+                            <p class="mx-2 my-0 mb-1">{{ __('ui.tema') }}</p>
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
                     </div>
                 </div>
             
