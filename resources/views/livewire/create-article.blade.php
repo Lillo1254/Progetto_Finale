@@ -74,7 +74,7 @@
                     <div>
                         <input type="file" wire:model.live="temporary_image" multiple
                             class="form-control shadow @error('temporary_image.*') is-invalid @enderror"
-                            placeholder="Img/" />
+                            placeholder = "@if(count($images)> 0) {{ count($images) }} @else 0 @endif"  />
                         @error('temporary_image.*')
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
@@ -88,10 +88,10 @@
                                 <label for="preview" class="form-label">Preview</label>
                                 <div>
                                     @foreach ($images as $key => $image)
-                                        <div class="col-2">
+                                        <div class="col-2 position-relative">
                                             <div class="img-preview mx-auto shadow rounded"
                                                 style="background-image:url({{ $image->temporaryUrl() }});">
-
+                                                <a wire:click="removeImg({{ $key }})" class="position absolute top-0 end-0 p-0 m-0"><i class="bi bi-x-square-fill fs-2 text-dark p-0 "></i></a>
                                             </div>
                                         </div>
                                     @endforeach

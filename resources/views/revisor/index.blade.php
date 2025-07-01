@@ -24,12 +24,12 @@
                                 </div>
                             @endforeach
                         @else
-                            @for ($i = 0; $i < 6; $i++)
+                            {{-- @for ($i = 0; $i < 6; $i++)
                                 <div class="col-3 col-md-3">
                                     <img src="https://picsum.photos/300" class="img-fluid rounded shadow"
                                         alt="immagine segnaposto">
                                 </div>
-                            @endfor
+                            @endfor --}}
                         @endif
                         <article class="col-12 col-md-6 col-lg-5 mb-4">
                             <div class="card primary-light-bg p-4 rounded-0">
