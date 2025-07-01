@@ -17,6 +17,7 @@ class CreateArticle extends Component
     public $images = [];
     public $temporary_image;
 
+    public $article;
     public $title;
     public $price;
     public $description;
@@ -40,21 +41,21 @@ class CreateArticle extends Component
         
     ];
 
-    protected function cleanForm()
-{
-    $this->title = '';
-    $this->price = '';
-    $this->description = '';
-    $this->category_id = '';
-    $this->images = [];
-    $this->temporary_image = null;
-}
+//     protected function cleanForm()
+// {
+//     $this->title = '';
+//     $this->price = '';
+//     $this->description = '';
+//     $this->category_id = '';
+//     $this->images = [];
+//     $this->temporary_image = null;
+// }
 
     public function create()
     {
         $validated = $this->validate();
 
-        Article::create([
+        $this->article = Article::create([
             'title' => $validated['title'],
             'price' => $validated['price'],
             'description' => $validated['description'],
@@ -63,26 +64,26 @@ class CreateArticle extends Component
         ]);
         if (count($this->images) > 0) {
             foreach ($this->images as $image) {
-                $newFileName="articles/{$this->article->id}";
-                $newImage= $this->article->images()->create(['path' => $image->store($newFileName, 'public')]);
-                dispatch(new ResizeImage($newImage ->path, 300, 300));
+                // $newFileName="articles/{$this->article->id}";
+               $this->article->images()->create(['path' => $image->store('images', 'public')]);
+                // dispatch(new ResizeImage($newImage ->path, 300, 300));
             }
-            File::deleteDirectory(storage_path('/app/livewire-tmp'));
+            // File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }    
                 
 
         session()->flash('message', 'Articolo creato con successo.');
         return redirect()->route('article.catalogo');
 
-        $this->cleanForm();
+        // $this->cleanForm();
     }
 
-    public function updateTemporaryImages() {
+    public function updatedTemporaryImage() {
         if($this->validate([
             'temporary_image.*' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
-            'temporary_images' => 'max:6',
+            'temporary_image' => 'max:6',
         ])) {
-           foreach ($this->temporary_images as $image) {
+           foreach ($this->temporary_image as $image) {
                $this->images[] = $image;
            }
         }

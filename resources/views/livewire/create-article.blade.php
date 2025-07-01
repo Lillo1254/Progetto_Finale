@@ -72,19 +72,19 @@
                     </div>
 
                     <div>
-                        <input type="file" wire:model.live="temporary_images" multiple
-                            class="form-control shadow @error('temporary_images.*') is-invalid @enderror"
+                        <input type="file" wire:model.live="temporary_image" multiple
+                            class="form-control shadow @error('temporary_image.*') is-invalid @enderror"
                             placeholder="Img/" />
-                        @error('temporary_images.*')
+                        @error('temporary_image.*')
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
-                        @error('temporary_images')
+                        @error('temporary_image')
                             <p>{{ $message }} </p>
                         @enderror
                     </div>
                     @if (!empty($images))
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-2">
                                 <label for="preview" class="form-label">Preview</label>
                                 <div>
                                     @foreach ($images as $key => $image)
