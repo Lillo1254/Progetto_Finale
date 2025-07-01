@@ -43,7 +43,9 @@
 
         <!-- ! LAVORA CON NOI -->
         @auth
-            <a href="{{ route('form.revisor') }}" class="btn btn-form mb-5 rounded-5 px-5"><p class="p-0 m-0 dark-text fs-5">Lavora con noi</p></a>       
+            <a href="{{ route('form.revisor') }}" class="btn btn-form mb-5 rounded-5 px-5">
+                <p class="p-0 m-0 dark-text fs-5">{{ __('ui.lavora') }}</p>
+            </a>       
         @endauth
 
 
@@ -66,14 +68,14 @@
 
             <!-- ! INFO -->
             <div class="col-12 col-sm-6 col-md-3 me-0 mb-4 text-start">
-                <h3 class="mb-3 secondary-text fw-light">Info</h3>
+                <h3 class="mb-3 secondary-text fw-light">{{ __('ui.info') }}</h3>
                 <ul class="list-unstyled">
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text"><i class="bi bi-house-door-fill me-1"></i> New York, NY 10012, US</small>
+                        <small class="white-text"><i class="bi bi-house-door-fill me-1"></i>New York, NY 10012, US</small>
 
                     </li>
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text"><i class="bi bi-envelope-fill me-1"></i> info@example.com</small>
+                        <small class="white-text"><i class="bi bi-envelope-fill me-1"></i>info@example.com</small>
                         
                     </li>
                     <li class="pb-2 pb-md-3">
@@ -91,26 +93,26 @@
 
             <!-- ! LINKS -->
             <div class="col-12 col-sm-6 col-md-3 me-0 mb-4 text-start">
-                <h3 class="mb-3 secondary-text fw-light">Link utili</h3>
+                <h3 class="mb-3 secondary-text fw-light">{{ __('ui.links') }}</h3>
                 <ul class="list-unstyled">
                     <li class="pb-2 pb-md-3">
                         <small class="white-text">
-                            <a href="" class="text-decoration-none footer-link">Assistenza</a>
+                            <a href="" class="text-decoration-none footer-link">{{ __('ui.assistenza') }}</a>
                         </small>
                     </li>
                     <li class="pb-2 pb-md-3">
                         <small class="white-text">
-                            <a href="" class="text-decoration-none footer-link">Privacy</a>
+                            <a href="" class="text-decoration-none footer-link">{{ __('ui.privacy') }}</a>
                         </small>
                     </li>
                     <li class="pb-2 pb-md-3">
                         <small class="white-text">
-                            <a href="" class="text-decoration-none footer-link">Condizioni</a>
+                            <a href="" class="text-decoration-none footer-link">{{ __('ui.condizioni') }}</a>
                         </small>
                     </li>
                     <li class="pb-2 pb-md-3">
                         <small class="white-text">
-                            <a href="" class="text-decoration-none footer-link">FAQ</a>
+                            <a href="" class="text-decoration-none footer-link">{{ __('ui.faq') }}</a>
                         </small>
                     </li>
                 </ul>
@@ -123,7 +125,7 @@
 
     <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
         <small class="m-0 p-0">
-            © 2025 Copyright:
+            © 2025 {{ __('ui.copyright') }}:
             <a class="white-text text-rese text-decoration-nonet  fw-bold"
                 href="https://mdbootstrap.com/">MDBootstrap.com</a>
         </small>

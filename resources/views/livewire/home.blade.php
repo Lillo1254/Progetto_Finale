@@ -3,10 +3,10 @@
     <main class="mx-0 image-home position-relative p-1">
         <div class="container-fluid container h-100 d-flex flex-column justify-content-center" data-aos-duration="2000"
             data-aos-easing="ease-cubic" data-aos="fade-right">
-            <h1 class="header-text text-shadow display-5">ReBrand</h1>
-            <h6 class="p-1 pb-0 white-text text-shadow"> {{ __('ui.titolo principale') }},</h6>
-            <h6 class="p-1 pt-0 white-text text-shadow">in un'unica piattaforma sicura.</h6>
-            <h4 class="p-1 header-text text-shadow">Il tuo mercato, a modo tuo.</h4>
+            <h1 class="header-text text-shadow display-5">{{ __('ui.rebrand') }}</h1>
+            <h6 class="p-1 pb-0 white-text text-shadow"> {{ __('ui.trasforma') }}</h6>
+            <h6 class="p-1 pt-0 white-text text-shadow">{{ __('ui.piattaforma') }}</h6>
+            <h4 class="p-1 header-text text-shadow">{{ __('ui.mercato') }}</h4>
         </div>
     </main>
 
@@ -15,13 +15,12 @@
             <div class="col-12 col-md-8 primary-bg py-5">
                 <div class="mt-4 d-flex flex-column align-items-center align-items-md-end" data-aos-duration="2000"
                     data-aos-easing="ease-cubic" data-aos="fade-left">
-                    <h2 class="secondary-text text-center text-md-end">Trova le migliori offerte per te</h2>
+                    <h2 class="secondary-text text-center text-md-end">{{ __('ui.offerte') }}</h2>
                     <p class=" fs-5 text-center text-md-end">
-                        Scopri una vasta gamma di prodotti selezionati con cura per offrirti qualità e convenienza.
-                        Approfitta delle nostre offerte esclusive e rendi il tuo shopping un'esperienza unica.
+                        {{ __('ui.gamma') }}
                     </p>
                     <a class="btn btn-home w-md-25 px-4 rounded-5" href="{{ route('article.catalogo') }}">
-                        <p class="m-auto p-0 px-2 dark-text">Acquista</p>
+                        <p class="m-auto p-0 px-2 dark-text">{{ __('ui.acquista') }}</p>
                     </a>
                 </div>
             </div>
@@ -31,33 +30,33 @@
             <div class="col-12 col-md-8 primary-bg py-5">
                 <div class="mt-4 d-flex flex-column align-items-center align-items-md-start" data-aos-duration="2000"
                     data-aos-easing="ease-cubic" data-aos="fade-right">
-                    <h2 class="secondary-text text-center text-md-start">Dai nuova vita ai tuoi oggetti</h2>
+                    <h2 class="secondary-text text-center text-md-start">{{ __('ui.vita') }}</h2>
                     <p class=" fs-5 text-center text-md-start">
-                        Metti in vendita in pochi secondi, vendi in pochi giorni, acquista in un attimo — è tutto più
-                        facile.
+                        {{ __('ui.vendita') }}
                     </p>
                     <a class="btn btn-home w-md-25 px-4 rounded-5" href="{{ route('article.create') }}">
-                        <p class="m-auto p-0 px-3 dark-text">Vendi</p>
+                        <p class="m-auto p-0 px-3 dark-text">{{ __('ui.vendi') }}</p>
                     </a>
                 </div>
             </div>
         </article>
 
         <section class="row rounded-0 m-0 p-3 secondary-bg">
-            <div class="col-9 my-auto">
-                <h3 class="primary-light-text pt-1 m-0">Scopri le migliori offerte sul catalogo</h3>
-                <p class="primary-light-text py-1 m-0">Non perderti questi sconti esclusivi su una gamma di prodotti
-                    selezionati dal nostro team.</p>
+            <div class="col-12 col-md-9 my-auto">
+                <h3 class="primary-light-text pt-1 m-0">{{ __('ui.scopri') }}</h3>
+                <p class="primary-light-text py-1 m-0">{{ __('ui.sconti') }}</p>
             </div>
-            <div class="col-3 m-auto text-end">
-                <a class="btn btn-banner w-md-25 px-4 rounded-5" href="{{ route('article.catalogo') }}"><p class="m-auto p-0 px-3 secondary-text">Acquista ora</p></a>
+            <div class="col-12 col-md-3 m-auto text-center text-md-end">
+                <a class="btn btn-banner w-md-25 px-4 mt-2 mt-md-0 rounded-5" href="{{ route('article.catalogo') }}">
+                    <p class="m-auto secondary-text">{{ __('ui.acquista_ora') }}</p>
+                </a>
             </div>
         </section>
 
         <div class="row justify-content-end justify-content-sm-center mt-5">
             <div class="col-12">
                 <!-- Ultimi Annunci -->
-                <h2 class="text-start secondary-text py-3">Ultimi Annunci</h2>
+                <h2 class="text-start secondary-text py-3">{{ __('ui.annunci') }}</h2>
             </div>
         </div>
 

@@ -1,6 +1,7 @@
 <header class="nav-bar primary-light-bg secondary-text">
     <nav class="container">
 
+        <!-- Main controls -->
         <div class="d-flex flex-row justify-content-between align-items-center w-100 gap-2">
             <!-- Search -->
             <div class="w-100 d-none d-md-block">
@@ -10,7 +11,7 @@
                         <i class="bi bi-search"></i>
                     </button>
                     <input class=" ps-5 py-2 rounded-5 white-text search-bar input-search-custom form-control"
-                        name="query" type="search" placeholder="Cerca" aria-label="Search" />
+                        name="query" type="search" placeholder="{{ __('ui.cerca') }}" aria-label="Search" />
                 </form>
             </div>
 
@@ -44,14 +45,12 @@
                             @endif
                         @endif
                     @endauth
-
                 </button>
             </div>
-
         </div>
 
         <!-- Search MOBILE-->
-        <div class="w-100 w-md-33 d-block d-md-none pb-1">
+        <div class="w-100 w-md-33 d-block d-md-none py-1">
             <form class="d-flex position-relative align-items-center" action="{{ route('article.search') }}"
                 method="GET">
                 <input class="form-control ps-3 py-2 primary-bg rounded-5 w-100 white-text input-search-custom"
@@ -67,15 +66,16 @@
             <div class="col-12 m-auto">
                 <ul class="navbar-nav d-flex flex-row justify-content-center p-0 gap-4">
                     <li class="nav-item">
-                        <a class="text-decoration-none active" href="{{ route('home') }}">Home</a>
+                        <a class="text-decoration-none active" href="{{ route('home') }}">{{ __('ui.home') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="text-decoration-none" href="{{ route('article.catalogo') }}">Catalogo</a>
+                        <a class="text-decoration-none"
+                            href="{{ route('article.catalogo') }}">{{ __('ui.catalogo') }}</a>
                     </li>
                     <li class="nav-item dropdown position-relative">
                         <a class="text-decoration-none dropdown-toggle" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Categorie
+                            {{ __('ui.categorie') }}
                         </a>
                         <ul class="dropdown-menu rounded-0 primary-light-bg position-absolute bg-ul-category">
                             @forelse ($categories as $category)
@@ -85,7 +85,7 @@
                                 </li>
                             @empty
                                 <li>
-                                    <p class="px-3">Nessuna categoria</p>
+                                    <p class="px-3">{{ __('ui.no_categoria') }}</p>
                                 </li>
                             @endforelse
                         </ul>
@@ -97,13 +97,15 @@
         <!-- OFFCANVAS -->
         <div class="offcanvas offcanvas-end primary-light-bg" tabindex="-1" id="offcanvasDarkNavbar"
             aria-labelledby="offcanvasDarkNavbarLabel">
+
+            <!-- offcanvas header -->
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
                     @auth
-                        Ciao <a href="{{ route('profile', ['user' => auth()->user()]) }}"
+                        {{ __('ui.ciao') }} <a href="{{ route('profile', ['user' => auth()->user()]) }}"
                             class="text-decoration-none ">{{ Auth::user()->name }}</a>
                     @else
-                        Benvenuto
+                        {{ __('ui.benvenuto') }}
                     @endauth
                 </h5>
                 <a type="button" class="bg-transparent ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -111,19 +113,21 @@
                 </a>
             </div>
 
+            <!-- offcanvas body -->
             <div class="offcanvas-body py-0">
+                
+                <!-- NAV Links in mobile -->
                 <ul class="list-unstyled">
-                    <!-- NAV Links in mobile -->
                     <li class="nav-item py-1 d-block d-md-none">
-                        <a class="dropdown-item" href="{{ route('home') }}">Home</a>
+                        <a class="dropdown-item" href="{{ route('home') }}">{{ __('ui.home') }}</a>
                     </li>
                     <li class="nav-item py-1 d-block d-md-none">
-                        <a class="dropdown-item" href="{{ route('article.catalogo') }}">Catalogo</a>
+                        <a class="dropdown-item" href="{{ route('article.catalogo') }}">{{ __('ui.catalogo') }}</a>
                     </li>
                     <li class="nav-item py-1 dropdown position-relative d-block d-md-none">
                         <a class="dropdown-toggle dropdown-item " href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Categorie
+                            {{ __('ui.categorie') }}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end primary-light-bg">
                             @forelse ($categories as $category)
@@ -133,7 +137,7 @@
                                 </li>
                             @empty
                                 <li>
-                                    <p class="px-3">Nessuna categoria</p>
+                                    <p class="px-3">{{ __('ui.no_categoria') }}a</p>
                                 </li>
                             @endforelse
                         </ul>
@@ -142,22 +146,23 @@
                     <!-- Auth links -->
                     @auth
                         <li class="nav-item py-1">
-                            <a class="dropdown-item" href="">Ordini</a>
+                            <a class="dropdown-item" href="">{{ __('ui.ordini') }}</a>
                         </li>
                         <li class="nav-item py-1">
-                            <a class="dropdown-item" href="{{ route('article.create') }}">Inserisci articolo</a>
+                            <a class="dropdown-item"
+                                href="{{ route('article.create') }}">{{ __('ui.articolo_crea') }}</a>
                         </li>
                         <li class="nav-item py-1">
-                            <a class="dropdown-item" href="{{ route('profile', ['user' => auth()->user()]) }}">Profilo
-                                utente</a>
+                            <a class="dropdown-item"
+                                href="{{ route('profile', ['user' => auth()->user()]) }}">{{ __('ui.utente') }}</a>
                         </li>
                         @if (auth()->user()->is_revisor)
                             <li class="nav-item py-1">
                                 <a class="dropdown-item"
                                     href="{{ route('revisor.profile', ['user' => auth()->user()]) }}">
-                                    Dashboard revisore
+                                    {{ __('ui.dashboard') }}
                                     @if ($counter > 0)
-                                        <p class="pt-1"><em>Hai {{ $counter }} articoli da revisionare</em></p>
+                                        <p class="pt-1"><em>{{ __('ui.counter_1') }}{{ $counter }}{{ __('ui.counter_2') }}</em></p>
                                     @endif
                                 </a>
                             </li>
@@ -167,23 +172,51 @@
 
 
                     @guest
-                        <h5 class="text-start pb-1">Accedi o Registrati</h5>
+                        <h5 class="text-start pb-1">{{ __('ui.auth') }}</h5>
                         <div class="d-flex gap-3">
                             <a href="{{ route('login') }}" class="btn btn-success w-50 rounded-5">
-                                <p class="m-auto p-0 px-2 dark-text">Login</p>
+                                <p class="m-auto p-0 px-2 dark-text">{{ __('ui.login') }}</p>
                             </a>
                             <a href="{{ route('register') }}" class="btn btn-form w-50 rounded-5">
-                                <p class="m-auto p-0 px-2 dark-text">Registrati</p>
+                                <p class="m-auto p-0 px-2 dark-text">{{ __('ui.sign_up') }}</p>
                             </a>
                         </div>
                     @endguest
                 </ul>
 
-                <label class="switch d-flex align-items-center">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                    <span class="ms-2">Theme Mode</span>
-                </label>
+                <div class="row justify-content-end">
+
+                    <!-- mode switch -->
+                    <div class="col-5">
+                        <label class="switch d-flex align-items-center justify-content-end">
+                            <p class="mx-2 my-0 mb-1">{{ __('ui.tema') }}</p>
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <!-- lang switch -->
+                    @php
+                        $currentLang = app()->getLocale();
+                        $availableLangs = ['it', 'en', 'es', 'zh'];
+                    @endphp
+        
+                    <div class="dropdown col-2 ms-1 position-relative d-flex align-items-center justify-content-end primary-light-bg">
+                        <a class="text-decoration-none dropdown-toggle d-flex align-items-center gap-2 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="curLang">
+                            <img src="{{ asset('vendor/blade-flags/language-' . $currentLang . '.svg') }}" width="28" height="28" />
+                        </a>
+                        <ul class="dropdown-menu primary-light-bg p-2">
+                            @foreach ($availableLangs as $lang)
+                                @if ($lang !== $currentLang)
+                                    <li class="bg-none p-0 m-0">
+                                        <x-_locale :lang='$lang' />
+                                    </li>
+                                @endif
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            
                 <!-- Logout -->
                 @auth
                     <form method="POST" action="{{ route('logout') }}" class="mt-4">
@@ -192,24 +225,14 @@
                             <button type="submit"
                                 class="rounded-5 btn btn-form w-100 d-flex align-items-center justify-content-center span-logout">
                                 <i class="bi bi-box-arrow-right dark-text fs-5 pe-2 m-0"></i>
-                                <span class="m-0 p-0 dark-text">Logout</span>
+                                <span class="m-0 p-0 dark-text">{{ __('ui.logout') }}</span>
                             </button>
 
                         </div>
 
                     </form>
                 @endauth
-
-                <div class="mt-5">
-                    @foreach (['it', 'en', 'es', 'zh'] as $lang)
-                        <x-_locale :lang="$lang" />
-                    @endforeach
-
-                </div>
             </div>
-
-
-
         </div>
-        </div>
+    </nav>
 </header>

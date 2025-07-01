@@ -11,6 +11,10 @@
     --dark: #090018;
 }
 
+.bg-none {
+    background-color: #ffffff00 !important;
+}
+
 .primary-text{
     color: var(--primary) !important;
 }
@@ -550,13 +554,21 @@ a:hover {
 }
 
 .nav-hover {
-    top:-8%;
+    top:-5.5%;
 }
 
 .nav-hover:hover {
     top:0%;
 }
 
+.dropdown-menu {
+    max-width: 60px !important;
+    min-width: 60px !important;
+}
+
+#curLang {
+    width: 50px;
+}
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
@@ -796,5 +808,9 @@ body {
     
     .hide {
         display: table-cell !important;
+    }
+
+    .nav-hover {
+    top:-8%;
     }
 }
