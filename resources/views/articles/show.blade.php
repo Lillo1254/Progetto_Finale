@@ -16,10 +16,13 @@
                         <div class="col-12 col-md-6 mb-3 mb-md-0">
                             <div id="articleCarousel" class="carousel slide shadow-sm" data-bs-ride="carousel">
                                 <div class="carousel-inner rounded-4">
-                                    
-
-
+                                    @foreach ($article->images as $key => $image)
+                                        <div class="carousel-item @if($loop->first) active @endif">
+                                            <img src="{{ Storage::url($image->path) }}" class="d-block w-100 rounded shadow" alt="immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
+                                        </div>
+                                    @endforeach
                                 </div>
+                                
                             </div>
                         </div>
                     </article>
