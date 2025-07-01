@@ -12,20 +12,17 @@
                             <p class="white-text mt-3 px-1">{{ $article->description }}</p>    
                         </div>
 
-                        
+                        @if ($article->images->count()>0)
                         <div class="col-12 col-md-6 mb-3 mb-md-0">
                             <div id="articleCarousel" class="carousel slide shadow-sm" data-bs-ride="carousel">
                                 <div class="carousel-inner rounded-4">
-                                    <div class="carousel-item active">
-                                        <img src="https://picsum.photos/500/400" width="500px" height="auto" class="d-block w-100" alt="Immagine articolo">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://picsum.photos/501/400" width="500px" height="auto" class="d-block w-100" alt="Immagine articolo">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://picsum.photos/502/400" width="500px" height="auto" class="d-block w-100" alt="Immagine articolo">
-                                    </div>
+                                    @foreach ($article->images as $key => $image)
+                                        <div class="carousel-item @if($loop->first) active @endif">
+                                            <img src="{{ Storage::url($image->path) }}" class="d-block w-100 rounded shadow" alt="immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
+                                        </div>
+                                    @endforeach
                                 </div>
+                                
                             </div>
                         </div>
                     </article>
