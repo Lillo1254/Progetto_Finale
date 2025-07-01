@@ -12,7 +12,7 @@
                     <form class="primary-light-bg p-5 rounded-0 form-glow mb-5" action="{{ route('register') }}" method="POST">
                         @csrf
                         @if ($errors->any())
-                            <div class="alert alert-danger m-0 mb-4">
+                            <div class="alert alert-danger rounded-0 m-0 mb-4">
                                 <ul>
                                     @foreach ($errors->all() as $error)
                                         <li>{{ $error }}</li>
@@ -21,21 +21,21 @@
                             </div>
                         @endif
                         <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control rounded-0 primary-bg white-text" id="name" name="name" required value="{{old('name')}}">
+                            <label for="name" class="form-label white-text">Name</label>
+                            <input type="text" class="form-control rounded-0" id="name" name="name" required value="{{old('name')}}">
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Indirizzo Email</label>
-                            <input type="email" class="form-control rounded-0 primary-bg white-text" id="email" name="email"
+                            <label for="email" class="form-label white-text">Indirizzo Email</label>
+                            <input type="email" class="form-control rounded-0" id="email" name="email"
                                 aria-describedby="emailHelp" required value="{{old('email')}}">
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control rounded-0 primary-bg white-text" id="password" name="password" required>
+                            <label for="password" class="form-label white-text">Password</label>
+                            <input type="password" class="form-control rounded-0" id="password" name="password" required>
                         </div>
                         <div class="mb-0">
-                            <label for="password_confirmation" class="form-label">Conferma Password</label>
-                            <input type="password" class="form-control rounded-0 primary-bg white-text" id="password_confirmation"
+                            <label for="password_confirmation" class="form-label white-text">Conferma Password</label>
+                            <input type="password" class="form-control rounded-0" id="password_confirmation"
                                 name="password_confirmation" required>
                         </div>
                         <div
@@ -43,9 +43,7 @@
                             <button type="submit" class="btn btn-form mt-5 px-5 rounded-5">
                                 <p class="m-auto p-0 px-2 dark-text">Registrati</p>
                             </button>
-                            <p class="my-0 mt-5 secondary-text">Hai già un account? <a
-                                    class="form-link secondary-text text-decoration-none"
-                                    href="{{ route('login') }}">Login</a></p>
+                            <p class="my-0 mt-5 secondary-text">Hai già un account? <a class="form-link secondary-text text-decoration-none" href="{{ route('login') }}">Login</a></p>
                         </div>
                         <div class="left-glow"></div>
                         <div class="bottom-glow"></div>

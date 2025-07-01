@@ -72,8 +72,7 @@ class CreateArticle extends Component
         }    
                 
 
-        session()->flash('message', 'Articolo creato con successo.');
-        return redirect()->route('article.catalogo');
+        return redirect(route('article.create'))->with('message', 'Articolo creato con successo.');
 
         // $this->cleanForm();
     }

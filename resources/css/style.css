@@ -235,6 +235,28 @@ a:hover {
     background-color: var(--secondary);
 }
 
+.btn-form:disabled {
+    background-color: var(--secondary) !important;
+    opacity: 1 !important;
+}
+
+.btn-form:disabled::after {
+    background-color: var(--secondary) !important;
+}
+
+.form-check-input:disabled {
+    background-color: #fff !important;
+    opacity: 1 !important;
+}
+
+.form-check-label {
+    opacity: 1 !important;
+}
+
+.form-check-input:checked {
+    background-color: var(--accent) !important;
+}
+
 .btn-home {
     transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
     color: var(--primary) !important;
@@ -374,12 +396,12 @@ a:hover {
 }
 
 .btn-secondary {
-    color: var(--dark) !important;
+    color: var(--primary) !important;
     background-color: var(--secondary);
 }
 
 .btn-secondary:hover {
-    color: var(--dark) !important;
+    color: var(--primary) !important;
     background-color: var(--secondary);
 }
 
@@ -413,6 +435,10 @@ a:hover {
 .alert-success {
     background-color: var(--success) !important;
     border: none !important;
+}
+
+.px-12 {
+    padding: 0px 12px !important;
 }
 
 

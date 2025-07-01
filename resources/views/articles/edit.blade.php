@@ -24,30 +24,30 @@
                             </div>
                         @endif
                         <div class="mb-3">
-                            <label for="title" class="form-label">Titolo</label>
+                            <label for="title" class="form-label white-text">Titolo</label>
                             <input type="text" name="title" id="title" class="form-control rounded-0"
                                 value="{{ old('title', $article->title) }}" required>
                         </div>
                         <div class="mb-3">
-                            <label for="price" class="form-label">Prezzo</label>
+                            <label for="price" class="form-label white-text">Prezzo</label>
                             <input type="number" name="price" id="price" class="form-control rounded-0"
                                 value="{{ old('price', $article->price) }}" required>
                         </div>
                         <div class="mb-3">
-                            <label for="description" class="form-label">Descrizione</label>
+                            <label for="description" class="form-label white-text">Descrizione</label>
                             <textarea name="description" id="description" class="form-control rounded-0" required>{{ old('description', $article->description) }}</textarea>
                         </div>
 
                         <!-- Categoria -->
-                        <label for="category" class="form-label">Categoria</label>
+                        <label for="category" class="form-label white-text">Categoria</label>
                         <div class="row justify-content-center ">
                             @foreach ($categories as $category)
                                 <div class="col-6">
                                     <div class="form-check">
-                                        <input class="form-check-input  " type="radio" name="category_id"
+                                        <input class="form-check-input" type="radio" name="category_id"
                                             id="category-{{ $category->id }}" value="{{ $category->id }}"
                                             {{ old('category_id', $article->category_id ?? '') == $category->id ? 'checked' : '' }}>
-                                        <label class="form-check-label  " for="category-{{ $category->id }}">
+                                        <label class="form-check-label white-text" for="category-{{ $category->id }}">
                                             {{ $category->name }}
                                         </label>
                                     </div>
@@ -55,17 +55,17 @@
                             @endforeach
                         </div>
 
-                        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between mt-5">
-                            <button type="submit" class="btn rounded-5 btn-success px-4">
+                        <div class="row justify-content-between gap-2 gap-sm-3 gap-md-4 gap-lg-5 mt-5 px-2">
+                            <button type="submit" class="col-12 col-sm btn rounded-5 btn-success">
                                 <p class="m-auto p-0 dark-text">Salva modifiche</p>
                             </button>
 
-
-                            <button type="button" class="btn rounded-5 btn-delete px-4 " data-bs-toggle="modal"
+                            <button type="button" class="col-12 col-sm btn rounded-5 btn-delete" data-bs-toggle="modal"
                                 data-bs-target="#deleteModal">
                                 <p class="m-auto p-0 dark-text">Elimina articolo</p>
                             </button>
-                            <a href="{{ route('article.catalogo') }}" class="btn rounded-5 btn-form px-5"><p class="m-auto p-0 dark-text">Annulla</p></a>
+
+                            <a href="{{ route('article.catalogo') }}" class="col-12 col-sm btn rounded-5 btn-form"><p class="m-auto p-0 dark-text">Annulla</p></a>
                         </div>
                     </form>
                 </div>
@@ -77,7 +77,7 @@
         {{-- modale --}}
         <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content primary-light-bg">
 
                     <div class="modal-header">
                         <h5 class="modal-title" id="deleteModalLabel">Conferma eliminazione</h5>
@@ -85,17 +85,24 @@
                     </div>
 
                     <div class="modal-body">
-                        Sei sicuro di voler eliminare questo articolo? Questa azione non può essere annullata.
+                        <p class="white-text m-0">
+                            Sei sicuro di voler eliminare questo articolo? Questa azione non può essere annullata.
+                        </p>
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
 
                         <form action="{{ route('article.destroy', $article) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Conferma elimina</button>
+                            <button type="submit" class="btn rounded-5 btn-delete">
+                                <p class="dark-text m-0 px-2">Conferma eliminazione</p>
+                            </button>
                         </form>
+
+                        <button type="button" class="btn rounded-5 btn-form" data-bs-dismiss="modal">
+                            <p class="dark-text m-0 px-2">Annulla</p>
+                        </button>
                     </div>
 
                 </div>

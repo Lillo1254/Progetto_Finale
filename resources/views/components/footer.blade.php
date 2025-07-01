@@ -51,13 +51,13 @@
 
         <div class="row justify-content-center">
 
-            <div class="col-1 d-none d-md-block"></div>
+            <div class="col-1 d-none d-lg-block"></div>
 
             <!-- ! COMPANY -->
             <div class="col-12 col-md-5 text-start px-md-5 pb-5 pb-md-0">
                 <h3 class="mb-3 secondary-text fw-light">JASL</h3>
                 <small class="mb-4 text-start">
-                    <p>
+                    <p class="white-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
                         repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
                         harum corrupti dicta, aliquam sequi voluptate quas.
@@ -71,19 +71,19 @@
                 <h3 class="mb-3 secondary-text fw-light">{{ __('ui.info') }}</h3>
                 <ul class="list-unstyled">
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text"><i class="bi bi-house-door-fill me-1"></i>New York, NY 10012, US</small>
+                        <small class="white-text"><i class="bi white-text bi-house-door-fill me-1"></i>New York, NY 10012, US</small>
 
                     </li>
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text"><i class="bi bi-envelope-fill me-1"></i>info@example.com</small>
+                        <small class="white-text"><i class="bi white-text bi-envelope-fill me-1"></i>info@example.com</small>
                         
                     </li>
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text"><i class="bi bi-telephone-fill me-1"></i> + 01 234 567 88</small>
+                        <small class="white-text"><i class="bi white-text bi-telephone-fill me-1"></i> + 01 234 567 88</small>
                         
                     </li>
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text"><i class="bi bi-printer-fill me-1"></i> + 01 234 567 89</small>
+                        <small class="white-text"><i class="bi white-text bi-printer-fill me-1"></i> + 01 234 567 89</small>
                         
                     </li>
 
@@ -96,23 +96,23 @@
                 <h3 class="mb-3 secondary-text fw-light">{{ __('ui.links') }}</h3>
                 <ul class="list-unstyled">
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text">
-                            <a href="" class="text-decoration-none footer-link">{{ __('ui.assistenza') }}</a>
+                        <small>
+                            <a href="" class="text-decoration-none white-text footer-link">{{ __('ui.assistenza') }}</a>
                         </small>
                     </li>
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text">
-                            <a href="" class="text-decoration-none footer-link">{{ __('ui.privacy') }}</a>
+                        <small>
+                            <a href="" class="text-decoration-none white-text footer-link">{{ __('ui.privacy') }}</a>
                         </small>
                     </li>
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text">
-                            <a href="" class="text-decoration-none footer-link">{{ __('ui.condizioni') }}</a>
+                        <small>
+                            <a href="" class="text-decoration-none white-text footer-link">{{ __('ui.condizioni') }}</a>
                         </small>
                     </li>
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text">
-                            <a href="" class="text-decoration-none footer-link">{{ __('ui.faq') }}</a>
+                        <small>
+                            <a href="" class="text-decoration-none white-text footer-link">{{ __('ui.faq') }}</a>
                         </small>
                     </li>
                 </ul>
@@ -124,9 +124,9 @@
     </div>
 
     <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
-        <small class="m-0 p-0">
+        <small class="m-0 p-0 white-text">
             © 2025 {{ __('ui.copyright') }}:
-            <a class="white-text text-rese text-decoration-nonet  fw-bold"
+            <a class="white-text text-decoration-none fw-bold"
                 href="https://mdbootstrap.com/">MDBootstrap.com</a>
         </small>
     </div>

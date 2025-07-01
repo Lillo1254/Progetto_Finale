@@ -1,5 +1,5 @@
 <x-layout titlePage="Dashboard Revisore">
-    <section class="primary-bg min-vh-100">
+    <main class="primary-bg min-vh-100">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12 text-center">
@@ -9,43 +9,50 @@
                 </div>
             </div>
 
-            @if (session()->has('message'))
-                <h5 class="text-center pb-5 display-6 white-text">{{ session('message') }}</h5>
+            @if (session('message'))
+                <div class="row justify-content-center px-12">
+                    <div class="col-12 col-sm-10 col-lg-12 col-xl-10 alert alert-success dark-text mb-4 rounded-0">
+                        {{ session('message') }}
+                    </div>
+                </div>
             @endif
 
             @if ($articles_to_check)
-                <main class="row justify-content-center">
-                    @foreach ($articles_to_check->take(4) as $article)
+                @foreach ($articles_to_check->take(4) as $article)
+                    <div class="row justify-content-center mb-5">
                         @if ($article->images->count())
                             @foreach ($article->images as $key => $image)
-                                <div class="col-6 col-md-4 mb-4 text-center">
-                                    <img src="{{$image->getUrl(300,300) }}" class="img-fluid rounded shadow"
+                                <div class="col-6 col-md-4 text-center">
+                                    <img src="{{ $image->getUrl(300, 300) }}" class="img-fluid rounded shadow"
                                         alt="immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
                                 </div>
                             @endforeach
                         @else
-                            {{-- @for ($i = 0; $i < 6; $i++)
-                                <div class="col-3 col-md-3">
-                                    <img src="https://picsum.photos/300" class="img-fluid rounded shadow"
-                                        alt="immagine segnaposto">
-                                </div>
-                            @endfor --}}
+                            <div class="col-12 col-sm-10 col-lg-4 col-xl-4 text-center">
+                                <img src="/media/default.jpg" class="img-fluid rounded-0" alt="Missing image">
+                            </div>
                         @endif
-                        <article class="col-12 col-md-6 col-lg-5 mb-4">
-                            <div class="card primary-light-bg p-4 rounded-0">
-                                <h2 class="pb-2">{{ $article->title }}</h2>
-                                <p><strong>Autore:</strong> {{ $article->author }}</p>
-                                <p><strong>Categoria:</strong> {{ $article->category->name }}</p>
-                                <p><strong>Stato:</strong> {{ $article->status }}</p>
+                        <article class="col-12 col-md-10 col-lg-8 col-xl-6">
+                            <div class="card primary-light-bg p-4 rounded-0 h-100">
+                                <div class="card-body p-0">                                   
+                                    <h2 class="pb-2">{{ $article->title }}</h2>
+                                    <p class="white-text"><strong class="white-text">Categoria:</strong> {{ $article->category->name }}</p>
+                                    <p class="white-text"><strong class="white-text">Prezzo:</strong> {{ $article->price }}€</p>
+                                    <p class="white-text"><strong class="white-text">Data inserimento:</strong> {{ $article->created_at->format('d/m/Y') }}</p>
+                                    <p class="white-text"><strong class="white-text">Descrizione:</strong> {{ $article->description }}</p>
+                                </div>
 
-                                <div class="d-flex justify-content-between mt-3">
-                                    <button type="button" class="btn btn-success rounded-5 px-3" data-bs-toggle="modal"
+                                <div class="row justify-content-between gap-2 gap-sm-3 gap-md-4 gap-lg-5 mt-3 px-2">
+                                    <a type="button" class="btn col-12 col-sm btn-form rounded-5" href="">
+                                        <p class="m-auto dark-text">Vedi dettagli</p>
+                                    </a>
+                                    <button type="button" class="btn col-12 col-sm btn-success rounded-5" data-bs-toggle="modal"
                                         data-bs-target="#acceptModal-{{ $article->id }}">
-                                        <p class="m-auto p-0 px-2 dark-text">Accetta articolo</p>
+                                        <p class="m-auto dark-text">Accetta articolo</p>
                                     </button>
-                                    <button type="button" class="btn btn-delete rounded-5 px-3" data-bs-toggle="modal"
+                                    <button type="button" class="btn col-12 col-sm btn-delete rounded-5" data-bs-toggle="modal"
                                         data-bs-target="#declineModal-{{ $article->id }}">
-                                        <p class="m-auto p-0 px-2 dark-text">Rifiuta articolo</p>
+                                        <p class="m-auto dark-text">Rifiuta articolo</p>
                                     </button>
                                 </div>
                             </div>
@@ -64,7 +71,7 @@
                                     </div>
                                     <div class="modal-body">
                                         Sei sicuro di voler accettare l'articolo
-                                        <strong>{{ $article->title }}</strong>?
+                                        <strong class="white-text">{{ $article->title }}</strong>?
                                     </div>
                                     <div class="modal-footer">
                                         <form action="{{ route('revisor.accept', $article) }}" method="POST">
@@ -114,21 +121,21 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach
-                </main>
+                    </div>
+                @endforeach
             @else
                 <div class="text-center my-5">
                     <h2><em>Nessun articolo da revisionare</em></h2>
                 </div>
             @endif
-            <div class="text-center mt-3">
-                <a href="{{ route('revisor.articledecline') }}" class="btn btn-form rounded-5 px-3 mx-3">
+            <div class="text-center my-5">
+                <a href="{{ route('revisor.articledecline') }}" class="btn btn-home rounded-5 px-3 me-3 me-md-5">
                     <p class="m-auto p-0 px-1 dark-text">Lista articoli rifiutati</p>
                 </a>
-                <a href="{{ route('home') }}" class="btn btn-success rounded-5 px-3 mx-3">
+                <a href="{{ route('home') }}" class="btn btn-success rounded-5 px-3 ms-3 ms-md-5">
                     <p class="m-auto p-0 px-1 dark-text">Torna all'homepage</p>
                 </a>
             </div>
         </div>
-    </section>
+    </main>
 </x-layout>
