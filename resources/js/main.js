@@ -1,21 +1,24 @@
 //   switch light mode
   document.addEventListener('DOMContentLoaded', () => {
         const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
-
+        const logo = document.getElementById('nav-logo');
        
         if (localStorage.getItem('theme') === 'light') {
             document.body.classList.add('light-mode');
-            toggleSwitch.checked = true;
+            toggleSwitch.checked = true;            
+            logo.src = '/media/Logo_LightMode.png';
         }
 
         toggleSwitch.addEventListener('change', () => {
             document.body.classList.toggle('light-mode');
 
-  
+
             if (document.body.classList.contains('light-mode')) {
                 localStorage.setItem('theme', 'light');
+                logo.src = '/media/Logo_LightMode.png';
             } else {
                 localStorage.setItem('theme', 'dark');
+                logo.src = '/media/Logo_DarkMode.png';
             }
         });
     });

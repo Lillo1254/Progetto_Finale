@@ -520,7 +520,7 @@ a:hover {
 }
 
 .logo {
-    height: 55px;
+    height: 40px;
 }
 
 .search-bar {
@@ -551,10 +551,6 @@ a:hover {
 .navbar-links {
     position: sticky;
     top: 0%;
-}
-
-.nav-hover {
-    top:-5.5%;
 }
 
 .nav-hover:hover {
@@ -832,7 +828,7 @@ body {
     }
 
     .logo {
-        height: 80px;
+        height: 50px;
     }
 
     .hide {

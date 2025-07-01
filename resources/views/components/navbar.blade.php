@@ -2,9 +2,9 @@
     <nav class="container">
 
         <!-- Main controls -->
-        <div class="d-flex flex-row justify-content-between align-items-center w-100 gap-2">
+        <div class="d-flex flex-row justify-content-between align-items-center w-100 gap-2 pt-3">
             <!-- Search -->
-            <div class="w-100 d-none d-md-block">
+            <div class="w-100 d-none d-md-block pb-3">
                 <form class="d-flex position-relative align-items-center" action="{{ route('article.search') }}"
                     method="GET">
                     <button class="btn position-absolute btn-navbar px-3" type="submit">
@@ -18,12 +18,12 @@
             <!-- Logo -->
             <div class="w-100 text-start text-md-center">
                 <a class="navbar-brand m-0" href="#">
-                    <img src="{{ asset('media/logodasvg-removebg-preview.png') }}" class="logo" alt="">
+                    <img src="{{ asset('media/Logo_DarkMode.png') }}" class="logo text-start" alt="" id="nav-logo">
                 </a>
             </div>
 
             <!-- Icons -->
-            <div class="w-100 w-md-33 d-flex align-items-center justify-content-end gap-2">
+            <div class="w-100 w-md-33 d-flex align-items-center justify-content-end gap-2 pb-3">
                 <a href="{{ route('article.create') }}"
                     class="text-decoration-none p-1 px-2 pb-2 btn-navbar btn border-0">
                     <i class="bi bi-plus-square-fill fs-5"></i>
@@ -53,7 +53,7 @@
         <div class="w-100 w-md-33 d-block d-md-none py-1">
             <form class="d-flex position-relative align-items-center" action="{{ route('article.search') }}"
                 method="GET">
-                <input class="form-control ps-3 py-2 primary-bg rounded-5 w-100 white-text input-search-custom"
+                <input class="form-control ps-3 py-2 rounded-5 w-100 white-text input-search-custom"
                     name="query" type="search" placeholder="Cerca" aria-label="Search" />
                 <button class="btn position-absolute end-0 px-3" type="submit">
                     <i class="bi bi-search btn-navbar"></i>
@@ -62,7 +62,7 @@
         </div>
 
         <!-- MAIN NAVBAR -->
-        <div class="d-none navbar-links d-md-flex justify-content-between align-items-center w-100 pb-2">
+        <div class="d-none navbar-links d-md-flex justify-content-between align-items-center w-100 pb-2 pt-3">
             <div class="col-12 m-auto">
                 <ul class="navbar-nav d-flex flex-row justify-content-center p-0 gap-4">
                     <li class="nav-item">
@@ -172,7 +172,7 @@
 
 
                     @guest
-                        <h5 class="text-start pb-1">{{ __('ui.auth') }}</h5>
+                        <h5 class="text-start pb-1 pt-3 pt-md-0">{{ __('ui.auth') }}</h5>
                         <div class="d-flex gap-3">
                             <a href="{{ route('login') }}" class="btn btn-success w-50 rounded-5">
                                 <p class="m-auto p-0 px-2 dark-text">{{ __('ui.login') }}</p>
