@@ -57,7 +57,7 @@
         <div class="row justify-content-end justify-content-sm-center mt-5">
             <div class="col-12">
                 <!-- Ultimi Annunci -->
-                <h2 class="text-start secondary-text py-3">Ultimi Annunci</h2>
+                <h2 class="text-start secondary-text py-3">{{ __('ui.Ultimi Annunci') }}</h2>
             </div>
         </div>
 

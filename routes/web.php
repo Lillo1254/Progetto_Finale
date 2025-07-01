@@ -21,7 +21,7 @@ Route::get('/search/article', [ArticleController::class, 'search'])->name('artic
 
 // route user auth
 Route::middleware(['auth'])->group(function () {
-    
+
     Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
     Route::post('/logout', function () {
         Auth::logout();
@@ -37,7 +37,12 @@ Route::middleware(['auth'])->group(function () {
 
 // route revisor
 Route::middleware(['auth', 'isRevisor'])->group(function () {
-    
+
+    // accettazione revisor
+    Route::get('/revisor/accept/{user}', [isAdmin::class, 'accept'])->name('revisor.acceptUser');
+    Route::get('/revisor/reject/{user}', [isAdmin::class, 'reject'])->name('revisor.rejectUser');
+
+
     Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
     Route::get('/revisor/table/decline', [RevisorController::class, 'showDecline'])->name('revisor.articledecline');
     Route::get('/revisor/profile/{user}', [RevisorController::class, 'revisorProfile'])->name('revisor.profile');

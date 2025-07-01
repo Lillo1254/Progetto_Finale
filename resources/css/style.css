@@ -1,6 +1,6 @@
 /* ! COLORS */
 
-:root{
+:root {
     --primary: rgb(9, 0, 24);
     --primary-light: #2b2337;
     --secondary: #e2d4f9;
@@ -11,99 +11,99 @@
     --dark: #090018;
 }
 
-.primary-text{
+.primary-text {
     color: var(--primary) !important;
 }
 
-.primary-bg{
+.primary-bg {
     background-color: var(--primary) !important;
 }
 
-.primary-border{
+.primary-border {
     border-color: var(--primary) !important;
 }
 
-.dark-text{
+.dark-text {
     color: var(--dark) !important;
 }
 
-.dark-bg{
+.dark-bg {
     background-color: var(--dark) !important;
 }
 
-.dark-border{
+.dark-border {
     border-color: var(--dark) !important;
 }
 
-.primary-light-text{
+.primary-light-text {
     color: var(--primary-light) !important;
 }
 
-.primary-light-bg{
-    background-color: var(--primary-light)!important;
+.primary-light-bg {
+    background-color: var(--primary-light) !important;
 }
 
-.primary-light-border{
+.primary-light-border {
     border-color: var(--primary-light) !important;
 }
 
-.secondary-text{
+.secondary-text {
     color: var(--secondary) !important;
 }
 
-.secondary-bg{
+.secondary-bg {
     background-color: var(--secondary) !important;
 }
 
-.secondary-border{
+.secondary-border {
     border-color: var(--secondary) !important;
 }
 
-.accent-text{
+.accent-text {
     color: var(--accent) !important;
 }
 
-.accent-bg{
+.accent-bg {
     background-color: var(--accent) !important;
 }
 
-.accent-border{
+.accent-border {
     border-color: var(--accent) !important;
 }
 
-.white-text{
+.white-text {
     color: #fff !important;
 }
 
-.white-bg{
+.white-bg {
     background-color: #fff !important;
 }
 
-.white-border{
+.white-border {
     border-color: #fff !important;
 }
 
-.danger-text{
+.danger-text {
     color: var(--danger) !important;
 }
 
-.danger-bg{
+.danger-bg {
     background-color: var(--danger) !important;
 }
 
-.danger-border{
+.danger-border {
     border-color: var(--danger) !important;
 }
 
-.success-text{
+.success-text {
     color: var(--success) !important;
 }
 
-.success-bg{
+.success-bg {
     background-color: var(--success) !important;
 }
 
-.success-border{
+.success-border {
     border-color: var(--success) !important;
 }
 
@@ -115,7 +115,7 @@
 }
 
 input {
-    color: #222!important;
+    color: #222 !important;
     border: none !important;
 }
 
@@ -124,7 +124,7 @@ input:focus {
 }
 
 textarea {
-    color: #222!important;
+    color: #222 !important;
     border: none !important;
 }
 
@@ -421,19 +421,19 @@ a:hover {
 }
 
 .page-link:hover {
-    color:var(--accent) !important;
+    color: var(--accent) !important;
 }
 
 .page-link-active {
     background-color: var(--accent) !important;
-    color:var(--primary) !important;
+    color: var(--primary) !important;
 }
 
 .page-link-active:hover {
     color: var(--primary) !important;
     border: none !important;
     box-shadow: none !important;
-    
+
 }
 
 .page-item:hover {
@@ -446,38 +446,38 @@ a:hover {
     border: none !important;
 }
 
-.card-categories{
+.card-categories {
     transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
-.card-categories:hover{
+.card-categories:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 25px 5px var(--secondary);
     z-index: 999;
 }
 
 .card-img {
-    max-width: 100vw; 
-    max-height: 100vh; 
-    object-fit: contain; 
+    max-width: 100vw;
+    max-height: 100vh;
+    object-fit: contain;
     transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
 .card:hover .card-img {
-    transform: scale(1.05); 
-    object-fit: cover; 
-    width: 100%; 
-    height: auto; 
-    transition: none; 
-    transform: none; 
+    transform: scale(1.05);
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    transition: none;
+    transform: none;
 }
 
 
-.card-scale-btn:hover{
-    width: auto; 
-    max-width: 100%; 
-    transition: none; 
-    transform: none; 
+.card-scale-btn:hover {
+    width: auto;
+    max-width: 100%;
+    transition: none;
+    transform: none;
 }
 
 .card-title {
@@ -488,7 +488,7 @@ a:hover {
 
 
 
-/* ! NAVBAR */ 
+/* ! NAVBAR */
 
 .navbar-toggler:focus {
     box-shadow: none !important;
@@ -499,11 +499,11 @@ a:hover {
 }
 
 .notifications {
-    width:8px;
-    height:8px;
+    width: 8px;
+    height: 8px;
     background-color: var(--danger);
     position: absolute;
-    top:1px;
+    top: 1px;
     right: 4px;
     border-radius: 8px;
     border: 2px solid var(--primary-light);
@@ -537,7 +537,7 @@ a:hover {
 
 .nav-bar {
     position: sticky;
-    top:0%;
+    top: 0%;
     z-index: 100;
     padding-bottom: 8px;
     width: 100%;
@@ -546,30 +546,37 @@ a:hover {
 
 .navbar-links {
     position: sticky;
-    top:0%;
+    top: 0%;
 }
 
 .nav-hover {
-    top:-8%;
+    top: -8%;
 }
 
 .nav-hover:hover {
-    top:0%;
+    top: 0%;
 }
 
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
 /* ! HEADER */
 
-.image-home{
+.image-home {
     height: 240px;
     width: 100%;
-    background:linear-gradient(#00000000, #00000000),url('/public/media/306-1024x768.jpg');
+    background: linear-gradient(#00000000, #00000000), url('/public/media/306-1024x768.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -598,7 +605,7 @@ a:hover {
     width: 100%;
     height: 5px;
     background: linear-gradient(to right, rgba(42, 123, 155, 0) 0%, rgba(155, 193, 208, 0) 25%, rgba(255, 255, 255, 1) 50%, rgba(246, 237, 165, 0) 75%, rgba(237, 221, 83, 0) 100%);
-    animation: move-right 4s cubic-bezier(0.60,0,0.8, 0) infinite;
+    animation: move-right 4s cubic-bezier(0.60, 0, 0.8, 0) infinite;
     z-index: 1;
 }
 
@@ -610,7 +617,7 @@ a:hover {
     width: 5px;
     height: 100%;
     background: linear-gradient(to top, rgba(42, 123, 155, 0) 0%, rgba(155, 193, 208, 0) 25%, rgba(255, 255, 255, 1) 50%, rgba(246, 237, 165, 0) 75%, rgba(237, 221, 83, 0) 100%);
-    animation: move-down 4s cubic-bezier(0, 0.7,.7,1) 3.75s infinite;
+    animation: move-down 4s cubic-bezier(0, 0.7, .7, 1) 3.75s infinite;
     z-index: 1;
 }
 
@@ -623,7 +630,7 @@ a:hover {
     width: 5px;
     height: 100%;
     background: linear-gradient(to bottom, rgba(42, 123, 155, 0) 0%, rgba(155, 193, 208, 0) 25%, rgba(255, 255, 255, 1) 50%, rgba(246, 237, 165, 0) 75%, rgba(237, 221, 83, 0) 100%);
-    animation: move-down 4s cubic-bezier(0.60,0,0.8, 0) infinite;
+    animation: move-down 4s cubic-bezier(0.60, 0, 0.8, 0) infinite;
     z-index: 1;
 }
 
@@ -636,7 +643,7 @@ a:hover {
     width: 100%;
     height: 5px;
     background: linear-gradient(to left, rgba(42, 123, 155, 0) 0%, rgba(155, 193, 208, 0) 25%, rgba(255, 255, 255, 1) 50%, rgba(246, 237, 165, 0) 75%, rgba(237, 221, 83, 0) 100%);
-    animation: move-right 4s cubic-bezier(0, 0.7,.7,1) 3.75s infinite;
+    animation: move-right 4s cubic-bezier(0, 0.7, .7, 1) 3.75s infinite;
     z-index: 1;
 }
 
@@ -651,23 +658,43 @@ a:hover {
 }
 
 @keyframes move-right {
-    0% { left: -100%; }
-    100% { left: 100%; }
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
 }
 
 @keyframes move-left {
-    0% { right: -100%; }
-    100% { right: 100%; }
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: 100%;
+    }
 }
 
 @keyframes move-up {
-    0% { bottom: -100%; }
-    100% { bottom: 100%; }
+    0% {
+        bottom: -100%;
+    }
+
+    100% {
+        bottom: 100%;
+    }
 }
 
 @keyframes move-down {
-    0% { top: -100%; }
-    100% { top: 100%; }
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 100%;
+    }
 }
 
 
@@ -690,7 +717,7 @@ a:hover {
 
 .container {
     max-width: 1360px !important;
-    
+
 }
 
 /* effetto navbar  */
@@ -698,20 +725,20 @@ a:hover {
 
 .nav-bar {
     backdrop-filter: none;
-    -webkit-backdrop-filter: none; 
+    -webkit-backdrop-filter: none;
 }
 
 
 .scrolled {
-    background-color: #09001877 !important; 
+    background-color: #09001877 !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
 .scrolled:hover {
-    background-color: var(--primary-light) !important; 
+    background-color: var(--primary-light) !important;
     backdrop-filter: none;
-    -webkit-backdrop-filter: none; 
+    -webkit-backdrop-filter: none;
 }
 
 body {
@@ -719,17 +746,17 @@ body {
 }
 
 .hover-move-down {
-    display: inline-block; 
+    display: inline-block;
     transition: transform 0.3s ease;
 }
 
 .hover-move-down:hover {
-    transform: translateY(30%); 
+    transform: translateY(30%);
 }
 
-.bg-ul-category{
-    background-color:var(--primary-light) !important;
-    
+.bg-ul-category {
+    background-color: var(--primary-light) !important;
+
 }
 
 
@@ -743,20 +770,20 @@ body {
 /* per cambio della scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
-    
+
 }
 
 ::-webkit-scrollbar-track {
     background: var(--primary-light);
     border-radius: 10px;
-    
+
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--secondary);
     border-radius: 10px;
     border: 1px solid var(--primary-light);
-    box-shadow: 0px 0px 50px 25px var(--secondary) ;
+    box-shadow: 0px 0px 50px 25px var(--secondary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -771,17 +798,18 @@ body {
     footer .form-control {
         margin-bottom: 10px;
     }
-    
+
     footer button.btn-form {
         padding: 10px 0;
     }
-    
+
     footer p {
         font-size: 0.95rem;
     }
+
     .footer-icon {
-        flex: 1 1 auto; 
-        min-width: 40px; 
+        flex: 1 1 auto;
+        min-width: 40px;
     }
 }
 
@@ -789,12 +817,23 @@ body {
     .image-home {
         height: 540px;
     }
-    
+
     .logo {
         height: 80px;
     }
-    
+
     .hide {
         display: table-cell !important;
     }
+}
+
+.img-preview {
+    width: 150px;
+    height: 150px;
+    background: center center no-repeat;
+    filter: grayscale(100%);
+}
+
+.img-preview:hover {
+    filter: grayscale(0%);
 }

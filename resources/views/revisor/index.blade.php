@@ -9,13 +9,28 @@
                 </div>
             </div>
 
-            @if(session()->has('message'))
-            <h5 class="text-center pb-5 display-6 white-text">{{ session('message') }}</h5>
+            @if (session()->has('message'))
+                <h5 class="text-center pb-5 display-6 white-text">{{ session('message') }}</h5>
             @endif
-            
+
             @if ($articles_to_check)
                 <main class="row justify-content-center">
                     @foreach ($articles_to_check->take(4) as $article)
+                        @if ($article->images->count())
+                            @foreach ($article->images as $image)
+                                <div class="col-3 col-md-3">
+                                    <img src="{{ Storage::url($image->path) }}" class="img-fluid rounded shadow"
+                                        alt="immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
+                                </div>
+                            @endforeach
+                        @else
+                            @for ($i = 0; $i < 6; $i++)
+                                <div class="col-3 col-md-3">
+                                    <img src="https://picsum.photos/300" class="img-fluid rounded shadow"
+                                        alt="immagine segnaposto">
+                                </div>
+                            @endfor
+                        @endif
                         <article class="col-12 col-md-6 col-lg-5 mb-4">
                             <div class="card primary-light-bg p-4 rounded-0">
                                 <h2 class="pb-2">{{ $article->title }}</h2>
@@ -59,7 +74,8 @@
                                                 <p class="m-auto p-0 px-2 dark-text">Accetta</p>
                                             </button>
                                         </form>
-                                        <button type="button" class="btn btn-secondary rounded-5 px-3" data-bs-dismiss="modal">
+                                        <button type="button" class="btn btn-secondary rounded-5 px-3"
+                                            data-bs-dismiss="modal">
                                             <p class="m-auto p-0 px-2 dark-text">Annulla</p>
                                         </button>
                                     </div>
@@ -90,9 +106,10 @@
                                                 <p class="m-auto p-0 px-2 dark-text">Rifiuta</p>
                                             </button>
                                         </form>
-                                        <button type="button" class="btn btn-secondary rounded-5 px-3" data-bs-dismiss="modal">
+                                        <button type="button" class="btn btn-secondary rounded-5 px-3"
+                                            data-bs-dismiss="modal">
                                             <p class="m-auto p-0 px-2 dark-text">Annulla</p>
-                                    </button>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
