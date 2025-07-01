@@ -35,12 +35,12 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/article/{article}', [ArticleController::class, 'update'])->name('article.update');
 });
 
+// accettazione revisor
+Route::get('/revisor/accept/{user}', [isAdmin::class, 'accept'])->name('revisor.acceptUser');
+Route::get('/revisor/reject/{user}', [isAdmin::class, 'reject'])->name('revisor.rejectUser');
 // route revisor
 Route::middleware(['auth', 'isRevisor'])->group(function () {
 
-    // accettazione revisor
-    Route::get('/revisor/accept/{user}', [isAdmin::class, 'accept'])->name('revisor.acceptUser');
-    Route::get('/revisor/reject/{user}', [isAdmin::class, 'reject'])->name('revisor.rejectUser');
 
 
     Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');

@@ -74,11 +74,11 @@
                     <div>
                         <input type="file" wire:model.live="temporary_images" multiple
                             class="form-control shadow @error('temporary_images.*') is-invalid @enderror"
-                            placeholder="Img" />
+                            placeholder="Img/" />
                         @error('temporary_images.*')
                             <p class="text-danger">{{ $message }}</p>
                         @enderror
-                        @error('temporary_images.* ')
+                        @error('temporary_images')
                             <p>{{ $message }} </p>
                         @enderror
                     </div>

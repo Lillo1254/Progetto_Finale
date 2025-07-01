@@ -25,6 +25,7 @@ class CreateArticle extends Component
         'price' => 'required|numeric|min:0',
         'description' => 'required|string|max:500',
         'category_id' => 'required|exists:categories,id',
+        
     ];
 
     protected $messages = [
