@@ -2,7 +2,7 @@
 
     <!-- ? IMAGE -->
     <a href="{{ route('article.show', $article) }}" class="card-link z-1">
-        <img src="{{ $article->images->IsNotEmpty() ? Storage::url($article->images->first()->path) : 'https://picsum.photos/600/500' }}" alt="immagine dell'articolo {{ $article->title }}"
+        <img src="{{ $article->images->IsNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://picsum.photos/600/500' }}" alt="immagine dell'articolo {{ $article->title }}"
             class="article-img rounded-0 z-1 p-0 m-0 w-100">
     </a>
 

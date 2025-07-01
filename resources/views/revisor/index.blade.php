@@ -17,10 +17,10 @@
                 <main class="row justify-content-center">
                     @foreach ($articles_to_check->take(4) as $article)
                         @if ($article->images->count())
-                            @foreach ($article->images as $image)
-                                <div class="col-3 col-md-3">
-                                    <img src="{{ Storage::url($image->path) }}" class="img-fluid rounded shadow"
-                                        alt="immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
+                            @foreach ($article_to_check->images as $key => $image)
+                                <div class="col-6 col-md-4 mb-4 text-center">
+                                    <img src="{{ $image->getUrl(300,300) }}" class="img-fluid rounded shadow"
+                                        alt="immagine {{ $key + 1 }} dell'articolo {{ $article_to_check->title }}">
                                 </div>
                             @endforeach
                         @else
