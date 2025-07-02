@@ -870,20 +870,10 @@ body {
     width: 150px;
     height: 150px;
     background: center center no-repeat;
-    filter: grayscale(100%);
-}
-
-.img-preview:hover {
-    filter: grayscale(0%);
 }
 
 .img-preview {
     width: 150px;
     height: 150px;
     background: center center no-repeat;
-    filter: grayscale(100%);
-}
-
-.img-preview:hover {
-    filter: grayscale(0%);
 }

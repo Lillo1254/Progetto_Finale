@@ -21,16 +21,26 @@
                 @foreach ($articles_to_check->take(4) as $article)
                     <div class="row justify-content-center mb-5">
                         @if ($article->images->count())
+                        <div class="col-12 col-sm-10 col-lg-4 col-xl-4 text-center">
+                            <div class="row flex-wrap">
                             @foreach ($article->images as $key => $image)
-                                <div class="col-6 col-md-4 text-center">
-                                    <img src="{{ $image->getUrl(300, 300) }}" class="img-fluid rounded shadow"
+                                <div class="col-6 col-sm-4text-center">
+                                    <img src="{{ $image->getUrl(300, 300) }}" class="img-fluid rounded-0"
                                         alt="immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
                                 </div>
                             @endforeach
-                        @else
-                            <div class="col-12 col-sm-10 col-lg-4 col-xl-4 text-center">
-                                <img src="/media/default.jpg" class="img-fluid rounded-0" alt="Missing image">
                             </div>
+                        </div>
+                        @else
+                        <div class="col-12 col-sm-10 col-lg-4 col-xl-4 text-center">
+                            <div class="row flex-wrap">
+                                @for ($i = 0; $i < 6; $i++)
+                                <div class="col-6 col-sm-4 text-center">
+                                    <img src="/media/default.jpg" class="img-fluid rounded-0 pb-4" alt="Missing image">
+                                </div>                                    
+                                @endfor
+                            </div>
+                        </div>
                         @endif
                         <article class="col-12 col-md-10 col-lg-8 col-xl-6">
                             <div class="card primary-light-bg p-4 rounded-0 h-100">
@@ -43,9 +53,9 @@
                                 </div>
 
                                 <div class="row justify-content-between gap-2 gap-sm-3 gap-md-4 gap-lg-5 mt-3 px-2">
-                                    <a type="button" class="btn col-12 col-sm btn-form rounded-5" href="">
+                                    <!-- <a type="button" class="btn col-12 col-sm btn-form rounded-5" href="">
                                         <p class="m-auto dark-text">Vedi dettagli</p>
-                                    </a>
+                                    </a> -->
                                     <button type="button" class="btn col-12 col-sm btn-success rounded-5" data-bs-toggle="modal"
                                         data-bs-target="#acceptModal-{{ $article->id }}">
                                         <p class="m-auto dark-text">Accetta articolo</p>

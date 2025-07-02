@@ -60,7 +60,7 @@
             </div>
         </div>
 
-        <article class="row row-cols-1 row-cols-md-3 row-cols-lg-3 pb-5 justify-content-center">
+        <article class="row row-cols-1 row-cols-md-3 row-cols-lg-3 pb-5 justify-content-start">
             @foreach ($articles as $article)
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
                     <x-card :article="$article"/>

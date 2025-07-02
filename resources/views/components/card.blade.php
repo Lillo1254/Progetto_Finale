@@ -46,7 +46,7 @@
             {{-- modale --}}
             <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
+                    <div class="modal-content primary-bg">
 
                         <div class="modal-header">
                             <h5 class="modal-title" id="deleteModalLabel">Conferma eliminazione</h5>
@@ -59,12 +59,12 @@
                         </div>
 
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                            <button type="button" class="btn rounded-5 btn-form" data-bs-dismiss="modal">Annulla</button>
 
                             <form action="{{ route('article.destroy', $article) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-delete">Conferma elimina</button>
+                                <button type="submit" class="btn rounded-5 btn-delete">Conferma elimina</button>
                             </form>
                         </div>
 

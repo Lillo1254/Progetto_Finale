@@ -10,21 +10,21 @@
                     Sei nella sezione {{ $categoryName }}
                 </h1>
                 @else
-                <h4 class="text-center secondary-text mt-2">
+                <h4 class="text-center secondary-text mt-5 py-5">
                     <em>Nessun articolo presente per questa categoria</em>
                 </h4>
-                <a href="{{ route('article.catalogo') }}" class="btn btn-form rounded-5 px-3 mx-3">Torna al catalogo</a>
+                <a href="{{ route('article.catalogo') }}" class="btn col-12 col-sm-6 col-md-4 col-lg-2 btn-form rounded-5 px-3 mx-3">
+                    <p class="dark-text m-0 p-0">Torna al catalogo</p>
+                </a>
                 @endif
             </div>
     
                 <article class="row">
-                    @forelse ($articles as $article)
+                    @foreach ($articles as $article)
                         <div class="col-12 col-md-6 col-lg-4 mb-4">
                             <x-card :article="$article"/>
                         </div>
-                    @empty
-                        <h4 class="text-center secondary-text"><em>Nessun articolo trovato</em></h4>
-                    @endforelse
+                    @endforeach
                 </article>
     
     

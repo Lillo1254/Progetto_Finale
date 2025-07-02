@@ -41,15 +41,15 @@ class CreateArticle extends Component
         
     ];
 
-//     protected function cleanForm()
-// {
-//     $this->title = '';
-//     $this->price = '';
-//     $this->description = '';
-//     $this->category_id = '';
-//     $this->images = [];
-//     $this->temporary_image = null;
-// }
+    protected function cleanForm()
+    {
+        $this->title = '';
+        $this->price = '';
+        $this->description = '';
+        $this->category_id = '';
+        $this->images = [];
+        $this->temporary_image = null;
+    }
 
     public function create()
     {
@@ -74,7 +74,7 @@ class CreateArticle extends Component
 
         return redirect(route('article.create'))->with('message', 'Articolo creato con successo.');
 
-        // $this->cleanForm();
+        $this->cleanForm();
     }
 
     public function updatedTemporaryImage() {

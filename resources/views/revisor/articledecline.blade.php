@@ -5,7 +5,7 @@
                 <div class="col-md-8">
                     
                         <div class="card-body text-center">
-                            <h1 class="secondary-text fw-bold">Articoli Rifiutati
+                            <h1 class="secondary-text fw-bold py-5">Articoli Rifiutati
                             </h1>
                             <hr class="my-3">
                         </div>
@@ -68,7 +68,7 @@
                 </div>
             </div>
 
-            <div class="text-center mt-4">
+            <div class="text-center mt-4 mb-5">
                 <a href="{{ route('revisor.profile', Auth::user()) }}" class="btn rounded-5 btn-success"><p class="m-auto p-0 px-2 dark-text">Torna alla dashboard</p>
                 </a>
             </div>
