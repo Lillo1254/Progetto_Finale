@@ -2,7 +2,7 @@
     <main class="primary-bg min-vh-100 py-3">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-10 col-lg-8">
                     
                         <div class="card-body text-center">
                             <h1 class="secondary-text fw-bold py-5">Articoli Rifiutati

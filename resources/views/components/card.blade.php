@@ -2,8 +2,8 @@
 
     <!-- ? IMAGE -->
     <a href="{{ route('article.show', $article) }}" class="card-link z-1">
-        <img src="{{ $article->images->IsNotEmpty() ? $article->images->first()->getUrl(300, 300) : '/media/default.jpg' }}" alt="immagine dell'articolo {{ $article->title }}"
-            class="article-img rounded-0 z-1 p-0 m-0 w-100">
+        <img src="{{ $article->images->IsNotEmpty() ? $article->images->first()->getUrl(300, 300) : '/media/default.jpg' }}"
+            alt="immagine dell'articolo {{ $article->title }}" class="article-img rounded-0 z-1 p-0 m-0 w-100">
     </a>
 
     <!-- ? CARD BODY -->
@@ -46,26 +46,34 @@
             {{-- modale --}}
             <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content primary-bg">
+                    <div class="modal-content primary-light-bg">
 
                         <div class="modal-header">
-                            <h5 class="modal-title" id="deleteModalLabel">Conferma eliminazione</h5>
+                            <h5 class="modal-title" id="deleteModalLabel">
+                                Conferma
+                                eliminazione</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
                         </div>
 
                         <div class="modal-body">
-                            Sei sicuro di voler eliminare questo articolo? Questa azione non può essere
+                            Sei sicuro di voler eliminare questo
+                            articolo? Questa azione non può essere
                             annullata.
                         </div>
 
                         <div class="modal-footer">
-                            <button type="button" class="btn rounded-5 btn-form" data-bs-dismiss="modal">Annulla</button>
-
                             <form action="{{ route('article.destroy', $article) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn rounded-5 btn-delete">Conferma elimina</button>
+                                <button type="submit" class="btn rounded-5 btn-delete">
+                                    <p class="dark-text m-0 px-2">Conferma
+                                        eliminazione</p>
+                                </button>
                             </form>
+
+                            <button type="button" class="btn rounded-5 btn-form" data-bs-dismiss="modal">
+                                <p class="dark-text m-0 px-2">Annulla</p>
+                            </button>
                         </div>
 
                     </div>
