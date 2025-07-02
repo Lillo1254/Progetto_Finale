@@ -64,7 +64,7 @@ class CreateArticle extends Component
             'user_id' => Auth::id(),
             'category_id' => $validated['category_id'],
         ]);
-        
+
         if (count($this->images) > 0) {
             foreach ($this->images as $image) {
                 $newFileName="articles/{$this->article->id}";
@@ -111,11 +111,5 @@ class CreateArticle extends Component
     {
         return view('livewire.create-article', ['categories' => Category::all()]);
     }
-
-
     
-            
-        }
-    
-    }
 }
