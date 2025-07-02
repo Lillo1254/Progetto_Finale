@@ -3,7 +3,6 @@
         <div class="row mb-5">
             <div class="col-12">
                 <h1 class="secondary-text display-3 pt-5 text-center">Crea un Articolo</h1>
-                <h1>prova</h1>
             </div>
         </div>
         <div class="row justify-content-center">
