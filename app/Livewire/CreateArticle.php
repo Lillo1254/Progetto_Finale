@@ -10,6 +10,7 @@ use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use App\Jobs\GoogleVisionLabelImage;
 
 class CreateArticle extends Component
 {
@@ -63,6 +64,7 @@ class CreateArticle extends Component
             'user_id' => Auth::id(),
             'category_id' => $validated['category_id'],
         ]);
+        
         if (count($this->images) > 0) {
             foreach ($this->images as $image) {
                 $newFileName="articles/{$this->article->id}";
@@ -70,11 +72,21 @@ class CreateArticle extends Component
                 dispatch(new ResizeImage($newImage ->path, 2000, 2000));
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
-        }    
+        }  
+    
+        if (count($this->images) > 0) {
+       foreach ($this->images as $image) {
+        $newFileName = "articles/{$this->article->id}";
+        $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'public')]);
+        dispatch(new ResizeImage($newImage->path, 300, 300));
+        dispatch(new GoogleVisionSafeSearch($newImage->id));
+       }
+       File::deleteDirectory(storage_path('/app/livewire-tmp'));  
                 
         $this->cleanForm();
 
         return redirect()->back()->with('message', 'Articolo creato con successo.');
+        
 
     }
 
@@ -100,14 +112,8 @@ class CreateArticle extends Component
         return view('livewire.create-article', ['categories' => Category::all()]);
     }
 
-    if (count($this->images) > 0) {
-       foreach ($this->images as $image) {
-        $newFileName = "articles/{$this->article->id}";
-        $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'public')]);
-        dispatch(new ResizeImage($newImage->path, 300, 300));
-        dispatch(new GoogleVisionSafeSearch($newImage->id));
-       }
-       File::deleteDirectory(storage_path('/app/livewire-tmp'));
+
+    
             
         }
     

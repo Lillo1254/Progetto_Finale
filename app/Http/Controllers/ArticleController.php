@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
-use App\Jobs\ResizeImage;
 use Illuminate\Http\Request;
-use App\Jobs\GoogleVisionSafeSearch;
 use App\Http\Requests\StoreArticleRequest;
 use App\Http\Requests\UpdateArticleRequest;
 
@@ -34,17 +32,7 @@ class ArticleController extends Controller
      */
     public function store(StoreArticleRequest $request)
     {
-     if (count($this->images) > 0) {
-       foreach ($this->images as $image) {
-        $newFileName = "articles/{$this->article->id}";
-        $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'public')]);
-        dispatch(new ResizeImage($newImage->path, 300, 300));
-        dispatch(new GoogleVisionSafeSearch($newImage->id));
-       }
-       File::deleteDirectory(storage_path('/app/livewire-tmp'));
-            
-        }
-    
+        //
     }
 
     /**
