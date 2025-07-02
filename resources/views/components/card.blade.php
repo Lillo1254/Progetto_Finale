@@ -2,7 +2,7 @@
 
     <!-- ? IMAGE -->
     <a href="{{ route('article.show', $article) }}" class="card-link z-1">
-        <img src="{{ $article->images->IsNotEmpty() ? $article->images->first()->getUrl(2000, 2000) : '/media/default.jpg' }}"
+        <img src="{{ $article->images->IsNotEmpty() ? $article->images->first()->getUrl(1024, 1024) : '/media/default.jpg' }}"
             alt="immagine dell'articolo {{ $article->title }}" class="article-img rounded-0 z-1 p-0 m-0 w-100">
     </a>
 

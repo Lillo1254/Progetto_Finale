@@ -12,10 +12,10 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class ResizeImage implements ShouldQueue
 {
     use Queueable;
-
+    
     /**
-     * Create a new job instance.
-     */
+    * Create a new job instance.
+    */
     private $w, $h, $fileName, $path;
     public function __construct($filePath, $w, $h)
     {
@@ -24,27 +24,47 @@ class ResizeImage implements ShouldQueue
         $this->w = $w;
         $this->h = $h;
     }
-
+    
     /**
-     * Execute the job.
-     */
+    * Execute the job.
+    */
     public function handle(): void
     {
         $w = $this->w;
         $h = $this->h;
         $srcPath = storage_path() . '/app/public/' . $this->path . '/' . $this->fileName;
         $destPath = storage_path() . '/app/public/' . $this->path . "/crop_{$w}x{$h}_" . $this->fileName;
-
-        Image::load($srcPath)
-            ->crop($w, $h, CropPosition::Center)
-            ->watermark(
-                base_path('resources/img/Logo_LightMode.png'),
-                width: 50,
-                height: 50,
-                paddingX: 5,
-                paddingY: 5,
-                paddingUnit: Unit::Percent
-            )
-            ->save($destPath);
+        
+        
+        // Inserire bestemmia alla madonna
+        $image = Image::load($srcPath);
+        $width = $image->getWidth();
+        $height = $image->getHeight();
+        
+        $aspectRatio = $w / $h;
+        $cropWidth = $width;
+        $cropHeight = (int) round($width / $aspectRatio);
+        
+        if ($cropHeight > $height) {
+            $cropHeight = $height;
+            $cropWidth = (int) round($height * $aspectRatio);
+        }
+        
+        $image
+        ->crop($cropWidth, $cropHeight, CropPosition::Center)
+        ->resize($w, $h)
+        ->watermark(
+            base_path('resources/img/Logo_LightMode.png'),
+            width: 200,
+            height: 200,
+            paddingX: 5,
+            paddingY: 5,
+            paddingUnit: Unit::Percent
+        )
+        ->save($destPath);
+            
+            
+            
     }
 }
+    

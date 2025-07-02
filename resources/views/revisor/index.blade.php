@@ -39,7 +39,7 @@
                                                 <div class="col-12 col-md-6 mb-4 d-flex flex-column">
                                                     <div class="image-container text-center mb-3 flex-grow-1 d-flex align-items-center justify-content-center"
                                                         style="height: 200px; overflow: hidden;"> 
-                                                        <img src="{{ $image->getUrl(2000, 2000) }}"
+                                                        <img src="{{ $image->getUrl(1024, 1024) }}"
                                                             class="img-fluid rounded-0"
                                                             alt="immagine {{ $key + 1 }} dell'articolo {{ $article->title }}"
                                                             style="object-fit: cover; width: 100%; height: 100%;">

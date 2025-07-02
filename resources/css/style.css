@@ -736,8 +736,6 @@ a:hover {
 /* ! IMAGES */
 
 .article-img {
-    height:100%;
-    aspect-ratio: 1/1;
     transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
 }
 
