@@ -71,10 +71,10 @@ class CreateArticle extends Component
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }    
                 
-
-        return redirect(route('article.create'))->with('message', 'Articolo creato con successo.');
-
         $this->cleanForm();
+
+        return redirect()->back()->with('message', 'Articolo creato con successo.');
+
     }
 
     public function updatedTemporaryImage() {
