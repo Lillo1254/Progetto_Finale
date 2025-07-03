@@ -61,9 +61,22 @@ return [
 
     //form-revisore
     'pagina_revisore' => 'Reviewer Page',
-    'nome' => 'First Name',
+    'nome' => 'Name',
     'cognome' => 'Last Name',
     'email' => 'Email',
     'messaggio' => 'Message',
     'diventa_revisore' => 'Apply to become a reviewer',
+
+    //profilo
+    'profilo_utente' => 'Profile',
+    'articoli_creati:' => 'Items created:',
+    'miei_articoli' => 'Your Items',
+    'nessun_articolo' => 'No items posted',
+    'azioni' => 'Actions',
+    'elimina_articolo' => 'Confirm deletion',
+    'conferma_eliminazione' => 'Are you sure you want to delete this item? This action cannot be undone.',
+    'annulla' => 'Cancel',
+    'data' => 'Date',
+
+
 ];

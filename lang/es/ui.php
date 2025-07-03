@@ -62,9 +62,20 @@ return [
     //form-revisore
     'pagina_revisore' => 'Página del Revisor',
     'nome' => 'Nombre',
-    'cognome' => 'Apellido',
     'email' => 'Correo electrónico',
     'messaggio' => 'Mensaje',
     'diventa_revisore' => 'Solicitar ser revisor',
+
+    //profilo
+    'profilo_utente' => 'Perfil',
+    'articoli_creati:' => 'Artículos creados:',
+    'miei_articoli' => 'Tus Artículos',
+    'nessun_articolo' => 'No has publicado ningún artículo',
+    'azioni' => 'Acciones',
+    'elimina_articolo' => 'Confirmar eliminación',
+    'conferma_eliminazione' => '¿Estás seguro de que deseas eliminar este artículo? Esta acción no se puede deshacer.',
+    'annulla' => 'Cancelar',
+    'data' => 'Fecha',
+
 
 ];

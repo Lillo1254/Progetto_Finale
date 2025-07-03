@@ -61,10 +61,24 @@ return [
     //form-revisore
     'pagina_revisore' => 'Pagina Revisore',
     'nome' => 'Nome',
-    'cognome' => 'Cognome',
     'email' => 'Email',
     'messaggio' => 'Messaggio',
     'diventa_revisore' => 'Richiedi di diventare revisore',
+
+    //profilo
+    'profilo_utente' => 'Profilo',
+    'articoli_creati' => 'Articoli creati:',
+    'miei_articoli' => 'I tuoi Articoli',
+    'nessun_articolo'=> 'Nessun articolo inserito',
+    'azioni' => 'Azioni',
+    'elimina_articolo'=> 'Conferma eliminazione',
+    'conferma_eliminazione'=>'Sei sicuro di voler eliminare questo articolo? Questa azione non può essere annullata.',
+    'annulla'=> 'Annulla',
+    'data'=> 'Data',
+
+    
+
+
     
 
 

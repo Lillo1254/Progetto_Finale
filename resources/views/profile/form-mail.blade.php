@@ -18,7 +18,7 @@
                         </div>
 
                         <div class="mb-3 text-start">
-                            <label for="email" class="form-label">{{ __('ui.cognome') }}</label>
+                            <label for="email" class="form-label">{{ __('ui.email') }}</label>
                             <input type="email" class="form-control border-0 rounded-0" id="email" name="email" required>
                         </div>
 

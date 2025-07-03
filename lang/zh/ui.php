@@ -63,9 +63,21 @@ return [
     // form-revisore
     'pagina_revisore' => '审查员页面',
     'nome' => '名字',
-    'cognome' => '姓氏',
     'email' => '电子邮件',
     'messaggio' => '留言',
     'diventa_revisore' => '申请成为审查员',
+
+    //profilo 
+    'profilo_utente' => '用户资料',
+    'articoli_creati:' => '已创建的商品：',
+    'miei_articoli' => '你的商品',
+    'nessun_articolo' => '尚未发布任何商品',
+    'azioni' => '操作',
+    'elimina_articolo' => '确认删除',
+    'conferma_eliminazione' => '你确定要删除此商品吗？此操作无法撤销。',
+    'annulla' => '取消',
+    'data' => '日期',
+
+
 
 ];
