@@ -1,7 +1,7 @@
 /* ! COLORS */
 
 :root {
-    --primary: rgb(9, 0, 24);
+    --primary: #090018;
     --primary-light: #2b2337;
     --secondary: #e2d4f9;
     --accent: rgb(223, 173, 36);
@@ -611,9 +611,9 @@ a:hover {
 .image-home {
     height: 240px;
     width: 100%;
-    background: linear-gradient(#00000000, #00000000), url('/public/media/306-1024x768.jpg');
+    background: linear-gradient(#09001877, #2b233777), url('/public/media/sponline_phone114.png');
     background-size: cover;
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
 }
 
@@ -885,6 +885,11 @@ details[open] #details {
 
     .nav-hover {
         top: -8%;
+    }
+
+    .image-home {
+    background: linear-gradient(#00000000, #00000000), url('/public/media/sponline_phone114.png');
+    background-position: center;
     }
 }
 
