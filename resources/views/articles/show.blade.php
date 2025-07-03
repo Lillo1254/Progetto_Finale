@@ -7,8 +7,8 @@
                         
                         <div class="col-12 col-md-6 overflow-hidden">
                             <h1 class="secondary-text display-5">{{ $article->title }}</h1>
-                            <h6 class="white-text px-1">Prezzo: {{ number_format($article->price, 2) }} €</h6>                        
-                            <h6 class="white-text px-1">Categoria: <a href="{{ route('category.articles', $article->category) }}" class="text-decoration-none">{{ $article->category->name ?? 'Nessuna categoria' }}</a></h6>
+                            <h6 class="white-text px-1">{{ __('ui.prezzo') }}: {{ number_format($article->price, 2) }} €</h6>                        
+                            <h6 class="white-text px-1">{{ __('ui.categoria') }}: <a href="{{ route('category.articles', $article->category) }}" class="text-decoration-none">{{ $article->category->name ?? 'Nessuna categoria' }}</a></h6>
                             <p class="white-text mt-3 px-1">{{ $article->description }}</p>    
                         </div>
 
@@ -30,7 +30,7 @@
 
                    
                     <div class="text-center mt-3 mt-md-5">
-                        <a href="{{ route('article.catalogo') }}" class="btn btn-form px-4 rounded-5"><p class="m-auto p-0 px-2 dark-text">Torna al catalogo</p></a>
+                        <a href="{{ route('article.catalogo') }}" class="btn btn-form px-4 rounded-5"><p class="m-auto p-0 px-2 dark-text">{{ __('ui.torna_catalogo') }}</p></a>
                     </div>
                 </div>
             </div>

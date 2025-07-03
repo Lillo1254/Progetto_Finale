@@ -44,4 +44,80 @@ return [
     'condizioni' => '条款与条件',
     'faq' => '常见问题',
     'copyright' => '版权',
+
+    // catalogo
+    'crea_articolo' => '创建商品',
+    'titolo' => '标题',
+    'descrizione' => '描述',
+    'categoria' => '分类',
+    'prezzo' => '价格',
+    'carica_immagini' => '上传图片',
+    'immagine' => '图片',
+    'hai_selezionato' => '你已选择',
+    'selezione_immagine' => '你已选择 1 张图片',
+    'dimensione_massima' => '所选文件必须为 jpeg、png 或 jpg 格式，且大小不得超过 2MB。',
+    'anteprima_immagini' => '图片预览：',
+
+    // article-index
+    'tutti_articoli' => '所有商品',
+
+    // form-revisore
+    'pagina_revisore' => '审查员页面',
+    'nome' => '名字',
+    'email' => '电子邮件',
+    'messaggio' => '留言',
+    'diventa_revisore' => '申请成为审查员',
+
+    //profilo 
+    'profilo_utente' => '用户资料',
+    'articoli_creati' => '已创建的商品：',
+    'miei_articoli' => '你的商品',
+    'nessun_articolo' => '尚未发布任何商品',
+    'azioni' => '操作',
+    'elimina_articolo' => '确认删除',
+    'conferma_eliminazione' => '你确定要删除此商品吗？此操作无法撤销。',
+    'annulla' => '取消',
+    'data' => '日期',
+
+    //article-decline
+    'articoli.rifutati' => '被拒商品',
+    'no_art_rifutato' => '没有被拒的商品',
+    'ripristina' => '恢复',
+    'torna_dashboard' => '返回仪表板',
+
+    //edit
+    'modifica_articolo' => '编辑商品',
+    'salva_modifiche' => '保存更改',
+    'elimina_articoli' => '删除商品',
+
+    //search
+    'risultati' => '搜索结果：',
+    'no_risultati' => '未找到商品',
+    'torna_catalogo' => '返回目录',
+
+    //login
+    'privacy' => '我们绝不会与任何人分享您的电子邮件地址。',
+    'password' => '密码',
+    'iscriviti' => '还没有账户？',
+    'conferma_password' => '确认密码',
+    'gia_account' => '您已经有账户了吗？',
+
+    //categories blade
+
+    'nome_sezione' => '您正在浏览的分类是',
+    'no_articolo_sezione' => '该分类下暂无文章',
+    'modifica' => '编辑',
+    'dashboard_revisore' => '审阅员面板',
+    'accetta_articolo' => '接受文章',
+    'rifiuta_articolo' => '拒绝文章',
+    'sicuro_accetta' => '您确定要接受该文章吗？',
+    'accetta' => '接受',
+
+
+
+
+
+
+
+
 ];

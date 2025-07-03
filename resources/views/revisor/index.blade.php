@@ -4,7 +4,7 @@
             <div class="row mb-5">
                 <div class="col-12 text-center">
                     <h1 class="secondary-text display-3 pt-5">
-                        Dashboard Revisore - {{ Auth::user()->name }}
+                        {{ __('ui.dashboard_revisore') }} - {{ Auth::user()->name }}
                     </h1>
                 </div>
             </div>
@@ -26,15 +26,15 @@
                                     <h2 class="pb-2">{{ $article->title }}</h2>
                                     <div class="row">
                                         <div class="col-12 col-md-4">
-                                            <p class="white-text"><strong class="white-text">Categoria:</strong>
+                                            <p class="white-text"><strong class="white-text">{{ __('ui.categorie') }}</strong>
                                                 {{ $article->category->name }}</p>
-                                            <p class="white-text"><strong class="white-text">Prezzo:</strong>
+                                            <p class="white-text"><strong class="white-text">{{ __('ui.prezzo') }}</strong>
                                                 {{ $article->price }}€</p>
-                                            <p class="white-text"><strong class="white-text">Data inserimento:</strong>
+                                            <p class="white-text"><strong class="white-text">{{ __('ui.data') }}</strong>
                                                 {{ $article->created_at->format('d/m/Y') }}</p>
                                         </div>
                                         <div class="col-12 col-md-8">
-                                            <p class="white-text"><strong class="white-text">Descrizione:</strong>
+                                            <p class="white-text"><strong class="white-text">{{ __('ui.descrizione') }}</strong>
                                                 {{ $article->description }}</p>
                                         </div>
 
@@ -117,10 +117,10 @@
 
                                 <div class="row justify-content-center my-3 px-3 mx-1 gap-3 gap-sm-1">
                                     <button type="button" class="btn col-12 col-sm-4 col-md-3 col-xl-2 btn-success rounded-5 px-3 me-sm-3" data-bs-toggle="modal" data-bs-target="#acceptModal-{{ $article->id }}">
-                                        <p class="m-auto dark-text">Accetta articolo</p>
+                                        <p class="m-auto dark-text">{{ __('ui.accetta_articolo') }}</p>
                                     </button>
                                     <button type="button" class="btn col-12 col-sm-4 col-md-3 col-xl-2 btn-delete rounded-5 ms-sm-3" data-bs-toggle="modal" data-bs-target="#declineModal-{{ $article->id }}">
-                                        <p class="m-auto dark-text px-3">Rifiuta articolo</p>
+                                        <p class="m-auto dark-text px-3">{{ __('ui.rifiuta_articolo') }}</p>
                                     </button>
                                 </div>
                             </div>
@@ -131,11 +131,11 @@
                             <div class="modal-dialog">
                                 <div class="modal-content primary-light-bg">
                                     <div class="modal-header">
-                                        <h1 class="modal-titlefs-5" id="acceptModalLabel-{{ $article->id }}">Accetta Articolo</h1>
+                                        <h1 class="modal-titlefs-5" id="acceptModalLabel-{{ $article->id }}">{{ __('ui.accetta_articolo') }}</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        Sei sicuro di voler accettare l'articolo
+                                        {{ __('ui.sicuro_accetta') }}
                                         <strong class="white-text">{{ $article->title }}</strong>?
                                     </div>
                                     <div class="modal-footer">
@@ -143,12 +143,12 @@
                                             @csrf
                                             @method('PATCH')
                                             <button class="btn btn-success rounded-5 px-3">
-                                                <p class="m-auto p-0 px-2 dark-text">Accetta</p>
+                                                <p class="m-auto p-0 px-2 dark-text">{{ __('ui.accetta') }}</p>
                                             </button>
                                         </form>
                                         <button type="button" class="btn btn-secondary rounded-5 px-3"
                                             data-bs-dismiss="modal">
-                                            <p class="m-auto p-0 px-2 dark-text">Annulla</p>
+                                            <p class="m-auto p-0 px-2 dark-text">{{ __('ui.annulla') }}</p>
                                         </button>
                                     </div>
                                 </div>
@@ -178,7 +178,7 @@
                                         </form>
                                         <button type="button" class="btn btn-secondary rounded-5 px-3"
                                             data-bs-dismiss="modal">
-                                            <p class="m-auto p-0 px-2 dark-text">Annulla</p>
+                                            <p class="m-auto p-0 px-2 dark-text">{{ __('ui.annulla') }}</p>
                                         </button>
                                     </div>
                                 </div>
