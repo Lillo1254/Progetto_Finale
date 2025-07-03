@@ -73,7 +73,7 @@
                             @if (count($images) == 1)
                                 {{ __('ui.selezione_immagine') }}
                             @else
-                                {{ __('ui.selezione_immagini') }}
+                                {{ __('ui.hai_selezionato') }} {{ count($images) }} {{ __('ui.immagine') }}
                             @endif
                         </p>
 
@@ -84,7 +84,7 @@
 
                     @if (!empty($images))
                         <div class="mb-4 mt-2">
-                            <h5 class="mb-3">{{ __('ui.anteprima.immagini') }}</h5>
+                            <h5 class="mb-3">{{ __('ui.anteprima_immagini') }}</h5>
                             <div class="row">
                                 @foreach ($images as $key => $image)
                                     <div class="col-6 col-md-4 col-lg-3 mb-3">

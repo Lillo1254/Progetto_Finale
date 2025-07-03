@@ -51,10 +51,12 @@ return [
     'categoria' => 'Category',
     'prezzo' => 'Price',
     'carica_immagini' => 'Upload Images',
-    'selezione_immagini' => 'you have selected :count images.',
-    'selezione_immagine' => 'you have selected 1 image',
+    'immagine' => 'Image',
+    'hai_selezionato' => 'You have selected',
+    'selezione_immagine' => 'You have selected 1 image',
     'dimensione_massima' => 'The selected files must be in jpeg, png or jpg format and must not exceed 2MB in size.',
     'anteprima_immagini' => 'Image Preview:',
+
 
     // article-index
     'tutti_articoli' => 'All articles',

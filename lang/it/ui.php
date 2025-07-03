@@ -50,8 +50,9 @@ return [
     'categoria' => 'Categoria',
     'prezzo' => 'Prezzo',
     'carica_immagini' => 'Carica Immagini',
-    'selezione_immagini' => 'hai selezionato :count immagini.',
-    'selezione_immagine' => 'hai selezionato 1 immagine',
+    'immagine'=> 'Immagine',
+    'hai_selezionato' => 'Hai selezionato',
+    'selezione_immagine' => 'Hai selezionato 1 immagine',
     'dimensione_massima'=> 'I file selezionati devono essere in formato jpeg, png o jpg e non devono superare i 2MB di dimensione.',
     'anteprima_immagini' => 'Anteprima Immagini:',
 
