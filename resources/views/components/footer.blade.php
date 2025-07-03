@@ -60,9 +60,7 @@
                 <h3 class="mb-3 secondary-text fw-light">JASL</h3>
                 <small class="mb-4 text-start">
                     <p class="white-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-                        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
-                        harum corrupti dicta, aliquam sequi voluptate quas.
+                        Benvenuto su Presto.it, il luogo dove i tuoi desideri prendono vita in un click! Sappiamo quanto il tuo tempo sia prezioso, ed è per questo che abbiamo creato un'esperienza di shopping online che unisce velocità, qualità e convenienza.
                     </p>
                 </small>
             </div>
