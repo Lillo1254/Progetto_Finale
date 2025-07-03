@@ -96,6 +96,11 @@ return [
     'no_risultati' => 'No items found',
     'torna_catalogo' => 'Back to catalog',
 
+    //login
+    'privacy' => 'We will never share your email address with anyone else.',
+    'password' => 'Password',
+    'iscriviti' => "Don't have an account yet?",
+
 
 
 

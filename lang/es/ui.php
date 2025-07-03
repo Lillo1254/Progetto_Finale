@@ -95,6 +95,10 @@ return [
     'no_risultati' => 'No se encontraron artículos',
     'torna_catalogo' => 'Volver al catálogo',
 
+    //login
+    'privacy' => 'Nunca compartiremos tu dirección de correo electrónico con nadie más.',
+    'password' => 'Contraseña',
+    'iscriviti' => '¿Aún no tienes una cuenta?',
 
 
 

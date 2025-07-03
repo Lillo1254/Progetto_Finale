@@ -94,9 +94,18 @@ return [
     
     'risultati' => 'Risultati per :',
     'no_risultati'=> 'Nessun articolo trovato',
-    'torna_catalogo' =>'Torna al catalogo'
+    'torna_catalogo' =>'Torna al catalogo',
 
-    
+    //login
+
+    'privacy' => 'Non condivideremo mai il tuo indirizzo email con nessun altro.',
+    'password' => 'Password',
+    'iscriviti'=> 'Non hai ancora un account? ',
+
+
+
+
+
     
 
     
