@@ -57,6 +57,13 @@ Route::get('/article/{article}', [ArticleController::class, 'show'])->name('arti
 Route::get('/categories/{category}', [ArticleController::class, 'showcategory'])->name('category.articles');
 
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setlocale');
+
+Route::get('/403', function(){
+    abort(403);
+});
+Route::get('/500', function(){
+    abort(500);
+});
     
 
 

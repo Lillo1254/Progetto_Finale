@@ -60,5 +60,6 @@ class GoogleVisionSafeSearch implements ShouldQueue
 
         $i->save();
 
+        sleep(12);
     }
 }

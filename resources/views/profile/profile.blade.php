@@ -1,5 +1,5 @@
 <x-layout titlePage="Profilo Utente - {{ auth()->user()->name }}">
-    <main class="primary-bg min-vh-100 py-3">
+    <main class="primary-bg min-vh-100 pt-3">
         @if (session('message'))
             <div class="alert alert-success dark-text m-0 mb-4 rounded-0">
                 {{ session('message') }}
@@ -41,7 +41,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($user->articles as $article)
+                                        @foreach ($articles as $article)
                                             <tr>
                                                 <td class="p-2 primary-light-bg">{{ $article->title }}</td>
                                                 <td class="p-2 primary-light-bg">{{ $article->price }}</td>

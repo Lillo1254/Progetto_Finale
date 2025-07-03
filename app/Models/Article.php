@@ -32,6 +32,7 @@ class Article extends Model
             'price' => $this->price,
             'description' => $this->description,
             'user_id' => $this->user_id,
+             'category' => $this->category->name
             
         ];                          
     }

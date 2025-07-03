@@ -826,6 +826,28 @@ body {
 }
 
 
+/* ! REVISOR */
+
+details>summary {
+    list-style: none;
+}
+
+summary::marker {
+    content: none;
+}
+
+#details {
+    display: block !important;
+    font-size: 12px;
+    transform: rotate(90deg) translateX(-3px) translateY(6px);
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
+}
+
+details[open] #details {
+    transform: rotate(180deg) translateX(0px) translateY(9px);
+}
+
+
 /* ! MEDIA QUERIES */
 
 
@@ -860,9 +882,9 @@ body {
     .hide {
         display: table-cell !important;
     }
-    
+
     .nav-hover {
-    top:-8%;
+        top: -8%;
     }
 }
 
@@ -876,4 +898,61 @@ body {
     width: 150px;
     height: 150px;
     background: center center no-repeat;
+}
+
+
+/* !Pagine errors */
+
+.error-container {
+   display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - var(--navbar-height, 80px) - var(--footer-height, 50px));
+            text-align: center;
+            padding: 40px 20px;
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+}
+
+.error-code {
+     font-size: 10em;
+            font-weight: 800;
+            color: #dc3545;
+            line-height: 1;
+            margin-bottom: 20px;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.1);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 8em;
+    }
+
+    .error-message {
+        font-size: 2em;
+    }
+
+    .error-description {
+        font-size: 1em;
+    }
+
+ 
+}
+
+@media (max-width: 480px) {
+    .error-code {
+        font-size: 6em;
+    }
+
+    .error-message {
+        font-size: 1.5em;
+    }
+
+    .error-description {
+        font-size: 0.9em;
+    }
 }

@@ -1,6 +1,6 @@
 <x-mail::message>
-# Ciao {{ $user->name }}, 
-## la tua richiesta è stata accettata
+# L'utente {{ $user->name }}, 
+## ha chiesto di poter collaborare come revisore
 
 
 <x-mail::button :url="route('revisor.acceptUser', ['user' => $user->id])">
@@ -10,5 +10,5 @@ accept
 reject
 </x-mail::button>
 
-# Grazie mille per la collaborazione
+# Grazie 
 </x-mail::message>
