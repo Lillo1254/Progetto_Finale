@@ -1,4 +1,4 @@
-<footer class="primary-light-bg text-center">
+<footer class="primary-light-bg text-center mb-0">
     <div class="container p-4">
         <div class="mb-3 d-flex justify-content-center flex-wrap gap-2">
             <ul class="list-unstyled d-flex flex-wrap flex-md-nowrap justify-content-center gap-1">
@@ -43,9 +43,11 @@
 
         <!-- ! LAVORA CON NOI -->
         @auth
+         @if (!auth()->user()->is_revisor)
             <a href="{{ route('form.revisor') }}" class="btn btn-form mb-5 rounded-5 px-5">
                 <p class="p-0 m-0 dark-text fs-5">{{ __('ui.lavora') }}</p>
             </a>       
+         @endif
         @endauth
 
 
