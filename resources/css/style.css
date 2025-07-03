@@ -826,6 +826,28 @@ body {
 }
 
 
+/* ! REVISOR */
+
+details>summary {
+  list-style: none;
+}
+
+summary::marker {
+  content: none;
+}
+
+#details {
+    display: block !important;
+    font-size: 12px;
+    transform: rotate(90deg) translateX(-3px) translateY(6px);
+    transition: 0.2s cubic-bezier(0.285, 0.245, 0.500, 1.000);
+}
+
+details[open] #details {
+  transform: rotate(180deg) translateX(0px) translateY(9px);
+}
+
+
 /* ! MEDIA QUERIES */
 
 
