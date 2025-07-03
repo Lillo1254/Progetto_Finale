@@ -72,5 +72,7 @@ class RemoveFaces implements ShouldQueue
             $image->save($srcPath);
         }
             $imageAnnotator->close();
+
+            sleep(12);
     }
 }
