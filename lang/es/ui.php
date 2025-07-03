@@ -43,4 +43,16 @@ return [
     'condizioni' => 'Términos y condiciones',
     'faq' => 'Preguntas frecuentes',
     'copyright' => 'Derechos de autor',
+
+    // catalogo
+    'crea_articolo' => 'Crear un Artículo',
+    'titolo' => 'Título',
+    'descrizione' => 'Descripción',
+    'categoria' => 'Categoría',
+    'prezzo' => 'Precio',
+    'carica_immagini' => 'Subir Imágenes',
+    'selezione_immagini' => 'has seleccionado :count imágenes.',
+    'selezione_immagine' => 'has seleccionado 1 imagen',
+    'dimensione_massima' => 'Los archivos seleccionados deben estar en formato jpeg, png o jpg y no deben superar los 2MB de tamaño.',
+    'anteprima_immagini' => 'Vista previa de las imágenes:',
 ];

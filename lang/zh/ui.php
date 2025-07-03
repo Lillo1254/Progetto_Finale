@@ -44,4 +44,16 @@ return [
     'condizioni' => '条款与条件',
     'faq' => '常见问题',
     'copyright' => '版权',
+
+    // catalogo
+    'crea_articolo' => '创建商品',
+    'titolo' => '标题',
+    'descrizione' => '描述',
+    'categoria' => '分类',
+    'prezzo' => '价格',
+    'carica_immagini' => '上传图片',
+    'selezione_immagini' => '你已选择 :count 张图片。',
+    'selezione_immagine' => '你已选择 1 张图片',
+    'dimensione_massima' => '所选文件必须为 jpeg、png 或 jpg 格式，且大小不得超过 2MB。',
+    'anteprima_immagini' => '图片预览：',
 ];

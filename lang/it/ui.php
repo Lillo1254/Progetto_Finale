@@ -42,4 +42,18 @@ return [
     'privacy' => 'Privacy',
     'condizioni' => 'Condizioni',
     'faq' => 'FAQ',
+
+    //catalogo
+    'crea_articolo'=> 'Crea un Articolo',
+    'titolo' => 'Titolo',
+    'descrizione' => 'Descrizione',
+    'categoria' => 'Categoria',
+    'prezzo' => 'Prezzo',
+    'carica_immagini' => 'Carica Immagini',
+    'selezione_immagini' => 'hai selezionato :count immagini.',
+    'selezione_immagine' => 'hai selezionato 1 immagine',
+    'dimensione_massima'=> 'I file selezionati devono essere in formato jpeg, png o jpg e non devono superare i 2MB di dimensione.',
+    'anteprima_immagini' => 'Anteprima Immagini:',
+    
+
 ];

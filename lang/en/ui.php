@@ -43,5 +43,17 @@ return [
     'condizioni' => 'Terms & Conditions',
     'faq' => 'FAQ',
     'copyright' => 'Copyright',
+
+    // catalogo
+     'crea_articolo' => 'Create an Item',
+    'titolo' => 'Title',
+    'descrizione' => 'Description',
+    'categoria' => 'Category',
+    'prezzo' => 'Price',
+    'carica_immagini' => 'Upload Images',
+    'selezione_immagini' => 'you have selected :count images.',
+    'selezione_immagine' => 'you have selected 1 image',
+    'dimensione_massima' => 'The selected files must be in jpeg, png or jpg format and must not exceed 2MB in size.',
+    'anteprima_immagini' => 'Image Preview:',
 ];
 
