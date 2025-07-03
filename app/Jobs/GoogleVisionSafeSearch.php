@@ -2,7 +2,7 @@
 
 namespace App\Jobs;
 
-use Google\Cloud\Vision\V1\Client\ImageAnnotatorClient;
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Models\Image;
 use Illuminate\Foundation\Queue\Queueable;
@@ -28,7 +28,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
             return;
         }
         $image= file_get_contents(storage_path('app/public/' . $i-> path));
-        putenv ('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('app/google_credential.json'));
+        putenv ('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
 
         $imageAnnotator= new ImageAnnotatorClient();
         $response = $imageAnnotator->safeSearchDetection($image);
@@ -48,7 +48,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
             'text-success bi bi-check-circle-fill',
             'text-warning bi bi-exclamation-circle-fill',
             'text-warning bi bi-exclamation-circle-fill',
-            'text-danger bi bi-x-circle-fill',
+            'text-danger bi bi-dash-circle-fill',
         ];
 
         $i->adult = $likelihoodName[$adult];
