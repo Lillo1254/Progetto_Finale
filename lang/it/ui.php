@@ -14,6 +14,7 @@ return [
     'vendi' => 'Vendi',
     'scopri' => 'Scopri le migliori offerte sul catalogo',
     'sconti' => 'Non perderti questi sconti esclusivi su una gamma di prodotti selezionati dal nostro team.',
+    'acquista_ora' => 'Acquista ora',
     'annunci' => 'Ultimi annunci',
     // navbar
     'cerca' => 'Cerca',
