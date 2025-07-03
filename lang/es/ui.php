@@ -70,7 +70,7 @@ return [
 
     //profilo
     'profilo_utente' => 'Perfil',
-    'articoli_creati:' => 'Artículos creados:',
+    'articoli_creati' => 'Artículos creados:',
     'miei_articoli' => 'Tus Artículos',
     'nessun_articolo' => 'No has publicado ningún artículo',
     'azioni' => 'Acciones',
@@ -78,6 +78,12 @@ return [
     'conferma_eliminazione' => '¿Estás seguro de que deseas eliminar este artículo? Esta acción no se puede deshacer.',
     'annulla' => 'Cancelar',
     'data' => 'Fecha',
+
+    //article-decline
+    'articoli.rifutati' => 'Artículos Rechazados',
+    'no_art_rifutato' => 'Ningún artículo rechazado',
+    'ripristina' => 'Restaurar',
+    'torna_dashboard' => 'Volver al panel',
 
 
 ];

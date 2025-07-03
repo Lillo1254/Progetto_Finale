@@ -77,6 +77,14 @@ return [
     'annulla'=> 'Annulla',
     'data'=> 'Data',
 
+    //article decline
+
+    'articoli.rifutati' => 'Articoli Rifiutati',
+    'no_art_rifutato'=> 'Nessun articolo rifiutato',
+    'ripristina' => 'Ripristina',
+    'torna_dashboard'=> 'Torna alla dashboard',
+    
+
     
 
 

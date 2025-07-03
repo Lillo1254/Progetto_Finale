@@ -70,7 +70,7 @@ return [
 
     //profilo 
     'profilo_utente' => '用户资料',
-    'articoli_creati:' => '已创建的商品：',
+    'articoli_creati' => '已创建的商品：',
     'miei_articoli' => '你的商品',
     'nessun_articolo' => '尚未发布任何商品',
     'azioni' => '操作',
@@ -78,6 +78,13 @@ return [
     'conferma_eliminazione' => '你确定要删除此商品吗？此操作无法撤销。',
     'annulla' => '取消',
     'data' => '日期',
+
+    //article-decline
+    'articoli.rifutati' => '被拒商品',
+    'no_art_rifutato' => '没有被拒的商品',
+    'ripristina' => '恢复',
+    'torna_dashboard' => '返回仪表板',
+
 
 
 

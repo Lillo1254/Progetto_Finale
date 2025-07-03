@@ -71,7 +71,7 @@ return [
 
     //profilo
     'profilo_utente' => 'Profile',
-    'articoli_creati:' => 'Items created:',
+    'articoli_creati' => 'Items created:',
     'miei_articoli' => 'Your Items',
     'nessun_articolo' => 'No items posted',
     'azioni' => 'Actions',
@@ -79,6 +79,14 @@ return [
     'conferma_eliminazione' => 'Are you sure you want to delete this item? This action cannot be undone.',
     'annulla' => 'Cancel',
     'data' => 'Date',
+
+    //article-decline
+    'articoli.rifutati' => 'Rejected Items',
+    'no_art_rifutato' => 'No rejected items',
+    'ripristina' => 'Restore',
+    'torna_dashboard' => 'Back to dashboard',
+
+    
 
 
 ];
