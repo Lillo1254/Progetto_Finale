@@ -31,6 +31,7 @@ return [
     'counter_2' => ' artículos para revisar',
     'auth' => 'Inicia sesión o regístrate',
     'login' => 'Iniciar sesión',
+    'already' => '¿Todavía no tienes una cuenta? ',
     'sign_up' => 'Registrarse',
     'tema' => 'Tema',
     'logout' => 'Cerrar sesión',
@@ -96,7 +97,7 @@ return [
     'torna_catalogo' => 'Volver al catálogo',
 
     //login
-    'privacy' => 'Nunca compartiremos tu dirección de correo electrónico con nadie más.',
+    'mail_share' => 'Nunca compartiremos tu dirección de correo electrónico con nadie más.',
     'password' => 'Contraseña',
     'iscriviti' => '¿Aún no tienes una cuenta?',
     'conferma_password' => 'Confirmar contraseña',

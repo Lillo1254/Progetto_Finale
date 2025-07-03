@@ -32,6 +32,7 @@ return [
     'counter_2' => ' articoli da revisionare',
     'auth' => 'Accedi o Registrati',
     'login' => 'Login',
+    'already' => 'Non hai ancora un account? ',
     'sign_up' => 'Registrati',
     'tema' => 'Tema',
     'logout' => 'Logout',
@@ -99,7 +100,7 @@ return [
 
     //login e register
 
-    'privacy' => 'Non condivideremo mai il tuo indirizzo email con nessun altro.',
+    'mail_share' => 'Non condivideremo mai il tuo indirizzo email con nessun altro.',
     'password' => 'Password',
     'iscriviti'=> 'Non hai ancora un account? ',
     'conferma_password' => 'Conferma password',

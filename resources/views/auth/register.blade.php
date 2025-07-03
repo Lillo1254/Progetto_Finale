@@ -43,7 +43,7 @@
                             <button type="submit" class="btn btn-form mt-5 px-5 rounded-5">
                                 <p class="m-auto p-0 px-2 dark-text">{{ __('ui.sign_up') }}</p>
                             </button>
-                            <p class="my-0 mt-5 secondary-text">{{ __('ui.gia_account') }}<a class="form-link secondary-text text-decoration-none" href="{{ route('login') }}">Login</a></p>
+                            <p class="my-0 mt-5 secondary-text">{{ __('ui.gia_account') }}<a class="form-link secondary-text text-decoration-none" href="{{ route('login') }}"> Login</a></p>
                         </div>
                         <div class="left-glow"></div>
                         <div class="bottom-glow"></div>
