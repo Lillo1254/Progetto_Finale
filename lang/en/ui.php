@@ -43,5 +43,80 @@ return [
     'condizioni' => 'Terms & Conditions',
     'faq' => 'FAQ',
     'copyright' => 'Copyright',
-];
 
+    // catalogo
+    'crea_articolo' => 'Create an Item',
+    'titolo' => 'Title',
+    'descrizione' => 'Description',
+    'categoria' => 'Category',
+    'prezzo' => 'Price',
+    'carica_immagini' => 'Upload Images',
+    'immagine' => 'Image',
+    'hai_selezionato' => 'You have selected',
+    'selezione_immagine' => 'You have selected 1 image',
+    'dimensione_massima' => 'The selected files must be in jpeg, png or jpg format and must not exceed 2MB in size.',
+    'anteprima_immagini' => 'Image Preview:',
+
+
+    // article-index
+    'tutti_articoli' => 'All articles',
+
+    //form-revisore
+    'pagina_revisore' => 'Reviewer Page',
+    'nome' => 'Name',
+    'cognome' => 'Last Name',
+    'email' => 'Email',
+    'messaggio' => 'Message',
+    'diventa_revisore' => 'Apply to become a reviewer',
+
+    //profilo
+    'profilo_utente' => 'Profile',
+    'articoli_creati' => 'Items created:',
+    'miei_articoli' => 'Your Items',
+    'nessun_articolo' => 'No items posted',
+    'azioni' => 'Actions',
+    'elimina_articolo' => 'Confirm deletion',
+    'conferma_eliminazione' => 'Are you sure you want to delete this item? This action cannot be undone.',
+    'annulla' => 'Cancel',
+    'data' => 'Date',
+
+    //article-decline
+    'articoli.rifutati' => 'Rejected Items',
+    'no_art_rifutato' => 'No rejected items',
+    'ripristina' => 'Restore',
+    'torna_dashboard' => 'Back to dashboard',
+
+    //edit
+    'modifica_articolo' => 'Edit item',
+    'salva_modifiche' => 'Save changes',
+    'elimina_articoli' => 'Delete item',
+
+    //search
+    'risultati' => 'Results for:',
+    'no_risultati' => 'No items found',
+    'torna_catalogo' => 'Back to catalog',
+
+    //login
+    'privacy' => 'We will never share your email address with anyone else.',
+    'password' => 'Password',
+    'iscriviti' => "Don't have an account yet?",
+    'conferma_password' => 'Confirm password',
+    'gia_account' => 'Already have an account?',
+
+    //categories-blade
+    'nome_sezione' => 'You are in the section',
+    'no_articolo_sezione' => 'No articles available for this category',
+    'modifica' => 'Edit',
+    'dashboard_revisore' => 'Reviewer Dashboard',
+    'accetta_articolo' => 'Accept article',
+    'rifiuta_articolo' => 'Reject article',
+    'sicuro_accetta' => 'Are you sure you want to accept the article?',
+    'accetta' => 'accept',
+
+
+
+
+
+
+
+];

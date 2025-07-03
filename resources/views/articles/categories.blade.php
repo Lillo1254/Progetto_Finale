@@ -6,15 +6,15 @@
 
                 @if ($articles->count() > 0)
                     <h1 class="text-center secondary-text display-3 pt-5">
-                        Sei nella sezione {{ $categoryName }}
+                       {{ __('ui.nome_sezione') }} {{ $categoryName }}
                     </h1>
                 @else
                     <h4 class="text-center secondary-text mt-5 py-5">
-                        <em>Nessun articolo presente per questa categoria</em>
+                        <em>{{ __('ui.no_articolo_sezione') }}</em>
                     </h4>
                     <a href="{{ route('article.catalogo') }}"
                         class="btn col-6 col-sm-4 col-md-3 col-lg-2 btn-form rounded-5 px-3 mx-auto">
-                        <p class="dark-text m-0 p-0">Torna al catalogo</p>
+                        <p class="dark-text m-0 p-0">{{ __('ui.torna_catalogo') }}</p>
                     </a>
                 @endif
             </div>

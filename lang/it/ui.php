@@ -14,6 +14,7 @@ return [
     'vendi' => 'Vendi',
     'scopri' => 'Scopri le migliori offerte sul catalogo',
     'sconti' => 'Non perderti questi sconti esclusivi su una gamma di prodotti selezionati dal nostro team.',
+    'acquista_ora' => 'Acquista ora',
     'annunci' => 'Ultimi annunci',
     // navbar
     'cerca' => 'Cerca',
@@ -42,4 +43,97 @@ return [
     'privacy' => 'Privacy',
     'condizioni' => 'Condizioni',
     'faq' => 'FAQ',
+
+    //catalogo
+    'crea_articolo'=> 'Crea un Articolo',
+    'titolo' => 'Titolo',
+    'descrizione' => 'Descrizione',
+    'categoria' => 'Categoria',
+    'prezzo' => 'Prezzo',
+    'carica_immagini' => 'Carica Immagini',
+    'immagine'=> 'Immagine',
+    'hai_selezionato' => 'Hai selezionato',
+    'selezione_immagine' => 'Hai selezionato 1 immagine',
+    'dimensione_massima'=> 'I file selezionati devono essere in formato jpeg, png o jpg e non devono superare i 2MB di dimensione.',
+    'anteprima_immagini' => 'Anteprima Immagini:',
+
+    //atricle-index
+    'tutti_articoli' => 'Tutti gli articoli',
+
+    //form-revisore
+    'pagina_revisore' => 'Pagina Revisore',
+    'nome' => 'Nome',
+    'email' => 'Email',
+    'messaggio' => 'Messaggio',
+    'diventa_revisore' => 'Richiedi di diventare revisore',
+
+    //profilo
+    'profilo_utente' => 'Profilo',
+    'articoli_creati' => 'Articoli creati:',
+    'miei_articoli' => 'I tuoi Articoli',
+    'nessun_articolo'=> 'Nessun articolo inserito',
+    'azioni' => 'Azioni',
+    'elimina_articolo'=> 'Conferma eliminazione',
+    'conferma_eliminazione'=>'Sei sicuro di voler eliminare questo articolo? Questa azione non può essere annullata.',
+    'annulla'=> 'Annulla',
+    'data'=> 'Data',
+
+    //article decline
+
+    'articoli.rifutati' => 'Articoli Rifiutati',
+    'no_art_rifutato'=> 'Nessun articolo rifiutato',
+    'ripristina' => 'Ripristina',
+    'torna_dashboard'=> 'Torna alla dashboard',
+
+    //edit
+
+    'modifica_articolo'=> 'Modifica articolo',
+    'salva_modifiche'=> 'Salva modifiche',
+    'elimina_articoli'=> 'Elimina articolo',
+
+    //search
+    
+    'risultati' => 'Risultati per :',
+    'no_risultati'=> 'Nessun articolo trovato',
+    'torna_catalogo' =>'Torna al catalogo',
+
+    //login e register
+
+    'privacy' => 'Non condivideremo mai il tuo indirizzo email con nessun altro.',
+    'password' => 'Password',
+    'iscriviti'=> 'Non hai ancora un account? ',
+    'conferma_password' => 'Conferma password',
+    'gia_account' => 'Hai già un account?',
+
+    //categories.blade
+
+    'nome_sezione'=>'Sei nella sezione',
+    'no_articolo_sezione'=>'Nessun articolo presente per questa categoria',
+
+    //card
+    'modifica'=> 'Modifica',
+
+    //index revisore
+
+    'dashboard_revisore'=> 'Dashboard Revisore',
+    'accetta_articolo'=> 'Accetta articolo',
+    'rifiuta_articolo'=> 'Rifiuta articolo',
+    'sicuro_accetta' => 'Sei sicuro di voler accettare l\' articolo ',
+    'accetta' => 'accetta',
+    
+
+
+    
+
+
+
+
+    
+
+    
+
+
+    
+
+
 ];

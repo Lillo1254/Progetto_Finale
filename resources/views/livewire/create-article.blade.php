@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row mb-5">
             <div class="col-12">
-                <h1 class="secondary-text display-3 pt-5 text-center">Crea un Articolo</h1>
+                <h1 class="secondary-text display-3 pt-5 text-center">{{ __('ui.crea_articolo') }}</h1>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -17,7 +17,7 @@
                     @endif
 
                     <div class="mb-3">
-                        <label for="title" class="form-label white-text">Titolo</label>
+                        <label for="title" class="form-label white-text">{{ __('ui.titolo') }}</label>
                         <input type="text" class="form-control rounded-0" id="title" wire:model="title">
                         @error('title')
                             <span class="danger-text">{{ $message }}</span>
@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="price" class="form-label white-text">Prezzo</label>
+                        <label for="price" class="form-label white-text">{{ __('ui.prezzo') }}</label>
                         <input type="number" class="form-control rounded-0" id="price" wire:model="price"
                             step="0.01">
                         @error('price')
@@ -34,7 +34,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="description" class="form-label white-text">Descrizione</label>
+                        <label for="description" class="form-label white-text">{{ __('ui.descrizione') }}</label>
                         <textarea class="form-control rounded-0 text-dark" id="description" wire:model="description"></textarea>
                         @error('description')
                             <span class="danger-text">{{ $message }}</span>
@@ -42,7 +42,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="category" class="form-label white-text">Categoria</label>
+                        <label for="category" class="form-label white-text">{{ __('ui.categoria') }}</label>
                         <div class="row justify-content-center">
                             @foreach ($categories as $category)
                                 <div class="col-6">
@@ -65,26 +65,26 @@
                     
 
                     <div class="mb-2 pt-0">
-                        <label for="imageUpload" class="form-label white-text">Carica Immagini</label>
+                        <label for="imageUpload" class="form-label white-text">{{ __('ui.carica_immagini') }}</label>
                         <input type="file" wire:model.live="temporary_image" multiple id="imageUpload"
                             class="form-control rounded-0 @error('temporary_image.*') is-invalid @enderror" />
 
                         <p class="white-text mt-2">
                             @if (count($images) == 1)
-                                Hai selezionato 1 immagine.
+                                {{ __('ui.selezione_immagine') }}
                             @else
-                                Hai selezionato {{ count($images) }} immagini.
+                                {{ __('ui.hai_selezionato') }} {{ count($images) }} {{ __('ui.immagine') }}
                             @endif
                         </p>
 
                         @error('temporary_image.*')
-                            <p class="danger-text mt-1">I file selezionati devono essere in formato jpeg, png o jpg e non devono superare i 2MB di dimensione.</p>
+                            <p class="danger-text mt-1">{{ __('ui.dimensione_massima') }}</p>
                         @enderror
                     </div>
 
                     @if (!empty($images))
                         <div class="mb-4 mt-2">
-                            <h5 class="mb-3">Anteprima Immagini:</h5>
+                            <h5 class="mb-3">{{ __('ui.anteprima_immagini') }}</h5>
                             <div class="row">
                                 @foreach ($images as $key => $image)
                                     <div class="col-6 col-md-4 col-lg-3 mb-3">
@@ -103,7 +103,7 @@
 
                     <div class="text-start mt-5">
                         <button type="submit" class="btn btn-form px-5 py-2 rounded-5">
-                            <p class="m-auto dark-text fs-5">Crea articolo</p>
+                            <p class="m-auto dark-text fs-5">{{ __('ui.crea_articolo') }}</p>
                         </button>
                     </div>
                 </form>

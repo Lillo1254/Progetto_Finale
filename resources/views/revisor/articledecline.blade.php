@@ -5,7 +5,7 @@
                 <div class="col-md-10 col-lg-8">
                     
                         <div class="card-body text-center">
-                            <h1 class="secondary-text fw-bold py-5">Articoli Rifiutati
+                            <h1 class="secondary-text fw-bold py-5">{{ __('ui.articoli.rifutati') }}
                             </h1>
                             <hr class="my-3">
                         </div>
@@ -18,18 +18,18 @@
                 <div class="row justify-content-center">
                     <div class="col-md-10 col-lg-8">
                         @if ($articles->isEmpty())
-                            <p class="text-danger text-center"><em>Nessun articolo rifiutato</em></p>
+                            <p class="text-danger text-center"><em>{{ __('ui.no_art_rifutato') }}</em></p>
                         @else
                             <article class="table-responsive">
                                 <table class="table table-striped table-sm border-0 primary-light-bg w-100">
                                     <thead class="table-dark">
                                         <tr>
-                                            <th class="fw-bold p-2 primary-light-bg">Titolo</th>
-                                            <th class="fw-bold p-2 primary-light-bg">Prezzo</th>
-                                            <th class="fw-bold p-2 primary-light-bg">Categorie</th>
-                                            <th class="hide fw-bold p-2 primary-light-bg">Descrizione</th>
-                                            <th class="hide fw-bold p-2 primary-light-bg w-15">Data</th>
-                                            <th class="fw-bold p-2 primary-light-bg text-start w-auto">Azioni</th>
+                                            <th class="fw-bold p-2 primary-light-bg">{{ __('ui.titolo') }}</th>
+                                            <th class="fw-bold p-2 primary-light-bg">{{ __('ui.prezzo') }}</th>
+                                            <th class="fw-bold p-2 primary-light-bg">{{ __('ui.categorie') }}</th>
+                                            <th class="hide fw-bold p-2 primary-light-bg">{{ __('ui.descrizione') }}</th>
+                                            <th class="hide fw-bold p-2 primary-light-bg w-15">{{ __('ui.data') }}</th>
+                                            <th class="fw-bold p-2 primary-light-bg text-start w-auto">{{ __('ui.azioni') }}</th>
                                         </tr>
                                         </tr>
                                     </thead>
@@ -53,7 +53,7 @@
                                                             @method('PATCH')
                                                             <button type="submit" class="btn rounded-5 btn-form btn-sm">
                                                                 <i class="bi bi-arrow-counterclockwise text-dark d-inline"></i>
-                                                                <p class="d-none d-md-inline m-auto p-0 pb-1 dark-text d-inline">Ripristina</p>
+                                                                <p class="d-none d-md-inline m-auto p-0 pb-1 dark-text d-inline">{{ __('ui.ripristina') }}</p>
                                                             </button>
                                                         </form>
                                                     </div>
@@ -69,7 +69,7 @@
             </div>
 
             <div class="text-center mt-4 mb-5">
-                <a href="{{ route('revisor.profile', Auth::user()) }}" class="btn rounded-5 btn-success"><p class="m-auto p-0 px-2 dark-text">Torna alla dashboard</p>
+                <a href="{{ route('revisor.profile', Auth::user()) }}" class="btn rounded-5 btn-success"><p class="m-auto p-0 px-2 dark-text">{{ __('ui.torna_dashboard') }}</p>
                 </a>
             </div>
         </div>

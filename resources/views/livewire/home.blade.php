@@ -3,7 +3,7 @@
     <main class="mx-0 image-home position-relative p-1">
         <div class="container-fluid container h-100 d-flex flex-column justify-content-center" data-aos-duration="2000"
             data-aos-easing="ease-cubic" data-aos="fade-right">
-            <h1 class="header-text text-shadow display-5">{{ __('ui.rebrand') }}</h1>
+            <h1 class="header-text text-shadow display-5 fw-bold">Presto.it</h1>
             <h6 class="p-1 pb-0 white-text text-shadow"> {{ __('ui.trasforma') }}</h6>
             <h6 class="p-1 pt-0 white-text text-shadow">{{ __('ui.piattaforma') }}</h6>
             <h4 class="p-1 header-text text-shadow">{{ __('ui.mercato') }}</h4>

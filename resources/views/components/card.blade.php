@@ -32,13 +32,13 @@
             <div class="article-buttons z-3 p-4 pt-2 row align-items-center justify-content-between">
                 <div class="col-6">
                     <a href="{{ route('article.edit', $article) }}" class="btn-form btn w-100 rounded-5">
-                        <p class="m-auto p-0 px-3 dark-text">Modifica</p>
+                        <p class="m-auto p-0 px-3 dark-text">{{ __('ui.modifica') }}</p>
                     </a>
                 </div>
                 <div class="col-6">
                     <button type="button" class="btn btn-delete rounded-5 w-100 px-4" data-bs-toggle="modal"
                         data-bs-target="#deleteModal">
-                        <p class="m-auto p-0 px-2 dark-text">Elimina</p>
+                        <p class="m-auto p-0 px-2 dark-text">{{ __('ui.elimina_articoli') }}</p>
                     </button>
                 </div>
             </div>
@@ -50,15 +50,12 @@
 
                         <div class="modal-header">
                             <h5 class="modal-title" id="deleteModalLabel">
-                                Conferma
-                                eliminazione</h5>
+                                {{ __('ui.elimina_articolo') }}</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
                         </div>
 
                         <div class="modal-body">
-                            Sei sicuro di voler eliminare questo
-                            articolo? Questa azione non può essere
-                            annullata.
+                            {{ __('ui.conferma_eliminazione') }}
                         </div>
 
                         <div class="modal-footer">
@@ -66,13 +63,12 @@
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn rounded-5 btn-delete">
-                                    <p class="dark-text m-0 px-2">Conferma
-                                        eliminazione</p>
+                                    <p class="dark-text m-0 px-2">{{ __('ui.elimina_articolo') }}</p>
                                 </button>
                             </form>
 
                             <button type="button" class="btn rounded-5 btn-form" data-bs-dismiss="modal">
-                                <p class="dark-text m-0 px-2">Annulla</p>
+                                <p class="dark-text m-0 px-2">{{ __('ui.annulla') }}</p>
                             </button>
                         </div>
 

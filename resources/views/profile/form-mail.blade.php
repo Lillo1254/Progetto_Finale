@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 text-center mt-5">
-                    <h1 class="secondary-text display-3 pt-3 text-center">Pagina Revisore</h1>
+                    <h1 class="secondary-text display-3 pt-3 text-center">{{ __('ui.pagina_revisore') }}</h1>
                 </div>
             </div>
             <div class="row justify-content-center py-5">
@@ -19,23 +19,23 @@
                         <input type="hidden" name="is_revisor" value="1">
 
                         <div class="mb-3 text-start">
-                            <label for="name" class="form-label">Nome</label>
+                            <label for="name" class="form-label">{{ __('ui.nome') }}</label>
                             <input type="text" class="form-control border-0 rounded-0" id="name" name="name" value="{{ auth()->user()->name }}" required>
                         </div>
 
                         <div class="mb-3 text-start">
-                            <label for="email" class="form-label">Email</label>
+                            <label for="email" class="form-label">{{ __('ui.email') }}</label>
                             <input type="email" class="form-control border-0 rounded-0" id="email" name="email" value="{{ auth()->user()->email }}"  required>
                         </div>
 
                         <div class="mb-3 text-start">
-                            <label for="message" class="form-label">Messaggio</label>
+                            <label for="message" class="form-label">{{ __('ui.messaggio') }}</label>
                             <textarea class="form-control border-0 rounded-0" id="message" name="message" rows="4" required></textarea>
                         </div>
 
                         <div class="text-center">
                             <button type="submit" class="btn btn-form mt-5 px-5 rounded-pill">
-                                Richiedi di diventare revisore
+                                {{ __('ui.diventa_revisore') }}
                             </button>
                         </div>
                     </form>

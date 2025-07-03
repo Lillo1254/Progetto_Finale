@@ -2,7 +2,7 @@
     <div class="container pb-3">
         <div class="row mb-5">
             <div class="col-12">
-                <h1 class="secondary-text display-3 pt-5 text-center">Tutti gli articoli</h1>
+                <h1 class="secondary-text display-3 pt-5 text-center">{{ __('ui.tutti_articoli') }}</h1>
             </div>
         </div>
         <article class="row">
