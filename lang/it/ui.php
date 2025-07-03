@@ -58,5 +58,14 @@ return [
     //atricle-index
     'tutti_articoli' => 'Tutti gli articoli',
 
+    //form-revisore
+    'pagina_revisore' => 'Pagina Revisore',
+    'nome' => 'Nome',
+    'cognome' => 'Cognome',
+    'email' => 'Email',
+    'messaggio' => 'Messaggio',
+    'diventa_revisore' => 'Richiedi di diventare revisore',
+    
+
 
 ];

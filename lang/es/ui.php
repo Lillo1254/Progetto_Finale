@@ -59,4 +59,12 @@ return [
     // article-index
     'tutti_articoli' => 'Todos los artículos',
 
+    //form-revisore
+    'pagina_revisore' => 'Página del Revisor',
+    'nome' => 'Nombre',
+    'cognome' => 'Apellido',
+    'email' => 'Correo electrónico',
+    'messaggio' => 'Mensaje',
+    'diventa_revisore' => 'Solicitar ser revisor',
+
 ];

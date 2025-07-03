@@ -45,7 +45,7 @@ return [
     'copyright' => 'Copyright',
 
     // catalogo
-     'crea_articolo' => 'Create an Item',
+    'crea_articolo' => 'Create an Item',
     'titolo' => 'Title',
     'descrizione' => 'Description',
     'categoria' => 'Category',
@@ -58,5 +58,12 @@ return [
 
     // article-index
     'tutti_articoli' => 'All articles',
-];
 
+    //form-revisore
+    'pagina_revisore' => 'Reviewer Page',
+    'nome' => 'First Name',
+    'cognome' => 'Last Name',
+    'email' => 'Email',
+    'messaggio' => 'Message',
+    'diventa_revisore' => 'Apply to become a reviewer',
+];

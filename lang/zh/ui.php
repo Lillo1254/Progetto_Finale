@@ -59,4 +59,13 @@ return [
 
     // article-index
     'tutti_articoli' => '所有商品',
+
+    // form-revisore
+    'pagina_revisore' => '审查员页面',
+    'nome' => '名字',
+    'cognome' => '姓氏',
+    'email' => '电子邮件',
+    'messaggio' => '留言',
+    'diventa_revisore' => '申请成为审查员',
+
 ];
