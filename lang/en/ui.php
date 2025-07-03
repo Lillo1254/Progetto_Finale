@@ -86,7 +86,11 @@ return [
     'ripristina' => 'Restore',
     'torna_dashboard' => 'Back to dashboard',
 
-    
+    //edit
+    'modifica_articolo' => 'Edit item',
+    'salva_modifiche' => 'Save changes',
+    'elimina_articoli' => 'Delete item',
+
 
 
 ];

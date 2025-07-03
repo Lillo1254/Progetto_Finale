@@ -85,6 +85,12 @@ return [
     'ripristina' => '恢复',
     'torna_dashboard' => '返回仪表板',
 
+    //edit
+
+    'modifica_articolo' => '编辑商品',
+    'salva_modifiche' => '保存更改',
+    'elimina_articoli' => '删除商品',
+
 
 
 

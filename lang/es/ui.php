@@ -85,5 +85,11 @@ return [
     'ripristina' => 'Restaurar',
     'torna_dashboard' => 'Volver al panel',
 
+    //edit
+    'modifica_articolo' => 'Editar artículo',
+    'salva_modifiche' => 'Guardar cambios',
+    'elimina_articoli' => 'Eliminar artículo',
+
+
 
 ];
