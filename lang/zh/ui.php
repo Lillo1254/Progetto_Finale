@@ -86,10 +86,15 @@ return [
     'torna_dashboard' => '返回仪表板',
 
     //edit
-
     'modifica_articolo' => '编辑商品',
     'salva_modifiche' => '保存更改',
     'elimina_articoli' => '删除商品',
+
+    //search
+    'risultati' => '搜索结果：',
+    'no_risultati' => '未找到商品',
+    'torna_catalogo' => '返回目录',
+
 
 
 

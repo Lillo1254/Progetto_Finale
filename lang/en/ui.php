@@ -91,6 +91,12 @@ return [
     'salva_modifiche' => 'Save changes',
     'elimina_articoli' => 'Delete item',
 
+    //search
+    'risultati' => 'Results for:',
+    'no_risultati' => 'No items found',
+    'torna_catalogo' => 'Back to catalog',
+
+
 
 
 ];

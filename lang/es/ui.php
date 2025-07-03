@@ -90,6 +90,12 @@ return [
     'salva_modifiche' => 'Guardar cambios',
     'elimina_articoli' => 'Eliminar artículo',
 
+    //search
+    'risultati' => 'Resultados para:',
+    'no_risultati' => 'No se encontraron artículos',
+    'torna_catalogo' => 'Volver al catálogo',
+
+
 
 
 ];

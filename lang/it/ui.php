@@ -89,6 +89,14 @@ return [
     'modifica_articolo'=> 'Modifica articolo',
     'salva_modifiche'=> 'Salva modifiche',
     'elimina_articoli'=> 'Elimina articolo',
+
+    //search
+    
+    'risultati' => 'Risultati per :',
+    'no_risultati'=> 'Nessun articolo trovato',
+    'torna_catalogo' =>'Torna al catalogo'
+
+    
     
 
     
