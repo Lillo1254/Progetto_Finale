@@ -102,6 +102,19 @@ return [
     'conferma_password' => '确认密码',
     'gia_account' => '您已经有账户了吗？',
 
+    //categories blade
+
+    'nome_sezione' => '您正在浏览的分类是',
+    'no_articolo_sezione' => '该分类下暂无文章',
+    'modifica' => '编辑',
+    'dashboard_revisore' => '审阅员面板',
+    'accetta_articolo' => '接受文章',
+    'rifiuta_articolo' => '拒绝文章',
+    'sicuro_accetta' => '您确定要接受该文章吗？',
+    'accetta' => '接受',
+
+
+
 
 
 

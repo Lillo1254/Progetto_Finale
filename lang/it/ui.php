@@ -96,12 +96,33 @@ return [
     'no_risultati'=> 'Nessun articolo trovato',
     'torna_catalogo' =>'Torna al catalogo',
 
-    //login
+    //login e register
 
     'privacy' => 'Non condivideremo mai il tuo indirizzo email con nessun altro.',
     'password' => 'Password',
     'iscriviti'=> 'Non hai ancora un account? ',
+    'conferma_password' => 'Conferma password',
+    'gia_account' => 'Hai già un account?',
 
+    //categories.blade
+
+    'nome_sezione'=>'Sei nella sezione',
+    'no_articolo_sezione'=>'Nessun articolo presente per questa categoria',
+
+    //card
+    'modifica'=> 'Modifica',
+
+    //index revisore
+
+    'dashboard_revisore'=> 'Dashboard Revisore',
+    'accetta_articolo'=> 'Accetta articolo',
+    'rifiuta_articolo'=> 'Rifiuta articolo',
+    'sicuro_accetta' => 'Sei sicuro di voler accettare l\' articolo ',
+    'accetta' => 'accetta',
+    
+
+
+    
 
 
 

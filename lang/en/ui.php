@@ -103,6 +103,17 @@ return [
     'conferma_password' => 'Confirm password',
     'gia_account' => 'Already have an account?',
 
+    //categories-blade
+    'nome_sezione' => 'You are in the section',
+    'no_articolo_sezione' => 'No articles available for this category',
+    'modifica' => 'Edit',
+    'dashboard_revisore' => 'Reviewer Dashboard',
+    'accetta_articolo' => 'Accept article',
+    'rifiuta_articolo' => 'Reject article',
+    'sicuro_accetta' => 'Are you sure you want to accept the article?',
+    'accetta' => 'accept',
+
+
 
 
 

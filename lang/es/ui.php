@@ -102,6 +102,17 @@ return [
     'conferma_password' => 'Confirmar contraseña',
     'gia_account' => '¿Ya tienes una cuenta?',
 
+    //categories.balde
+    'nome_sezione' => 'Estás en la sección',
+    'no_articolo_sezione' => 'No hay artículos disponibles para esta categoría',
+    'modifica' => 'Editar',
+
+    'dashboard_revisore' => 'Panel del Revisor',
+    'accetta_articolo' => 'Aceptar artículo',
+    'rifiuta_articolo' => 'Rechazar artículo',
+    'sicuro_accetta' => '¿Estás seguro de que quieres aceptar el artículo?',
+    'accetta' => 'aceptar',
+
 
 
 
