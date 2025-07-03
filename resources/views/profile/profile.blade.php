@@ -24,7 +24,7 @@
             <section class="my-4">
                 <h2 class="text-center secondary-text py-3"><i class="fas fa-shopping-cart"></i> I tuoi Articoli</h2>
                 <div class="row justify-content-center">
-                    <div class="col-md-10 col-lg-8">
+                    <div class=" col-md-10 col-lg-8">
                         @if ($user->articles->isEmpty())
                             <p class="text-danger text-center"><em>Nessun articolo inserito</em></p>
                         @else
