@@ -1,4 +1,10 @@
 <x-layout titlePage="Richiedi di diventare revisore">
+    @if(auth()->user()->is_revisor)
+    <div>
+        <h1><em>Sei gia un Revisore</em></h1>
+
+        @else
+    </div>
     <div class="primary-bg min-vh-100 d-flex flex-column justify-content-start pb-5">
         <div class="container">
             <div class="row justify-content-center">
@@ -14,12 +20,12 @@
 
                         <div class="mb-3 text-start">
                             <label for="name" class="form-label">Nome</label>
-                            <input type="text" class="form-control border-0 rounded-0" id="name" name="name" required>
+                            <input type="text" class="form-control border-0 rounded-0" id="name" name="name" value="{{ auth()->user()->name }}" required>
                         </div>
 
                         <div class="mb-3 text-start">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control border-0 rounded-0" id="email" name="email" required>
+                            <input type="email" class="form-control border-0 rounded-0" id="email" name="email" value="{{ auth()->user()->email }}"  required>
                         </div>
 
                         <div class="mb-3 text-start">
@@ -37,4 +43,5 @@
             </div>
         </div>
     </div>
+    @endif
 </x-layout> 

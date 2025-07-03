@@ -18,7 +18,8 @@ public function profile() {
 }
 
 public function sendForm() {
-    return view('profile.form-mail');
+    $user = auth()->user();
+    return view('profile.form-mail', compact('user'));
 }
 public function setLanguage($lang) {
     session(['locale' => $lang]);
