@@ -2,10 +2,11 @@
 
 namespace App\Jobs;
 
-use Google\Cloud\Vision\V1\ImageAnnotatorClient;
-use Illuminate\Contracts\Queue\ShouldQueue;
+
 use App\Models\Image;
 use Illuminate\Foundation\Queue\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
 class GoogleVisionSafeSearch implements ShouldQueue
 {
