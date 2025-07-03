@@ -54,6 +54,9 @@ return [
     'selezione_immagine' => 'hai selezionato 1 immagine',
     'dimensione_massima'=> 'I file selezionati devono essere in formato jpeg, png o jpg e non devono superare i 2MB di dimensione.',
     'anteprima_immagini' => 'Anteprima Immagini:',
-    
+
+    //atricle-index
+    'tutti_articoli' => 'Tutti gli articoli',
+
 
 ];

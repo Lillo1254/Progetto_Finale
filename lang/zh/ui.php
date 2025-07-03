@@ -56,4 +56,7 @@ return [
     'selezione_immagine' => '你已选择 1 张图片',
     'dimensione_massima' => '所选文件必须为 jpeg、png 或 jpg 格式，且大小不得超过 2MB。',
     'anteprima_immagini' => '图片预览：',
+
+    // article-index
+    'tutti_articoli' => '所有商品',
 ];

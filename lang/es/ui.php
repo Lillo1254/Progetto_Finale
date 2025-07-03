@@ -55,4 +55,8 @@ return [
     'selezione_immagine' => 'has seleccionado 1 imagen',
     'dimensione_massima' => 'Los archivos seleccionados deben estar en formato jpeg, png o jpg y no deben superar los 2MB de tamaño.',
     'anteprima_immagini' => 'Vista previa de las imágenes:',
+
+    // article-index
+    'tutti_articoli' => 'Todos los artículos',
+
 ];
