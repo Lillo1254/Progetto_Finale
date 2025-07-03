@@ -99,6 +99,9 @@ return [
     'privacy' => 'Nunca compartiremos tu dirección de correo electrónico con nadie más.',
     'password' => 'Contraseña',
     'iscriviti' => '¿Aún no tienes una cuenta?',
+    'conferma_password' => 'Confirmar contraseña',
+    'gia_account' => '¿Ya tienes una cuenta?',
+
 
 
 

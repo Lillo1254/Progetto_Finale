@@ -99,6 +99,9 @@ return [
     'privacy' => '我们绝不会与任何人分享您的电子邮件地址。',
     'password' => '密码',
     'iscriviti' => '还没有账户？',
+    'conferma_password' => '确认密码',
+    'gia_account' => '您已经有账户了吗？',
+
 
 
 

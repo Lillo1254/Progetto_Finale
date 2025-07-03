@@ -100,6 +100,10 @@ return [
     'privacy' => 'We will never share your email address with anyone else.',
     'password' => 'Password',
     'iscriviti' => "Don't have an account yet?",
+    'conferma_password' => 'Confirm password',
+    'gia_account' => 'Already have an account?',
+
+
 
 
 
