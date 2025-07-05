@@ -65,8 +65,10 @@ class ArticleController extends Controller
         abort_if($article->user_id !== auth()->id(), 403, 'Non sei autorizzato ad accedere a questa pagina.');
 
         $article->update($request->validated());
+        $article->is_accepted = null;
+        $article->save();
 
-        return redirect()->route('article.show', $article)->with('message', 'Articolo aggiornato con successo.');
+        return redirect()->route('article.show', $article)->with('message', 'Articolo aggiornato con successo, un revisore effettuera un nuovo controllo appena possibile.');
     }
 
     /**

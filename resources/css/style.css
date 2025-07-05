@@ -961,3 +961,7 @@ details[open] #details {
         font-size: 0.9em;
     }
 }
+
+.ul-password{
+    font-size: 0.75rem;
+}

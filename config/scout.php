@@ -213,7 +213,7 @@ return [
         'fuzzy' => [
             'prefix_length' => 2,
             'max_expansions' => 20,
-            'distance'=> 2,
+            'distance'=> 7,
             'no_limit' =>false,
         ],
         'asYouType'=> false,

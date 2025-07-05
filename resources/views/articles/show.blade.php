@@ -8,8 +8,16 @@
                         <div class="col-12 col-md-6 overflow-hidden">
                             <h1 class="secondary-text display-5">{{ $article->title }}</h1>
                             <h6 class="white-text px-1">{{ __('ui.prezzo') }}: {{ number_format($article->price, 2) }} €</h6>                        
-                            <h6 class="white-text px-1">{{ __('ui.categoria') }}: <a href="{{ route('category.articles', $article->category) }}" class="text-decoration-none">{{ $article->category->name ?? 'Nessuna categoria' }}</a></h6>
-                            <p class="white-text mt-3 px-1">{{ $article->description }}</p>    
+                            <h6 class="white-text px-1">{{ __('ui.categoria') }}: <a href="{{ route('category.articles', $article->category) }}" class="">{{ $article->category->name ?? 'Nessuna categoria' }}</a></h6>
+                            <p class="white-text mt-3 px-1">{{ $article->description }}</p>
+                            <p>Inserito da:</p>
+                             @auth
+        @if(auth()->id() === $article->user->id)
+            <a href="{{ route('profile', auth()->user()) }}">Il tuo profilo</a>
+        @else
+            <a href="{{ route('profiloarticolo', $article->user) }}">{{ $article->user->name }}</a>
+        @endif
+    @endauth    
                         </div>
 
                         @if ($article->images->count()>0)

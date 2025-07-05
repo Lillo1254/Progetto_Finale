@@ -17,6 +17,7 @@ use App\Http\Controllers\RoleProfile;
 Route::get('/', [PublicController::class, 'home'])->name('home');
 Route::get('/article/catalogo', [ArticleController::class, 'index'])->name('article.catalogo');
 Route::get('/search/article', [ArticleController::class, 'search'])->name('article.search');
+Route::get('profile/article/{user}', [ProfileController::class, 'articleprofile'])->name('profiloarticolo');
 
 
 // route user auth

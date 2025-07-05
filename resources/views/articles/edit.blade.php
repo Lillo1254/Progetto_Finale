@@ -10,7 +10,7 @@
             <article class="row justify-content-center mb-5">
                 <div class="col-12 col-md-10 col-lg-8">
                     <form class="primary-light-bg p-5 rounded-0" action="{{ route('article.update', $article) }}"
-                        method="POST">
+                        method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="mb-3">
@@ -45,6 +45,8 @@
                             @endforeach
                         </div>
 
+
+
                         <div class="row justify-content-between gap-2 gap-sm-3 gap-md-4 gap-lg-5 mt-5 px-2">
                             <button type="submit" class="col-12 col-sm btn rounded-5 btn-success">
                                 <p class="m-auto p-0 dark-text">{{ __('ui.salva_modifiche') }}</p>
@@ -55,7 +57,9 @@
                                 <p class="m-auto p-0 dark-text">{{ __('ui.elimina_articoli') }}</p>
                             </button>
 
-                            <a href="{{ route('article.catalogo') }}" class="col-12 col-sm btn rounded-5 btn-form"><p class="m-auto p-0 dark-text">Annulla</p></a>
+                            <a href="{{ route('article.catalogo') }}" class="col-12 col-sm btn rounded-5 btn-form">
+                                <p class="m-auto p-0 dark-text">Annulla</p>
+                            </a>
                         </div>
                     </form>
                 </div>
