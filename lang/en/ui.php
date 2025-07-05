@@ -31,6 +31,7 @@ return [
     'counter_2' => ' items to review',
     'auth' => 'Login or Register',
     'login' => 'Login',
+    'already' => 'Don\'t have an account yet? ',
     'sign_up' => 'Sign up',
     'tema' => 'Theme',
     'logout' => 'Logout',
@@ -97,7 +98,7 @@ return [
     'torna_catalogo' => 'Back to catalog',
 
     //login
-    'privacy' => 'We will never share your email address with anyone else.',
+    'mail_share' => 'We will never share your email address with anyone else.',
     'password' => 'Password',
     'iscriviti' => "Don't have an account yet?",
     'conferma_password' => 'Confirm password',

@@ -32,6 +32,7 @@ return [
     'counter_2' => ' 个商品待审核',
     'auth' => '登录或注册',
     'login' => '登录',
+    'already' => '你还没有账户吗？ ',
     'sign_up' => '注册',
     'tema' => '主题',
     'logout' => '退出登录',
@@ -96,7 +97,7 @@ return [
     'torna_catalogo' => '返回目录',
 
     //login
-    'privacy' => '我们绝不会与任何人分享您的电子邮件地址。',
+    'mail_share' => '我们绝不会与任何人分享您的电子邮件地址。',
     'password' => '密码',
     'iscriviti' => '还没有账户？',
     'conferma_password' => '确认密码',
