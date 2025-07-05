@@ -9,13 +9,7 @@
                 </div>
             </div>
 
-            @if (session('message'))
-                <div class="row justify-content-center px-12">
-                    <div class="col-12 col-sm-10 col-lg-12 col-xl-10 alert alert-success dark-text mb-4 rounded-0">
-                        {{ session('message') }}
-                    </div>
-                </div>
-            @endif
+
 
             @if ($articles_to_check)
             <div class="row justify-content-center mb-5 gap-5">

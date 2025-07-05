@@ -22,6 +22,7 @@ Route::get('/search/article', [ArticleController::class, 'search'])->name('artic
 // route user auth
 Route::middleware(['auth'])->group(function () {
 
+    Route::get('/order/article', [ArticleController::class, 'order'])->name('article.order');
     Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
     Route::post('/logout', function () {
         Auth::logout();

@@ -1,10 +1,5 @@
 <x-layout titlePage="Profilo Utente - {{ auth()->user()->name }}">
     <main class="primary-bg min-vh-100 pt-3">
-        @if (session('message'))
-            <div class="alert alert-success dark-text m-0 mb-4 rounded-0">
-                {{ session('message') }}
-            </div>
-        @endif
         <article class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-8">

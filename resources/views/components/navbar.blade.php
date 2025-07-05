@@ -18,24 +18,24 @@
             <!-- Logo -->
             <div class="w-100 text-start text-md-center">
                 <a class="navbar-brand m-0" href="#">
-                    <img src="{{ asset('media/Logo_DarkMode.png') }}" class="logo text-start" alt="" id="nav-logo">
+                    <img src="{{ asset('media/Logo_DarkMode.png') }}" class="logo text-start" alt="immagine logo del sito" id="nav-logo" title="Return to start">
                 </a>
             </div>
 
             <!-- Icons -->
             <div class="w-100 w-md-33 d-flex align-items-center justify-content-end gap-2 pb-3">
                 <a href="{{ route('article.create') }}"
-                    class="text-decoration-none white-text  p-1 px-2 pb-2 btn-navbar btn border-0">
+                    class="text-decoration-none white-text  p-1 px-2 pb-2 btn-navbar btn border-0" title="Insert Article">
                     <i class="bi white-text bi-plus-square-fill fs-5"></i>
                 </a>
 
-                <button class="p-1 px-2 pb-2 btn-navbar btn border-0">
+                <a href="{{ route('article.order') }}" class="p-1 px-2 pb-2 btn-navbar btn border-0">
                     <i class="bi white-text bi-bag-dash-fill fs-5"></i>
-                </button>
+                </a>
 
                 <button class="navbar-toggler btn p-1 pb-2 btn-navbar person-icon-correction border-0 position-relative"
                     type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-                    aria-controls="offcanvasDarkNavbar">
+                    aria-controls="offcanvasDarkNavbar" title="Open Menu">
                     <i class="bi white-text bi-person-fill"></i>
 
                     @auth
@@ -144,7 +144,7 @@
                     <!-- Auth links -->
                     @auth
                         <li class="nav-item py-1">
-                            <a class="dropdown-item white-text " href="">{{ __('ui.ordini') }}</a>
+                            <a class="dropdown-item white-text " href="{{ route('article.order') }}">{{ __('ui.ordini') }}</a>
                         </li>
                         <li class="nav-item py-1">
                             <a class="dropdown-item white-text "

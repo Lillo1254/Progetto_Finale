@@ -13,16 +13,6 @@
                         method="POST">
                         @csrf
                         @method('PUT')
-
-                        @if ($errors->any())
-                            <div class="alert alert-danger m-0 mb-4">
-                                <ul class="mb-0">
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
                         <div class="mb-3">
                             <label for="title" class="form-label white-text">{{ __('ui.titolo') }}</label>
                             <input type="text" name="title" id="title" class="form-control rounded-0"

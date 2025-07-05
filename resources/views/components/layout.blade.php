@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -18,6 +19,26 @@
 
     <x-navbar />
     <div class="navbarclass"></div>
+
+    @if (session('message'))
+        <div class="row justify-content-center px-12">
+            <div class="col-12 col-sm-10 col-lg-12 col-xl-10 alert alert-success dark-text mb-4 rounded-0">
+                {{ session('message') }}
+            </div>
+        </div>
+    @endif
+
+    @if ($errors->any())
+        <div class="alert alert-danger rounded-0 m-0 mb-4">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+
     {{ $slot }}
 
 

@@ -26,11 +26,17 @@ class CreateNewUser implements CreatesNewUsers
                 'string',
                 'email',
                 'max:255',
+                'regex:/@.*\.(it|com|outlook)$/i',
                 Rule::unique(User::class),
             ],
             'password' => $this->passwordRules(),
-        ])->validate();
-
+        ], [
+            'email.regex' => 'L\'email deve terminare con .it, .com , .outlook o .pec',
+        ],[
+    'password.regex' => 'La password deve contenere almeno una lettera maiuscola, una minuscola, un numero e un simbolo.',
+    'password.confirmed' => 'Le password non coincidono.',
+])->validate();
+                                                                                                                                              
         return User::create([
             'name' => $input['name'],
             'email' => $input['email'],

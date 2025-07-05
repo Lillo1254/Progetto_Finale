@@ -102,4 +102,9 @@ class ArticleController extends Controller
 
         return view('articles.search', compact('articles', 'query'));
     }
+
+    public function order() {
+        return view('errors.sviluppo');
+    }
+
 }

@@ -11,15 +11,6 @@
                 <div class="col-12 col-md-10 col-lg-8 ">
                     <form class="primary-light-bg p-5 rounded-0 form-glow mb-5" action="{{ route('register') }}" method="POST">
                         @csrf
-                        @if ($errors->any())
-                            <div class="alert alert-danger rounded-0 m-0 mb-4">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
                         <div class="mb-3">
                             <label for="name" class="form-label white-text">{{ __('ui.nome') }}</label>
                             <input type="text" class="form-control rounded-0" id="name" name="name" required value="{{old('name')}}">
