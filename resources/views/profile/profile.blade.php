@@ -17,7 +17,8 @@
             </div>
 
             <section class="my-4">
-                <h2 class="text-center secondary-text py-3"><i class="fas fa-shopping-cart"></i> {{ __('ui.miei_articoli') }}</h2>
+                <h2 class="text-center secondary-text py-3"><i class="fas fa-shopping-cart"></i>
+                    {{ __('ui.miei_articoli') }}</h2>
                 <div class="row justify-content-center">
                     <div class=" col-md-10 col-lg-8">
                         @if ($user->articles->isEmpty())
@@ -30,9 +31,12 @@
                                             <th class="fw-bold p-2 primary-light-bg">{{ __('ui.titolo') }}</th>
                                             <th class="fw-bold p-2 primary-light-bg">{{ __('ui.prezzo') }}</th>
                                             <th class="fw-bold p-2 primary-light-bg">{{ __('ui.categorie') }}</th>
-                                            <th class="hide fw-bold p-2 primary-light-bg">{{ __('ui.descrizione') }}</th>
+                                            <th class="hide fw-bold p-2 primary-light-bg">{{ __('ui.descrizione') }}
+                                            </th>
                                             <th class="hide fw-bold p-2 primary-light-bg w-15">{{ __('ui.data') }}</th>
-                                            <th class="fw-bold p-2 primary-light-bg text-start w-auto">{{ __('ui.azioni') }}</th>
+                                            <th class="fw-bold p-2 primary-light-bg text-start w-auto">
+                                                {{ __('ui.azioni') }}</th>
+                                            <th class="fw-bold p-2 primary-light-bg text-center">status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -41,8 +45,10 @@
                                                 <td class="p-2 primary-light-bg">{{ $article->title }}</td>
                                                 <td class="p-2 primary-light-bg">{{ $article->price }}</td>
                                                 <td class="p-2 primary-light-bg">{{ $article->category->name }}</td>
-                                                <td class="p-2 hide primary-light-bg">{{ Str::limit($article->description, 50) }}</td>
-                                                <td class="p-2 hide primary-light-bg w-15">{{ $article->created_at->format('d/m/Y') }}</td>
+                                                <td class="p-2 hide primary-light-bg">
+                                                    {{ Str::limit($article->description, 50) }}</td>
+                                                <td class="p-2 hide primary-light-bg w-15">
+                                                    {{ $article->created_at->format('d/m/Y') }}</td>
                                                 <td class="p-2 primary-light-bg text-start w-auto">
                                                     <div class="d-flex align-items-center gap-2">
                                                         <a href="{{ route('article.show', $article) }}"
@@ -73,7 +79,7 @@
                                                                     </div>
 
                                                                     <div class="modal-body">
-                                                                       {{ __('ui.conferma_eliminazione') }}
+                                                                        {{ __('ui.conferma_eliminazione') }}
                                                                     </div>
 
                                                                     <div class="modal-footer">
@@ -84,14 +90,16 @@
                                                                             @method('DELETE')
                                                                             <button type="submit"
                                                                                 class="btn rounded-5 btn-delete">
-                                                                                <p class="dark-text m-0 px-2">{{ __('ui.elimina_articolo') }}</p>
+                                                                                <p class="dark-text m-0 px-2">
+                                                                                    {{ __('ui.elimina_articolo') }}</p>
                                                                             </button>
                                                                         </form>
 
                                                                         <button type="button"
                                                                             class="btn rounded-5 btn-form"
                                                                             data-bs-dismiss="modal">
-                                                                            <p class="dark-text m-0 px-2">{{ __('ui.annulla') }}</p>
+                                                                            <p class="dark-text m-0 px-2">
+                                                                                {{ __('ui.annulla') }}</p>
                                                                         </button>
                                                                     </div>
 
@@ -99,6 +107,15 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                </td>
+                                                <td class="p-2 primary-light-bg text-center">
+                                                    @if (is_null($article->is_accepted))
+                                                        <span class="badge bg-warning text-dark">In revisione</span>
+                                                    @elseif ($article->is_accepted)
+                                                        <span class="badge bg-success">Accettato</span>
+                                                    @else
+                                                        <span class="badge bg-danger">Rifiutato</span>
+                                                    @endif
                                                 </td>
                                             </tr>
                                         @endforeach

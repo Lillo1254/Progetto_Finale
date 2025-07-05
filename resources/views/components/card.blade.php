@@ -12,7 +12,7 @@
             class="card-link card-title z-1 text-decoration-none white-text fw-light fs-3">{{ $article->title }}</a>
         <h5 class="card-text fw-light pt-2 fs-6">{{ $article->price }} €</h5>
         <a href="{{ route('category.articles', $article->category) }}"
-            class="text-decoration-none card-text secondary-text">{{ $article->category->name }}</a>
+            class=" card-text secondary-text">{{ $article->category->name }}</a>
 
         @guest
             <div class="mb-3"></div>
