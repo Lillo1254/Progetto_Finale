@@ -42,7 +42,7 @@ class ArticleController extends Controller
     {
         $article = Article::findOrFail($article->id);
 
-        if ($article->is_accepted == true) {
+        if ($article->is_accepted == true || $article->is_accepted == false) {
             return view('articles.show', compact('article'));
         }
         return redirect()->route('profile', auth()->user())->with('message', 'Il tuo articolo è in fase di revisione.');
