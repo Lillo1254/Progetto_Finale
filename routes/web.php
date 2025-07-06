@@ -25,10 +25,6 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/order/article', [ArticleController::class, 'order'])->name('article.order');
     Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
-    Route::post('/logout', function () {
-        Auth::logout();
-        return redirect()->route('home');
-    })->name('logout');
     Route::post('/revisor/request', [RoleProfile::class, 'send'])->name('revisor.request');
     Route::get('/form-revisor', [PublicController::class, 'SendForm'])->name('form.revisor');
     Route::get('/article/{article}/edit', [ArticleController::class, 'edit'])->name('article.edit');

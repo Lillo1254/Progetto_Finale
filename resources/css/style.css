@@ -3,9 +3,11 @@ body{
     
 }
 
-/* a, button,i , {
+/* a, button  {
   cursor: url('/public/hand.cur'), auto;
-} */
+}
+ */
+
 
 /* body, a, button {
   cursor: url('/public/hand.cur'), pointer;
@@ -14,7 +16,7 @@ body{
 
 :root {
     --primary: #090018;
-    --primary-light: #2b2337;
+    --primary-light: rgb(43, 35, 55);
     --secondary: #e2d4f9;
     --accent: rgb(223, 173, 36);
     --danger: hsl(352, 62%, 53%);
@@ -976,4 +978,32 @@ details[open] #details {
 
 .ul-password{
     font-size: 0.75rem;
+}
+
+ul.dropdown-menu.show[data-popper-placement="bottom-end"] {
+  top: 0px !important;
+  left: 0 !important;
+  right: 0 !important;
+  /* bottom: auto !important; */
+  padding: 0px !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu {
+  width: 50% !important;    
+  height: auto !important;     
+  max-height: 100vh !important; 
+  overflow-y: auto !important; 
+  background: rgba(43, 35, 55, 0.88) !important;
+  backdrop-filter: blur(10px) !important;
+   opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s ease, transform 1s ease;
+  pointer-events: none;
+}
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
 }

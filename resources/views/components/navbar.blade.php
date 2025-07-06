@@ -68,10 +68,12 @@
                     <li class="nav-item">
                         <a class="text-decoration-none white-text  active" href="{{ route('home') }}">{{ __('ui.home') }}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="text-decoration-none white-text "
-                            href="{{ route('article.catalogo') }}">{{ __('ui.catalogo') }}</a>
-                    </li>
+                    <a class="text-decoration-none "
+                            href="{{ route('article.catalogo') }}">
+                    <li class="nav-item  white-text">
+                        {{ __('ui.catalogo') }}
+                    </li></a>
+                    
                     <li class="nav-item dropdown position-relative">
                         <a class="text-decoration-none white-text  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ __('ui.categorie') }}
@@ -129,10 +131,10 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end primary-light-bg">
                             @forelse ($categories as $category)
-                                <li>
+                                
                                     <a class="dropdown-item white-text  "
                                         href="{{ route('category.articles', ['category' => $category->id]) }}">{{ $category->name }}</a>
-                                </li>
+                                
                             @empty
                                 <li>
                                     <p class="px-3">{{ __('ui.no_categoria') }}a</p>

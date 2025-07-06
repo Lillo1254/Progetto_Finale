@@ -1,13 +1,17 @@
 <x-layout titlePage="Richiedi di diventare revisore">
     @if(auth()->user()->is_revisor)
-    <div>
-        <h1><em>Sei gia un Revisore</em></h1>
+    <div class="text-center my-5">
+        <h1><em>Sei gia un Revisore, perche ci provi?</em></h1>
+        <a href="{{ route('revisor.profile', Auth::user()) }}"
+                class="btn col-12 mx-3 col-sm-4 col-md-3 col-xl-2 btn-home rounded-5 ms-sm-3">
+                <p class="m-auto p-0 px-1 dark-text">Torna a lavoro</p>
+            </a>
+        </div>
 
         @else
 
 
 
-    </div>
     <div class="primary-bg min-vh-100 d-flex flex-column justify-content-start pb-5">
         <div class="container">
             <div class="row justify-content-center">

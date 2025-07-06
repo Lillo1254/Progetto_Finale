@@ -97,3 +97,10 @@ startLogging("Inizio pagina");
 
 // Secondo log parte dopo 5 secondi (per simulare "a metà")
 startLogging("Meta pagina", 5000);
+
+
+document.addEventListener('mousemove', e => {
+  const cursor = document.getElementById('custom-cursor');
+  cursor.style.top = e.clientY + 'px';
+  cursor.style.left = e.clientX + 'px';
+});

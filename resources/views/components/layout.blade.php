@@ -19,7 +19,7 @@
 
     <x-navbar />
     <div class="navbarclass"></div>
-
+    
     @if (session('message'))
         <div class="row justify-content-center px-12">
             <div class="col-12 col-sm-10 col-lg-12 col-xl-10 alert alert-success dark-text mb-4 rounded-0">
