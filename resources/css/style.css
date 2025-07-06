@@ -1,3 +1,15 @@
+body{
+    cursor: url(/public/cursore2.cur) , auto;
+    
+}
+
+/* a, button,i , {
+  cursor: url('/public/hand.cur'), auto;
+} */
+
+/* body, a, button {
+  cursor: url('/public/hand.cur'), pointer;
+} */
 /* ! COLORS */
 
 :root {
