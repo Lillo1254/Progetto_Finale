@@ -76,3 +76,24 @@ passwordInput.addEventListener('input', function () {
   lengthCheck.textContent = `${mincar ? '✅' : '❌'} minimo 8 caratteri`;
 });
 //fine validazioni password
+
+function startLogging(label, delayStart = 0) {
+  setTimeout(() => {
+    let count = 0;
+    const interval = setInterval(() => {
+      count++;
+      console.log(`${label} - messaggio numero ${count}`);
+      if (count >= 10) {
+        clearInterval(interval);
+        // Ricomincia dopo 500ms (puoi modificare il ritardo qui)
+        startLogging(label, 500);
+      }
+    }, 500);
+  }, delayStart);
+}
+
+// Primo log parte subito
+startLogging("Inizio pagina");
+
+// Secondo log parte dopo 5 secondi (per simulare "a metà")
+startLogging("Meta pagina", 5000);
