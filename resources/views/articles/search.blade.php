@@ -5,7 +5,7 @@
         <div class="row  justify-content-center pb-5">
             @if ($articles->count() > 0)
                 @foreach ($articles as $article)
-                    <div class="col-12 col-md-6 col-lg-2 mb-4">
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
                         <x-card :article="$article"/>
                     </div>
                 @endforeach
