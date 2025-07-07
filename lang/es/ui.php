@@ -87,9 +87,9 @@ return [
     'torna_dashboard' => 'Volver al panel',
 
     //edit
-    'modifica_articolo' => 'Editar artículo',
+    'modifica_articolo' => 'Editar',
     'salva_modifiche' => 'Guardar cambios',
-    'elimina_articoli' => 'Eliminar artículo',
+    'elimina_articoli' => 'Eliminar',
 
     //search
     'risultati' => 'Resultados para:',

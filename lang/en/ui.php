@@ -90,7 +90,7 @@ return [
     //edit
     'modifica_articolo' => 'Edit item',
     'salva_modifiche' => 'Save changes',
-    'elimina_articoli' => 'Delete item',
+    'elimina_articoli' => 'Delete',
 
     //search
     'risultati' => 'Results for:',

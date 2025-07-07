@@ -46,7 +46,7 @@ return [
     'faq' => 'FAQ',
 
     //catalogo
-    'crea_articolo'=> 'Crea un Articolo',
+    'crea_articolo'=> 'Crea articolo',
     'titolo' => 'Titolo',
     'descrizione' => 'Descrizione',
     'categoria' => 'Categoria',
@@ -90,7 +90,7 @@ return [
 
     'modifica_articolo'=> 'Modifica articolo',
     'salva_modifiche'=> 'Salva modifiche',
-    'elimina_articoli'=> 'Elimina articolo',
+    'elimina_articoli'=> 'Elimina',
 
     //search
     
