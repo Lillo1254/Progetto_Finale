@@ -29,17 +29,20 @@
     @auth
         @if ($article->user_id === auth()->id())
             <hr class="secondary-text">
-            <div class="article-buttons z-3 p-4 pt-2 row align-items-center justify-content-between">
-                <div class="col-6">
-                    <a href="{{ route('article.edit', $article) }}" class="btn-form btn w-100 rounded-5">
-                        <p class="m-auto p-0 px-3 dark-text">{{ __('ui.modifica') }}</p>
-                    </a>
-                </div>
-                <div class="col-6">
-                    <button type="button" class="btn btn-delete rounded-5 w-100 px-4" data-bs-toggle="modal"
-                        data-bs-target="#deleteModal">
-                        <p class="m-auto p-0 px-2 dark-text">{{ __('ui.elimina_articoli') }}</p>
-                    </button>
+            <div class="container-fluid">
+
+                <div class="article-buttons z-3 p-4 pt-2 row align-items-center justify-content-between flex-column">
+                    <div class="col-12">
+                        <a href="{{ route('article.edit', $article) }}" class="btn-form btn w-100 rounded-5">
+                            <p class="m-auto p-0 px-3 dark-text">{{ __('ui.modifica') }}</p>
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <button type="button" class="btn btn-delete rounded-5 w-100 px-4" data-bs-toggle="modal"
+                            data-bs-target="#deleteModal">
+                            <p class="m-auto p-0 px-2 dark-text">{{ __('ui.elimina_articoli') }}</p>
+                        </button>
+                    </div>
                 </div>
             </div>
 
