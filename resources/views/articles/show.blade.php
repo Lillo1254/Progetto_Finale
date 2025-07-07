@@ -36,10 +36,19 @@
                         @endif
                     </article>
 
-                   
+                   <div class="d-flex flex-column align-items-center">
                     <div class="text-center mt-3 mt-md-5">
                         <a href="{{ route('article.catalogo') }}" class="btn btn-form px-4 rounded-5"><p class="m-auto p-0 px-2 dark-text">{{ __('ui.torna_catalogo') }}</p></a>
                     </div>
+                    @if (Auth::check() && Auth::user()->is_revisor)
+                    <div class="mt-3">
+
+                        <a href="{{ route('revisor.profile', Auth::user()) }}" class="btn rounded-5 btn-success"><p class="m-auto p-0 px-2 dark-text">{{ __('ui.torna_dashboard') }}</p>
+                        </a>
+                    </div>
+                    @endif
+                </div>
+
                 </div>
             </div>
         </div>
