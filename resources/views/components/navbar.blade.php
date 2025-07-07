@@ -18,7 +18,7 @@
             <!-- Logo -->
             <div class="w-100 text-start text-md-center">
                 <a class="navbar-brand m-0" href="#">
-                    <img src="{{ asset('media/Logo_DarkMode.png') }}" class="logo text-start" alt="immagine logo del sito" id="nav-logo" title="Return to start">
+                    <img src="{{ asset('media/intellex.png') }}" class="logo text-start" alt="immagine logo del sito" id="nav-logo" title="Return to start">
                 </a>
             </div>
 
@@ -62,7 +62,7 @@
         </div>
 
         <!-- MAIN NAVBAR -->
-        <div class="d-none navbar-links d-md-flex justify-content-between align-items-center w-100 pb-2 pt-3">
+        <div class="d-none navbar-links d-md-flex justify-content-between align-items-center w-100 pb-2 pt-1">
             <div class="col-12 m-auto">
                 <ul class="navbar-nav d-flex flex-row justify-content-center p-0 gap-4">
                     <li class="nav-item">

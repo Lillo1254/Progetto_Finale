@@ -4,12 +4,12 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12">
-                    <h1 class="secondary-text display-3 pt-5 text-center">{{ __('ui.login') }}</h1>
+                    <h1 class="secondary-text display-3 pt-5 text-center text-shadow-white">{{ __('ui.login') }}</h1>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-8">
-                    <form class="primary-light-bg p-5 rounded-0 form-glow" action="{{ route('login') }}" method="POST">
+                    <form class="primary-light-bg-form p-5 rounded-0 form-glow" action="{{ route('login') }}" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label white-text">{{ __('ui.email') }}</label>

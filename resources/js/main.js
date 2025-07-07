@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('theme') === 'light') {
     document.body.classList.add('light-mode');
     toggleSwitch.checked = true;
-    logo.src = '/media/Logo_LightMode.png';
+    logo.src = '/media/intellex.png';
   }
 
   toggleSwitch.addEventListener('change', () => {
@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (document.body.classList.contains('light-mode')) {
       localStorage.setItem('theme', 'light');
-      logo.src = '/media/Logo_LightMode.png';
+      logo.src = '/media/intellex.png';
     } else {
       localStorage.setItem('theme', 'dark');
-      logo.src = '/media/Logo_DarkMode.png';
+      logo.src = '/media/intellex.png';
     }
   });
 });

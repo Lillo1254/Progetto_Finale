@@ -10,6 +10,8 @@
  --color-green: #d29eff;
 }
 
+
+
 .slider {
  display: inline-block;
  width: var(--button-width);
@@ -111,11 +113,11 @@ body.light-mode .secondary-bg {
 }
 
 body.light-mode .secondary-text {
-    color: var(--secondary) !important;
+    color: #ffffff !important;
 }
 
 body.light-mode .white-text {
-    color: #000 !important;
+    color: #ffffff !important;
 }
 
 body.light-mode .white-bg {
@@ -203,3 +205,15 @@ body.light-mode .primary-light-bg {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--accent);
 }
+
+body.light-mode .logo{
+    filter: invert(1);
+}
+
+body.light-mode .testo-nero{
+color: #1c102e !important;
+}
+
+/* body.light-mode .dark-text {
+    color: white !important;
+} */

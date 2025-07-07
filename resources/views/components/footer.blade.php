@@ -57,9 +57,9 @@
 
             <!-- ! COMPANY -->
             <div class="col-12 col-md-5 text-start px-md-5 pb-5 pb-md-0">
-                <h3 class="mb-3 secondary-text fw-light">JASL</h3>
+                <h3 class="mb-3 secondary-text fw-light testo-nero">JASL</h3>
                 <small class="mb-4 text-start">
-                    <p class="white-text">
+                    <p class="white-text testo-nero">
                         Benvenuto su Presto.it, il luogo dove i tuoi desideri prendono vita in un click! Sappiamo quanto il tuo tempo sia prezioso, ed è per questo che abbiamo creato un'esperienza di shopping online che unisce velocità, qualità e convenienza.
                     </p>
                 </small>
@@ -68,22 +68,22 @@
 
             <!-- ! INFO -->
             <div class="col-12 col-sm-6 col-md-3 me-0 mb-4 text-start">
-                <h3 class="mb-3 secondary-text fw-light">{{ __('ui.info') }}</h3>
+                <h3 class="mb-3 secondary-text fw-light testo-nero">{{ __('ui.info') }}</h3>
                 <ul class="list-unstyled">
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text"><i class="bi white-text bi-house-door-fill me-1"></i>New York, NY 10012, US</small>
+                        <small class="white-text testo-nero"><i class="bi white-text bi-house-door-fill me-1 testo-nero testo-nero"></i>New York, NY 10012, US</small>
 
                     </li>
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text"><i class="bi white-text bi-envelope-fill me-1"></i>info@example.com</small>
+                        <small class="white-text testo-nero"><i class="bi white-text bi-envelope-fill me-1 testo-nero"></i>info@example.com</small>
                         
                     </li>
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text"><i class="bi white-text bi-telephone-fill me-1"></i> + 01 234 567 88</small>
+                        <small class="white-text testo-nero"><i class="bi white-text bi-telephone-fill me-1 testo-nero"></i> + 01 234 567 88</small>
                         
                     </li>
                     <li class="pb-2 pb-md-3">
-                        <small class="white-text"><i class="bi white-text bi-printer-fill me-1"></i> + 01 234 567 89</small>
+                        <small class="white-text testo-nero"><i class="bi white-text bi-printer-fill me-1 testo-nero"></i> + 01 234 567 89</small>
                         
                     </li>
 
@@ -93,26 +93,26 @@
 
             <!-- ! LINKS -->
             <div class="col-12 col-sm-6 col-md-3 me-0 mb-4 text-start">
-                <h3 class="mb-3 secondary-text fw-light">{{ __('ui.links') }}</h3>
+                <h3 class="mb-3 secondary-text fw-light testo-nero">{{ __('ui.links') }}</h3>
                 <ul class="list-unstyled">
                     <li class="pb-2 pb-md-3">
                         <small>
-                            <a href="" class="text-decoration-none white-text footer-link">{{ __('ui.assistenza') }}</a>
+                            <a href="" class="text-decoration-none white-text footer-link testo-nero">{{ __('ui.assistenza') }}</a>
                         </small>
                     </li>
                     <li class="pb-2 pb-md-3">
                         <small>
-                            <a href="" class="text-decoration-none white-text footer-link">{{ __('ui.privacy') }}</a>
+                            <a href="" class="text-decoration-none white-text footer-link testo-nero">{{ __('ui.privacy') }}</a>
                         </small>
                     </li>
                     <li class="pb-2 pb-md-3">
                         <small>
-                            <a href="" class="text-decoration-none white-text footer-link">{{ __('ui.condizioni') }}</a>
+                            <a href="" class="text-decoration-none white-text footer-link testo-nero">{{ __('ui.condizioni') }}</a>
                         </small>
                     </li>
                     <li class="pb-2 pb-md-3">
                         <small>
-                            <a href="" class="text-decoration-none white-text footer-link">{{ __('ui.faq') }}</a>
+                            <a href="" class="text-decoration-none white-text footer-link testo-nero">{{ __('ui.faq') }}</a>
                         </small>
                     </li>
                 </ul>
@@ -124,9 +124,9 @@
     </div>
 
     <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
-        <small class="m-0 p-0 white-text">
+        <small class="m-0 p-0 white-text testo-nero">
             © 2025 {{ __('ui.copyright') }}:
-            <a class="white-text text-decoration-none fw-bold"
+            <a class="white-text text-decoration-none fw-bold testo-nero"
                 href="https://mdbootstrap.com/">MDBootstrap.com</a>
         </small>
     </div>

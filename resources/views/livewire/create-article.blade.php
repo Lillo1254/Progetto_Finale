@@ -1,13 +1,13 @@
-<main class="primary-bg min-vh-100 d-flex flex-column justify-content-center pb-5">
+<main class="login-register min-vh-100 d-flex flex-column justify-content-center pb-5">
     <div class="container">
         <div class="row mb-5">
             <div class="col-12">
-                <h1 class="secondary-text display-3 pt-5 text-center">{{ __('ui.crea_articolo') }}</h1>
+                <h1 class="secondary-text display-3 pt-5 text-center text-shadow-white">{{ __('ui.crea_articolo') }}</h1>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-xl-9 col-xxl-8">
-                <form class="primary-light-bg p-5 rounded-0 mb-5" wire:submit.prevent="create">
+                <form class="primary-light-bg-form p-5 rounded-0 mb-5" wire:submit.prevent="create">
                     @csrf
 
                     @if (session('message'))

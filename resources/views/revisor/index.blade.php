@@ -1,5 +1,5 @@
 <x-layout titlePage="Dashboard Revisore">
-    <main class="primary-bg min-vh-100">
+    <main class=" min-vh-100 login-register">
         <div class="container-fluid">
             <div class="row mb-5">
                 <div class="col-12 text-center">
@@ -42,9 +42,9 @@
                                         <div class="row flex-wrap my-3 flex-grow-1">
                                             @foreach ($article->images as $key => $image)
                                                 @if ($article->images->count() == 1)
-                                                <div class="col-12 col-md col-lg-4 mb-4 d-flex flex-column">
-                                                @else
-                                                <div class="col-12 col-md mb-4 d-flex flex-column">
+                                                    <div class="col-12 col-md-4 col-lg-2 mb-4 d-flex flex-column">
+                                                    @else
+                                                        <div class="col-12 col-md col-lg-2 mb-4 d-flex flex-column">
                                                 @endif
                                                 <div class="mb-3">
                                                     <img src="{{ $image->getUrl(1024, 1024) }}"
@@ -69,35 +69,41 @@
                                                     @else
                                                         <h5 class="secondary-text">No labels</h5>
                                                     @endif
+                                                    <details class="mt-3">
+                                                        <summary class="d-flex">
+                                                            <h5 class="me-2">Ratings</h5>
+                                                            <i class="bi bi-triangle-fill secondary-text"
+                                                                    id="details"></i>
+                                                        </summary>
+                                                        <div class="row mt-2">
+                                                            <div class="col-12 d-flex align-items-center mb-1">
+                                                                <div class="text-center me-2 {{ $image->adult }}">
+                                                                </div>
+                                                                <span class="white-text">Adult</span>
+                                                            </div>
+                                                            <div class="col-12 d-flex align-items-center mb-1">
+                                                                <div class="text-center me-2 {{ $image->violence }}">
+                                                                </div>
+                                                                <span class="white-text">Violence</span>
+                                                            </div>
+                                                            <div class="col-12 d-flex align-items-center mb-1">
+                                                                <div class="text-center me-2 {{ $image->spoof }}">
+                                                                </div>
+                                                                <span class="white-text">Spoof</span>
+                                                            </div>
+                                                            <div class="col-12 d-flex align-items-center mb-1">
+                                                                <div class="text-center me-2 {{ $image->racy }}">
+                                                                </div>
+                                                                <span class="white-text">Racy</span>
+                                                            </div>
+                                                            <div class="col-12 d-flex align-items-center mb-1">
+                                                                <div class="text-center me-2 {{ $image->medical }}">
+                                                                </div>
+                                                                <span class="white-text">Medical</span>
+                                                            </div>
+                                                        </div>
+                                                    </details>
 
-                                                    <h5 class="mt-2 mb-2">Ratings</h5>
-                                                    <div class="row">
-                                                        <div class="col-12 d-flex align-items-center mb-1">
-                                                            <div class="text-center me-2 {{ $image->adult }}">
-                                                            </div>
-                                                            <span class="white-text">Adult</span>
-                                                        </div>
-                                                        <div class="col-12 d-flex align-items-center mb-1">
-                                                            <div class="text-center me-2 {{ $image->violence }}">
-                                                            </div>
-                                                            <span class="white-text">Violence</span>
-                                                        </div>
-                                                        <div class="col-12 d-flex align-items-center mb-1">
-                                                            <div class="text-center me-2 {{ $image->spoof }}">
-                                                            </div>
-                                                            <span class="white-text">Spoof</span>
-                                                        </div>
-                                                        <div class="col-12 d-flex align-items-center mb-1">
-                                                            <div class="text-center me-2 {{ $image->racy }}">
-                                                            </div>
-                                                            <span class="white-text">Racy</span>
-                                                        </div>
-                                                        <div class="col-12 d-flex align-items-center mb-1">
-                                                            <div class="text-center me-2 {{ $image->medical }}">
-                                                            </div>
-                                                            <span class="white-text">Medical</span>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                         </div>
                                     @endforeach
@@ -201,13 +207,13 @@
             <h2><em>Nessun articolo da revisionare</em></h2>
         </div>
         @endif
-        <div class="row justify-content-center mt-3 mb-5 px-4 mx-1 gap-3">
+        <div class="row justify-content-center mt-3 pb-5 px-4 mx-1 gap-3">
             <a href="{{ route('revisor.articledecline') }}"
-                class="btn col-12 col-sm-4 col-md-3 col-xl-2 btn-home rounded-5 ms-sm-3"">
+                class="btn col-12 col-sm-4 col-md-3 col-xl-2 btn-home rounded-5 ms-sm-3 shadow-card">
                 <p class="m-auto p-0 px-1 dark-text">Lista articoli rifiutati</p>
             </a>
             <a href="{{ route('home') }}"
-                class="btn col-12 mx-3 col-sm-4 col-md-3 col-xl-2 btn-home rounded-5 ms-sm-3">
+                class="btn col-12 mx-3 col-sm-4 col-md-3 col-xl-2 btn-home rounded-5 ms-sm-3 shadow-card">
                 <p class="m-auto p-0 px-1 dark-text">Torna all'homepage</p>
             </a>
         </div>

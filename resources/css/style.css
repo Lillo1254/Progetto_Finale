@@ -625,7 +625,7 @@ a:hover {
 .image-home {
     height: 240px;
     width: 100%;
-    background:linear-gradient(#09001877, #2b233777), url('/public/media/sponline_phone114.png');
+    background:linear-gradient(#09001877, #2b233777), url('/media/intellex-sfondo.jpg');
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
@@ -766,6 +766,22 @@ a:hover {
 .primary-light-bg-card{
     background-color: rgba(43, 35, 55, 0.482) !important;
 }
+
+.primary-light-bg-form{
+    background-color: rgba(43, 35, 55, 0.625) !important;
+    backdrop-filter: blur(20px);
+}
+
+
+/* blur focusmode */
+/* #exampleInputEmail1:not(:focus) {
+  filter: blur(2px);
+  transition: filter 0.3s ease;
+}
+
+#exampleInputEmail1:focus {
+  filter: blur(0);
+} */
 
 /* ! CONTAINER SIZING */
 
@@ -920,7 +936,8 @@ details[open] #details {
     }
 
     .logo {
-        height: 50px;
+        height: 70px;
+    
     }
 
     .hide {
@@ -932,13 +949,17 @@ details[open] #details {
     }
 
     .image-home {
-        background: linear-gradient(#00000000, #00000000), url('/public/media/sponline_phone114.png');
+        background: linear-gradient(#00000000, #00000000), url('/public/media/intellex-sfondo.jpg');
         background-position: center;
      
     }
 }
 .shadow-home{
        box-shadow: 0px 0px 10px 5px rgb(255, 255, 255);
+}
+.text-shadow-white {
+    text-shadow: 0px 0px 15px rgb(255, 255, 255),
+    0px 0px 20px var(--primary);
 }
 
 .img-preview {
