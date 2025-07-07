@@ -8,14 +8,14 @@
                         <div class="col-12 col-md-6 overflow-hidden">
                             <h1 class="secondary-text display-5">{{ $article->title }}</h1>
                             <h6 class="white-text px-1">{{ __('ui.prezzo') }}: {{ number_format($article->price, 2) }} €</h6>                        
-                            <h6 class="white-text px-1">{{ __('ui.categoria') }}: <a href="{{ route('category.articles', $article->category) }}" class="">{{ $article->category->name ?? 'Nessuna categoria' }}</a></h6>
+                            <h6 class="white-text px-1">{{ __('ui.categoria') }}: <a href="{{ route('category.articles', $article->category) }}" class="white-text">{{ $article->category->name ?? 'Nessuna categoria' }}</a></h6>
                             <p class="white-text mt-3 px-1">{{ $article->description }}</p>
-                            <p>Inserito da:</p>
+                            <p class="white-text">Inserito da:</p>
                              @auth
         @if(auth()->id() === $article->user->id)
-            <a href="{{ route('profile', auth()->user()) }}">Il tuo profilo</a>
+            <a href="{{ route('profile', auth()->user()) }}" class="white-text">Il tuo profilo</a>
         @else
-            <a href="{{ route('profiloarticolo', $article->user) }}">{{ $article->user->name }}</a>
+            <a href="{{ route('profiloarticolo', $article->user) }}" class="white-text">{{ $article->user->name }}</a>
         @endif
     @endauth    
                         </div>
@@ -25,7 +25,7 @@
                             <div id="articleCarousel" class="carousel slide shadow-sm" data-bs-ride="carousel">
                                 <div class="carousel-inner rounded-4">
                                     @foreach ($article->images as $key => $image)
-                                        <div class="carousel-item @if($loop->first) active @endif">
+                                        <!-- <div class="carousel-item @if($loop->first) active @endif"> -->
                                             <img src="{{ $image->getUrl(1024, 1024) }}" class="d-block w-100 rounded shadow" alt="immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
                                         </div>
                                     @endforeach
@@ -38,12 +38,12 @@
 
                    <div class="d-flex flex-column align-items-center">
                     <div class="text-center mt-3 mt-md-5">
-                        <a href="{{ route('article.catalogo') }}" class="btn btn-form px-4 rounded-5"><p class="m-auto p-0 px-2 dark-text">{{ __('ui.torna_catalogo') }}</p></a>
+                        <a href="{{ route('article.catalogo') }}" class="btn btn-home px-4 rounded-5"><p class="m-auto p-0 px-2 dark-text">{{ __('ui.torna_catalogo') }}</p></a>
                     </div>
                     @if (Auth::check() && Auth::user()->is_revisor && $article->is_accepted == false)
                     <div class="mt-3">
 
-                        <a href="{{ route('revisor.articledecline') }}" class="btn rounded-5 btn-success"><p class="m-auto p-0 px-2 dark-text">torna alla lista rifiutati</p>
+                        <a href="{{ route('revisor.articledecline') }}" class="btn rounded-5 btn-success"><p class="m-auto p-0 px-2 dark-text">Torna alla lista rifiutati</p>
                         </a>
                     </div>
                     @endif
