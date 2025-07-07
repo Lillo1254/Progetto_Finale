@@ -1,4 +1,4 @@
-<div class="card position-relative p-0 border-0 primary-light-bg rounded-0 h-100 overflow-hidden">
+<div class="card position-relative p-0 border-0 primary-light-bg-card rounded-0 h-100 overflow-hidden shadow-card">
 
     <!-- ? IMAGE -->
     <a href="{{ route('article.show', $article) }}" class="card-link z-1">
@@ -7,7 +7,7 @@
     </a>
 
     <!-- ? CARD BODY -->
-    <div class="card-body p-4 z-2 primary-light-bg pb-0">
+    <div class="card-body p-4 z-2 primary-light-bg-card pb-0">
         <a href="{{ route('article.show', $article) }}"
             class="card-link card-title z-1 text-decoration-none white-text fw-light fs-3">{{ $article->title }}</a>
         <h5 class="card-text fw-light pt-2 fs-6">{{ $article->price }} €</h5>
@@ -28,17 +28,20 @@
     <!-- ? CARD BUTTONS -->
     @auth
         @if ($article->user_id === auth()->id())
-            <hr class="secondary-text">
-            <div class="article-buttons z-3 p-4 pt-2 row align-items-center justify-content-between">
-                <div class="col-6">
-                    <a href="{{ route('article.edit', $article) }}" class="btn-form btn w-100 rounded-5">
-                        <p class="m-auto p-0 px-3 dark-text">{{ __('ui.modifica') }}</p>
+            
+        <div class="container-fluid p-0">
+
+        
+            <div class="row z-3 py-3 align-items-center justify-content-center primary-light-bg-card g-0">
+                <div class="col-4 g-0 mx-auto">
+                    <a href="{{ route('article.edit', $article) }}" class="btn-form btn m-0 px-0 rounded-5">
+                        <p class="m-auto px-2 dark-text">{{ __('ui.modifica') }}</p>
                     </a>
                 </div>
-                <div class="col-6">
-                    <button type="button" class="btn btn-delete rounded-5 w-100 px-4" data-bs-toggle="modal"
+                <div class="col-4 g-0 mx-auto">
+                    <button type="button" class="btn btn-delete rounded-5 " data-bs-toggle="modal"
                         data-bs-target="#deleteModal">
-                        <p class="m-auto p-0 px-2 dark-text">{{ __('ui.elimina_articoli') }}</p>
+                        <p class="m-auto p-0 dark-text">{{ __('ui.elimina_articoli') }}</p>
                     </button>
                 </div>
             </div>
@@ -76,6 +79,7 @@
                 </div>
             </div>
             {{-- fine mdoale --}}
+            </div>
         @endif
     @endauth
 

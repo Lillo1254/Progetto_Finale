@@ -1,6 +1,6 @@
 <x-layout titlePage="Login">
 
-    <div class="main-bg min-vh-100">
+    <div class="main-bg min-vh-100 login-register">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12">
