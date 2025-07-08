@@ -5,7 +5,7 @@
             <div class="row justify-content-center w-100 mb-5 bg-transparent">
 
                 @if ($articles->count() > 0)
-                    <h1 class="text-center secondary-text display-3 pt-5 text-shadow-white">
+                    <h1 class="text-center secondary-text display-3 pt-5 text-shadow">
                        {{ __('ui.nome_sezione') }} {{ $categoryName }}
                     </h1>
                 @else

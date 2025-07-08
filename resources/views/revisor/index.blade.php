@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row mb-5">
                 <div class="col-12 text-center">
-                    <h1 class="secondary-text display-3 pt-5">
+                    <h1 class="secondary-text display-3 pt-5 text-shadow">
                         {{ __('ui.dashboard_revisore') }} - {{ Auth::user()->name }}
                     </h1>
                 </div>

@@ -43,6 +43,7 @@ Route::middleware(['auth', 'isRevisor'])->group(function () {
 
     Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
     Route::get('/revisor/table/decline', [RevisorController::class, 'showDecline'])->name('revisor.articledecline');
+    // Route::get('revisor/article/all', [RevisorController::class, 'allArticles'])->name('allarticles');
     Route::get('/revisor/profile/{user}', [RevisorController::class, 'revisorProfile'])->name('revisor.profile');
     Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('revisor.accept');
     Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('revisor.reject');

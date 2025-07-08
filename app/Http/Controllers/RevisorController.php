@@ -46,4 +46,8 @@ class RevisorController extends Controller
 
         return redirect()->back()->with('message', "L'articolo non è stato rifiutato, quindi non può essere annullato.");
     }
+
+    // public function allArticles() {
+    //     return view('revisor.allArticles');
+    // }
 }
