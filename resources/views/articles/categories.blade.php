@@ -1,11 +1,11 @@
 <x-layout titlePage="Categoria {{ $categoryName }}">
 
-    <main class="primary-bg min-vh-100">
-        <div class="container primary-bg pb-5 ">
-            <div class="row justify-content-center w-100 mb-5">
+    <main class="primary-bg min-vh-100 login-register">
+        <div class="container pb-5 bg-transparent">
+            <div class="row justify-content-center w-100 mb-5 bg-transparent">
 
                 @if ($articles->count() > 0)
-                    <h1 class="text-center secondary-text display-3 pt-5">
+                    <h1 class="text-center secondary-text display-3 pt-5 text-shadow-white">
                        {{ __('ui.nome_sezione') }} {{ $categoryName }}
                     </h1>
                 @else
@@ -19,9 +19,9 @@
                 @endif
             </div>
 
-            <article class="row">
+            <article class="row bg-transparent">
                 @foreach ($articles as $article)
-                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 bg-transparent">
                         <x-card :article="$article" />
                     </div>
                 @endforeach

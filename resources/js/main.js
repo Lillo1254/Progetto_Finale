@@ -21,6 +21,28 @@ document.addEventListener('DOMContentLoaded', () => {
       logo.src = '/media/intellex.png';
     }
   });
+
+   const footer = document.getElementById('main-footer');
+
+    if (!footer) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const visibleRatio = entry.intersectionRatio;
+
+            if (visibleRatio < 0.6) {
+                footer.classList.add('footer-transparent');
+            } else {
+                footer.classList.remove('footer-transparent');
+            }
+        });
+    }, {
+        threshold: Array.from({ length: 101 }, (_, i) => i / 100) // da 0.00 a 1.00
+    });
+
+    observer.observe(footer);
+
+    
 });
 // fine switch light mode 
 
@@ -77,24 +99,4 @@ passwordInput.addEventListener('input', function () {
 });
 //fine validazioni password
 
-function startLogging(label, delayStart = 0) {
-  setTimeout(() => {
-    let count = 0;
-    const interval = setInterval(() => {
-      count++;
-      console.log(`${label} - messaggio numero ${count}`);
-      if (count >= 10) {
-        clearInterval(interval);
-        // Ricomincia dopo 500ms (puoi modificare il ritardo qui)
-        startLogging(label, 500);
-      }
-    }, 500);
-  }, delayStart);
-}
-
-// Primo log parte subito
-startLogging("Inizio pagina");
-
-// Secondo log parte dopo 5 secondi (per simulare "a metà")
-startLogging("Meta pagina", 5000);
 

@@ -20,20 +20,33 @@
     @endauth    
                         </div>
 
-                        @if ($article->images->count()>0)
-                        <div class="col-12 col-md-6 mb-3 mb-md-0">
-                            <div id="articleCarousel" class="carousel slide shadow-sm" data-bs-ride="carousel">
-                                <div class="carousel-inner rounded-4">
-                                    @foreach ($article->images as $key => $image)
-                                        <!-- <div class="carousel-item @if($loop->first) active @endif"> -->
-                                            <img src="{{ $image->getUrl(1024, 1024) }}" class="d-block w-100 rounded shadow" alt="immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
-                                        </div>
-                                    @endforeach
-                                </div>
+@if ($article->images->count() > 0)
+    <div class="row">
+        @foreach ($article->images as $key => $image)
+            <div class="col-6 col-md-4 col-lg-3 mb-3">
+                <img src="{{ $image->getUrl(1024, 1024) }}"
+                     class="img-fluid rounded shadow cursor-pointer"
+                     data-bs-toggle="modal"
+                     data-bs-target="#imageModal{{ $key }}"
+                     alt="Miniatura {{ $key + 1 }}">
 
+                <!-- Modale per l'immagine ingrandita -->
+                <div class="modal fade" id="imageModal{{ $key }}" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-md">
+                        <div class="modal-content bg-transparent border-0">
+                            <div class="modal-body p-0 text-center">
+                                <img src="{{ $image->getUrl(1024, 1024) }}" class="img-fluid rounded shadow" alt="Immagine grande {{ $key + 1 }}">
+                            </div>
+                            <div class="modal-footer justify-content-center border-0">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
                             </div>
                         </div>
-                        @endif
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
+@endif
                     </article>
 
                    <div class="d-flex flex-column align-items-center">

@@ -17,7 +17,7 @@
 
             <!-- Logo -->
             <div class="w-100 text-start text-md-center">
-                <a class="navbar-brand m-0" href="#">
+                <a class="navbar-brand m-0" href="{{ route('home') }}">
                     <img src="{{ asset('media/intellex.png') }}" class="logo text-start" alt="immagine logo del sito" id="nav-logo" title="Return to start">
                 </a>
             </div>

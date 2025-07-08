@@ -87,8 +87,8 @@
                             <h5 class="mb-3">{{ __('ui.anteprima_immagini') }}</h5>
                             <div class="row">
                                 @foreach ($images as $key => $image)
-                                    <div class="col-6 col-md-4 col-lg-3 mb-3">
-                                        <div class="img-preview mx-auto rounded-0 position-relative" style="background-image:url({{ $image->temporaryUrl()}}); height: 150px; background-size: cover; background-position: center;">
+                                    <div class="col-12 mx-2 col-md-4 col-lg-3 mb-3">
+                                        <div class="img-preview mx-auto rounded-0 position-relative" style="background-image:url({{ $image->temporaryUrl()}}); height: 8rem; background-size: cover; background-position: center; ">
                                             <a wire:click="removeImg({{ $key }})"
                                                 class="position-absolute top-0 end-0 p-1 text-decoration-none cursor-pointer">
                                                 <i class="bi bi-x-square-fill fs-4 danger-text rounded-0"></i>

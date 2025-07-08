@@ -1,5 +1,5 @@
 <x-layout titlePage="Hai cercato : {{ $query }}">
-    <main class="container primary-bg min-vh-100">
+    <main class="container  min-vh-100 login-register">
 
         <h1 class="text-center secondary-text display-5 py-5">{{ __('ui.risultati') }} "{{ $query }}"</h1>
         <div class="row  justify-content-center pb-5">

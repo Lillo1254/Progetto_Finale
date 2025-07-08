@@ -1,4 +1,4 @@
-<footer class="primary-light-bg text-center mb-0">
+<footer class="primary-light-bg text-center mb-0 transition-opacity"  id="main-footer">
     <div class="container p-4">
         <div class="mb-3 d-flex justify-content-center flex-wrap gap-2">
             <ul class="list-unstyled d-flex flex-wrap flex-md-nowrap justify-content-center gap-1">

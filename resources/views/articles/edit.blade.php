@@ -1,5 +1,5 @@
 <x-layout titlePage="Modifica Articolo">
-    <main class="primary-bg min-vh-100">
+    <main class="login-register min-vh-100">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12">
